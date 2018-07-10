@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ basic.sitename }} | {{ pagetitle }}</title>
+        <meta name="keywords" content="{{ keywords }}" />
+        <meta name="description" content="{{ description }}" />
+        <link rel="manifest" href="site.webmanifest" />
+        <link rel="icon" type="image/png" href="images/_browser/favicon.png" />
+        <!-- Apple Web App -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="images/_browser/icon.png" />
+        <!-- Windows -->
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <!-- SNS -->
+        <meta property="og:url" content="http://www.uryu-myao.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="URYU MYAO" />
+        <meta property="og:description" content="Welcome to URYU MYAO 's playground. Don't we have fun together!" />
+        <meta property="og:image" content="http://www.uryu-myao.com/images/_sns/ogimg.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@Myao_YL" />
+        <meta name="twitter:creator" content="@Myao_YL" />
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800i,900" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/app.min.css" />
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+      {% block content %}
+      {% endblock %}
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98704909-1"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-98704909-1');
+      </script>
+      <script src="script/app.min.js"></script>
+  </body>
+</html>

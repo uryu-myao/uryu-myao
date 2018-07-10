@@ -1,0 +1,111 @@
+{% extends "_layout.njk" %}
+{% set pagetitle = "TOP" %}
+{% set keyword = 'URYU MYAO' %}
+{% set description = 'URYU MYAO' %}
+<!--  head end  -->
+
+{% block content %}
+
+<div id="top" data-page="top">
+
+    {% include "_bg.njk" %}
+
+    <main class="grid__layout" role="main">
+        <div class="horizon horizon__top"><div></div></div>
+        <div class="horizon horizon__bottom"><div></div></div>
+
+        <aside class="grid__aside">
+            <div>
+                <div class="logo">
+                    <h1>logo</h1>
+                </div>
+                <nav class="controller" role="navigation">
+
+                </nav>
+                <picture class="moon">
+                    <img src="{{ data.root }}images/top/moon.png" alt="moon" />
+                </picture>
+                <p class="cr">© {{ data.sitename }} 2018</p>
+            </div>
+        </aside>
+
+        <section class="grid__prev">
+            <div>
+
+            </div>
+        </section>
+
+        <section class="grid__curS">
+            <div class="horizon horizon__top"><div></div></div>
+            <div class="horizon horizon__bottom"><div></div></div>
+
+            <a href="/work/">
+                <figure class="__cur-show">
+                    <picture class="__s1"></picture>
+                </figure>
+            </a>
+        </section>
+
+        <section class="grid__curI">
+            <div class="horizon horizon__top"><div></div></div>
+            <div class="horizon horizon__bottom"><div></div></div>
+            <div class="__curI-ttl">
+                <h2>
+                {{ show[0].name }}
+                </h2>
+                <p>
+                {{ show[0].cat }}
+                </p>
+            </div>
+            <div class="__curI-desc">
+                <dl>
+                    <dt>client</dt>
+                    <dd>{{ show[0].info1 }}</dd>
+                    <dt>{{ show[0].item2 }}</dt>
+                    <dd>{{ show[0].info2 }}</dd>
+                    <dt>{{ show[0].item3 }}</dt>
+                    <dd>{{ show[0].info3 }}</dd>
+                    <dt>employer</dt>
+                    <dd>
+                        <a href="https://www.econosys.jp/" target="_blank">
+                        {{ show[0].info4 }}
+                        </a>
+                    </dd>
+                </dl>
+                <button type="button">
+                    <a href="{{ data.root }}work/" role="button">details</a>
+                </button>
+            </div>
+        </section>
+
+        <section class="grid__next">
+            <div class="__bar">
+                <div>
+                    <p>next</p>
+                </div>
+            </div>
+            <div class="">
+                <a href="#">
+                    <figure>
+                        <picture class=""></picture>
+                    </figure>
+                </a>
+            </div>
+        </section>
+
+        <section class="grid__prog">
+            <div>
+                <ol>
+                    <li class="__prog-dots"></li>
+                    <li class="__prog-dots __prog-active"></li>
+                    <li class="__prog-dots"></li>
+                    <li class="__prog-dots"></li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+</div>
+<!--  contents end  -->
+
+{% endblock %}

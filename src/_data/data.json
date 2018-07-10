@@ -1,0 +1,50 @@
+{
+
+  "basic": {
+    "root": "./",
+    "sitename": "URYU MYAO",
+    "url": "http://www.uryu-myao.com/"
+  },
+
+  "show": [
+    {
+      "name": "yoshikawa",
+      "cat": "Web design",
+      "info1": "yoshikawa",
+      "item2": "ui / fe dev.",
+      "info2": "myao",
+      "item3": "direction",
+      "info3": "watanabe",
+      "info4": "econosys design"
+    },
+    {
+      "name": "kyobe",
+      "cat": "Web design",
+      "info1": "kyotobiyo",
+      "item2": "fe dev.",
+      "info2": "myao",
+      "item3": null,
+      "info3": null,
+      "info4": "econosys design"
+    },
+    {
+      "name": "hanplus",
+      "cat": "Web design",
+      "info1": "hanker inc.",
+      "item2": "ui / fe dev.",
+      "info2": "myao",
+      "item3": null,
+      "info3": null,
+      "info4": "econosys design"
+    }
+  ],
+
+  "works": [
+    {
+      "title": "yoshikawa",
+      "cate": "web design",
+      "cate": "web design",
+      "firstview": "/img/work/firstview"
+    }
+  ]
+}
