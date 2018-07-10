@@ -1,6 +1,7 @@
 {
 
-  "basic":{
+  "basic": {
+
       "root": "./",
       "sitename": "URYU MYAO",
       "url": "http://www.uryu-myao.com/"
@@ -21,25 +22,40 @@
       }
   ],
 
-  "desc1":[
+  "description": [
       {
           "name": "yoshikawa",
-          "cat": "Web design"
-      }
-  ],
-
-  "desc2":[
-      {
+          "cat": "Web design",
           "client": "yoshikawa inc.",
           "role1": "ui / fe dev.",
           "item1": "myao",
           "role2": "direction",
           "item2": "watanabe",
           "employer": "econosys design"
+      },
+      {
+          "name": "kyobe",
+          "cat": "Web design",
+          "client": "kyo-be school",
+          "role1": "fe dev.",
+          "item1": "myao",
+          "role2": null,
+          "item2": null,
+          "employer": "econosys design"
+      },
+      {
+          "name": "hanplus",
+          "cat": "Web design",
+          "client": "hanker inc.",
+          "role1": "ui / fe dev.",
+          "item1": "myao",
+          "role2": null,
+          "item2": null,
+          "employer": "econosys design"
       }
   ],
 
-  "works":[
+  "works": [
       {
           "title": "yoshikawa",
           "cat": "web design",

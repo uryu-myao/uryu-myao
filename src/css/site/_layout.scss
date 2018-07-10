@@ -128,7 +128,6 @@ div[data-page='about']
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 // aside
 //
 .grid__aside {
@@ -201,12 +200,12 @@ div[data-page='about']
     .__s1 {
       @include bg-image (auto, 0, /images/top/video_s1, gif, center, cover, no-repeat);
     }
-    .__s2 {
-      @include bg-image (auto, 0, /images/top/video_s2, gif, center, cover, no-repeat);
-    }
-    .__s3 {
-      @include bg-image (auto, 0, /images/top/video_s3, gif, center, cover, no-repeat);
-    }
+    // .__s2 {
+    //   @include bg-image (auto, 0, /images/top/video_s2, gif, center, cover, no-repeat);
+    // }
+    // .__s3 {
+    //   @include bg-image (auto, 0, /images/top/video_s3, gif, center, cover, no-repeat);
+    // }
   }
 }
 
@@ -214,48 +213,60 @@ div[data-page='about']
   grid-area: curI;
   color: white;
   position: relative;
+}
+
+.__curI-ttl {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  position: relative;
+  background: black;
+  height: calc( 30% - 10px );
 
   & > div {
-    background: black;
-
-    h2 {
-      font-family: 'fjalla';
-      font-size: 1.89rem;
-      letter-spacing: .26em;
-      line-height: normal;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    p {
-      font-size: .946rem;
-      letter-spacing: .35em;
-      margin: 1.4em auto 0;
-    }
+    @include center ( horizontal );
+    top: 45px;
+    margin-left: -4px;
   }
 
-  .__curI-ttl {
-    margin-bottom: 10px;
-    padding: 3em 15%;
-    box-sizing: border-box;
-  }
-
-  .__curI-desc {
+  h2 {
+    font-family: 'Fjalla One';
+    font-size: 1.89rem;
+    letter-spacing: .25em;
+    line-height: normal;
+    white-space: nowrap;
     text-transform: uppercase;
+  }
 
-    dt {
-      color: #627e99;
-      font-size: 1em;
-      font-weight: normal;
-    }
-
-    dd {
-      color: skyblue;
-      font-size: .9em;
-      font-weight: normal;
-    }
+  p {
+    font-size: .9rem;
+    letter-spacing: .3em;
+    margin: 1.4em auto 0;
   }
 }
+
+.__curI-desc {
+  text-transform: uppercase;
+  position: relative;
+  background: black;
+  height: 70%;
+
+  & > div {
+      position: absolute;
+  }
+
+  dt {
+    color: #627e99;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  dd {
+    color: skyblue;
+    font-size: .9em;
+    font-weight: normal;
+  }
+}
+
 
 
 // Prev

@@ -40,7 +40,7 @@
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
 
-            {% for current in data.current %}
+            {% for current in current %}
             <a href="/work/{{ current.link }}.html">
                 <figure class="__cur-show">
                     <picture class="__{{ current.class }}"></picture>
@@ -56,35 +56,41 @@
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
 
-            {% for current in data.description %}
             <div class="__curI-ttl">
-                <h2>
-                {{ description.name }}
-                </h2>
-                <p>
-                {{ description.cat }}
-                </p>
+                {% for desc1 in desc1 %}
+                <div>
+                    <h2 class="glitch__txt">
+                    {{ desc1.name }}
+                    </h2>
+                    <p>
+                    {{ desc1.cat }}
+                    </p>
+                </div>
+                {% endfor %}
             </div>
             <div class="__curI-desc">
-                <dl>
-                    <dt>client</dt>
-                    <dd>{{ description.client }}</dd>
-                    <dt>{{ description.role1 }}</dt>
-                    <dd>{{ description.item1 }}</dd>
-                    <dt>{{ description.role2 }}</dt>
-                    <dd>{{ description.item2 }}</dd>
-                    <dt>employer</dt>
-                    <dd>
-                        <a href="https://www.econosys.jp/" target="_blank">
-                        {{ description.employer }}
-                        </a>
-                    </dd>
-                </dl>
-                <button type="button">
-                    <a href="{{ data.root }}work/" role="button">details</a>
-                </button>
+                {% for desc2 in desc2 %}
+                <div>
+                    <dl>
+                        <dt>client</dt>
+                        <dd>{{ desc2.client }}</dd>
+                        <dt>{{ desc2.role1 }}</dt>
+                        <dd>{{ desc2.item1 }}</dd>
+                        <dt>{{ desc2.role2 }}</dt>
+                        <dd>{{ desc2.item2 }}</dd>
+                        <dt>employer</dt>
+                        <dd>
+                            <a href="https://www.econosys.jp/" target="_blank">
+                            {{ desc2.employer }}
+                            </a>
+                        </dd>
+                    </dl>
+                    <button type="button">
+                        <a href="{{ data.root }}work/" role="button">details</a>
+                    </button>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
 
         </section>
 
