@@ -1,10 +1,12 @@
 {% extends "_layout.njk" %}
-{% set pageTitle = "SHOW_1" %}
+{% set pagetitle = "{{ work[0].title }}" %}
+{% set keyword = 'URYU MYAO' %}
+{% set description = 'URYU MYAO' %}
 <!--  head end -->
 
 {% block content %}
 
-<div id="about" data-page="about">
+<div data-page="{{ work[0].title }}">
 
     {% include "_bg.njk" %}
 

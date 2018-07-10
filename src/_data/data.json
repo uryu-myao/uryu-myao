@@ -1,50 +1,66 @@
 {
 
   "basic": {
-    "root": "./",
-    "sitename": "URYU MYAO",
-    "url": "http://www.uryu-myao.com/"
+
+      "root": "./",
+      "sitename": "URYU MYAO",
+      "url": "http://www.uryu-myao.com/"
   },
 
-  "show": [
-    {
-      "name": "yoshikawa",
-      "cat": "Web design",
-      "info1": "yoshikawa",
-      "item2": "ui / fe dev.",
-      "info2": "myao",
-      "item3": "direction",
-      "info3": "watanabe",
-      "info4": "econosys design"
-    },
-    {
-      "name": "kyobe",
-      "cat": "Web design",
-      "info1": "kyotobiyo",
-      "item2": "fe dev.",
-      "info2": "myao",
-      "item3": null,
-      "info3": null,
-      "info4": "econosys design"
-    },
-    {
-      "name": "hanplus",
-      "cat": "Web design",
-      "info1": "hanker inc.",
-      "item2": "ui / fe dev.",
-      "info2": "myao",
-      "item3": null,
-      "info3": null,
-      "info4": "econosys design"
-    }
+  "current":[
+      {
+          "link": "work_1",
+          "class": "s1"
+      },
+      {
+          "link": "work_2",
+          "class": "s2"
+      },
+      {
+          "link": "work_3",
+          "class": "s3"
+      }
+  ],
+
+  "description": [
+      {
+          "name": "yoshikawa",
+          "cat": "Web design",
+          "client": "yoshikawa inc.",
+          "role1": "ui / fe dev.",
+          "item1": "myao",
+          "role2": "direction",
+          "item2": "watanabe",
+          "employer": "econosys design"
+      },
+      {
+          "name": "kyobe",
+          "cat": "Web design",
+          "client": "kyo-be school",
+          "role1": "fe dev.",
+          "item1": "myao",
+          "role2": null,
+          "item2": null,
+          "employer": "econosys design"
+      },
+      {
+          "name": "hanplus",
+          "cat": "Web design",
+          "client": "hanker inc.",
+          "role1": "ui / fe dev.",
+          "item1": "myao",
+          "role2": null,
+          "item2": null,
+          "employer": "econosys design"
+      }
   ],
 
   "works": [
-    {
-      "title": "yoshikawa",
-      "cate": "web design",
-      "cate": "web design",
-      "firstview": "/img/work/firstview"
-    }
+      {
+          "title": "yoshikawa",
+          "cat": "web design",
+          "firstview": "/img/work/firstview"
+      }
   ]
+
 }

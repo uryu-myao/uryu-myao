@@ -118,6 +118,13 @@ div[data-page='about']
 .horizon__top { top: 0;}
 .horizon__bottom { bottom: 0;}
 
+// botton
+//
+[role="button"] {
+  color: white;
+  text-decoration: uppercase;
+}
+
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -192,7 +199,13 @@ div[data-page='about']
     }
 
     .__s1 {
-      @include bg-image (auto, 0, /images/top/video_p1, gif, center, cover, no-repeat);
+      @include bg-image (auto, 0, /images/top/video_s1, gif, center, cover, no-repeat);
+    }
+    .__s2 {
+      @include bg-image (auto, 0, /images/top/video_s2, gif, center, cover, no-repeat);
+    }
+    .__s3 {
+      @include bg-image (auto, 0, /images/top/video_s3, gif, center, cover, no-repeat);
     }
   }
 }
