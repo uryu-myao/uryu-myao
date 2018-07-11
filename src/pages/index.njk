@@ -6,6 +6,7 @@
 
 {% block content %}
 
+
 <div id="top" data-page="top">
 
     {% include "_bg.njk" %}
@@ -51,14 +52,13 @@
         </section>
 
 
-
         <section class="grid__curI">
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
 
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
-                <div>
+                <div class="">
                     <h2 class="glitch__txt">
                     {{ desc1.name }}
                     </h2>
@@ -70,7 +70,7 @@
             </div>
             <div class="__curI-desc">
                 {% for desc2 in desc2 %}
-                <div>
+                <div class="">
                     <dl>
                         <dt>client</dt>
                         <dd>{{ desc2.client }}</dd>
@@ -113,7 +113,6 @@
         <section class="grid__prog">
             <div>
                 <ol>
-                    <li class="__prog-dots"></li>
                     <li class="__prog-dots __prog-active"></li>
                     <li class="__prog-dots"></li>
                     <li class="__prog-dots"></li>

@@ -224,7 +224,7 @@ div[data-page='about']
 
   & > div {
     @include center ( horizontal );
-    top: 45px;
+    top: 5.5vh;
     margin-left: -4px;
   }
 
@@ -249,6 +249,7 @@ div[data-page='about']
   position: relative;
   background: black;
   height: 70%;
+  padding: 3vh 10%;
 
   & > div {
       position: absolute;

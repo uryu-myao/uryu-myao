@@ -26,3 +26,4 @@ const mod = require('./mod/scrollProgress.js');
 const tilt = require('./mod/tilt.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
+const slider = require('./mod/slider.js');

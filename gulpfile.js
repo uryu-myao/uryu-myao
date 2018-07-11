@@ -80,11 +80,11 @@ gulp.task('sass', function() {
         // style：nested, compact, expanded, compressed
     }))
     .pipe(postcss([
-      autoprefixer({
-        grid: true,
-        browsers: ['last 2 versions'],
-        cascade: false
-      })
+        autoprefixer({
+            grid: true,
+            browsers: ['last 2 versions'],
+            cascade: false
+        })
     ]))
 
     .pipe(rename({ suffix: ".min" }))
