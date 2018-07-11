@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>{{ basic.sitename }} | {{ pagetitle }}</title>
-        <meta name="keywords" content="{{ keywords }}" />
-        <meta name="description" content="{{ description }}" />
+        <meta name="keywords" content="{{ kw }}" />
+        <meta name="description" content="{{ des }}" />
         <link rel="manifest" href="site.webmanifest" />
         <link rel="icon" type="image/png" href="images/_browser/favicon.png" />
         <!-- Apple Web App -->
@@ -16,11 +16,11 @@
         <!-- Windows -->
         <meta name="msapplication-config" content="browserconfig.xml">
         <!-- SNS -->
-        <meta property="og:url" content="http://www.uryu-myao.com/" />
+        <meta property="og:url" content="{{ basic.url }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="URYU MYAO" />
-        <meta property="og:description" content="Welcome to URYU MYAO 's playground. Don't we have fun together!" />
-        <meta property="og:image" content="http://www.uryu-myao.com/images/_sns/ogimg.jpg" />
+        <meta property="og:title" content="{{ basic.sitename }}" />
+        <meta property="og:description" content="Welcome to {{ basic.sitename }} 's playground. Don't we have fun together!" />
+        <meta property="og:image" content="{{ basic.url }}images/_sns/ogimg.jpg" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@Myao_YL" />
         <meta name="twitter:creator" content="@Myao_YL" />
@@ -36,16 +36,16 @@
         <![endif]-->
 
 
-      {% block content %}
-      {% endblock %}
+        {% block content %}
+        {% endblock %}
 
 
-      <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-98704909-1');
-      </script>
-      <script src="script/app.min.js"></script>
-  </body>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-98704909-1');
+        </script>
+        <script src="script/app.min.js"></script>
+    </body>
 </html>
