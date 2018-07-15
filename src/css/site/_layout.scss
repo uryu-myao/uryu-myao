@@ -1,6 +1,5 @@
 body {
   font-family: $safeType_en, $safeType_jp, $safeType_ch;
-  font-size: 1.6em;
   color: black;
 }
 // cursor: url('../images/cursor.gif'), url('../images/cursor.cur'), auto;
@@ -120,14 +119,31 @@ div[data-page='about']
 
 // botton
 //
-[role="button"] {
+button {
+  width: 100%;
   color: white;
-  text-decoration: uppercase;
+  background: #090b10;
+  height: 42px;
+  border-left: 2px solid $color-secondary;
+  border-right: 2px solid $color-secondary;
+  position: absolute;
+
+  a {
+    font-family: $txt_cond;
+    color: white;
+    text-decoration: uppercase;
+    letter-spacing: .2em;
+  }
 }
+
+
 
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+div[data-page='top'] {
+  overflow: hidden;
+}
 // aside
 //
 .grid__aside {
@@ -229,7 +245,8 @@ div[data-page='about']
   }
 
   h2 {
-    font-family: 'Fjalla One';
+    // font-family: $txt_en;
+    font-family: $txt_cond;
     font-size: 1.89rem;
     letter-spacing: .25em;
     line-height: normal;
@@ -239,6 +256,7 @@ div[data-page='about']
 
   p {
     font-size: .9rem;
+    font-weight: bold;
     letter-spacing: .3em;
     margin: 1.4em auto 0;
   }
@@ -249,23 +267,54 @@ div[data-page='about']
   position: relative;
   background: black;
   height: 70%;
-  padding: 3vh 10%;
+  padding: 55px 10% 3vh;
+  box-sizing: border-box;
 
   & > div {
-      position: absolute;
+    position: absolute;
+    width: calc( 100% - 20% );
+  }
+
+  dl {
+    width: 100%;
+    text-align: left;
+    @include flex( space-between, center);
+    margin-bottom: 10px;
+  }
+
+  dl > * {
+    white-space: normal;
+    font-size: 1rem;
+    font-family: $txt_cond;
+    letter-spacing: .18em;
+    line-height: 1;
   }
 
   dt {
+    width: 46%;
     color: #627e99;
-    font-size: 1em;
     font-weight: normal;
   }
 
   dd {
-    color: skyblue;
-    font-size: .9em;
-    font-weight: normal;
+    max-width: 200px;
+    width: 50%;
+    color: black;
+    font-weight: bold;
+    background: $color-secondary;
+    padding: 4px 12px 2px;
+    box-sizing: border-box;
+
+    a {
+      color: black;
+    }
   }
+
+  button {
+    width: calc( 100% - 20%);
+    bottom: 50px;
+  }
+
 }
 
 

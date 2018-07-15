@@ -59,7 +59,7 @@
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
                 <div class="">
-                    <h2 class="glitch__txt">
+                    <h2>
                     {{ desc1.name }}
                     </h2>
                     <p>
@@ -70,14 +70,20 @@
             </div>
             <div class="__curI-desc">
                 {% for desc2 in desc2 %}
-                <div class="">
+                <div>
                     <dl>
                         <dt>client</dt>
                         <dd>{{ desc2.client }}</dd>
+                    </dl>
+                    <dl>
                         <dt>{{ desc2.role1 }}</dt>
                         <dd>{{ desc2.item1 }}</dd>
+                    </dl>
+                    <dl>
                         <dt>{{ desc2.role2 }}</dt>
                         <dd>{{ desc2.item2 }}</dd>
+                    </dl>
+                    <dl>
                         <dt>employer</dt>
                         <dd>
                             <a href="https://www.econosys.jp/" target="_blank">
@@ -85,10 +91,10 @@
                             </a>
                         </dd>
                     </dl>
-                    <button type="button">
-                        <a href="{{ data.root }}work/" role="button">details</a>
-                    </button>
                 </div>
+                <button type="button" class="glitch__txt">
+                    <a href="{{ data.root }}work/" role="button">DETAILS</a>
+                </button>
                 {% endfor %}
             </div>
 

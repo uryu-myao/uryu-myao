@@ -24,18 +24,18 @@
   "desc1":[
       {
           "name": "yoshikawa",
-          "cat": "Web design"
+          "cat": "corporate site"
       }
   ],
 
   "desc2":[
       {
-          "client": "yoshikawa inc.",
+          "client": "yoshikawa",
           "role1": "ui / fe dev.",
           "item1": "myao",
           "role2": "direction",
           "item2": "watanabe",
-          "employer": "econosys design"
+          "employer": "econosys"
       }
   ],
 
