@@ -152,18 +152,43 @@ button {
   border-right: 2px solid $clr-secondary;
   position: absolute;
   padding-top: 2px;
+  box-sizing: border-box;
   cursor: pointer;
 
   a {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     font-family: $txt_cond;
     color: white;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 3.4;
     letter-spacing: .25em;
-    margin-top: 2px;
+
+    &:hover {
+      animation: button_hover .25s 0s linear infinite;
+    }
+
+    @keyframes button_hover {
+      0% {
+        background: #202739;
+        margin: -1px -2px 0 0;
+      }
+      50% {
+        margin: 2px 2px 0 0;
+      }
+      60% {
+        margin-top: 0;
+      }
+      80% {
+        background: #202739;;
+        margin-top: -1px;
+      }
+      100% {
+        background: transparent;
+        margin-top: 1px;
+      }
+    }
   }
 }
 
