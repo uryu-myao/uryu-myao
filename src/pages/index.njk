@@ -7,9 +7,13 @@
 {% block content %}
 
 
+{% include "_preload.njk" %}
+
+
 <div id="top" data-page="top">
 
     {% include "_bg.njk" %}
+
 
     <main class="grid__layout" role="main">
         <div class="horizon horizon__top"><div></div></div>
@@ -25,7 +29,7 @@
 
                 </nav>
                 <picture class="moon">
-                    <img src="{{ data.root }}images/top/moon.png" alt="moon" />
+                    <img src="{{ basic.root }}images/top/moon.png" alt="moon" />
                 </picture>
                 <p class="cr">© {{ basic.sitename }} 2018</p>
             </div>
@@ -37,7 +41,7 @@
             <div class="horizon horizon__bottom"><div></div></div>
 
             {% for current in current %}
-            <a href="/works/{{ current.link }}.html">
+            <a href="{{ basic.root }}works/{{ current.link }}.html">
                 <figure class="__cur-show">
                     <picture class="__{{ current.class }}"></picture>
                 </figure>
@@ -81,7 +85,7 @@
                     </dl>
                 </div>
                 <button type="button" class="glitch__txt">
-                    <a href="/works/{{ desc2.link }}.html" role="button">details</a>
+                    <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">details</a>
                 </button>
                 {% endfor %}
             </div>
@@ -91,7 +95,7 @@
         <section class="grid__prev">
             {% for prev in prev %}
             <div class="__midbar">
-                <a href="/works/{{ prev.link }}.html">
+                <a href="{{ basic.root }}works/{{ prev.link }}.html">
                     <figure>
                         <picture class="__{{ prev.class }}"></picture>
                     </figure>
@@ -114,7 +118,7 @@
                 </div>
             </div>
             <div class="__midbar">
-                <a href="/works/{{ next.link }}.html">
+                <a href="{{ basic.root }}works/{{ next.link }}.html">
                     <figure>
                         <picture class="__{{ next.class }}"></picture>
                     </figure>
@@ -122,6 +126,7 @@
             </div>
             {% endfor %}
         </section>
+
 
         <section class="grid__prog">
             <div>

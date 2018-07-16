@@ -27,3 +27,4 @@ const tilt = require('./mod/tilt.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
 const slider = require('./mod/slider.js');
+const preload = require('./mod/preload.js');

@@ -106,14 +106,15 @@ gulp.task('js', function() {
     })
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('dist/script'));
+    .pipe(rename({ suffix: ".bundle" }))
+    .pipe(gulp.dest('src/script'));
 });
 
 
 // Minify JS
 
 gulp.task('minjs', ['js'], function() {
-    gulp.src(['dist/script/app.js'])
+    gulp.src(['src/script/app.bundle.js'])
         .pipe(minify({
             ext: { min:'.min.js'}
         }))
@@ -180,7 +181,7 @@ gulp.task('watch', ['sync'], function()
     gulp.watch(paths.srcDATA,  ['njk']);
     gulp.watch(paths.srcSASS,  ['sass']);
     gulp.watch(paths.srcJS,    ['js']).on('change', bs.reload);
-    gulp.watch(paths.distJS,   ['minjs']).on('change', bs.reload);
+    // gulp.watch(paths.distJS,   ['minjs']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['img']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['font']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['del']).on('change', bs.reload);
