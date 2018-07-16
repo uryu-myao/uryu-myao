@@ -9,13 +9,4 @@
 //   url('./_font/FjallaOne-Regular.ttf') format('svg');
 // }
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
-
-@font-face {
-  font-family: 'opens';
-  src: url('./_font/OpenSansCondensed-Light.ttf') format('ttf');
-  src: url('./_font/OpenSansCondensed-Light.ttf'); /* IE9 Compat Modes */
-  src: url('./_font/OpenSansCondensed-Light.ttf') format('ttf'), /* IE6-IE8 */
-  url('./_font/OpenSansCondensed-Light.ttf') format('woff'), /* Modern Browsers */
-  url('./_font/OpenSansCondensed-Light.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('./_font/OpenSansCondensed-Light.ttf') format('svg'); /* Legacy iOS */
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');

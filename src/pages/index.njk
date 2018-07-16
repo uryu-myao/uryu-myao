@@ -15,6 +15,7 @@
         <div class="horizon horizon__top"><div></div></div>
         <div class="horizon horizon__bottom"><div></div></div>
 
+
         <aside class="grid__aside">
             <div>
                 <div class="logo">
@@ -30,25 +31,18 @@
             </div>
         </aside>
 
-        <section class="grid__prev">
-            <div>
-
-            </div>
-        </section>
-
 
         <section class="grid__curS">
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
 
             {% for current in current %}
-            <a href="/work/{{ current.link }}.html">
+            <a href="/works/{{ current.link }}.html">
                 <figure class="__cur-show">
                     <picture class="__{{ current.class }}"></picture>
                 </figure>
             </a>
             {% endfor %}
-
         </section>
 
 
@@ -58,7 +52,7 @@
 
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
-                <div class="">
+                <div>
                     <h2>
                     {{ desc1.name }}
                     </h2>
@@ -74,16 +68,10 @@
                     <dl>
                         <dt>client</dt>
                         <dd>{{ desc2.client }}</dd>
-                    </dl>
-                    <dl>
                         <dt>{{ desc2.role1 }}</dt>
                         <dd>{{ desc2.item1 }}</dd>
-                    </dl>
-                    <dl>
                         <dt>{{ desc2.role2 }}</dt>
                         <dd>{{ desc2.item2 }}</dd>
-                    </dl>
-                    <dl>
                         <dt>employer</dt>
                         <dd>
                             <a href="https://www.econosys.jp/" target="_blank">
@@ -93,27 +81,46 @@
                     </dl>
                 </div>
                 <button type="button" class="glitch__txt">
-                    <a href="{{ data.root }}work/" role="button">DETAILS</a>
+                    <a href="/works/{{ desc2.link }}.html" role="button">details</a>
                 </button>
                 {% endfor %}
             </div>
+        </section>
 
+
+        <section class="grid__prev">
+            {% for prev in prev %}
+            <div class="__midbar">
+                <a href="/works/{{ prev.link }}.html">
+                    <figure>
+                        <picture class="__{{ prev.class }}"></picture>
+                    </figure>
+                </a>
+            </div>
+            <div class="__bar">
+                <div>
+                    <p>{{ prev.title }}</p>
+                </div>
+            </div>
+            {% endfor %}
         </section>
 
 
         <section class="grid__next">
+            {% for next in next %}
             <div class="__bar">
                 <div>
-                    <p>next</p>
+                    <p>{{ next.title }}</p>
                 </div>
             </div>
-            <div class="">
-                <a href="#">
+            <div class="__midbar">
+                <a href="/works/{{ next.link }}.html">
                     <figure>
-                        <picture class=""></picture>
+                        <picture class="__{{ next.class }}"></picture>
                     </figure>
                 </a>
             </div>
+            {% endfor %}
         </section>
 
         <section class="grid__prog">
