@@ -17,10 +17,15 @@ p, dt, dd, li, a {
   height: 100%;
   height: 100vh;
   background: black;
-  position: relative;
+  position: fixed;
 
   & > div {
-    @include center (both);
+    width: 100%;
+    height: 100%;
+
+    div {
+      @include center (both);
+    }
   }
 
   p {
@@ -54,7 +59,7 @@ p, dt, dd, li, a {
   z-index: 2;
   background:
   {
-    image: url(../images/common/noise.gif);
+    image: url(/images/common/noise.gif);
     repeat: repeat;
   }
 }
@@ -166,7 +171,7 @@ button {
     letter-spacing: .25em;
 
     &:hover {
-      animation: button_hover .25s 0s linear infinite;
+      animation: button_hover .25s 0s linear forwards;
     }
 
     @keyframes button_hover {
@@ -177,11 +182,14 @@ button {
       50% {
         margin: 2px 2px 0 0;
       }
+      59% {
+        background: transparent;
+      }
       60% {
+        background: #202739;
         margin-top: 0;
       }
-      80% {
-        background: #202739;;
+      90% {
         margin-top: -1px;
       }
       100% {
@@ -191,6 +199,7 @@ button {
     }
   }
 }
+
 
 
 // Top
@@ -204,6 +213,28 @@ div[data-page='top'] {
   height: 100%;
   background: $clr-dark-trans;
   grid-area: aside;
+  animation: noise .2s 2s linear infinite;
+
+  @keyframes noise {
+    0% {
+      background-image: {
+        image: url(/images/common/noise.gif);
+        repeat: repeat;
+      }
+    }
+    50% {
+      background: transparent;
+    }
+    99% {
+      background-image: {
+        image: url(/images/common/noise.gif);
+        repeat: repeat;
+      }
+    }
+    100% {
+      background: transparent;
+    }
+  }
 
   & > div {
     position: relative;
