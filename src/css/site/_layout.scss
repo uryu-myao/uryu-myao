@@ -18,19 +18,21 @@ p, dt, dd, li, a {
   height: 100vh;
   background: black;
   position: fixed;
+  z-index: 999;
 
-  & > div {
+  .shield {
     width: 100%;
-    height: 100%;
-
-    div {
-      @include center (both);
-    }
+    height: 50vh;
+    position: absolute;
+    background: $clr-dark;
   }
 
-  p {
-    color: white;
-    margin: 0;
+  .shield__up {
+    top: 0;
+  }
+
+  .shield__down {
+    bottom: 0;
   }
 }
 
@@ -441,8 +443,10 @@ div[data-page='top'] {
   padding: 10px 0;
   box-sizing: border-box;
   margin-bottom: 10px;
-  background-image: url(/images/common/pttn.png);
-  background-repeat: repeat;
+  background: {
+    image: url(/images/common/pttn.png);
+    repeat: repeat;
+  }
   animation: stripe .5s 0s linear infinite;
 
   & > div {
