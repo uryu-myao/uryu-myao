@@ -4,7 +4,8 @@
 //   @include center(both);
 // }
 
-@mixin center ($position) {
+@mixin center ($position)
+{
   position: absolute;
 
   @if $position == 'vertical' {
@@ -25,8 +26,7 @@
 
 // F O N T  B A S I C
 
-@mixin font (
-$size, $lh, $ltsp, $weight: normal)
+@mixin font ($size, $lh, $ltsp, $weight: normal)
 {
   font-size: $size;
   line-height: $lh;
@@ -35,11 +35,27 @@ $size, $lh, $ltsp, $weight: normal)
 }
 
 
-// M E D I A  R E S P
+// M Q
+//
+// -=-=- usage -=-=-
+//
+// .elements {
+//   @include mq (large) {
+//     ...
+//     @include mq (xlarge, max, true ) {
+//       ...
+//     }
+//   }
+// }
 
-@mixin mq ($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)}
-  {
+@mixin mq ($breakpoint: medium, $rule: min, $subtraction: false)
+{
+  $breakpoint: map_get($mq-breakpoints, $breakpoint);
+
+  @if $rule == max and $subtraction {
+    $breakpoint: $breakpoint - 1;
+  }
+  @media screen and (#{$rule}-width: $breakpoint) {
     @content;
   }
 }
@@ -98,7 +114,8 @@ $justify: space-between, $align: center)
 
 // L I N K
 
-@mixin linx ($link, $visit, $hover, $active) {
+@mixin linx ($link, $visit, $hover, $active)
+{
   a {
     color: $link;
     &:visited {

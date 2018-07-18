@@ -377,6 +377,14 @@ div[data-page='top'] {
     grid-template-columns: auto 1fr;
     max-width: 300px;
     text-align: left;
+    margin: 0;
+
+    @include mq (large) {
+      @include mq (xlarge, max, true ) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
   }
 
   dl > * {
@@ -386,7 +394,6 @@ div[data-page='top'] {
     font-family: $txt_cond;
     letter-spacing: .18em;
     line-height: 1;
-
   }
 
   dt {
@@ -400,9 +407,13 @@ div[data-page='top'] {
     color: black;
     font-weight: bold;
     background: $clr-secondary;
+    width: calc( 100% - 10% );
+    margin: 5px 0 5px 10%;
     padding: 4px 12px 2px;
     box-sizing: border-box;
-    margin: 5px 0 5px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     a {
       font-family: inherit;
@@ -514,7 +525,7 @@ div[data-page='top'] {
   }
 
   & ol {
-    width: 40%;
+    width: 30%;
   }
 }
 

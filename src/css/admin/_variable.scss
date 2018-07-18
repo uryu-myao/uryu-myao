@@ -24,13 +24,15 @@ $blue: #3116f8;
 // $blue: rgba(23, 111, 246, 1);
 
 
-// M E D i A
+// M Q 
 
-$breakpoints: (
+$mq-breakpoints: (
 
-    sm:  screen and (max-width: 400px),
-    md:  screen and (max-width: 768px),
-    lg:  screen and (max-width: 1000px),
-    xl:  screen and (max-width: 1200px),
+    'xsmall'  : 320px,
+    'small'   : 600px,
+    'medium'  : 768px,
+    'large'   : 1024px,
+    'xlarge'  : 1280px,
+    'xxlarge' : 1440px,
 
-) !default;
+);
