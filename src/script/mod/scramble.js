@@ -64,7 +64,7 @@
             return this.chars[Math.floor(Math.random() * this.chars.length)]
         }, t
     }(),
-    elements = document.getElementsByClassName("scbtxt"), i = 0, length = elements.length; i < length; i++)
+    elements = document.getElementsByClassName("scramble__txt"), i = 0, length = elements.length; i < length; i++)
 
     ScrambleText(elements[i]);
 
