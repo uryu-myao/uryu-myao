@@ -1,16 +1,14 @@
 (function(){
 
-    'use strict';
-
-    const scrollProgress = document.querySelector( '.scrollProgress' )
+    let scrollProgress = document.querySelector( '.scrollProgress' )
 
     window.addEventListener ( 'scroll', function ()
     {
         if ( scrollProgress )
         {
-            let docH = $(".child").height(),
-                winH = $(window).height(),
-                winT = $(window).scrollTop(),
+            let docH = el.getAttribute('page').style.height,
+                winH = window.style.height,
+                winT = document.body.scrollTop,
                 totalScroll = winT / ( docH - winH ) * 100
 
             document.querySelector( '.scrollProgress div' ).style.width = totalScroll + '%'

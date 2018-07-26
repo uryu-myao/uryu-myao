@@ -1,8 +1,11 @@
 (function() {
 
-  window.onload = function() {
-      let el = document.getElementById('preload');
-      el.style.display = 'none';
-  };
+  let preload = document.querySelector('#preload')
+
+  if (preload) {
+      window.onload = function() {
+          preload.style.display = 'none';
+      }
+  }
 
 }());

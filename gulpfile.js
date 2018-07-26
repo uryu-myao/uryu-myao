@@ -180,7 +180,7 @@ gulp.task('watch', ['sync'], function()
     gulp.watch(paths.srcHTML,  ['njk']);
     gulp.watch(paths.srcDATA,  ['njk']);
     gulp.watch(paths.srcSASS,  ['sass']);
-    gulp.watch(paths.srcJS,    ['js']).on('change', bs.reload);
+    // gulp.watch(paths.srcJS,    ['js']).on('change', bs.reload);
     // gulp.watch(paths.distJS,   ['minjs']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['img']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['font']).on('change', bs.reload);
