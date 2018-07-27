@@ -437,6 +437,8 @@ template {
 }
 
 
+
+
 /*  =============================================
 ****               URYU EDITED               ****
 ================================================= */
@@ -445,14 +447,10 @@ template {
 /* img alt alert
    ========================================================================== */
 
-/**
- * notice lost alt.
- */
-
-/* img[alt=""],
+img[alt=""],
 img:not([alt]) {
   border: 1px dashed #c00;
-} */
+}
 
 
 /* Reset for font-size: 62.5%
@@ -473,7 +471,6 @@ h1, h2, h3, h4, h5, h6 { font-size: 62.5%;}
 figure, dl { margin: 0;}
 
 
-
 /* Remove selector margin
    ========================================================================== */
 
@@ -485,12 +482,10 @@ ul, ol {
 li { list-style: none;}
 
 
-
 /* No underbar in a tag
    ========================================================================== */
 
 a { text-decoration: none;}
-
 
 
 /* h1~6 dd dt li
@@ -552,21 +547,14 @@ textarea {
 }
 
 
-/* Webkit font smoothing
+/* font optimization
    ========================================================================== */
 
-p {
+body {
   -webkit-font-smoothing: antialiased;
-}
-
-
-/* タイトル オブティカル
-   ========================================================================== */
-
-h1, h2, h3, h4, h5, h6, p, li {
+  -moz-osx-font-smoothing: grayscale;
   font-feature-settings : "palt" 1;
 }
-
 
 
 /* Remove iframe border
