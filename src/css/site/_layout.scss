@@ -25,16 +25,34 @@ p, dt, dd, li, a {
     height: 50vh;
     position: absolute;
     background: $clr-dark;
-  }
-
-  .shield__up {
-    top: 0;
-  }
-
-  .shield__down {
-    bottom: 0;
+    transition: all .15s ease-out;
   }
 }
+
+.shield__up {
+  top: 0;
+}
+
+.shield__down {
+  bottom: 0;
+}
+
+.line__close {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 1px;
+  background: white;
+}
+
+.hide .shield__up {
+  top: -100%;
+}
+.hide .shield__down {
+  bottom: -100%;
+}
+
 
 // Background
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

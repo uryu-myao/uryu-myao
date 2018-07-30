@@ -4,6 +4,7 @@
 
   if (preload) {
       window.onload = function() {
+          // preload.classList.add('hide');
           preload.style.display = 'none';
       }
   }
