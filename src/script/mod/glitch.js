@@ -1,3 +1,11 @@
+/*
+    *** glitch ***
+
+    - video and picture glitch effect
+    - top.html
+
+*/
+
 (function(){
 
     $(function(){

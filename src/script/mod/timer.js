@@ -1,4 +1,12 @@
-(function (obj2) {
+/*
+    *** timer ***
+
+    - count down timer
+    - about.html
+
+*/
+
+(function () {
 
     const countup = document.querySelector('.countup')
 
@@ -35,6 +43,6 @@
                 upTime ( countTo )
             }, 1000 )
         }
-    } 
+    }
 
 })(window);

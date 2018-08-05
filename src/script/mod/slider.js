@@ -1,3 +1,12 @@
+/*
+    *** slider ***
+
+    - top page main slider
+    - top.html
+
+*/
+
+
 class slider {
 
     constructor(options) {
@@ -6,5 +15,5 @@ class slider {
         }
         this.options = Object.assign({}, defaultOptions, options)
     }
-    
+
 }
