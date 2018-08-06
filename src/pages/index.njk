@@ -6,19 +6,20 @@
 
 {% block content %}
 
-
+<!-- ** Preload Page ** -->
 {% include "_preload.njk" %}
-
+<!-- * end * -->
 
 <div id="top" data-page="top">
 
     {% include "_bg.njk" %}
 
-
     <main class="grid__layout" role="main">
+
+        <!-- ** Modulized Cyber-line (absolute) ** -->
         <div class="horizon horizon__top"><div></div></div>
         <div class="horizon horizon__bottom"><div></div></div>
-
+        <!-- * end * -->
 
         <aside class="grid__aside">
             <div>
@@ -37,8 +38,11 @@
 
 
         <section class="grid__curS">
+
+            <!-- ** Modulized Cyber-line (absolute) ** -->
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
+            <!-- * end * -->
 
             {% for current in current %}
             <a href="{{ basic.root }}works/{{ current.link }}.html">
@@ -51,8 +55,11 @@
 
 
         <section class="grid__curI">
+
+            <!-- ** Modulized Cyber-line (absolute) ** -->
             <div class="horizon horizon__top"><div></div></div>
             <div class="horizon horizon__bottom"><div></div></div>
+            <!-- * end * -->
 
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
@@ -142,7 +149,7 @@
 
     </main>
 </div>
-<!--  contents end  -->
+<!--  * CONTENTS end * -->
 
 
 {% endblock %}
