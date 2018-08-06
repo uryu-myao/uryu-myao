@@ -1,3 +1,11 @@
+/*
+    *** scramble ***
+
+    - text scrambling effect 
+    - top.html
+
+*/
+
 (function(){
 
     'use strict';

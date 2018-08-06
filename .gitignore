@@ -16,6 +16,7 @@ npm-debug.log
 *.css.map
 build/
 dist/
+*.bundle.js
 
 
 # Logs and database #

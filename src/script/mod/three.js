@@ -5,7 +5,6 @@
     // import library
     const THREE = require('three');
 
-
     // resposive
     window.addEventListener( 'resize', function ()
     {
@@ -16,20 +15,16 @@
         camera.updateProjectionMatrix();
     });
 
-
     // render
     const renderer = new THREE.WebGLRenderer();
-
 
     // bg color
     renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.setPixelRatio( window.devicePixelRatio );
     document.querySelector('.bg__canvas').appendChild( renderer.domElement );
 
-
     // scene
     const scene  = new THREE.Scene();
-
 
     // camera
     const camera = new THREE.PerspectiveCamera
@@ -37,7 +32,6 @@
         50, window.innerWidth / window.innerHeight, 1, 10000
     );
     camera.position.z = 600;
-
 
     // create the shapes
     const geometry = new THREE.Geometry();
@@ -50,7 +44,6 @@
         geometry.vertices.push( vertex );
     }
 
-
     // create materials
     const material = new THREE.PointsMaterial(
     {
@@ -61,31 +54,30 @@
     });
     material.color.setHex( 0x1e3b86 );
 
-
     const particles = new THREE.Points( geometry, material );
     particles.sortParticles = true;
 
-
     scene.add( particles );
-
 
     // draw materials
     let draw = function ()
     {
         requestAnimationFrame( draw );
 
-        // let s = Math.sin( Date.now() * 0.0002 );
-				particles.material.color.setHSL(1.5, 1, 0.5 );
-				particles.rotation.y = Date.now() * 0.0002;
-    }
+        let is_update = true;
+        if (is_update) {
+            // let s = Math.sin( Date.now() * 0.0002 );
+            particles.material.color.setHSL(1.5, 1, 0.5 );
+            particles.rotation.y = Date.now() * 0.0002;
+        }
 
+    }
 
     // draw Scene
     let render = function()
     {
         renderer.render( scene, camera );
     };
-
 
     // run game loop
     let gameLoop = function()
@@ -94,13 +86,12 @@
         draw();
         render();
 
-        if (!(document.getElementById('top'))) {
-
+        if (!(document.getElementById('top')))
+        {
             scene.remove( geometry );
-
         }
     };
 
     gameLoop();
 
-})(window);
+})();
