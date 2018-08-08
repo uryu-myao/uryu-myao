@@ -444,34 +444,14 @@ template {
 ================================================= */
 
 
-/* img alt alert
-   ========================================================================== */
 
-img[alt=""],
-img:not([alt]) {
-  border: 1px dashed #c00;
-}
-
-
-/* Reset for font-size: 62.5%
-   ========================================================================== */
-
-/**
- * make 1em = 10px
- */
-
-html,
-body,
-h1, h2, h3, h4, h5, h6 { font-size: 62.5%;}
-
-
-/* Fix figure dl
+/* Fix <figure> and <dl> margin
    ========================================================================== */
 
 figure, dl { margin: 0;}
 
 
-/* Remove selector margin
+/* Reset list tag style
    ========================================================================== */
 
 ul, ol {
@@ -482,13 +462,13 @@ ul, ol {
 li { list-style: none;}
 
 
-/* No underbar in a tag
+/* Remove underbar in <a> tag
    ========================================================================== */
 
 a { text-decoration: none;}
 
 
-/* h1~6 dd dt li
+/* Reset <h1~6> <dd> <dt> <li> styles
    ========================================================================== */
 
 h1, h2, h3, h4, h5, h6, dd, dt, li {
@@ -497,7 +477,7 @@ h1, h2, h3, h4, h5, h6, dd, dt, li {
 }
 
 
-/* Remove input & textarea & select
+/* Reset <input> & <textarea> & <select> styles
    ========================================================================== */
 
 label, input, textarea {
@@ -509,45 +489,7 @@ label, input, textarea {
 input:focus, textarea:focus ,select:focus { outline: none;}
 
 
-/* Chrome:オートコンプリート使用後の背景色を変更する
-   ========================================================================== */
-
-input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px skyblue inset;
-}
-
-
-/* Placeholder Style
-   ========================================================================== */
-
-input::placeholder               { color: var(--phGrey); transition: all .1s ease-in-out;}
-input::-webkit-input-placeholder { color: var(--phGrey); transition: all .1s ease-in-out;}
-input::-moz-placeholder          { color: var(--phGrey); transition: all .1s ease-in-out;}
-input::-ms-placeholder           { color: var(--phGrey); transition: all .1s ease-in-out;}
-
-textarea::placeholder               { color: var(--phGrey); transition: all .1s ease-in-out;}
-textarea::-webkit-input-placeholder { color: var(--phGrey); transition: all .1s ease-in-out;}
-textarea::-moz-placeholder          { color: var(--phGrey); transition: all .1s ease-in-out;}
-textarea::-ms-placeholder           { color: var(--phGrey); transition: all .1s ease-in-out;}
-
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus::-ms-placeholder           { color:transparent; }
-input:focus::-moz-placeholder          { color:transparent; }
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus::-ms-placeholder           { color:transparent; }
-textarea:focus::-moz-placeholder          { color:transparent; }
-
-
-/* No draging in Textarea
-   ========================================================================== */
-
-textarea {
-  resize: none;
-}
-
-
-/* font optimization
+/* Add font optimization
    ========================================================================== */
 
 body {
@@ -565,7 +507,7 @@ iframe {
 }
 
 
-/* Remove botton border
+/* Remove botton border style
    ========================================================================== */
 
 input[type="button" i],
