@@ -63,13 +63,13 @@ textarea::-webkit-input-placeholder { color: skyblue; transition: all .1s ease-i
 textarea::-moz-placeholder          { color: skyblue; transition: all .1s ease-in-out;}
 textarea::-ms-placeholder           { color: skyblue; transition: all .1s ease-in-out;}
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus::-ms-placeholder           { color:transparent; }
-input:focus::-moz-placeholder          { color:transparent; }
+input:focus::-webkit-input-placeholder { color:transparent;}
+input:focus::-ms-placeholder           { color:transparent;}
+input:focus::-moz-placeholder          { color:transparent;}
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus::-ms-placeholder           { color:transparent; }
-textarea:focus::-moz-placeholder          { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color:transparent;}
+textarea:focus::-ms-placeholder           { color:transparent;}
+textarea:focus::-moz-placeholder          { color:transparent;}
 
 
 
@@ -77,3 +77,16 @@ textarea:focus::-moz-placeholder          { color:transparent; }
 // ==========================================================================
 
 textarea { resize: none;}
+
+
+
+//  Better looking hr
+// ==========================================================================
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
