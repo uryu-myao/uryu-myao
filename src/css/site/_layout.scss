@@ -13,6 +13,7 @@ p, dt, dd, li, a {
 
 // Preload
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 #preload {
   width: 100%;
   height: 100%;
@@ -58,6 +59,7 @@ p, dt, dd, li, a {
 
 // Background
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 #bg {
   position: fixed;
   width: 100%;
@@ -111,14 +113,17 @@ p, dt, dd, li, a {
 
 // Grid Admin
 //
-.grid__layout {
+
+.grid__rule {
   width: 100%;
-  height: calc( 100% - 40px );
-  height: calc( 100vh - 40px );
   display: grid;
   grid-template-columns: 4.9fr 10.8333fr 3.7667fr 1fr;
-  grid-template-rows: 12.7vh 6vh 1fr 6vh 12.7vh;
   grid-gap: 10px 10px;
+}
+.__gTop {
+  height: calc( 100% - 40px );
+  height: calc( 100vh - 40px );
+  grid-template-rows: 12.7vh 6vh 1fr 6vh 12.7vh;
   grid-template-areas:
     'aside prev prev prog'
     'aside prev prev prog'
@@ -129,6 +134,7 @@ p, dt, dd, li, a {
 
 // Common styles
 //
+
 div[data-page='top'],
 div[data-page='about']
 {
@@ -156,7 +162,7 @@ div[data-page='about']
       position: absolute;
       width: 5px;
       height: 5px;
-      background: $clr-light;
+      background: $activeBlue;
       top: -2px;
     }
     &:before { left: -2px;}
@@ -169,13 +175,14 @@ div[data-page='about']
 
 // botton
 //
+
 button {
   width: 100%;
   color: white;
   background: $clr-dark;
   height: 42px;
-  border-left: 2px solid $clr-secondary;
-  border-right: 2px solid $clr-secondary;
+  border-left: 2px solid $activeBlue;
+  border-right: 2px solid $activeBlue;
   position: absolute;
   padding-top: 2px;
   box-sizing: border-box;
@@ -241,15 +248,17 @@ button {
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 div[data-page='top'] {
   overflow: hidden;
 }
+
 // aside
 //
+
 .grid__aside {
   height: 100%;
   background: $clr-dark-trans;
-  grid-area: aside;
   animation: noise .2s 2s linear infinite;
 
   @keyframes noise {
@@ -298,6 +307,9 @@ div[data-page='top'] {
     margin: 0 0 20px 0;
   }
 }
+.__asideTop {
+  grid-area: aside;
+}
 
 .moon {
   position: absolute;
@@ -320,6 +332,7 @@ div[data-page='top'] {
 
 // Current show
 //
+
 .grid__curS {
   grid-area: curS;
   width: 100%;
@@ -377,7 +390,6 @@ div[data-page='top'] {
   }
 
   h2 {
-    // font-family: $txt_en;
     font-family: $txt_cond;
     font-size: 1.89rem;
     letter-spacing: .25em;
@@ -441,7 +453,7 @@ div[data-page='top'] {
     grid-column: 2;
     color: black;
     font-weight: bold;
-    background: $clr-secondary;
+    background: $mainBlue;
     width: calc( 100% - 10% );
     margin: 5px 0 5px 10%;
     padding: 4px 12px 2px;
@@ -547,6 +559,7 @@ div[data-page='top'] {
 
 // Progress
 //
+
 .grid__prog {
   height: 100%;
   background: $clr-dark-trans;
@@ -580,3 +593,230 @@ div[data-page='top'] {
 
 // About
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+div[data-page='about'] {
+  h1 {
+    color: $mainBlue;
+    font-family: courier;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+  }
+  .ttl {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.__asideAbout {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.grid__contentsAbout {
+  grid-column-start: 2;
+  grid-column-end: 5;
+
+  article {
+    position: relative;
+    padding-left: 35px;
+  }
+}
+
+.me {
+  padding-top: 60px;
+
+  .svg__me {
+    margin: 0 0 90px 70px;
+  }
+}
+
+.resume {
+  padding-top: 35px;
+
+  .svg__resume {
+    margin: 0 0 90px 70px;
+  }
+}
+
+.svg__clr { fill: $mainBlue;}
+
+.svg__me { width: 220px; height: 72.7px;}
+.svg__resume { width: 130.6px; height: 72.4px;}
+.svg__contact { width: 133.5px; height: 72.4px;}
+
+.introduce {
+  position: relative;
+  z-index: 10;
+}
+
+.txt__en {
+  font-size: 3.85rem;
+  line-height: 1.45;
+  letter-spacing: .03em;
+  color: white;
+  z-index: 10;
+}
+
+.txt__ch {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: .16em;
+  color: #9aade9;
+  margin: 40px 0 23px 35%;
+  z-index: 10;
+}
+
+.countup {
+  width: 630px;
+  bottom: 305px;
+  left: -295px;
+  position: absolute;
+  transform: rotate(-90deg);
+  z-index: 2;
+
+  &:after {
+    content: 'BE BORN';
+    position: absolute;
+    transform: rotate(90deg);
+    top: 36px;
+    left: -52px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0c1946;
+    letter-spacing: .25em;
+  }
+
+  p {
+    height: 75px;
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    font-size: 8rem;
+    line-height: 1;
+    letter-spacing: .01em;
+    margin: 0;
+    color: black;
+  }
+
+  span {
+    color: black;
+    font-size: 8rem;
+    margin: 0 8px;
+  }
+}
+
+.sns {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 125px;
+  right: 20%;
+  z-index: 10;
+
+  li {
+    margin: 0 18px;
+    cursor: pointer;
+  }
+
+  li:first-child { margin-left: 0;}
+  li:last-child { margin-right: 0;}
+
+  i { cursor: pointer;}
+
+  .svg__clr-sns { fill: #568fff;}
+}
+
+.brush {
+  position: relative;
+
+  &:after {
+    content: url(/images/about/brush.png);
+    position: absolute;
+    top: -4px;
+    left: -18px;
+  }
+}
+
+.paper {
+  width: 65%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  picture {
+    display: inline-block;
+    position: relative;
+    height: 835px;
+    @include bg-image (auto, 0, /images/about/paper, png, center, cover, no-repeat);
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: calc( 100% - 5vw );
+      height: 718px;
+      background: rgba( 0,0,0,.35 );
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+
+.resume {
+  background: #172126;
+  padding-bottom: 140px;
+  z-index: 1;
+
+  h1 {
+    span {
+      font-family: $txt_cond;
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: white;
+      letter-spacing: .2em;
+      margin-left: 15px;
+    }
+  }
+}
+
+.history {
+  background: #1b262d;
+  margin: 72px 5vw 0 0;
+  box-sizing: border-box;
+
+  & > div {
+    display: flex;
+    padding: 60px 76px;
+  }
+
+  h2 {
+    font-family: $txt_cond;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: .25rem;
+    margin-bottom: 26px;
+  }
+
+  .tag {
+    font-family: $txt_cond;
+    font-weight: bold;
+    color: white;
+    background: $activeBlue;
+    padding: 6px 12px 5px;
+    display: inline;
+  }
+}
+
+
+
+.contact {
+  margin-top: 110px;
+
+  h1 {
+    margin-bottom: 60px;
+  }
+}

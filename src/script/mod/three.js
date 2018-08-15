@@ -35,7 +35,7 @@
 
     // create the shapes
     const geometry = new THREE.Geometry();
-    for ( let i = 0; i < 150; i ++ )
+    for ( let i = 0; i < 100; i ++ )
     {
         let vertex = new THREE.Vector3();
         vertex.x = 1000 * Math.random() - 500;

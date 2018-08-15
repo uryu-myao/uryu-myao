@@ -1,12 +1,17 @@
-//
-// @font-face {
-//   font-family: 'fjalla';
-//   src: url('./_font/FjallaOne-Regular.ttf') format('ttf');
-//   src: url('./_font/FjallaOne-Regular.ttf');
-//   src: url('./_font/FjallaOne-Regular.ttf') format('ttf'),
-//   url('./_font/FjallaOne-Regular.ttf') format('woff'),
-//   url('./_font/FjallaOne-Regular.ttf') format('truetype'),
-//   url('./_font/FjallaOne-Regular.ttf') format('svg');
-// }
+@font-face {
+  font-family: courier;
+  src: url('./_font/CourierNew-Bold.ttf') format('ttf');
+  src: url('./_font/CourierNew-Bold.ttf');
+  src: url('./_font/CourierNew-Bold.ttf') format('ttf'),
+  url('./_font/CourierNew-Bold.ttf') format('woff'),
+  url('./_font/CourierNew-Bold.ttf') format('truetype'),
+  url('./_font/CourierNew-Bold.ttf') format('svg');
+}
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+
+.courier {
+  font-family: courier;
+}
