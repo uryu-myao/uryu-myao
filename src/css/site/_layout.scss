@@ -116,13 +116,13 @@ p, dt, dd, li, a {
 
 .grid__rule {
   width: 100%;
+  height: calc( 100% - 40px );
+  height: calc( 100vh - 40px );
   display: grid;
   grid-template-columns: 4.9fr 10.8333fr 3.7667fr 1fr;
   grid-gap: 10px 10px;
 }
 .__gTop {
-  height: calc( 100% - 40px );
-  height: calc( 100vh - 40px );
   grid-template-rows: 12.7vh 6vh 1fr 6vh 12.7vh;
   grid-template-areas:
     'aside prev prev prog'
@@ -147,10 +147,10 @@ div[data-page='about']
 }
 
 .horizon {
-  width: 100%;
+  width: calc( 100% - 40px );
   height: 1px;
   background: #323d4f;
-  position: absolute;
+  position: fixed;
   z-index: 20;
 
   div {
@@ -170,8 +170,8 @@ div[data-page='about']
   }
 }
 
-.horizon__top { top: 0;}
-.horizon__bottom { bottom: 0;}
+.horizon__top { top: 20px;}
+.horizon__bottom { bottom: 20px;}
 
 
 // botton
@@ -283,6 +283,16 @@ div[data-page='top'] {
     }
   }
 
+  .cr {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: $txt_norm;
+    letter-spacing: .15em;
+    color: #343434;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+
   & > div {
     position: relative;
     overflow: hidden;
@@ -291,6 +301,10 @@ div[data-page='top'] {
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+.__asideTop {
+  grid-area: aside;
 
   .logo {
     color: $red;
@@ -298,18 +312,6 @@ div[data-page='top'] {
     z-index: 10;
     @include center (horizontal);
   }
-
-  .cr {
-    font-size: 1rem;
-    font-family: $txt_norm;
-    letter-spacing: .15em;
-    color: #343434;
-    text-align: center;
-    margin: 0 0 20px 0;
-  }
-}
-.__asideTop {
-  grid-area: aside;
 }
 
 .moon {
@@ -615,14 +617,26 @@ div[data-page='about'] {
   }
 }
 
+.__gAbout { overflow: scroll;}
+
 .__asideAbout {
   grid-column-start: 1;
   grid-column-end: 2;
+  height: calc( 100% - 40px );
+  height: calc( 100vh - 40px );
+
+  & > div {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
 }
 
 .grid__contentsAbout {
   grid-column-start: 2;
   grid-column-end: 5;
+  height: calc( 100% - 40px );
+  height: calc( 100vh - 40px );
+  overflow: scroll;
 
   article {
     position: relative;
@@ -642,21 +656,6 @@ div[data-page='about'] {
   padding-top: 60px;
 
   .svg__me {
-    margin: 0 0 90px 70px;
-  }
-}
-
-.resume {
-  padding-top: 35px;
-
-  button {
-    width: 200px;
-    position: absolute;
-    bottom: -12px;
-    right: 5vw;
-  }
-
-  .svg__resume {
     margin: 0 0 90px 70px;
   }
 }
@@ -692,7 +691,7 @@ div[data-page='about'] {
 .countup {
   width: 630px;
   bottom: 305px;
-  left: -295px;
+  left: -274px;
   position: absolute;
   transform: rotate(-90deg);
   z-index: 2;
@@ -706,7 +705,7 @@ div[data-page='about'] {
     font-family: 'Anton', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0c1946;
+    color: #353842;
     letter-spacing: .25em;
   }
 
@@ -789,10 +788,14 @@ div[data-page='about'] {
 }
 
 
+
 .resume {
+  position: relative;
+  padding-top: 35px;
   background: #172126;
   padding-bottom: 140px;
   z-index: 1;
+  overflow: hidden;
 
   h1 {
     span {
@@ -804,12 +807,34 @@ div[data-page='about'] {
       margin-left: 15px;
     }
   }
+
+  &:before {
+    content: url(/images/about/noise.png);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  button {
+    width: 200px;
+    position: absolute;
+    bottom: -12px;
+    right: 5vw;
+  }
+
+  .svg__resume {
+    margin: 0 0 90px 70px;
+  }
 }
 
 .history {
+  position: relative;
   background: #1b262d;
   margin: 72px 5vw 0 0;
   box-sizing: border-box;
+  z-index: 2;
 
   & > div {
     display: flex;
