@@ -173,13 +173,14 @@ div[data-page='about']
 .horizon__top { top: 0;}
 .horizon__bottom { bottom: 0;}
 
+
 // botton
 //
 
 button {
   width: 100%;
   color: white;
-  background: $clr-dark;
+  background: $clr-light-trans;
   height: 42px;
   border-left: 2px solid $activeBlue;
   border-right: 2px solid $activeBlue;
@@ -387,6 +388,9 @@ div[data-page='top'] {
     @include center ( horizontal );
     top: 5.5vh;
     margin-left: -4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   h2 {
@@ -399,10 +403,13 @@ div[data-page='top'] {
   }
 
   p {
+    color: $mainBlue;
+    font-family: $txt_courier;
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: .3em;
+    letter-spacing: .1em;
     margin: 1.4em auto 0;
+    white-space: nowrap;
   }
 }
 
@@ -494,7 +501,7 @@ div[data-page='top'] {
   overflow: hidden;
 }
 
-.__bar {
+.motionBar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -597,12 +604,12 @@ div[data-page='top'] {
 div[data-page='about'] {
   h1 {
     color: $mainBlue;
-    font-family: courier;
+    font-family: $txt_courier;
     font-size: 1.9rem;
     text-transform: uppercase;
     letter-spacing: .3em;
   }
-  .ttl {
+  .__ttl {
     position: relative;
     z-index: 10;
   }
@@ -621,6 +628,14 @@ div[data-page='about'] {
     position: relative;
     padding-left: 35px;
   }
+
+  .motionBar {
+    height: 75px;
+
+    p {
+      text-transform: uppercase;
+    }
+  }
 }
 
 .me {
@@ -633,6 +648,13 @@ div[data-page='about'] {
 
 .resume {
   padding-top: 35px;
+
+  button {
+    width: 200px;
+    position: absolute;
+    bottom: -12px;
+    right: 5vw;
+  }
 
   .svg__resume {
     margin: 0 0 90px 70px;
@@ -738,6 +760,8 @@ div[data-page='about'] {
   }
 }
 
+// .svg__ins { width: 30px; height: 30px;}
+
 .paper {
   width: 65%;
   position: absolute;
@@ -789,7 +813,13 @@ div[data-page='about'] {
 
   & > div {
     display: flex;
-    padding: 60px 76px;
+    align-items: flex-start;
+    padding: 65px 76px 55px;
+    border-bottom: 1px solid #212573;
+  }
+
+  & > div:last-child {
+    border: 0;
   }
 
   h2 {
@@ -798,7 +828,7 @@ div[data-page='about'] {
     text-transform: uppercase;
     font-size: 1.8rem;
     letter-spacing: .25rem;
-    margin-bottom: 26px;
+    margin-bottom: 21px;
   }
 
   .tag {
@@ -809,14 +839,44 @@ div[data-page='about'] {
     padding: 6px 12px 5px;
     display: inline;
   }
-}
 
+  .due {
+    color: $mainBlue;
+    font-family: $txt_courier;
+    font-size: 1.4rem;
+    letter-spacing: .02em;
+    margin-top: 18px;
+  }
+
+  .place {
+    width: 24vw;
+    min-width: 213px;
+    margin-top: 5px;
+  }
+
+  .job {
+    color: $lightBlue;
+    font-family: $txt_norm;
+    font-size: 1.45rem;
+    letter-spacing: .08em;
+    line-height: 1.6;
+  }
+}
 
 
 .contact {
   margin-top: 110px;
 
   h1 {
+    position: absolute;
+    top: 0;
+    right: 40%;
     margin-bottom: 60px;
+  }
+
+  p {
+    color: $lightBlue;
+    line-height: 1.65;
+    margin: 65px 0 50px;
   }
 }

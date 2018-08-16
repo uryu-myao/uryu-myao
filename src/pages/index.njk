@@ -110,9 +110,11 @@
                     </figure>
                 </a>
             </div>
-            <div class="__bar">
+            <div class="motionBar">
                 <div>
-                    <p>{{ prev.title }}</p>
+                    <a href="{{ basic.root }}works/{{ prev.link }}.html">
+                        <p>{{ prev.title }}</p>
+                    </a>
                 </div>
             </div>
             {% endfor %}
@@ -121,9 +123,11 @@
 
         <section class="grid__next">
             {% for next in next %}
-            <div class="__bar">
+            <div class="motionBar">
                 <div>
-                    <p>{{ next.title }}</p>
+                    <a href="{{ basic.root }}works/{{ next.link }}.html">
+                        <p>{{ next.title }}</p>
+                    </a>
                 </div>
             </div>
             <div class="__midbar">
