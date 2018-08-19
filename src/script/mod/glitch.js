@@ -7,7 +7,7 @@
 */
 
 (function(){
-
+    
     $(function(){
         $( ".grid__curS picture" ).mgGlitch({
             // set 'true' to stop the plugin
