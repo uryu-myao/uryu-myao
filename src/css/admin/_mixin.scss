@@ -114,18 +114,21 @@ $justify: space-between, $align: center)
 
 // L I N K
 
-@mixin linx ($link, $visit, $hover, $active)
+@mixin linx ($link, $hover, $visit, $active, $focus)
 {
   a {
     color: $link;
-    &:visited {
-      color: $visit;
-    }
     &:hover {
       color: $hover;
     }
+    &:visited {
+      color: $visit;
+    }
     &:active {
       color: $active;
+    }
+    &:focus {
+      color: $focus;
     }
   }
 }

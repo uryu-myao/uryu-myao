@@ -11,6 +11,7 @@ p, dt, dd, li, a {
 
 
 
+
 // Preload
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -172,6 +173,18 @@ div[data-page='about']
 
 .horizon__top { top: 20px;}
 .horizon__bottom { bottom: 20px;}
+
+.grid__curS,
+.grid__curI
+{
+  .horizon {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  .horizon__top { top: -1px;}
+  .horizon__bottom { bottom: -1px;}
+}
 
 
 // botton
@@ -628,6 +641,8 @@ div[data-page='about'] {
   & > div {
     width: 100%;
     flex-direction: column-reverse;
+    @include bg-image (auto, 0, /images/about/aside, gif, center, cover, no-repeat);
+    opacity: .12;
   }
 }
 
@@ -641,6 +656,12 @@ div[data-page='about'] {
   article {
     position: relative;
     padding-left: 35px;
+
+    .__ttl {
+      & > div:first-child {
+        margin: 0 0 90px 5vw;
+      }
+    }
   }
 
   .motionBar {
@@ -654,10 +675,6 @@ div[data-page='about'] {
 
 .me {
   padding-top: 60px;
-
-  .svg__me {
-    margin: 0 0 90px 70px;
-  }
 }
 
 .svg__clr { fill: $mainBlue;}
@@ -745,6 +762,9 @@ div[data-page='about'] {
 
   i { cursor: pointer;}
 
+  .i__github { svg { width: 30.8px; height: 30px;}}
+  .i__ins { svg { width: 34px; height: 12.2px;}}
+
   .svg__clr-sns { fill: #568fff;}
 }
 
@@ -788,7 +808,6 @@ div[data-page='about'] {
 }
 
 
-
 .resume {
   position: relative;
   padding-top: 35px;
@@ -823,11 +842,8 @@ div[data-page='about'] {
     bottom: -12px;
     right: 5vw;
   }
-
-  .svg__resume {
-    margin: 0 0 90px 70px;
-  }
 }
+
 
 .history {
   position: relative;
@@ -839,7 +855,7 @@ div[data-page='about'] {
   & > div {
     display: flex;
     align-items: flex-start;
-    padding: 65px 76px 55px;
+    padding: 65px 10vw 55px;
     border-bottom: 1px solid #212573;
   }
 
@@ -882,9 +898,9 @@ div[data-page='about'] {
   .job {
     color: $lightBlue;
     font-family: $txt_norm;
-    font-size: 1.45rem;
-    letter-spacing: .08em;
-    line-height: 1.6;
+    font-size: 1.6rem;
+    letter-spacing: .085em;
+    line-height: 1.8;
   }
 }
 
@@ -893,15 +909,64 @@ div[data-page='about'] {
   margin-top: 110px;
 
   h1 {
-    position: absolute;
-    top: 0;
-    right: 40%;
-    margin-bottom: 60px;
+
+    & + p {
+      color: $lightBlue;
+      line-height: 1.75;
+      margin: -2px 0 0 4%;
+    }
+  }
+
+  .__ttl {
+    & > div:last-child {
+      display: flex;
+    }
+  }
+}
+
+
+.dropMessages {
+  position: relative;
+
+  div {
+    // background: #0f161b;
+    background: rgba( 26, 38, 46, .3);
+    width: 86%;
+    height: 20vh;
+    margin: 80px auto 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend .tras;
+
+    &:hover {
+      background: rgba( 26, 38, 46, 1);
+    }
   }
 
   p {
-    color: $lightBlue;
-    line-height: 1.65;
-    margin: 65px 0 50px;
+    text-transform: uppercase;
+    color: white;
+    font-family: $txt_cond;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: .2em;
+    padding-bottom: 2px;
+    position: relative;
+    z-index: 2;
+  }
+
+  figure {
+    @include center(both);
+    z-index: 1;
+  }
+
+  svg {
+    width: 51px;
+    height: 73.2px;
+  }
+
+  .svg__send {
+    fill: black;
   }
 }

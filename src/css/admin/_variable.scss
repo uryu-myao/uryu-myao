@@ -38,3 +38,8 @@ $mq-breakpoints: (
     'xxlarge' : 1440px,
 
 );
+
+
+// Extend Para
+
+.tras { transition: all 1s cubic-bezier(.39,.06,.39,.99);}
