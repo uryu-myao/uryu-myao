@@ -149,7 +149,7 @@ div[data-page='about']
       position: relative;
       width: 100%;
 
-      &:before, &:after {
+      &::before, &::after {
           content: '';
           position: absolute;
           width: 5px;
@@ -157,8 +157,8 @@ div[data-page='about']
           background: $activeBlue;
           top: -2px;
       }
-      &:before { left: -2px;}
-      &:after { right: -2px;}
+      &::before { left: -2px;}
+      &::after { right: -2px;}
   }
 }
 
@@ -491,39 +491,53 @@ div[data-page='top'] { overflow: hidden;}
 }
 
 .motionBar {
+    height: 55px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 0 10px 3em;
     box-sizing: border-box;
     margin-bottom: 10px;
     background: {
         image: url(/images/common/pttn.png);
         repeat: repeat;
     }
-    animation: stripe .5s 0s linear infinite;
+    animation: stripe .5s linear 0s infinite;
 
     & > div {
-        background: $clr-dark;
-        width: 86%;
+        background: black;
+        width: 65%;
+        height: 100%;
         overflow: hidden;
+        position: relative;
     }
 
     p {
-        font-family: $txt_norm;
-        font-size: 1.35rem;
-        letter-spacing: .2em;
-        color: #2c383f;
+        position: absolute;
+        font-family: $txt_cond;
+        font-size: 1.585rem;
+        font-weight: bold;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        color: #001d2d;
         margin: 0;
-        padding: 10px 0;
         white-space: nowrap;
+        @include center(vertical);
+        animation: movingleft 3s linear 0s infinite;
+    }
+
+    @keyframes stripe {
+        0%   { background-position-x: 0px;}
+        100% { background-position-x: 9px;}
+    }
+
+    @keyframes movingleft {
+        0%   { left: -50px;}
+        100% { left: 0px;}
     }
 }
 
-@keyframes stripe {
-    0%   { background-position-x: 0px;}
-    100% { background-position-x: 9px;}
-}
+
 
 .__midbar {
     height: 100%;
@@ -646,6 +660,7 @@ div[data-page='about'] {
 .svg__contact { width: 133.5px; height: 72.4px;}
 
 .introduce {
+    margin-top: 72px;
     position: relative;
     z-index: 10;
 }
@@ -667,6 +682,19 @@ div[data-page='about'] {
     z-index: 10;
 }
 
+// #typing {
+//
+//     &::after {
+//         content: "|";
+//         animation: blink 500ms linear infinite alternate;
+//     }
+//
+//     @keyframes blink {
+//       	0%   { opacity: 0;}
+//       	100% { opacity: 1;}
+//     }
+// }
+
 .countup {
     width: 630px;
     bottom: 305px;
@@ -675,7 +703,7 @@ div[data-page='about'] {
     transform: rotate(-90deg);
     z-index: 2;
 
-    &:after {
+    &::after {
         content: 'BE BORN';
         position: absolute;
         transform: rotate(90deg);
@@ -733,7 +761,7 @@ div[data-page='about'] {
 .brush {
     position: relative;
 
-    &:after {
+    &::after {
         content: url(/images/about/brush.png);
         position: absolute;
         top: -4px;
@@ -754,12 +782,12 @@ div[data-page='about'] {
         height: 835px;
         @include bg-image (auto, 0, /images/about/paper, png, center, cover, no-repeat);
 
-        &:before {
+        &::before {
             content: '';
             position: absolute;
             display: block;
             width: calc( 100% - 5vw );
-            height: 718px;
+            height: 752px;
             background: rgba( 0,0,0,.35 );
             top: 0;
             left: 0;
@@ -786,7 +814,7 @@ div[data-page='about'] {
         }
     }
 
-    &:before {
+    &::before {
         content: url(/images/about/noise.png);
         position: absolute;
         display: block;

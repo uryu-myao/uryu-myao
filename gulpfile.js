@@ -58,7 +58,7 @@ gulp.task('njk', function() {
     return gulp.src('src/pages/**/*.+(html|njk|xml)')
     // read data.json
     .pipe(data(function() {
-        return require('./src/_data/data.json')
+        return require('./src/data/data.json')
     }))
     // spit out html
     .pipe(nunjucksRender({
@@ -144,6 +144,14 @@ gulp.task('font', function() {
 });
 
 
+//  Transfer JSON files
+
+gulp.task('JSON', function() {
+    gulp.src(paths.srcDATA)
+        .pipe(gulp.dest('dist/'))
+});
+
+
 // Delete images
 
 gulp.task('del', function (cb) {
@@ -169,7 +177,7 @@ gulp.task('clean', function() {
 // Build
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['njk', 'sass', 'minjs', 'img', 'font', 'del'], cb)
+    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'del'], cb)
 });
 
 
@@ -178,7 +186,7 @@ gulp.task('build', function(cb) {
 gulp.task('watch', ['sync'], function()
 {
     gulp.watch(paths.srcHTML,  ['njk']);
-    gulp.watch(paths.srcDATA,  ['njk']);
+    gulp.watch(paths.srcDATA,  ['njk']).on('change', bs.reload);
     gulp.watch(paths.srcSASS,  ['sass']);
     // gulp.watch(paths.srcJS,    ['js']).on('change', bs.reload);
     // gulp.watch(paths.distJS,   ['minjs']).on('change', bs.reload);

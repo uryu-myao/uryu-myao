@@ -42,7 +42,7 @@
 
     "prev":[
         {
-            "title": "Corporate Site",
+            "title": "hanplus",
             "link": "work_1",
             "class": "prev-s1"
         }
@@ -50,7 +50,7 @@
 
     "next":[
         {
-            "title": "corporate site",
+            "title": "kyobi",
             "link": "work_1",
             "class": "next-s1"
         }
