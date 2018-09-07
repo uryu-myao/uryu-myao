@@ -1,3 +1,12 @@
+/*
+    *** JSON ***
+
+    - repeat text data from JSON
+    @ top.html & about.html
+
+*/
+
+
 (function(){
 
     let dataJSON = new XMLHttpRequest(),

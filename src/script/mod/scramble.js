@@ -1,14 +1,12 @@
 /*
     *** scramble ***
 
-    - text scrambling effect 
-    - top.html
+    - text scrambling effect
+    @ top.html
 
 */
 
 (function(){
-
-    'use strict';
 
     function _classCallCheck(t, e) {
         if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")

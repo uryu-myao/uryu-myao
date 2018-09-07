@@ -2,12 +2,12 @@
     *** glitch ***
 
     - video and picture glitch effect
-    - top.html
+    @ top.html
 
 */
 
 (function(){
-    
+
     $(function(){
         $( ".grid__curS picture" ).mgGlitch({
             // set 'true' to stop the plugin

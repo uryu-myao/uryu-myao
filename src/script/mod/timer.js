@@ -2,7 +2,7 @@
     *** timer ***
 
     - count down timer
-    - about.html
+    @ about.html
 
 */
 
