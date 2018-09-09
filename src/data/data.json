@@ -30,13 +30,9 @@
 
     "desc2":[
         {
-            "client": "yoshikawa",
-            "role1": "ui / fe dev.",
-            "item1": "myao",
-            "role2": "direction",
-            "item2": "watanabe",
-            "employer": "econosys",
-            "link": "work_1"
+            "badge1": "Design",
+            "badge2": "DEV.",
+            "badge3": "Direction"
         }
     ],
 

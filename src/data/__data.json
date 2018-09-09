@@ -1,65 +1,67 @@
 {
 
-  "basic": {
-      "root": "./",
-      "sitename": "URYU MYAO",
-      "url": "http://www.uryu-myao.com/"
-  },
+    "basic":{
+        "root": "/",
+        "sitename": "URYU MYAO",
+        "url": "http://www.uryu-myao.com/"
+    },
 
-  "current": [
-      {
-          "link": "work_1",
-          "class": "s1"
-      },
-      {
-          "link": "work_2",
-          "class": "s2"
-      },
-      {
-          "link": "work_3",
-          "class": "s3"
-      }
-  ],
+    "current":[
+        {
+            "link": "work_1",
+            "class": "cur-s1"
+        },
+        {
+            "link": "work_2",
+            "class": "cur-s2"
+        },
+        {
+            "link": "work_3",
+            "class": "cur-s3"
+        }
+    ],
 
-  "description": [
-      {
-          "name": "yoshikawa",
-          "cat": "Web design",
-          "client": "yoshikawa inc.",
-          "role1": "ui / fe dev.",
-          "item1": "myao",
-          "role2": "direction",
-          "item2": "watanabe",
-          "employer": "econosys design"
-      },
-      {
-          "name": "kyobe",
-          "cat": "Web design",
-          "client": "kyo-be school",
-          "role1": "fe dev.",
-          "item1": "myao",
-          "role2": null,
-          "item2": null,
-          "employer": "econosys design"
-      },
-      {
-          "name": "hanplus",
-          "cat": "Web design",
-          "client": "hanker inc.",
-          "role1": "ui / fe dev.",
-          "item1": "myao",
-          "role2": null,
-          "item2": null,
-          "employer": "econosys design"
-      }
-  ],
+    "desc1":[
+        {
+            "name": "yoshikawa",
+            "cat": "corporate site"
+        }
+    ],
 
-  "works": [
-      {
-          "title": "yoshikawa",
-          "cat": "web design",
-          "firstview": "/img/work/firstview"
-      }
-  ]
+    "desc2":[
+        {
+            "client": "yoshikawa",
+            "role1": "ui / fe dev.",
+            "item1": "myao",
+            "role2": "direction",
+            "item2": "watanabe",
+            "employer": "econosys",
+            "link": "work_1"
+        }
+    ],
+
+    "prev":[
+        {
+            "title": "hanplus",
+            "link": "work_1",
+            "class": "prev-s1"
+        }
+    ],
+
+    "next":[
+        {
+            "title": "kyobi",
+            "link": "work_1",
+            "class": "next-s1"
+        }
+    ],
+
+    "works":[
+        {
+            "title": "yoshikawa",
+            "cat": "web design",
+            "firstview": "/img/work/firstview"
+        }
+    ]
 
 }

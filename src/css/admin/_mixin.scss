@@ -132,3 +132,11 @@ $justify: space-between, $align: center)
     }
   }
 }
+
+
+// C O L O R  O P A C I T Y
+
+@mixin clr-opacity ($color, $opacity: .3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}

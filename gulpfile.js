@@ -31,7 +31,7 @@ const paths =
     srcDATA:  src  + '/**/*.json',
     srcSASS:  src  + '/**/*.+(scss|css)',
     srcJS:    src  + '/**/*.js',
-    srcIMG:   src  + '/images/**/*.+(png|jpg|gif|webp)',
+    srcIMG:   src  + '/images/**/*.+(png|jpg|gif|svg)',
     srcFONT:  src  + '/font/**/*.+(ttf|woff|truetype|svg)',
 
     distJS:   dist + '/**/*.js',

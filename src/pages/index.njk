@@ -74,8 +74,36 @@
                 {% endfor %}
             </div>
             <div class="__curI-desc">
-                {% for desc2 in desc2 %}
+                <div class="graph">
+                    <canvas id=""></canvas>
+                </div>
                 <div>
+                    <ol class="badges">
+                        <li>
+                            <p>Design</p>
+                            <div class="badge__ch __badge-design"></div>
+                            <div class="">
+
+                            </div>
+                        </li>
+                        <li>
+                            <p>DEV.</p>
+                            <div class="badge__ch __badge-dev"></div>
+                            <div class="">
+
+                            </div>
+                        </li>
+                        <li>
+                            <p>Direction</p>
+                            <div class="badge__ch __badge-direction"></div>
+                            <div class="">
+
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                {# {% for desc2 in desc2 %} #}
+                {# <div>
                     <dl>
                         <dt>client</dt>
                         <dd>{{ desc2.client }}</dd>
@@ -92,11 +120,11 @@
                             </a>
                         </dd>
                     </dl>
-                </div>
+                </div> #}
                 <button type="button" class="glitch__btn">
                     <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">details</a>
                 </button>
-                {% endfor %}
+                {# {% endfor %} #}
             </div>
         </section>
 
