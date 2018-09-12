@@ -113,7 +113,7 @@ p, dt, dd, li, a {
     height: calc( 100% - 40px );
     height: calc( 100vh - 40px );
     display: grid;
-    grid-template-columns: 4.9fr 10.8333fr 3.7667fr 1fr;
+    grid-template-columns: 4.9fr 10.8333fr 3.6667fr 1fr;
     grid-gap: 10px 10px;
 }
 .__gTop {
@@ -397,13 +397,13 @@ div[data-page='top'] { overflow: hidden;}
     background: black;
     height: 70%;
     width: 100%;
-    padding: 25px 10% 3vh;
+    padding: 4vh 0;
     box-sizing: border-box;
     margin: 0 auto;
 
     & > div {
-        position: absolute;
         width: 80%;
+        margin: 0 auto;
     }
 
     .graph {
@@ -413,31 +413,37 @@ div[data-page='top'] { overflow: hidden;}
     }
 
     .badges {
-        display: flex;
-        justify-content: space-between;
-        margin-top: calc( 104px + 35px );
+
+        ol {
+            display: flex;
+            justify-content: space-between;
+        }
 
         li {
             width: 30%;
-            height: 65px;
+            height: 72px;
             position: relative;
+            clip-path: polygon(19% 0, 100% 0, 100% 86%, 81% 100%, 0 100%, 0 14%);
             @include clr-opacity ( $clr_blue-main, .34 );
+        }
 
-            P {
-                position: absolute;
-                writing-mode: vertical-rl;
-                text-orientation: mixed;
-                margin: 0;
-                font-family: $txt_cond;
-                opacity: .1;
-                right: 0;
-            }
+        P {
+            position: absolute;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin: 0;
+            font-family: $txt_cond;
+            letter-spacing: .045em;
+            top: 4px;
+            right: 4px;
+            opacity: .1;
         }
 
         .badge__ch {
-            width: 17px;
-            height: 25px;
-            margin: 16px 0 0 10px;
+            width: 18px;
+            height: 26px;
+            margin: 1.8vh 0 0 1.23vw;
+            opacity: .1;
             background: {
                 repeat: no-repeat;
                 size: cover;
@@ -448,11 +454,44 @@ div[data-page='top'] { overflow: hidden;}
         .__badge-dev { background-image: url( /images/top/badge_02.svg );}
         .__badge-direction { background-image: url( /images/top/badge_03.svg );}
 
+        .badge__li {
+            display: flex;
+            justify-content: flex-start;
+            width: 60%;
+            position: absolute;
+            left: .6vw;
+            bottom: 10px;
+
+            span {
+                width: 4px;
+                height: 6px;
+                margin-right: 2px;
+                background: #6b6d41;
+            }
+        }
+
+        .badges_active {
+            background-image: linear-gradient(
+            #232a8b, #0b1940);
+            .badge__ch { opacity: 1;}
+
+            // &:before {
+            //     position: absolute;
+            //     content: '';
+            //     display: block;
+            //     width: 15px;
+            //     height: 8px;
+            //     border-top: 2px solid $clr_blur-active;
+            //     border-right: 2px solid $clr_blur-active;
+            //     top: 0;
+            // }
+        }
     }
 
     button {
-        width: calc( 100% - 20%);
-        bottom: 25px;
+        width: calc( 100% - 24%);
+        bottom: 4vh;
+        @include center (horizontal);
     }
 
     // dl {
