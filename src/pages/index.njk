@@ -16,9 +16,8 @@
 
     <main class="grid__rule __gTop" role="main">
 
-        <!-- ** Modulized Cyber-line (absolute) ** -->
-        <div class="horizon horizon__top"><div></div></div>
-        <div class="horizon horizon__bottom"><div></div></div>
+        <!-- ** Modulized Cyber line (absolute) ** -->
+        {% include "_cyberline.njk" %}
         <!-- * end * -->
 
         <aside class="grid__aside __asideTop">
@@ -39,9 +38,8 @@
 
         <section class="grid__curS">
 
-            <!-- ** Modulized Cyber-line (absolute) ** -->
-            <div class="horizon horizon__top"><div></div></div>
-            <div class="horizon horizon__bottom"><div></div></div>
+            <!-- ** Modulized Cyber line (absolute) ** -->
+            {% include "_cyberline.njk" %}
             <!-- * end * -->
 
             {% for current in current %}
@@ -56,10 +54,7 @@
 
         <section class="grid__curI">
 
-            <!-- ** Modulized Cyber-line (absolute) ** -->
-            <div class="horizon horizon__top"><div></div></div>
-            <div class="horizon horizon__bottom"><div></div></div>
-            <!-- * end * -->
+            {% include "_cyberline.njk" %}
 
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
@@ -82,41 +77,17 @@
                         <li class="badges_active">
                             <p>Design</p>
                             <div class="badge__ch __badge-design"></div>
-                            <div class="badge__li">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            {% include "_level.njk" %}
                         </li>
                         <li>
                             <p>DEV.</p>
                             <div class="badge__ch __badge-dev"></div>
-                            <div class="badge__li">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            {% include "_level.njk" %}
                         </li>
                         <li>
                             <p>Direction</p>
                             <div class="badge__ch __badge-direction"></div>
-                            <div class="badge__li">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            {% include "_level.njk" %}
                         </li>
                     </ol>
                 </div>

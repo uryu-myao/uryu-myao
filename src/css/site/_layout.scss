@@ -466,14 +466,17 @@ div[data-page='top'] { overflow: hidden;}
                 width: 4px;
                 height: 6px;
                 margin-right: 2px;
-                background: #6b6d41;
+                @include clr-opacity ( #6b6d41, .28 );
+
             }
         }
 
         .badges_active {
             background-image: linear-gradient(
             #232a8b, #0b1940);
+
             .badge__ch { opacity: 1;}
+            .badge__li span { background: #6b6d41;}
 
             // &:before {
             //     position: absolute;
