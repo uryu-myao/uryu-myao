@@ -39,7 +39,6 @@
     "prev":[
         {
             "title": "hanplus",
-            "link": "work_1",
             "class": "prev-s1"
         }
     ],
@@ -47,7 +46,6 @@
     "next":[
         {
             "title": "kyobi",
-            "link": "work_1",
             "class": "next-s1"
         }
     ],

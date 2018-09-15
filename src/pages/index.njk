@@ -11,11 +11,11 @@
 <!-- * end * -->
 
 <div id="top" data-page="top">
-
+    <!-- ** background ** -->
     {% include "_bg.njk" %}
 
     <main class="grid__rule __gTop" role="main">
-
+        <!-- ** line ** -->
         {% include "_cyberline.njk" %}
 
         <aside class="grid__aside __asideTop">
@@ -35,7 +35,7 @@
 
 
         <section class="grid__curS">
-
+            <!-- ** line ** -->
             {% include "_cyberline.njk" %}
 
             {% for current in current %}
@@ -49,7 +49,7 @@
 
 
         <section class="grid__curI">
-
+            <!-- ** line ** -->
             {% include "_cyberline.njk" %}
 
             <div class="__curI-ttl">
@@ -132,18 +132,12 @@
         <section class="grid__prev">
             {% for prev in prev %}
             <div class="__midbar">
-                <a href="{{ basic.root }}works/{{ prev.link }}.html">
-                    <figure>
-                        <picture class="__{{ prev.class }}"></picture>
-                    </figure>
-                </a>
+                <figure>
+                    <picture class="__{{ prev.class }}"></picture>
+                </figure>
             </div>
             <div class="motionBar">
-                <div>
-                    <a href="{{ basic.root }}works/{{ prev.link }}.html">
-                        <p></p>
-                    </a>
-                </div>
+                <div><p></p></div>
             </div>
             {% endfor %}
         </section>
@@ -152,18 +146,12 @@
         <section class="grid__next">
             {% for next in next %}
             <div class="motionBar">
-                <div>
-                    <a href="{{ basic.root }}works/{{ next.link }}.html">
-                        <p></p>
-                    </a>
-                </div>
+                <div><p></p></div>
             </div>
             <div class="__midbar">
-                <a href="{{ basic.root }}works/{{ next.link }}.html">
-                    <figure>
-                        <picture class="__{{ next.class }}"></picture>
-                    </figure>
-                </a>
+                <figure>
+                    <picture class="__{{ next.class }}"></picture>
+                </figure>
             </div>
             {% endfor %}
         </section>
