@@ -4,6 +4,7 @@
 body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch;
     color: black;
+    cursor: url('/images/common/cursor.png'), auto;
 }
 // cursor: url('../images/cursor.gif'), url('../images/cursor.cur'), auto;
 
@@ -191,7 +192,7 @@ button {
     position: absolute;
     padding-top: 2px;
     box-sizing: border-box;
-    cursor: pointer;
+    // cursor: pointer;
 
     a {
         display: block;
@@ -316,6 +317,7 @@ div[data-page='top'] { overflow: hidden;}
     grid-area: curS;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     .__cur-show {
         height: 100%;
@@ -490,12 +492,21 @@ div[data-page='top'] { overflow: hidden;}
             // }
         }
 
-        // Level grid bar loop styling
-        $levelloop: __level !default
+        .__level-1 span:nth-child(-n+1) { background: #f0ff00; }
+        .__level-2 span:nth-child(-n+2) { background: #f0ff00; }
+        .__level-3 span:nth-child(-n+3) { background: #f0ff00; }
+        .__level-4 span:nth-child(-n+4) { background: #f0ff00; }
+        .__level-5 span:nth-child(-n+5) { background: #f0ff00; }
+        .__level-6 span:nth-child(-n+6) { background: #f0ff00; }
+        .__level-7 span:nth-child(-n+7) { background: #f0ff00; }
 
-        @for $i from 1 through 7
-        .#{ $levelloop }-#{ $i } span:nth-child(-n+#{ $i })
-            background: #f0ff00;
+
+        // level grid loop
+        // $levelStatus: __level !default
+        //
+        // @for $i from 1 through 7
+        // .#{ $levelStatus }-#{ $i } span:nth-child(-n+#{ $i })
+        //     background: #f0ff00;
         // -- *
     }
 
@@ -726,7 +737,7 @@ div[data-page='about'] {
 
     .motionBar {
         height: 75px;
-        cursor: pointer;
+        // cursor: pointer;
 
         p { text-transform: uppercase;}
     }
@@ -825,13 +836,15 @@ div[data-page='about'] {
 
     li {
         margin: 0 18px;
-        cursor: pointer;
+        // cursor: pointer;
     }
 
     li:first-child { margin-left: 0;}
     li:last-child { margin-right: 0;}
 
-    i { cursor: pointer;}
+    i {
+        // cursor: pointer;
+    }
 
     .i__github { svg { width: 30.8px; height: 30px;}}
     .i__ins { svg { width: 34px; height: 12.2px;}}

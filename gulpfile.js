@@ -33,6 +33,7 @@ const paths =
     srcJS:    src  + '/**/*.js',
     srcIMG:   src  + '/images/**/*.+(png|jpg|gif|svg)',
     srcFONT:  src  + '/font/**/*.+(ttf|woff|truetype|svg)',
+    srcAUDIO: src  + '/audio/**/*.+(mp3|ogg)',
 
     distJS:   dist + '/**/*.js',
     distIMG:  dist + '/images/**/*.+(png|jpg|gif|webp)'
@@ -144,6 +145,14 @@ gulp.task('font', function() {
 });
 
 
+//  Transfer audio files
+
+gulp.task('audio', function() {
+    gulp.src(paths.srcAUDIO)
+        .pipe(gulp.dest('dist/audio'))
+});
+
+
 //  Transfer JSON files
 
 gulp.task('JSON', function() {
@@ -177,7 +186,7 @@ gulp.task('clean', function() {
 // Build
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'del'], cb)
+    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'audio', 'del'], cb)
 });
 
 
@@ -191,7 +200,8 @@ gulp.task('watch', ['sync'], function()
     // gulp.watch(paths.srcJS,    ['js']).on('change', bs.reload);
     // gulp.watch(paths.distJS,   ['minjs']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['img']).on('change', bs.reload);
-    gulp.watch(paths.srcIMG,   ['font']).on('change', bs.reload);
+    gulp.watch(paths.srcFONT,  ['font']).on('change', bs.reload);
+    gulp.watch(paths.srcAUDIO, ['audio']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['del']).on('change', bs.reload);
 });
 
@@ -212,6 +222,7 @@ gulp.task('help',function () {
   console.log('gulp minjs  --- Minify JS');
   console.log('gulp img    --- Minify images');
   console.log('gulp font   --- Transfer font files');
+  console.log('gulp audio  --- Transfer audio files');
   console.log('gulp del    --- Delete images changed in src');
   console.log('gulp clean  --- Clean dist files');
   console.log('gulp build  --- Build dist files');

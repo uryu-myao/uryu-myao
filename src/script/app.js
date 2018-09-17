@@ -21,6 +21,7 @@ const Glitch = require('./lib/mgGlitch.js');
 // modules
 // ** -
 const threeCustom = require('./mod/three.js');
+const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const mod = require('./mod/scrollProgress.js');
 const tilt = require('./mod/typing.js');
