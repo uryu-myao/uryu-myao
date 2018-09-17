@@ -6,10 +6,12 @@
 
 {% block content %}
 
-
+<!-- ** audio source ** -->
+{% include "_audio.njk" %}
+<!-- * end * -->
 
 <div id="about" data-page="about" class="child">
-
+    <!-- ** background ** -->
     {% include "_bg.njk" %}
 
     <main class="grid__rule __gAbout" role="about">
@@ -128,7 +130,7 @@
                 <div class="introduce">
                     <h2 class="txt__en courier">
                     Hi,I'm <span class="scramble__txt">URYU Myao</span>,<br>
-                    a Japan based <span class="scramble__txt">designer</span> from China.<br>
+                    a Japan based designer from China.<br>
                     My work ranges form digital design,<br>
                     <span class="brush">coding</span> web development and<br>
                     traditional graphic design.
@@ -177,7 +179,7 @@
                     <span>FE Dev. 2ys</span>
                     </h1>
 
-                    <button type="button" class="glitch__btn">
+                    <button type="button" class="glitch__btn audio__hv">
                         <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">resume</a>
                     </button>
                 </div>

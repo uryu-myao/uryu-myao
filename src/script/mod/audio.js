@@ -6,9 +6,9 @@
 
     audio__hover.addEventListener('mouseenter', function() {
         audio.play();
-    })
+    }, false);
     audio__hover.addEventListener('mouseleave', function() {
         audio.pause();
-    })
+    }, false)
 
 }());
