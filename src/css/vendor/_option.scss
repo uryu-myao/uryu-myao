@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+
 // Reset for font-size: 62.5%
 // ==========================================================================
 /**
@@ -29,12 +32,12 @@ img:not([alt])
 
 ::-moz-selection
 {
-  background-color: #1b58d3;
+  background-color: transparent;
   color: black;
 }
 ::selection
 {
-  background-color: #1b58d3;
+  background-color: transparent;
   color: black;
 }
 

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+// HORIZON LINE
+//
+.horizon {
+    width: calc( 100% - 40px );
+    height: 1px;
+    background: #323d4f;
+    position: fixed;
+    z-index: 20;
+
+    div {
+      position: relative;
+      width: 100%;
+
+      &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: $clr_blur-active;
+          top: -2px;
+      }
+      &::before { left: -2px;}
+      &::after { right: -2px;}
+  }
+}
+
+.horizon__top { top: 20px;}
+.horizon__bottom { bottom: 20px;}

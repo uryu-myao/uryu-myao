@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+
 // General
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -139,33 +142,6 @@ div[data-page='about']
     main { position: relative;}
   }
 
-.horizon {
-    width: calc( 100% - 40px );
-    height: 1px;
-    background: #323d4f;
-    position: fixed;
-    z-index: 20;
-
-    div {
-      position: relative;
-      width: 100%;
-
-      &::before, &::after {
-          content: '';
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          background: $clr_blur-active;
-          top: -2px;
-      }
-      &::before { left: -2px;}
-      &::after { right: -2px;}
-  }
-}
-
-.horizon__top { top: 20px;}
-.horizon__bottom { bottom: 20px;}
-
 .grid__curS,
 .grid__curI
 {
@@ -176,62 +152,6 @@ div[data-page='about']
     }
     .horizon__top { top: -1px;}
     .horizon__bottom { bottom: -1px;}
-}
-
-
-// botton
-//
-
-button {
-    width: 100%;
-    color: white;
-    background: $clr_light-trans;
-    height: 42px;
-    border-left: 2px solid $clr_blur-active;
-    border-right: 2px solid $clr_blur-active;
-    position: absolute;
-    padding-top: 2px;
-    box-sizing: border-box;
-    // cursor: pointer;
-
-    a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        font-family: $txt_cond;
-        color: white;
-        text-transform: uppercase;
-        line-height: 3.4;
-        letter-spacing: .25em;
-
-        &:hover {
-          animation: button_hover .25s 0s linear forwards;
-        }
-
-        @keyframes button_hover {
-            0% {
-                background: #202739;
-                margin: -1px -2px 0 0;
-            }
-            50% {
-                margin: 2px 2px 0 0;
-            }
-            59% {
-                background: transparent;
-            }
-            60% {
-                background: #202739;
-                margin-top: 0;
-            }
-            90% {
-                margin-top: -1px;
-            }
-            100% {
-                background: transparent;
-                margin-top: 1px;
-            }
-        }
-    }
 }
 
 

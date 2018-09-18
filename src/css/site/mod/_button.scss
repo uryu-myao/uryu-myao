@@ -1,16 +1,57 @@
-.scrollProgress
-{
-  width: 100%;
-  height: 4px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  & div {
-    width: 0;
-    height: 100%;
-    max-width: 100%;
-    background: orange;
-    transition: all .3s ease;
-  }
+@charset "UTF-8";
+
+
+// BUTTON
+// detail btn / resume btn
+
+button {
+    width: 100%;
+    color: white;
+    background: $clr_light-trans;
+    height: 42px;
+    border-left: 2px solid $clr_blur-active;
+    border-right: 2px solid $clr_blur-active;
+    position: absolute;
+    padding-top: 2px;
+    box-sizing: border-box;
+    // cursor: pointer;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-family: $txt_cond;
+        color: white;
+        text-transform: uppercase;
+        line-height: 3.4;
+        letter-spacing: .25em;
+
+        &:hover {
+          animation: button_hover .25s 0s linear forwards;
+        }
+
+        @keyframes button_hover {
+            0% {
+                background: #202739;
+                margin: -1px -2px 0 0;
+            }
+            50% {
+                margin: 2px 2px 0 0;
+            }
+            59% {
+                background: transparent;
+            }
+            60% {
+                background: #202739;
+                margin-top: 0;
+            }
+            90% {
+                margin-top: -1px;
+            }
+            100% {
+                background: transparent;
+                margin-top: 1px;
+            }
+        }
+    }
 }
