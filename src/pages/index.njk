@@ -23,15 +23,27 @@
 
         <aside class="grid__aside __asideTop">
             <div>
+
+                {# <div class="">
+                    <nav class="controller" role="navigation">
+                        <a href="/about.html">about</a>
+                        <a href="/about.html">blog</a>
+                    </nav>
+                </div> #}
+
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <div class="logo">
                     <h1>logo</h1>
                 </div>
-                <nav class="controller" role="navigation">
-                    <a href="/about.html"></a>
-                </nav>
-                <picture class="moon">
-                    <img src="{{ basic.root }}images/top/moon.png" alt="moon" />
-                </picture>
+
+                <picture class="earth" style="background-image: url( /images/top/earth.png );"></picture>
+                <picture class="" style="background-image: url( /images/top/mars.png );"></picture>
+
                 <p class="cr">© {{ basic.sitename }} 2018</p>
             </div>
         </aside>
@@ -161,12 +173,20 @@
 
 
         <section class="grid__prog">
-            <div>
+            <div class="__prog">
                 <ol>
                     <li class="__prog-dots __prog-active"></li>
                     <li class="__prog-dots"></li>
                     <li class="__prog-dots"></li>
                 </ol>
+            </div>
+            <div class="sound__switch">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </section>
 
