@@ -23,14 +23,6 @@
 
         <aside class="grid__aside __asideTop">
             <div>
-
-                {# <div class="">
-                    <nav class="controller" role="navigation">
-                        <a href="/about.html">about</a>
-                        <a href="/about.html">blog</a>
-                    </nav>
-                </div> #}
-
                 <div class="menu">
                     <span></span>
                     <span></span>
@@ -45,13 +37,24 @@
                 <picture class="" style="background-image: url( /images/top/mars.png );"></picture>
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
+
+                <div class="overlay">
+                    <nav role="navigation">
+                        <ul class="overlay__list">
+                            <li class="overlay__item"><a href="/about.html">yoshikawa</a></li>
+                            <li class="overlay__item"><a href="/about.html">kyobi</a></li>
+                            <li class="overlay__item __last_pj"><a href="/about.html">hanplus</a></li>
+
+                            <li class="overlay__item"><a href="/about.html">about</a></li>
+                            <li class="overlay__item"><a href="/about.html">blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </aside>
 
 
         <section class="grid__curS">
-
-            {% include "_cyberline.njk" %}
 
             {% for current in current %}
             <a href="{{ basic.root }}works/{{ current.link }}.html">

@@ -30,15 +30,23 @@ img:not([alt])
 // Change text selection styles
 // ==========================================================================
 
-::-moz-selection
-{
-  background-color: transparent;
-  color: #303595;
-}
-::selection
-{
-  background-color: transparent;
-  color: #303595;
+// ::-moz-selection
+// {
+//   background-color: transparent;
+//   color: #303595;
+// }
+// ::selection
+// {
+//   background-color: transparent;
+//   color: #303595;
+// }
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+   -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+       -ms-user-select: none; /* Internet Explorer/Edge */
+           user-select: none; 
 }
 
 

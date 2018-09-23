@@ -38,6 +38,11 @@ $mq-breakpoints: (
 );
 
 
+// Cubic-bezier
+
+$cb_rush: cubic-bezier(.6,.01,.58,.99);
+
+
 // Extend Para
 
 .tras { transition: all 1s cubic-bezier(.39,.06,.39,.99);}

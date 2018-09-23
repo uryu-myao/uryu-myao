@@ -8,6 +8,7 @@ body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch;
     color: black;
     cursor: url('/images/common/cursor.png'), auto;
+    background: $clr-dark;
 }
 // cursor: url('../images/cursor.gif'), url('../images/cursor.cur'), auto;
 
@@ -232,11 +233,16 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
+// menu module
+//
+
+// * icon
 .menu {
     position: absolute;
     display: flex;
     top: 45px;
     left: 3vw;
+    z-index: 20;
 
     span {
         display: block;
@@ -244,11 +250,88 @@ div[data-page='top'] { overflow: hidden;}
         height: 40px;
         background: $clr_blur-active;
         margin-right: 2px;
+        transition: all .15s $cb_rush;
 
         &:last-child { margin-right: 0;}
     }
 
+    &:hover {
+        span {
+            margin-right: 4px;
+        }
+    }
 }
+
+// * overlay
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $clr_dark-trans;
+    z-index: 10;
+    top: 0;
+    left: -100%;
+    transition: all .15s $cb_rush;
+
+    &-active { left: 0;}
+
+    nav {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        a {
+            font-size: 1.45rem;
+            color: $clr_blur-active;
+            font-weight: bold;
+            font-family: $txt_cond;
+            text-transform: uppercase;
+        }
+    }
+
+    &__list {
+        width: 65%;
+        margin: 0 auto;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-size: 1rem;
+            font-family: $txt_cond;
+            color: $clr_blue-main;
+            letter-spacing: .3em;
+            content: 'projects';
+            top: -2.6em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.45em;
+        overflow: hidden;
+        transform: translateX(-8px);
+        transition: all .35s $cb_rush;
+        opacity: 0;
+
+        &-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @for $i from 1 through 5 {
+    .overlay__list > li:nth-child(#{ $i }) {
+            transition-delay: $i * .1s;
+        }
+    }
+
+//
+    .__last_pj { margin-bottom: 40px;}
+}
+
+
 
 
 
@@ -434,22 +517,23 @@ div[data-page='top'] { overflow: hidden;}
             // }
         }
 
-        .__level-1 span:nth-child(-n+1) { background: #f0ff00; }
-        .__level-2 span:nth-child(-n+2) { background: #f0ff00; }
-        .__level-3 span:nth-child(-n+3) { background: #f0ff00; }
-        .__level-4 span:nth-child(-n+4) { background: #f0ff00; }
-        .__level-5 span:nth-child(-n+5) { background: #f0ff00; }
-        .__level-6 span:nth-child(-n+6) { background: #f0ff00; }
-        .__level-7 span:nth-child(-n+7) { background: #f0ff00; }
+        // .__level-1 span:nth-child(-n+1) { background: #f0ff00; }
+        // .__level-2 span:nth-child(-n+2) { background: #f0ff00; }
+        // .__level-3 span:nth-child(-n+3) { background: #f0ff00; }
+        // .__level-4 span:nth-child(-n+4) { background: #f0ff00; }
+        // .__level-5 span:nth-child(-n+5) { background: #f0ff00; }
+        // .__level-6 span:nth-child(-n+6) { background: #f0ff00; }
+        // .__level-7 span:nth-child(-n+7) { background: #f0ff00; }
 
 
-        // level grid loop
-        // $levelStatus: __level !default
-        //
-        // @for $i from 1 through 7
-        // .#{ $levelStatus }-#{ $i } span:nth-child(-n+#{ $i })
-        //     background: #f0ff00;
-        // -- *
+        // Badge level grid loop
+        $levelStatus: __level !default;
+
+        @for $i from 1 through 7 {
+            .#{ $levelStatus }-#{ $i } span:nth-child(-n+#{ $i }) {
+                background: #f0ff00;
+            }
+        }
     }
 
     button {
