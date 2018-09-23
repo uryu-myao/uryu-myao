@@ -250,9 +250,29 @@ div[data-page='top'] { overflow: hidden;}
         height: 40px;
         background: $clr_blur-active;
         margin-right: 2px;
-        transition: all .15s $cb_rush;
+        transition: all .25s $cb_rush;
 
-        &:last-child { margin-right: 0;}
+        &:last-child {
+            margin-right: 0;
+            position: relative;
+
+            &::after {
+                content: 'menu';
+                position: absolute;
+                font-family: $txt_cond;
+                font-size: 1.45rem;
+                text-transform: uppercase;
+                color: $clr_blur-active;
+                font-weight: bold;
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+                letter-spacing: .1em;
+                left: -24px;
+                top: 1px;
+                opacity: 0;
+                transition: all .25s $cb_rush;
+            }
+        }
     }
 
     &:hover {
@@ -260,14 +280,40 @@ div[data-page='top'] { overflow: hidden;}
             margin-right: 4px;
         }
     }
+
+    &-active {
+        & span:first-child {
+            height: 83vh;
+            width: 1px;
+            background: rgb(50, 61, 79);
+            // background: #05235f;
+        }
+
+        & span:nth-child(n+2) {
+            height: 0;
+        }
+
+        & span:last-child {
+            &::after {
+                left: -4px;
+                opacity: 1;
+            }
+        }
+        &:hover {
+            span {
+                margin-right: 2px;
+            }
+        }
+    }
 }
+
 
 // * overlay
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $clr_dark-trans;
+    background: black;
     z-index: 10;
     top: 0;
     left: -100%;
@@ -292,7 +338,7 @@ div[data-page='top'] { overflow: hidden;}
     }
 
     &__list {
-        width: 65%;
+        width: 60%;
         margin: 0 auto;
         position: relative;
 
