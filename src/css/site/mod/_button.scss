@@ -6,11 +6,10 @@
 
 button {
     width: 100%;
-    color: white;
     background: $clr_light-trans;
     height: 42px;
-    border-left: 2px solid $clr_blur-active;
-    border-right: 2px solid $clr_blur-active;
+    border-left: 2px solid $clr_blue-active;
+    border-right: 2px solid $clr_blue-active;
     position: absolute;
     padding-top: 2px;
     box-sizing: border-box;

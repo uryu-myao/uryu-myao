@@ -6,7 +6,7 @@
 .horizon {
     width: calc( 100% - 40px );
     height: 1px;
-    background: #323d4f;
+    background: $clr_blue-grey;
     position: fixed;
     z-index: 20;
 
@@ -19,7 +19,7 @@
           position: absolute;
           width: 5px;
           height: 5px;
-          background: $clr_blur-active;
+          background: $clr_blue-active;
           top: -2px;
       }
       &::before { left: -2px;}
