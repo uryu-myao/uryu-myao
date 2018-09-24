@@ -185,7 +185,7 @@ div[data-page='top'] { overflow: hidden;}
         font-weight: bold;
         font-family: $txt_norm;
         letter-spacing: .15em;
-        color: $clr_red;
+        color: $clr_blue-grey;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         position: absolute;
@@ -287,7 +287,7 @@ div[data-page='top'] { overflow: hidden;}
                 font-family: $txt_cond;
                 font-size: 1.45rem;
                 text-transform: uppercase;
-                color: $clr_blue-active;
+                color: white;
                 font-weight: bold;
                 -ms-writing-mode: tb-rl;
                 writing-mode: vertical-rl;
@@ -769,6 +769,7 @@ div[data-page='about'] {
 .__gAbout { overflow: scroll;}
 
 .__asideAbout {
+
     grid-column-start: 1;
     grid-column-end: 2;
     height: calc( 100% - 40px );
@@ -777,8 +778,8 @@ div[data-page='about'] {
     & > div {
         width: 100%;
         flex-direction: column-reverse;
-        @include bg-image (auto, 0, /images/about/aside, gif, center, cover, no-repeat);
-        opacity: .09;
+        // @include bg-image (auto, 0, /images/about/aside, gif, center, cover, no-repeat);
+        opacity: 1;
     }
 }
 

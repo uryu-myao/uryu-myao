@@ -1,22 +1,22 @@
 (function () {
 
-    function loadPages () {
-
-        // create
-        let xhr = new XMLHttpRequest();
-
-        // Open - type, url/file, async
-        xhr.open( 'GET', 'about.txt', true );
-
-        xhr.onload = funtion () {
-            if( this.status === 200 ) {
-                let item = JSON.parse( this.responseText );
-
-
-            } else if ( this.status === 404 ) {
-
-            }
-        }
+    // function loadPages () {
+    //
+    //     // create
+    //     let xhr = new XMLHttpRequest();
+    //
+    //     // Open - type, url/file, async
+    //     xhr.open( 'GET', 'about.txt', true );
+    //
+    //     xhr.onload = funtion () {
+    //         if( this.status === 200 ) {
+    //             let item = JSON.parse( this.responseText );
+    //
+    //
+    //         } else if ( this.status === 404 ) {
+    //
+    //         }
+    //     }
 
         // xhr.onreadystatechange = function () {
         //
@@ -28,14 +28,14 @@
         //
         // }
 
-        xhr.onerror = function () {
-
-        }
-
-        // send request
-        xhr.send();
-
-    }
+    //     xhr.onerror = function () {
+    //
+    //     }
+    //
+    //     // send request
+    //     xhr.send();
+    //
+    // }
 
 })();
 

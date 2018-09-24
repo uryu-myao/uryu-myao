@@ -9,6 +9,9 @@
 
 (function(){
 
+    if ( document.querySelector('#top') ) {
+
+
     let dataJSON = new XMLHttpRequest(),
         url = "/data/data.json";
 
@@ -28,5 +31,7 @@
     }
 
     dataJSON.send(null);
+
+    }
 
 })();

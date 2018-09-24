@@ -9,6 +9,8 @@
 
 (function() {
 
+    if ( document.querySelector('#top') ) {
+
     const elemCount = 3;
     const elemTrans = 0;
 
@@ -41,5 +43,5 @@
         }
     }
 
-
+    }
 }());

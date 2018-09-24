@@ -24,7 +24,6 @@ const Glitch = require('./lib/mgGlitch.js');
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const mod = require('./mod/scrollProgress.js');
-const tilt = require('./mod/typing.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
 const slider = require('./mod/topSlider.js');
