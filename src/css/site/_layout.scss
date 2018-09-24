@@ -759,6 +759,7 @@ div[data-page='about'] {
         font-size: 1.9rem;
         text-transform: uppercase;
         letter-spacing: .3em;
+        margin-left: 5vw;
     }
     .__ttl {
         position: relative;
@@ -829,6 +830,7 @@ div[data-page='about'] {
     letter-spacing: .03em;
     color: white;
     z-index: 10;
+    margin-left: 5vw;
 }
 
 .txt__ch {
@@ -993,19 +995,19 @@ div[data-page='about'] {
 
 .history {
     position: relative;
-    background: #1b262d;
-    margin: 72px 5vw 0 0;
+    margin: 72px 5vw 0;
     box-sizing: border-box;
     z-index: 2;
 
     & > div {
+        width: 100%;
+        margin: 0 auto;
         display: flex;
         align-items: flex-start;
-        padding: 65px 10vw 55px;
-        border-bottom: 1px solid #212573;
-    }
+        margin-bottom: 50px;
 
-    & > div:last-child { border: 0;}
+        &:last-child { margin-bottom: 0;}
+    }
 
     h2 {
         font-family: $txt_cond;
@@ -1020,31 +1022,59 @@ div[data-page='about'] {
         font-family: $txt_cond;
         font-weight: bold;
         color: white;
-        background: $clr_blue-active;
+        background: $clr_blue-main;
         padding: 6px 12px 5px;
         display: inline;
+        letter-spacing: .18em;
     }
 
     .due {
         color: $clr_blue-main;
         font-family: $txt_courier;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         letter-spacing: .02em;
-        margin-top: 18px;
+        margin: 18px 0 0;
     }
 
     .place {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 30px;
+        box-sizing: border-box;
         width: 24vw;
-        min-width: 213px;
+        height: 150px;
+        max-width: 278px;
         margin-top: 5px;
+        background: #1f2a33;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            @include center (vertical);
+            left: -2.8vw;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 6px solid $clr_blue-main;
+        }
     }
 
     .job {
-        color: $clr_blue-light;
-        font-family: $txt_norm;
-        font-size: 1.6rem;
-        letter-spacing: .085em;
-        line-height: 1.8;
+        margin: 0 0 0 50px;
+        display: flex;
+        align-items: center;
+        height: 150px;
+
+        p {
+            color: $clr_blue-light;
+            font-family: $txt_norm;
+            font-size: 1.6rem;
+            letter-spacing: .055em;
+            line-height: 1.8;
+            margin: 0;
+        }
     }
 }
 
