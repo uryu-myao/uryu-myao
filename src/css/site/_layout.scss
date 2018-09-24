@@ -29,30 +29,37 @@ p, dt, dd, li, a {
     background: black;
     position: relative;
     z-index: 999;
+    padding: 20px;
+    box-sizing: border-box;
 
     .shield {
-        width: 100%;
-        height: 50vh;
+        width: calc( 100% - 40px );
+        height: calc( 50vh - 20px );
         position: absolute;
         background: $clr_dark;
-        transition: all .15s ease-out;
+        transition: all .15s $cb_rush;
+        z-index: 10;
+    }
+
+    .loadingline {
+        width: calc( 100% - 46px );
+        height: 1px;
+        position: absolute;
+        @include center (horizontal);
+        background: $clr_blue-main;
+        transition: all .15s $cb_rush;
+        z-index: 20;
     }
 }
 
-.shield__up   { top: 0;}
-.shield__down { bottom: 0;}
+.shield__up,
+.loadingline__up    { top: 20px;}
+.shield__down,
+.loadingline__down  { bottom: 20px;}
 
-.line__close {
-    position: absolute;
-    display: block;
-    content: '';
-    width: 0;
-    height: 1px;
-    background: white;
+.preload-active {
+
 }
-
-.hide .shield__up   { top: -100%;}
-.hide .shield__down { bottom: -100%;}
 
 
 
@@ -241,8 +248,9 @@ div[data-page='top'] { overflow: hidden;}
     picture {
         opacity: .35;
         display: block;
+        width: 100%;
         height: 100%;
-        @include bg-image (auto, 0, /images/top/mars, png, bottom 0px right 35%, cover, no-repeat);
+        @include bg-image (auto, 0, /images/top/mars, png, top 0px right 35%, cover, no-repeat);
     }
 }
 

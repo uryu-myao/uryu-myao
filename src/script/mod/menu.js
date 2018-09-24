@@ -16,7 +16,7 @@
                 overlay.classList.add('overlay-active');
                 menu.classList.add('menu-active');
 
-                for (var i = 0, ii = navItem.length; i < ii; i++) {
+                for ( var i = 0; i < navItem.length; i++ ) {
                     navItem[i].classList.add('overlay__item-active');
                 }
 
@@ -27,7 +27,7 @@
                 overlay.classList.remove('overlay-active');
                 menu.classList.remove('menu-active');
 
-                for (var i = 0, ii = navItem.length; i < ii; i++) {
+                for ( var i = 0; i < navItem.length; i++ ) {
                     navItem[i].classList.remove('overlay__item-active');
                 }
 
@@ -35,11 +35,12 @@
             }
         };
 
+
         let bindActions = function() {
             menu.addEventListener('click', toggleMenu, false);
         };
 
-        let init = function() { bindActions(); };
+        let init = function() { bindActions();};
 
         return { init: init };
 
