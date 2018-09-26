@@ -6,6 +6,8 @@
             overlay = document.querySelector('.overlay'),
             navItem = document.querySelectorAll('.overlay__item');
 
+        const click_01 = document.querySelector('#sound_click-1');
+
         let active = false;
 
 
@@ -33,6 +35,8 @@
 
                 active = false;
             }
+
+            click_01.play();
         };
 
 
