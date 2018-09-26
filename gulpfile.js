@@ -11,6 +11,7 @@ const autoprefixer   = require("autoprefixer"); // complement CSS prefixer
 const source         = require('vinyl-source-stream');　//　change vinyl to Stream
 const minify         = require('gulp-minify'); //　minify JS
 const browserify     = require('browserify'); // require JS module
+const sourcemaps     = require('gulp-sourcemaps');
 const bs             = require('browser-sync').create();　
 const imagemin       = require('gulp-imagemin'); // compress image
 const del            = require('del'); // delete image
@@ -98,17 +99,21 @@ gulp.task('sass', function() {
 // Compile JS
 
 gulp.task('js', function() {
-    return browserify({
-        entries: 'src/script/app.js',
-        debug: true,
-        paths: ['./node_modules'],
-        cache: {},
-        packageCache: {}
-    })
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(rename({ suffix: ".bundle" }))
-    .pipe(gulp.dest('src/script'));
+
+    let bs = browserify({
+          entries: 'src/script/app.js',
+          debug: true
+          // paths: ['./node_modules'],
+          // cache: {},
+          // packageCache: {}
+      });
+
+    return bs.bundle()
+        .pipe(source('app.js'))
+        .pipe(rename({ suffix: ".bundle" }))
+        // .pipe(sourcemaps.init({loadMaps: true}))
+        // .pipe(sourcemaps.write())
+        .pipe(gulp.dest('src/script'));
 });
 
 

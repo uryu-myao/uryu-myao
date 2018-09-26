@@ -1,12 +1,12 @@
 (function() {
 
-    // Hover Sound Resourse
+    // Sound Resourses
     const glitch_01 = document.querySelector('#sound_hv-1');
     const BGM = document.querySelector('#sound_bgm');
 
-    let audio_hvGlitch_01 = document.querySelector('.audio__hv'),
-        audio_switchBGM = document.querySelector('.sound__switch');
 
+    let audio_hvGlitch_01 = document.querySelector('.audio__hv'),
+        audio_switchBGM = document.querySelector('.audio__switch');
 
     let btnHoverSoundEffect = function () {
 
@@ -47,9 +47,7 @@
         audio_switchBGM.addEventListener('click', toggleBGMBtn, false);
     };
 
-
     BGM.play();
     switchBGM();
-
 
 }());
