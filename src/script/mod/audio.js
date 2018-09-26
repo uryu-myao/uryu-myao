@@ -9,38 +9,37 @@
     let audio_hvGlitch_01 = document.querySelector('.audio__hv-01'),
         audio_switchBGM = document.querySelector('.BGM');
 
+    //
+    // function hoverAudioEffect ( audio ) {
+    //     return function () {
+    //
+    //         this.addEventListener('mouseenter', function() {
+    //             audio.play();
+    //         }, false);
+    //         this.addEventListener('mouseleave', function() {
+    //             audio.pause();
+    //         }, false);
+    //
+    //     }
+    // };
+    //
+    // let audio_glitch_01 = hoverAudioEffect( glitch_01 );
+    // let audio_glitch_02 = hoverAudioEffect( glitch_02 );
+    //
+    // document.querySelector('.audio__hv-01').addEventListener = audio_glitch_01;
 
-    function hoverAudioEffect ( audio ) {
-        return function () {
+    let btnHoverSoundEffect = function () {
 
-            this.addEventListener('mouseenter', function() {
-                audio.play();
-            }, false);
-            this.addEventListener('mouseleave', function() {
-                audio.pause();
-            }, false);
+        audio_hvGlitch_01.addEventListener('mouseenter', function() {
+            glitch_01.play();
+        }, false);
+        audio_hvGlitch_01.addEventListener('mouseleave', function() {
+            glitch_01.pause();
+        }, false);
 
-        }
     };
 
-    let audio_glitch_01 = hoverAudioEffect( glitch_01 );
-    let audio_glitch_02 = hoverAudioEffect( glitch_02 );
-
-    document.querySelector('.audio__hv-01').addEventListener = audio_glitch_01;
-
-    // let btnHoverSoundEffect = function () {
-    //
-    //     audio_hvGlitch_01.addEventListener('mouseenter', function() {
-    //         glitch_01.play();
-    //     }, false);
-    //     audio_hvGlitch_01.addEventListener('mouseleave', function() {
-    //         glitch_01.pause();
-    //     }, false);
-    //
-    // };
-
-    // btnHoverSoundEffect();
-
+    btnHoverSoundEffect();
 
 
     // Turn on/off BGM

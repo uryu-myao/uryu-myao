@@ -479,16 +479,16 @@ div[data-page='top'] { overflow: hidden;}
 
     & > div {
         @include center ( both );
-        margin-left: -4px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 8px;
     }
 
     h2 {
         font-family: $txt_cond;
         font-size: 1.89rem;
-        letter-spacing: .25em;
+        letter-spacing: .16em;
         line-height: normal;
         white-space: nowrap;
         text-transform: uppercase;
@@ -757,23 +757,19 @@ div[data-page='top'] { overflow: hidden;}
         bottom: -22px;
         height: 1px;
 
-        animation: spectrum_on 0ms -800ms linear infinite alternate;
+        animation: spectrum 0ms -800ms linear infinite alternate;
         transition: all .35s $cb_rush;
 
-        &:nth-child(1) { left: 9px; animation-duration: 424ms;}
+        &:nth-child(1) { left: 9px;  animation-duration: 424ms;}
         &:nth-child(2) { left: 13px; animation-duration: 487ms;}
         &:nth-child(3) { left: 17px; animation-duration: 400ms;}
         &:nth-child(4) { left: 21px; animation-duration: 442ms;}
     }
 }
 
-@keyframes spectrum_on {
-    0%   { height: 1px;}
+@keyframes spectrum {
+    0%   { height: 2px;}
     100% { height: 10px;}
-}
-@keyframes spectrum_off {
-    0%   { height: 10px;}
-    100% { height: 1px;}
 }
 
 ._pause {
