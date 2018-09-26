@@ -57,8 +57,14 @@ p, dt, dd, li, a {
 .shield__down,
 .loadingline__down  { bottom: 20px;}
 
-.preload-active {
+.preload-active .horizon {
 
+    div {
+
+        &::before, &::after {
+            animation: tinkle 2s infinite 0s ease;
+        }
+    }
 }
 
 
@@ -163,6 +169,10 @@ div[data-page='about']
     .horizon__bottom { bottom: -1px;}
 }
 
+@keyframes tinkle {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}
 
 
 // Top
