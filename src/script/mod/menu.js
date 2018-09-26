@@ -6,7 +6,7 @@
             overlay = document.querySelector('.overlay'),
             navItem = document.querySelectorAll('.overlay__item');
 
-        const click_01 = document.querySelector('#sound_click-1');
+        const click_01 = document.querySelector('#sound_click-01');
 
         let active = false;
 

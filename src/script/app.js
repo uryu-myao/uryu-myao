@@ -12,9 +12,7 @@ window.$ = window.jQuery = require('jquery');
 
 // lib
 // ** -
-const tiltJS = require('./lib/tilt.jquery.js');
 const Glitch = require('./lib/mgGlitch.js');
-// const threeControls = require('./lib/OrbitControls.js');
 // const glMatrix = require('./lib/gl-matrix-min.js');
 
 

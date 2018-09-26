@@ -9,39 +9,41 @@
 
 (function() {
 
-    if ( document.querySelector('#top') ) {
+    let topPage = document.querySelector('#top');
 
-    const elemCount = 3;
-    const elemTrans = 0;
+    if ( topPage ) {
 
-    let current = 1,
-        trans = 1;
+        let elemCount = 3,
+            elemTrans = 0;
 
-    const nextElem = document.querySelector('.grid__prev');
-    const prevElem = document.querySelector('.grid__next');
-    const currentSlider = document.querySelector('.grid__curS .__cur-show > *');
-    const detailsBtn = document.querySelector('.__curI-desc button a');
+        let current = 1,
+            trans = 1;
 
-    nextElem.addEventListener('click', nextImage);
-    prevElem.addEventListener('click', prevImage);
+        let nextElem = document.querySelector('.grid__prev'),
+            prevElem = document.querySelector('.grid__next'),
+            currentSlider = document.querySelector('.grid__curS .__cur-show > *'),
+            detailsBtn = document.querySelector('.__curI-desc button a');
 
-    detailsBtn.href = "/works/01.html";
+        nextElem.addEventListener('click', nextImage);
+        prevElem.addEventListener('click', prevImage);
 
-    function nextImage () {
-        if ( current < elemCount )
-        {
-            current++;
-            console.log(current);
+        detailsBtn.href = "/works/01.html";
+
+        function nextImage () {
+            if ( current < elemCount )
+            {
+                current++;
+                console.log(current);
+            }
+        };
+
+        function prevImage () {
+            if ( current > 0 )
+            {
+                current--;
+                console.log(current);
+            }
         }
-    };
-
-    function prevImage () {
-        if ( current > 0 )
-        {
-            current--;
-            console.log(current);
-        }
-    }
 
     }
 }());
