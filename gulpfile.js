@@ -76,11 +76,13 @@ gulp.task('njk', function() {
 gulp.task('sass', function() {
     return gulp.src(paths.srcSASS)
 
-    .pipe(sass.sync().on('error', sass.logError))
     .pipe(sass({
         outputStyle: 'expanded'
         // style：nested, compact, expanded, compressed
     }))
+    .pipe(sourcemaps.init())
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(postcss([
         autoprefixer({
             grid: true,

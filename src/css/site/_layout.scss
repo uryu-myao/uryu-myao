@@ -223,7 +223,7 @@ div[data-page='top'] { overflow: hidden;}
 .__asideTop {
     grid-area: aside;
 
-  .logo {
+  #logo {
       color: $clr_red;
       z-index: 10;
       @include center (both);
