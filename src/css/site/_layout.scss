@@ -1176,17 +1176,72 @@ div[data-page='about'] {
 // 404
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 div[data-page='404'] {
+    color: white;
     position: relative;
 
-    main > div {
+    main > * {
         position: absolute;
+    }
+
+    picture { display: block;}
+}
+
+.screen_404 {
+    width: 200px;
+    top: 10vh;
+    left: 4vw;
+    box-shadow: 0px 0px 10px white;
+    animation: screen_flash 1s infinite 0s linear;
+
+    picture {
+        height: 200px;
+        @include bg-image (auto, 0, /assets/404/screen, png, center, cover, no-repeat);
     }
 }
 
-.404_plant {
+.p_404 {
+    top: 10vh;
+    right: 4vw;
 
+    h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: .25em;
+    }
+
+    p {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1;
+        letter-spacing: .2rem;
+    }
 }
 
-.404_p {
+.plant_404 {
+    width: 400px;
+    bottom: 0;
+    right: 0;
+    animation: floating 1s infinite 0s linear;
 
+    picture {
+        height: 200px;
+        @include bg-image (auto, 0, /assets/404/plant, png, center, cover, no-repeat);
+    }
+}
+
+@keyframes screen_flash {
+    0% { box-shadow: 0px 0px 10px white;}
+    100% { box-shadow: 0px 0px 10px white;}
+}
+
+@keyframes floating {
+    0% {
+        top: 1px;
+        left: 1vw;
+    }
+    100% {
+        top: 1px;
+        left: 1vw;
+    }
 }

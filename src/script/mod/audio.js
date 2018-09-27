@@ -7,7 +7,7 @@
 
     // DOM
     let audio_hvGlitch_01 = document.querySelector('.audio__hv-01'),
-        audio_switchBGM = document.querySelector('.BGM');
+        audio_switchBGM = document.querySelector('.BGM')
 
     //
     // function hoverAudioEffect ( audio ) {
@@ -35,7 +35,7 @@
         }, false);
         audio_hvGlitch_01.addEventListener('mouseleave', function() {
             glitch_01.pause();
-        }, false);
+        }, false)
 
     };
 
@@ -52,14 +52,14 @@
             audio_switchBGM.classList.add('_pause');
             BGM.pause();
 
-            play = false;
+            play = false
 
         } else {
 
             audio_switchBGM.classList.remove('_pause');
             BGM.play();
 
-            play = true;
+            play = true
 
         }
     };
