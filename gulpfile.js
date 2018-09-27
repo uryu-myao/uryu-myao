@@ -33,7 +33,7 @@ const paths =
     srcSASS:  src  + '/**/*.+(scss|css)',
     srcJS:    src  + '/**/*.js',
     srcIMG:   src  + '/assets/**/*.+(png|jpg|gif|svg)',
-    srcFONT:  src  + '/font/**/*.+(ttf|woff|truetype|svg)',
+    srcFONT:  src  + '/assets/**/*.+(ttf|woff|truetype|svg)',
     srcAUDIO: src  + '/assets/**/*.+(mp3|ogg)',
 
     distJS:   dist + '/**/*.js',
@@ -146,7 +146,7 @@ gulp.task('img', () =>
 
 gulp.task('font', function() {
     gulp.src(paths.srcFONT)
-        .pipe(gulp.dest('dist/font'))
+        .pipe(gulp.dest('dist/assets'))
 });
 
 
