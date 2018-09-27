@@ -68,8 +68,7 @@
         audio_switchBGM.addEventListener('click', toggleBGMBtn, false);
     };
 
-    switchBGM();
-
     BGM.play();
+    switchBGM();
 
 }());

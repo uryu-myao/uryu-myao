@@ -4,7 +4,7 @@
 
         let menu = document.querySelector('.menu'),
             overlay = document.querySelector('.overlay'),
-            navItem = document.querySelectorAll('.overlay__item')
+            navItem = document.querySelectorAll('.overlay__item');
 
         const click_01 = document.querySelector('#sound_click-01');
 
@@ -19,10 +19,10 @@
                 menu.classList.add('menu-active');
 
                 for ( var i = 0; i < navItem.length; i++ ) {
-                    navItem[i].classList.add('overlay__item-active')
+                    navItem[i].classList.add('overlay__item-active');
                 }
 
-                active = true
+                active = true;
 
             } else {
 
@@ -30,10 +30,10 @@
                 menu.classList.remove('menu-active');
 
                 for ( var i = 0; i < navItem.length; i++ ) {
-                    navItem[i].classList.remove('overlay__item-active')
+                    navItem[i].classList.remove('overlay__item-active');
                 }
 
-                active = false
+                active = false;
             }
 
             click_01.play();
@@ -41,7 +41,7 @@
 
 
         let bindActions = function() {
-            menu.addEventListener('click', toggleMenu, false)
+            menu.addEventListener('click', toggleMenu, false);
         };
 
         let init = function() { bindActions();};

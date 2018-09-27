@@ -34,6 +34,7 @@ p, dt, dd, li, a {
     .shield {
         width: calc( 100% - 40px );
         height: calc( 50vh - 20px );
+        opacity: 0;
         position: absolute;
         background: $clr_dark;
         transition: all .15s $cb_rush;
@@ -61,10 +62,15 @@ p, dt, dd, li, a {
     div {
 
         &::before, &::after {
-            animation: tinkle 2s infinite 0s ease;
+            animation: tinkle 1s infinite 1s alternate linear;
         }
     }
 }
+
+.preload-active .shield {
+    animation: tinkle 2.5s forwards linear;
+}
+
 
 
 
@@ -169,8 +175,8 @@ div[data-page='about']
 }
 
 @keyframes tinkle {
-    0% { opacity: 1;}
-    100% { opacity: 0;}
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
 
 
