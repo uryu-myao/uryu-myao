@@ -32,12 +32,12 @@ const paths =
     srcDATA:  src  + '/**/*.json',
     srcSASS:  src  + '/**/*.+(scss|css)',
     srcJS:    src  + '/**/*.js',
-    srcIMG:   src  + '/images/**/*.+(png|jpg|gif|svg)',
+    srcIMG:   src  + '/assets/**/*.+(png|jpg|gif|svg)',
     srcFONT:  src  + '/font/**/*.+(ttf|woff|truetype|svg)',
-    srcAUDIO: src  + '/audio/**/*.+(mp3|ogg)',
+    srcAUDIO: src  + '/assets/**/*.+(mp3|ogg)',
 
     distJS:   dist + '/**/*.js',
-    distIMG:  dist + '/images/**/*.+(png|jpg|gif|webp)'
+    distIMG:  dist + '/assets/**/*.+(png|jpg|gif|webp)'
 };
 
 
@@ -128,7 +128,7 @@ gulp.task('minjs', ['js'], function() {
 });
 
 
-// Minify images
+// Minify assets
 
 gulp.task('img', () =>
     gulp.src(paths.srcIMG)
@@ -138,7 +138,7 @@ gulp.task('img', () =>
             optimizationLevel: 5,
             svgoPlugins: [{removeViewBox: true}]
         }))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/assets'))
 );
 
 
@@ -154,7 +154,7 @@ gulp.task('font', function() {
 
 gulp.task('audio', function() {
     gulp.src(paths.srcAUDIO)
-        .pipe(gulp.dest('dist/audio'))
+        .pipe(gulp.dest('dist/assets'))
 });
 
 
@@ -166,7 +166,7 @@ gulp.task('JSON', function() {
 });
 
 
-// Delete images
+// Delete assets
 
 gulp.task('del', function (cb) {
     return del(paths.distIMG, cb)
@@ -225,10 +225,10 @@ gulp.task('help',function () {
   console.log('gulp css    --- Complie Sass / minfy css');
   console.log('gulp js     --- Bundle JS');
   console.log('gulp minjs  --- Minify JS');
-  console.log('gulp img    --- Minify images');
+  console.log('gulp img    --- Minify assets');
   console.log('gulp font   --- Transfer font files');
   console.log('gulp audio  --- Transfer audio files');
-  console.log('gulp del    --- Delete images changed in src');
+  console.log('gulp del    --- Delete assets changed in src');
   console.log('gulp clean  --- Clean dist files');
   console.log('gulp build  --- Build dist files');
   console.log('gulp watch  --- Watch image changes form src folder');

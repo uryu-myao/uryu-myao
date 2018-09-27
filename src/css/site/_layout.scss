@@ -7,7 +7,7 @@
 body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch;
     color: black;
-    cursor: url('/images/common/cursor.png'), auto;
+    cursor: url('/assets/common/cursor.png'), auto;
     background: $clr-dark;
 }
 
@@ -94,7 +94,7 @@ p, dt, dd, li, a {
     z-index: 2;
     background:
     {
-        image: url(/images/common/noise.gif);
+        image: url(/assets/common/noise.gif);
         repeat: repeat;
     }
 }
@@ -242,7 +242,7 @@ div[data-page='top'] { overflow: hidden;}
     picture {
         display: block;
         height: 62px;
-        @include bg-image (auto, 0, /images/top/earth, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, /assets/top/earth, png, center, cover, no-repeat);
     }
 }
 
@@ -259,7 +259,7 @@ div[data-page='top'] { overflow: hidden;}
         display: block;
         width: 100%;
         height: 100%;
-        @include bg-image (auto, 0, /images/top/mars, png, top 0px right 35%, cover, no-repeat);
+        @include bg-image (auto, 0, /assets/top/mars, png, top 0px right 35%, cover, no-repeat);
     }
 }
 
@@ -453,13 +453,13 @@ div[data-page='top'] { overflow: hidden;}
       }
 
       .__cur-s1 {
-          @include bg-image (auto, 0, /images/top/video_s1, gif, center, cover, no-repeat);
+          @include bg-image (auto, 0, /assets/top/video_s1, gif, center, cover, no-repeat);
       }
       // .__cur-s2 {
-      //     @include bg-image (auto, 0, /images/top/video_s2, gif, center, cover, no-repeat);
+      //     @include bg-image (auto, 0, /assets/top/video_s2, gif, center, cover, no-repeat);
       // }
       // .__cur-s3 {
-      //     @include bg-image (auto, 0, /images/top/video_s3, gif, center, cover, no-repeat);
+      //     @include bg-image (auto, 0, /assets/top/video_s3, gif, center, cover, no-repeat);
       // }
     }
 }
@@ -565,9 +565,9 @@ div[data-page='top'] { overflow: hidden;}
             }
         }
 
-        .__badge-design { background-image: url( /images/top/badge_01.svg );}
-        .__badge-dev { background-image: url( /images/top/badge_02.svg );}
-        .__badge-direction { background-image: url( /images/top/badge_03.svg );}
+        .__badge-design { background-image: url( /assets/top/badge_01.svg );}
+        .__badge-dev { background-image: url( /assets/top/badge_02.svg );}
+        .__badge-direction { background-image: url( /assets/top/badge_03.svg );}
 
         .badge__li {
             display: flex;
@@ -650,7 +650,7 @@ div[data-page='top'] { overflow: hidden;}
     box-sizing: border-box;
     margin-bottom: 10px;
     background: {
-        image: url(/images/common/pttn.png);
+        image: url(/assets/common/pttn.png);
         repeat: repeat;
     }
     animation: stripe .5s linear 0s infinite;
@@ -701,11 +701,11 @@ div[data-page='top'] { overflow: hidden;}
 }
 
 .__next-s1 {
-    @include bg-image (auto, 0, /images/top/next_s1, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, /assets/top/next_s1, png, center, cover, no-repeat);
 }
 
 .__prev-s1 {
-    @include bg-image (auto, 0, /images/top/prev_s1, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, /assets/top/prev_s1, png, center, cover, no-repeat);
 }
 
 
@@ -815,7 +815,7 @@ div[data-page='about'] {
     & > div {
         width: 100%;
         flex-direction: column-reverse;
-        // @include bg-image (auto, 0, /images/about/aside, gif, center, cover, no-repeat);
+        // @include bg-image (auto, 0, /assets/about/aside, gif, center, cover, no-repeat);
         opacity: 1;
     }
 }
@@ -960,7 +960,7 @@ div[data-page='about'] {
     position: relative;
 
     &::after {
-        content: url(/images/about/brush.png);
+        content: url(/assets/about/brush.png);
         position: absolute;
         top: -4px;
         left: -18px;
@@ -978,7 +978,7 @@ div[data-page='about'] {
         display: inline-block;
         position: relative;
         height: 835px;
-        @include bg-image (auto, 0, /images/about/paper, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, /assets/about/paper, png, center, cover, no-repeat);
 
         &::before {
             content: '';
@@ -1013,7 +1013,7 @@ div[data-page='about'] {
     }
 
     &::before {
-        content: url(/images/about/noise.png);
+        content: url(/assets/about/noise.png);
         position: absolute;
         display: block;
         top: 0;
@@ -1169,4 +1169,24 @@ div[data-page='about'] {
     }
 
     .svg__send { fill: black;}
+}
+
+
+
+// 404
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+div[data-page='404'] {
+    position: relative;
+
+    main > div {
+        position: absolute;
+    }
+}
+
+.404_plant {
+
+}
+
+.404_p {
+
 }
