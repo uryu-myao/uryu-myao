@@ -11,7 +11,7 @@
 
             if (!loaded) {
 
-                loadingPage.classList.add('preload-active');
+                loadingPage.classList.add('_preload_loading');
 
                 // window.addEventListener( 'scroll', noscroll );
 

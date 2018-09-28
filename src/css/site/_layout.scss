@@ -23,17 +23,22 @@ p, dt, dd, li, a {
 
 #preload {
     width: 100%;
-    height: 100%;
-    height: 100vh;
     background: black;
-    position: relative;
+    position: fixed;
+    overflow: hidden;
     z-index: 999;
     padding: 20px;
     box-sizing: border-box;
 
+    & > div {
+        position: relative;
+        height: calc( 100% - 40px );
+        height: calc( 100vh - 40px );
+    }
+
     .shield {
-        width: calc( 100% - 40px );
-        height: calc( 50vh - 20px );
+        width: calc( 100% );
+        height: 0;
         opacity: 0;
         position: absolute;
         background: $clr_dark;
@@ -45,19 +50,20 @@ p, dt, dd, li, a {
         width: calc( 100% - 46px );
         height: 1px;
         position: absolute;
-        @include center (horizontal);
         background: $clr_blue-main;
         transition: all .15s $cb_rush;
         z-index: 20;
     }
 }
 
-.shield__up,
-.loadingline__up    { top: 20px;}
-.shield__down,
-.loadingline__down  { bottom: 20px;}
+.loadingline__up { top: 0;}
+.loadingline__down { bottom: 0;}
 
-.preload-active .horizon {
+.shield__up { top: 0;}
+.shield__down { bottom: 0;}
+
+
+._preload_loading .horizon {
 
     div {
 
@@ -67,10 +73,16 @@ p, dt, dd, li, a {
     }
 }
 
-.preload-active .shield {
-    animation: tinkle 2.5s forwards linear;
+._preload_loading .shield {
+    height: calc( 50vh - 20px );
+    animation: tinkle 1s forwards 1s linear;
 }
 
+@keyframes fadein-tinkle {
+  0% { opacity: 0;}
+  50% { opacity: .5;}
+  100% { opacity: 1;}
+}
 
 
 
