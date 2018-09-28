@@ -19,6 +19,8 @@ const clean          = require('gulp-clean'); // remove dist
 const rename         = require('gulp-rename'); // rename files
 const runSequence    = require('run-sequence'); // gulp task order
 
+const gutil = require('gulp-util');
+
 
 
 
@@ -113,6 +115,7 @@ gulp.task('js', function() {
     return bs.bundle()
         .pipe(source('app.js'))
         .pipe(rename({ suffix: ".bundle" }))
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         // .pipe(sourcemaps.init({loadMaps: true}))
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest('src/script'));

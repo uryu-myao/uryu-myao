@@ -9,9 +9,11 @@
 
 $(function(){
 
-    if ( document.querySelector('#top') ) {
+    let $glitchPic = $( ".grid__curS picture" );
 
-        $( ".grid__curS picture" ).mgGlitch({
+    if ( $glitchPic ) {
+
+        $glitchPic.mgGlitch({
             // set 'true' to stop the plugin
     			  destroy : false,
             // set 'false' to stop glitching
