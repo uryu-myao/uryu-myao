@@ -36,16 +36,6 @@ p, dt, dd, li, a {
         height: calc( 100vh - 40px );
     }
 
-    .shield {
-        width: calc( 100% );
-        height: 0;
-        opacity: 0;
-        position: absolute;
-        background: $clr_dark;
-        transition: all .15s $cb_rush;
-        z-index: 10;
-    }
-
     .loadingline {
         width: calc( 100% - 46px );
         height: 1px;
@@ -59,6 +49,15 @@ p, dt, dd, li, a {
 .loadingline__up { top: 0;}
 .loadingline__down { bottom: 0;}
 
+.shield {
+    width: calc( 100% );
+    height: 0;
+    position: absolute;
+    background: $clr_dark;
+    transition: all .35s $cb_rush;
+    z-index: 10;
+}
+
 .shield__up { top: 0;}
 .shield__down { bottom: 0;}
 
@@ -68,20 +67,32 @@ p, dt, dd, li, a {
     div {
 
         &::before, &::after {
-            animation: tinkle 1s infinite 1s alternate linear;
+            background: black;
+            animation: open-dots 2s infinite 0 alternate $cb_rush;
         }
     }
 }
 
 ._preload_loading .shield {
     height: calc( 50vh - 20px );
-    animation: tinkle 1s forwards 1s linear;
 }
 
-@keyframes fadein-tinkle {
-  0% { opacity: 0;}
-  50% { opacity: .5;}
-  100% { opacity: 1;}
+@keyframes open-dots {
+  0% {
+    opacity: 0;
+    background: black;
+  }
+  50% {
+    opacity: 1;
+    background: #001eff;
+  }
+  75% {
+    background: #1a2685;
+  }
+  100% {
+    opacity: 1;
+    background: #001eff;
+  }
 }
 
 
@@ -166,7 +177,8 @@ p, dt, dd, li, a {
 //
 
 div[data-page='top'],
-div[data-page='about']
+div[data-page='about'],
+div[data-page='works']
 {
     padding: 20px;
     box-sizing: border-box;
@@ -507,7 +519,7 @@ div[data-page='top'] { overflow: hidden;}
         font-family: $txt_cond;
         font-size: 1.89rem;
         letter-spacing: .16em;
-        line-height: normal;
+        line-height: 1;
         white-space: nowrap;
         text-transform: uppercase;
     }
@@ -546,90 +558,6 @@ div[data-page='top'] { overflow: hidden;}
 
     .badges {
         margin-top: 15px;
-
-        ol {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        li {
-            width: 30%;
-            height: 72px;
-            position: relative;
-            clip-path: polygon(19% 0, 100% 0, 100% 86%, 81% 100%, 0 100%, 0 14%);
-            @include clr-opacity ( $clr_blue-main, .34 );
-        }
-
-        P {
-            position: absolute;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            margin: 0;
-            font-family: $txt_cond;
-            letter-spacing: .045em;
-            top: 4px;
-            right: 4px;
-            opacity: .1;
-        }
-
-        .badge__ch {
-            width: 18px;
-            height: 26px;
-            margin: 1.8vh 0 0 1.23vw;
-            opacity: .1;
-            background: {
-                repeat: no-repeat;
-                size: cover;
-            }
-        }
-
-        .__badge-design { background-image: url( /assets/top/badge_01.svg );}
-        .__badge-dev { background-image: url( /assets/top/badge_02.svg );}
-        .__badge-direction { background-image: url( /assets/top/badge_03.svg );}
-
-        .badge__li {
-            display: flex;
-            justify-content: flex-start;
-            width: 60%;
-            position: absolute;
-            left: .6vw;
-            bottom: 10px;
-
-            span {
-                width: 4px;
-                height: 6px;
-                margin-right: 2px;
-                @include clr-opacity ( #6b6d41, .28 );
-
-            }
-        }
-
-        .badges_active {
-            background-image: linear-gradient( #232a8b, #0b1940 );
-
-            .badge__ch { opacity: 1;}
-            .badge__li span { background: #6b6d41;}
-
-            // &:before {
-            //     position: absolute;
-            //     content: '';
-            //     display: block;
-            //     width: 15px;
-            //     height: 8px;
-            //     border-top: 2px solid $clr_blue-active;
-            //     border-right: 2px solid $clr_blue-active;
-            //     top: 0;
-            // }
-        }
-
-        // Badge level grid loop
-        $levelStatus: __level !default;
-
-        @for $i from 1 through 7 {
-            .#{ $levelStatus }-#{ $i } span:nth-child(-n+#{ $i }) {
-                background: #f0ff00;
-            }
-        }
     }
 
     button {
@@ -639,6 +567,93 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
+
+.badges {
+
+    ol {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        width: 30%;
+        height: 72px;
+        position: relative;
+        clip-path: polygon(19% 0, 100% 0, 100% 86%, 81% 100%, 0 100%, 0 14%);
+        @include clr-opacity ( $clr_blue-main, .34 );
+    }
+
+    P {
+        color: white;
+        position: absolute;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        margin: 0;
+        font-family: $txt_cond;
+        letter-spacing: .045em;
+        top: 4px;
+        right: 4px;
+        opacity: .2;
+    }
+
+    .badge__ch {
+        width: 18px;
+        height: 26px;
+        margin: 1.8vh 0 0 1.23vw;
+        opacity: .1;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+        }
+    }
+
+    .__badge-design { background-image: url( /assets/top/badge_01.svg );}
+    .__badge-dev { background-image: url( /assets/top/badge_02.svg );}
+    .__badge-direction { background-image: url( /assets/top/badge_03.svg );}
+
+    .badge__li {
+        display: flex;
+        justify-content: flex-start;
+        width: 60%;
+        position: absolute;
+        left: .6vw;
+        bottom: 10px;
+
+        span {
+            width: 4px;
+            height: 6px;
+            margin-right: 2px;
+            @include clr-opacity ( #6b6d41, .28 );
+        }
+    }
+
+    .badges_active {
+        background-image: linear-gradient( #232a8b, #0b1940 );
+
+        .badge__ch { opacity: 1;}
+        .badge__li span { background: #6b6d41;}
+
+        // &:before {
+        //     position: absolute;
+        //     content: '';
+        //     display: block;
+        //     width: 15px;
+        //     height: 8px;
+        //     border-top: 2px solid $clr_blue-active;
+        //     border-right: 2px solid $clr_blue-active;
+        //     top: 0;
+        // }
+    }
+
+    // Badge level grid loop
+    $levelStatus: __level !default;
+
+    @for $i from 1 through 7 {
+        .#{ $levelStatus }-#{ $i } span:nth-child(-n+#{ $i }) {
+            background: #f0ff00;
+        }
+    }
+}
 
 
 // Prev & Next
@@ -815,10 +830,20 @@ div[data-page='about'] {
         letter-spacing: .3em;
         margin-left: 5vw;
     }
+
     .__ttl {
         position: relative;
         z-index: 10;
     }
+
+    .BGM {
+        position: fixed;
+        bottom: 30px;
+        left: auto;
+        right: 15px;
+        z-index: 10;
+    }
+
 }
 
 .__gAbout { overflow: scroll;}
@@ -1191,6 +1216,121 @@ div[data-page='about'] {
 
 
 
+// Works
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+.grid__contentsWorks {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: calc( 100% - 40px );
+    height: calc( 100vh - 40px );
+    overflow: scroll;
+
+    & > figure {
+        height: 100%;
+
+        picture {
+            display: block;
+            height: 100%;
+
+            @include bg-image (auto, 0, /assets/works/w01/main, png, center, cover, no-repeat);
+        }
+    }
+
+    article {
+        margin-top: 10px;
+        background: black;
+        padding: 100px 0;
+
+        & > div {
+            width: $wd_work-dtl;
+            margin: 0 auto;
+        }
+
+        .__ttl {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include clr-opacity ( $clr_blue-main, .2 );
+            padding: 8vh 9.33333%;
+
+            h1 {
+                color: white;
+                font-family: $txt_cond;
+                font-size: 2rem;
+                letter-spacing: .16em;
+                line-height: 1;
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $clr_blue-main;
+                font-family: "courier";
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: .1em;
+                margin: 0;
+                white-space: nowrap;
+            }
+        }
+
+        .__dtl {
+            margin-top: 7.5vh;
+            padding: 0 9.33333%;
+            display: flex;
+            flex-wrap: wrap;
+
+            & > div {
+                width: 50%;
+            }
+
+            h2 {
+                color: #272d40;
+                font-family: $txt_cond;
+                font-size: 1.35rem;
+                font-weight: bold;
+                letter-spacing: .16em;
+                line-height: 1;
+                text-transform: uppercase;
+                margin-bottom: 5vh;
+            }
+
+            .badges { margin-bottom: 3.5vh;}
+            
+            .badges ol { justify-content: flex-start;}
+            
+            .badges li {
+              max-width: 62px;
+              margin-right: 10px;
+
+              &:last-child { margin-right: 0;}
+            }
+        }
+
+        .role p,
+        .agency p
+        {
+            color: $clr_blue-main;
+            font-family: "courier";
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: .1em;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .role h2 { margin-bottom: 5vh;}
+        .agency h2 { margin-bottom: 3vh;}
+
+        .agency {
+            margin-top: 8vh;
+        }
+
+    }
+}
+
+
 // 404
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 div[data-page='404'] {
@@ -1207,11 +1347,12 @@ div[data-page='404'] {
 .screen_404 {
     width: 200px;
     top: 10vh;
-    left: 4vw;
+    right: 4vw;
     box-shadow: 0px 0px 10px white;
     animation: screen_flash 1s infinite 0s linear;
 
     picture {
+        display: block;
         height: 200px;
         @include bg-image (auto, 0, /assets/404/screen, png, center, cover, no-repeat);
     }
@@ -1219,7 +1360,7 @@ div[data-page='404'] {
 
 .p_404 {
     top: 10vh;
-    right: 4vw;
+    left: 4vw;
 
     h1 {
         font-size: 4rem;

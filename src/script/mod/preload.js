@@ -4,30 +4,18 @@
 
         let loadingPage = document.querySelector('#preload')
 
-        let loaded = false;
 
+        let preload = setInterval(function() {
 
-        let preload = function() {
+            if (document.readyState === 'complete') {
 
-            if (!loaded) {
-
-                loadingPage.classList.add('_preload_loading');
-
-                // window.addEventListener( 'scroll', noscroll );
-
-            } else {
-
-
+                loadingPage.classList.remove('_preload_loading');
+                clearInterval(preload);
 
             }
 
+        }, 500);
 
-
-        };
-
-        function noscroll() {
-            window.scrollTo( 0, 0 );
-        };
 
         let bindActions = function() {
             window.onload = preload;

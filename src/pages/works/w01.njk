@@ -1,0 +1,114 @@
+{% extends "_layout.njk" %}
+{% set pagetitle = "WORK" %}
+{% set kw = 'URYU MYAO' %}
+{% set des = 'URYU MYAO' %}
+<!--  head end -->
+
+{% block content %}
+
+<!-- ** Audio Source ** -->
+{% include "_audio.njk" %}
+<!-- * end * -->
+
+
+<div data-page="works">
+
+    {% include "_bg.njk" %}
+
+    <main class="grid__rule" role="main">
+
+          {% include "_cyberline.njk" %}
+
+          <aside class="grid__aside __asideWorks">
+              <div>
+                  <div class="menu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+
+                  <figure class="earth"><picture></picture></figure>
+                  <figure class="mars"><picture></picture></figure>
+
+                  <p class="cr">© {{ basic.sitename }} 2018</p>
+
+                  {% include "_menu-overlay.njk" %}
+              </div>
+          </aside>
+
+          <section class="grid__contentsWorks">
+              <figure>
+                  <picture></picture>
+              </figure>
+
+              <article class="">
+                  <div>
+                      <div class="__ttl">
+                          <h1>YOSHIKAWA</h1>
+                          <p>corporate site</p>
+                      </div>
+
+                      <div class="__dtl">
+                          <div class="role">
+                              <h2>role</h2>
+
+                              <div class="badges">
+                                  <ol>
+                                      <li class="badges_active">
+                                          <p>Design</p>
+                                          <div class="badge__ch __badge-design"></div>
+                                          <!-- ** level status ** -->
+                                          {% for level in levelStatus %}
+                                          <div class="badge__li {{ level.4grid }}">
+                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                          </div>
+                                          {% endfor %}
+                                      </li>
+                                      <li class="badges_active">
+                                          <p>DEV.</p>
+                                          <div class="badge__ch __badge-dev"></div>
+                                          <!-- ** level status ** -->
+                                          {% for level in levelStatus %}
+                                          <div class="badge__li">
+                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                          </div>
+                                          {% endfor %}
+                                      </li>
+                                      <li>
+                                          <p>Direction</p>
+                                          <div class="badge__ch __badge-direction"></div>
+                                          <!-- ** level status ** -->
+                                          {% for level in levelStatus %}
+                                          <div class="badge__li">
+                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                          </div>
+                                          {% endfor %}
+                                      </li>
+                                  </ol>
+                              </div> <!-- badges-->
+
+                              <p>
+                              UI Design, Motion Design
+                              </p>
+                          </div> <!-- col -->
+
+                          <div class="graph">
+                              <h2>approch</h2>
+                          </div> <!-- col -->
+
+                          <div class="agency">
+                              <h2>agency</h2>
+                              <p>ECONOSYS DESIGN,Inc</p>
+                          </div> <!-- col -->
+                      </div> <!-- detail -->
+                  </div> <!-- inner -->
+              </article>
+
+          </section>
+
+
+    </main>
+</div>
+<!--  contents end  -->
+
+{% endblock %}

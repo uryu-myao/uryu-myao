@@ -41,7 +41,6 @@
 
     btnHoverSoundEffect();
 
-
     // Turn on/off BGM
     let play = true;
 
