@@ -916,7 +916,7 @@ div[data-page='about'] {
     font-size: 1.25rem;
     line-height: 1.6;
     letter-spacing: .16em;
-    color: #9aade9;
+    color: $clr_blue-light;
     margin: 40px 0 23px 35%;
     z-index: 10;
 }
@@ -1247,6 +1247,17 @@ div[data-page='about'] {
             margin: 0 auto;
         }
 
+        h2 {
+            color: #272d40;
+            font-family: $txt_cond;
+            font-size: 1.35rem;
+            font-weight: bold;
+            letter-spacing: .16em;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 5vh;
+        }
+
         .__ttl {
             display: flex;
             justify-content: space-between;
@@ -1267,7 +1278,7 @@ div[data-page='about'] {
             p {
                 color: $clr_blue-main;
                 font-family: "courier";
-                font-size: 1rem;
+                font-size: 1.35rem;
                 font-weight: bold;
                 letter-spacing: .1em;
                 margin: 0;
@@ -1285,21 +1296,10 @@ div[data-page='about'] {
                 width: 50%;
             }
 
-            h2 {
-                color: #272d40;
-                font-family: $txt_cond;
-                font-size: 1.35rem;
-                font-weight: bold;
-                letter-spacing: .16em;
-                line-height: 1;
-                text-transform: uppercase;
-                margin-bottom: 5vh;
-            }
-
             .badges { margin-bottom: 3.5vh;}
-            
+
             .badges ol { justify-content: flex-start;}
-            
+
             .badges li {
               max-width: 62px;
               margin-right: 10px;
@@ -1313,7 +1313,7 @@ div[data-page='about'] {
         {
             color: $clr_blue-main;
             font-family: "courier";
-            font-size: 1rem;
+            font-size: 1.35rem;
             font-weight: bold;
             letter-spacing: .1em;
             margin: 0;
@@ -1327,6 +1327,31 @@ div[data-page='about'] {
             margin-top: 8vh;
         }
 
+
+        .__sto {
+            position: relative;
+
+            & > div {
+                padding: 10vh 9.33333%;
+            }
+
+            p {
+                font-size: 1.25rem;
+                line-height: 1.8;
+                letter-spacing: .16em;
+                color: $clr_blue-light;
+            }
+        }
+
+        section:last-child {
+            width: 100%;
+            position: relative;
+            padding: 0 9.33333%;
+
+            button {
+                max-width: 200px;
+            }
+        }
     }
 }
 
