@@ -13,12 +13,14 @@ window.$ = window.jQuery = require('jquery');
 // lib
 // ** -
 const mgGlitch = require('./lib/mgGlitch.js');
+const gsap = require('gsap');
 // const glMatrix = require('./lib/gl-matrix-min.js');
 
 
 // modules
 // ** -
 // const threeCustom = require('./mod/three.js');
+
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const mod = require('./mod/scrollProgress.js');
