@@ -12,6 +12,9 @@
 <!-- ** Audio Source ** -->
 {% include "_audio.njk" %}
 <!-- * end * -->
+<!-- ** mouse circle ** -->
+{% include "_mouse-circle.njk" %}
+<!-- * end * -->
 
 
 <div id="top" data-page="top">
@@ -82,31 +85,25 @@
                             <p>Design</p>
                             <div class="badge__ch __badge-design"></div>
                             <!-- ** level status ** -->
-                            {% for level in levelStatus %}
-                            <div class="badge__li {{ level.4grid }}">
+                            <div class="badge__li __level-5">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
-                            {% endfor %}
                         </li>
                         <li class="badges_active">
                             <p>DEV.</p>
                             <div class="badge__ch __badge-dev"></div>
                             <!-- ** level status ** -->
-                            {% for level in levelStatus %}
-                            <div class="badge__li">
+                            <div class="badge__li __level-3">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
-                            {% endfor %}
                         </li>
                         <li>
                             <p>Direction</p>
                             <div class="badge__ch __badge-direction"></div>
                             <!-- ** level status ** -->
-                            {% for level in levelStatus %}
                             <div class="badge__li">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
-                            {% endfor %}
                         </li>
                     </ol>
                 </div>

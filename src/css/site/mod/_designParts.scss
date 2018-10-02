@@ -29,3 +29,18 @@
 
 .horizon__top { top: 20px;}
 .horizon__bottom { bottom: 20px;}
+
+
+// MOUSE CIRCLE
+//
+.circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border: 2px solid $clr_blue-main;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    z-index: 999;
+}

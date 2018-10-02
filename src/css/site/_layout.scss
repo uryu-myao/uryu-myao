@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 
+
 // General
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -148,6 +149,7 @@ p, dt, dd, li, a {
 }
 
 
+
 // Common
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -202,6 +204,7 @@ div[data-page='works']
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
+
 
 
 // Top
@@ -304,7 +307,6 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
-
 // menu module
 //
 
@@ -378,7 +380,6 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
-
 // * overlay
 //
 .overlay {
@@ -445,10 +446,8 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 
-//
     .__last_pj { margin-bottom: 40px;}
 }
-
 
 
 
@@ -567,7 +566,6 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
-
 .badges {
 
     ol {
@@ -655,7 +653,6 @@ div[data-page='top'] { overflow: hidden;}
     }
 }
 
-
 // Prev & Next
 //
 
@@ -720,8 +717,6 @@ div[data-page='top'] { overflow: hidden;}
         100% { left: 0px;}
     }
 }
-
-
 
 .__midbar {
     height: 100%;
@@ -813,8 +808,6 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 }
-
-
 
 
 

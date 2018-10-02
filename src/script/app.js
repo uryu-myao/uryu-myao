@@ -24,6 +24,7 @@ const gsap = require('gsap');
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const mod = require('./mod/scrollProgress.js');
+const mouse = require('./mod/mouseEffect.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
 const slider = require('./mod/topSlider.js');

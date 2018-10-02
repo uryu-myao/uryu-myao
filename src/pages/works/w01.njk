@@ -1,6 +1,6 @@
 {% extends "_layout.njk" %}
 {% set pagetitle = "WORK" %}
-{% set kw = 'URYU MYAO' %}
+{% set kw = 'URYU, MYAO, URYU MYAO, ウェブデザイナー, 中国人デザイナー, 网页设计, 网站开发, design, ui, ux, development, web, javascript, js, webgl' %}
 {% set des = 'URYU MYAO' %}
 <!--  head end -->
 
@@ -17,120 +17,112 @@
 
     <main class="grid__rule" role="main">
 
-          {% include "_cyberline.njk" %}
+        {% include "_cyberline.njk" %}
 
-          <aside class="grid__aside __asideWorks">
-              <div>
-                  <div class="menu">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                  </div>
+        <aside class="grid__aside __asideWorks">
+            <div>
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-                  <figure class="earth"><picture></picture></figure>
-                  <figure class="mars"><picture></picture></figure>
+                <figure class="earth"><picture></picture></figure>
+                <figure class="mars"><picture></picture></figure>
 
-                  <p class="cr">© {{ basic.sitename }} 2018</p>
+                <p class="cr">© {{ basic.sitename }} 2018</p>
 
-                  {% include "_menu-overlay.njk" %}
-              </div>
-          </aside>
+                {% include "_menu-overlay.njk" %}
+            </div>
+        </aside>
 
-          <section class="grid__contentsWorks">
-              <figure>
-                  <picture></picture>
-              </figure>
+        <section class="grid__contentsWorks">
+            <figure>
+                <picture></picture>
+            </figure>
 
-              <article class="">
-                  <div>
-                      <section class="__ttl">
-                          <h1>YOSHIKAWA</h1>
-                          <p>corporate site</p>
-                      </section>
+            <article class="">
+                <div>
+                    <section class="__ttl">
+                        <h1>YOSHIKAWA</h1>
+                        <p>corporate site</p>
+                    </section>
 
-                      <section class="__dtl">
-                          <div class="role">
-                              <h2>role</h2>
+                    <section class="__dtl">
+                        <div class="role">
+                            <h2>role</h2>
 
-                              <div class="badges">
-                                  <ol>
-                                      <li class="badges_active">
-                                          <p>Design</p>
-                                          <div class="badge__ch __badge-design"></div>
-                                          <!-- ** level status ** -->
-                                          {% for level in levelStatus %}
-                                          <div class="badge__li {{ level.4grid }}">
-                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                          </div>
-                                          {% endfor %}
-                                      </li>
-                                      <li class="badges_active">
-                                          <p>DEV.</p>
-                                          <div class="badge__ch __badge-dev"></div>
-                                          <!-- ** level status ** -->
-                                          {% for level in levelStatus %}
-                                          <div class="badge__li">
-                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                          </div>
-                                          {% endfor %}
-                                      </li>
-                                      <li>
-                                          <p>Direction</p>
-                                          <div class="badge__ch __badge-direction"></div>
-                                          <!-- ** level status ** -->
-                                          {% for level in levelStatus %}
-                                          <div class="badge__li">
-                                              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                          </div>
-                                          {% endfor %}
-                                      </li>
-                                  </ol>
-                              </div> <!-- badges-->
+                            <div class="badges">
+                                <ol>
+                                    <li class="badges_active">
+                                        <p>Design</p>
+                                        <div class="badge__ch __badge-design"></div>
+                                        <!-- ** level status ** -->
+                                        <div class="badge__li __level-5">
+                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                    </li>
+                                    <li class="badges_active">
+                                        <p>DEV.</p>
+                                        <div class="badge__ch __badge-dev"></div>
+                                        <!-- ** level status ** -->
+                                        <div class="badge__li __level-3">
+                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>Direction</p>
+                                        <div class="badge__ch __badge-direction"></div>
+                                        <!-- ** level status ** -->
+                                        <div class="badge__li">
+                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div> <!-- badges-->
 
-                              <p>
-                              UI Design, Motion Design
-                              </p>
-                          </div> <!-- col -->
+                            <p>
+                            UI Design, Motion Design
+                            </p>
+                        </div> <!-- col -->
 
-                          <div class="graph">
-                              <h2>approch</h2>
-                          </div> <!-- col -->
+                        <div class="graph">
+                            <h2>approch</h2>
+                        </div> <!-- col -->
 
-                          <div class="agency">
-                              <h2>agency</h2>
-                              <p>ECONOSYS DESIGN,Inc</p>
-                          </div> <!-- col -->
-                      </section> <!-- dtl -->
+                        <div class="agency">
+                            <h2>agency</h2>
+                            <p>ECONOSYS DESIGN,Inc</p>
+                        </div> <!-- col -->
+                    </section> <!-- dtl -->
 
-                      <section class="__sto">
-                          <div>
-                              <h2>story</h2>
-                              <p>
+                    <section class="__sto">
+                        <div>
+                            <h2>story</h2>
+                            <p>
 人はいつ好奇心を失くしてしまうのだろう。
 <br>失敗を恐れた時、現状維持で満足してしまった時、視野が狭くなってしまった時、凝り固まった人間になってしまった時、古い固定観念に囚われた時、多くの経験を積んだ先に人々は好奇心を失くしてしまうのだろうか。
-私たちは探求します。世の中で何が起きているのか、何が人々の心を動かすのか。私たちは探究します。一つのことに対して誰よりも深く本質的に。
-                              </p>
-                          </div>
+<br>私たちは探求します。世の中で何が起きているのか、何が人々の心を動かすのか。私たちは探究します。一つのことに対して誰よりも深く本質的に。
+                            </p>
+                        </div>
 
-                          <figure>
-                              <picture></picture>
-                          </figure>
-                      </section>
+                        <figure>
+                            <picture></picture>
+                        </figure>
+                    </section>
 
-                      <section>
-                          <div>
-                              <h2>see site</h2>
-                              <button type="button" class="glitch__btn audio__hv-01">
-                                  <a href="/" role="button">launch</a>
-                              </button>
-                          </div>
-                      </section>
-                  </div> <!-- inner -->
-              </article>
+                    <section>
+                        <div>
+                            <h2>see site</h2>
+                            <button type="button" class="glitch__btn audio__hv-01">
+                                <a href="/" role="button">launch</a>
+                            </button>
+                        </div>
+                    </section>
+                </div> <!-- inner -->
+            </article>
 
-          </section>
-
-
+        </section>
     </main>
 </div>
 <!--  contents end  -->

@@ -56,18 +56,6 @@
             "cat": "web design",
             "firstview": "/img/work/firstview"
         }
-    ],
-
-    "levelStatus":[
-        {
-            "1grid": "__level-1",
-            "2grid": "__level-2",
-            "3grid": "__level-3",
-            "4grid": "__level-4",
-            "5grid": "__level-5",
-            "6grid": "__level-6",
-            "7grid": "__level-7"
-        }
     ]
 
 }
