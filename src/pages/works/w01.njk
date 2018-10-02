@@ -9,6 +9,8 @@
 <!-- ** Audio Source ** -->
 {% include "_audio.njk" %}
 <!-- * end * -->
+{% include "_mouse-circle.njk" %}
+<!-- * end * -->
 
 
 <div data-page="works">
@@ -19,7 +21,7 @@
 
         {% include "_cyberline.njk" %}
 
-        <aside class="grid__aside __asideWorks">
+        <aside class="grid__aside __asideWorks mz">
             <div>
                 <div class="menu">
                     <span></span>
@@ -41,7 +43,7 @@
                 <picture></picture>
             </figure>
 
-            <article class="">
+            <article>
                 <div>
                     <section class="__ttl">
                         <h1>YOSHIKAWA</h1>
@@ -92,7 +94,14 @@
 
                         <div class="agency">
                             <h2>agency</h2>
-                            <p>ECONOSYS DESIGN,Inc</p>
+                            <a href="https://www.econosys.jp/" target="_blank">ECONOSYS DESIGN,Inc
+                                <span>
+                                  <svg x="0px" y="0px" viewBox="0 0 8 7" xml:space="preserve">
+                                  <polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/>
+                                  <rect x="2" width="6" height="5"/>
+                                  </svg>
+                                </span>
+                            </a>
                         </div> <!-- col -->
                     </section> <!-- dtl -->
 
@@ -122,6 +131,24 @@
                 </div> <!-- inner -->
             </article>
 
+        </section>
+
+        <section class="grid__prog">
+            <div class="__prog">
+                <ol>
+                    <li class="__prog-dots __prog-active"></li>
+                    <li class="__prog-dots"></li>
+                    <li class="__prog-dots"></li>
+                </ol>
+            </div>
+            <div class="BGM">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </section>
     </main>
 </div>

@@ -9,17 +9,21 @@
 <!-- ** Audio Source ** -->
 {% include "_audio.njk" %}
 <!-- * end * -->
+{% include "_mouse-circle.njk" %}
+<!-- * end * -->
+
 
 <div id="about" data-page="about" class="child">
     <!-- ** background ** -->
     {% include "_bg.njk" %}
 
-    <main class="grid__rule __gAbout" role="about">
+    <main class="grid__rule __g-about" role="about">
 
         {% include "_cyberline.njk" %}
 
         <aside class="grid__aside __asideAbout">
-            <div>
+
+            <div class="mz">
                 <div class="menu">
                     <span></span>
                     <span></span>
@@ -32,7 +36,7 @@
             </div>
         </aside>
 
-        <section class="grid__contentsAbout">
+        <section class="grid__contentsAbout silent">
 
             <article class="me">
                 <div class="countup">
@@ -186,7 +190,7 @@
                     <span>FE Dev. 2ys</span>
                     </h1>
 
-                    <button type="button" class="glitch__btn audio__hv-01">
+                    <button type="button" class="glitch__btn audio__hv-01 mz">
                         <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">resume</a>
                     </button>
                 </div>
@@ -291,14 +295,7 @@
                 </div>
             </article> <!-- contact -->
 
-
-            <div class="motionBar">
-                <div>
-                    <a href="{{ basic.root }}works/{{ next.link }}.html">
-                        <p>project</p>
-                    </a>
-                </div>
-            </div>
+            <div class="motionBar"></div>
 
         </section> <!-- grid__contentsAbout -->
 

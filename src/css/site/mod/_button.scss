@@ -13,7 +13,8 @@ button {
     position: absolute;
     padding-top: 2px;
     box-sizing: border-box;
-    // cursor: pointer;
+    z-index: 10; // * since mouse effect div is 2.
+    cursor: url('/assets/common/cursor.png'), auto;
 
     a {
         display: block;
