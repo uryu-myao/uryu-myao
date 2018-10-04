@@ -10,7 +10,7 @@
 
     const countup = document.querySelector('.countup')
 
-    if ( countup )
+    if ( countup.length )
     {
         countup.addEventListener('load', upTime ( 'nov,03,1988,00:00:00' ));
 

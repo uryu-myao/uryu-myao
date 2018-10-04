@@ -13,6 +13,7 @@ window.$ = window.jQuery = require('jquery');
 // lib
 // ** -
 const mgGlitch = require('./lib/mgGlitch.js');
+const chartJS = require('./lib/Chart.js');
 const gsap = require('gsap');
 // const glMatrix = require('./lib/gl-matrix-min.js');
 
@@ -20,10 +21,9 @@ const gsap = require('gsap');
 // modules
 // ** -
 // const threeCustom = require('./mod/three.js');
-
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
-const mod = require('./mod/scrollProgress.js');
+const chart = require('./mod/chartCustom.js');
 const mouse = require('./mod/mouseEffect.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');

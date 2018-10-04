@@ -4,7 +4,7 @@
 
     window.addEventListener ( 'scroll', function ()
     {
-        if ( scrollProgress )
+        if ( scrollProgress.length )
         {
             let docH = document.querySelector('.child').clientHeight,
                 winH = window.style.height,
