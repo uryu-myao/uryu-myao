@@ -11,7 +11,7 @@ $(function(){
 
     let $glitchPic = $( ".grid__curS picture" );
 
-    if ( $glitchPic.length ) {
+    if ( $glitchPic ) {
 
         $glitchPic.mgGlitch({
             // set 'true' to stop the plugin

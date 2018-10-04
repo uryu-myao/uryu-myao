@@ -11,7 +11,7 @@
 
     let topPage = document.querySelector('#top');
 
-    if ( topPage.length ) {
+    if ( topPage ) {
 
         let elemCount = 3,
             elemTrans = 0;

@@ -13,7 +13,7 @@ window.$ = window.jQuery = require('jquery');
 // lib
 // ** -
 const mgGlitch = require('./lib/mgGlitch.js');
-const chartJS = require('./lib/Chart.js');
+const chartJS = require('Chart.js');
 const gsap = require('gsap');
 // const glMatrix = require('./lib/gl-matrix-min.js');
 

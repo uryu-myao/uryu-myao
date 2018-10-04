@@ -21,7 +21,7 @@
     });
 
 
-    if ( noEffect.length ) {
+    if ( noEffect ) {
 
         noEffect.addEventListener("pointerenter", function() {
             killAction();
