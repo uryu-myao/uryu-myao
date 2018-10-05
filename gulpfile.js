@@ -59,6 +59,7 @@ gulp.task('sync', function() {
 // HTML compile
 
 gulp.task('njk', function() {
+    log('Compiling Nunjucks files...');
     return gulp.src('src/pages/**/*.+(html|njk|xml)')
     // read data.json
     .pipe(data(function() {
@@ -76,6 +77,7 @@ gulp.task('njk', function() {
 // Sass compile
 
 gulp.task('sass', function() {
+    log('Compiling SCSS files...');
     return gulp.src(paths.srcSASS)
 
     .pipe(sass({
@@ -84,7 +86,8 @@ gulp.task('sass', function() {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
         autoprefixer({
             grid: true,
@@ -94,7 +97,7 @@ gulp.task('sass', function() {
     ]))
 
     .pipe(rename({ suffix: ".min" }))
-    // .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'))
     .pipe(bs.reload({ stream: true }))
 });
@@ -103,7 +106,7 @@ gulp.task('sass', function() {
 // Compile JS
 
 gulp.task('js', function() {
-
+    log('Bundling Javascript files...');
     let bs = browserify({
           entries: 'src/script/app.js',
           debug: true
@@ -125,6 +128,7 @@ gulp.task('js', function() {
 // Minify JS
 
 gulp.task('minjs', ['js'], function() {
+    log('Minifying Javascript files...');
     gulp.src(['src/script/app.bundle.js'])
         .pipe(minify({
             ext: { min:'.min.js'}
