@@ -37,16 +37,23 @@
 
 // M Q
 //
-// -=-=- usage -=-=-
+//    'xsmall'  : 320px,
+//    'small'   : 600px,
+//    'medium'  : 768px,
+//    'large'   : 1024px,
+//    'xlarge'  : 1280px,
+//    'xxlarge' : 1440px,
 //
-// .elements {
-//   @include mq (large) {
-//     ...
-//     @include mq (xlarge, max, true ) {
-//       ...
+//     .elements {
+//       @include mq (large) {
+//         ...
+//         @include mq (xlarge, max, true ) {
+//           ...
+//         }
+//       }
 //     }
-//   }
-// }
+//
+//   original: https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
 
 @mixin mq ($breakpoint: medium, $rule: min, $subtraction: false)
 {

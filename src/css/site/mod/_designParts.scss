@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 
+// CURSOR
+//
+a:-webkit-any-link { cursor: url('/assets/common/cursor.png'), auto;}
+.innerScroll { cursor: url('/assets/common/cursor.gif'), auto;}
+
+
 // HORIZON LINE
 //
 .horizon {

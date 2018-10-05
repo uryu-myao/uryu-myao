@@ -17,9 +17,6 @@ p, dt, dd, li, a {
     letter-spacing: .15em;
 }
 
-a:-webkit-any-link {
-    cursor: url('/assets/common/cursor.png'), auto;
-}
 
 
 // Preload
@@ -27,12 +24,12 @@ a:-webkit-any-link {
 
 #preload {
     width: 100%;
+    padding: 20px;
     background: black;
     position: fixed;
     overflow: hidden;
-    z-index: 999;
-    padding: 20px;
     box-sizing: border-box;
+    z-index: 999;
 
     & > div {
         position: relative;
@@ -64,7 +61,6 @@ a:-webkit-any-link {
 
 .shield__up { top: 0;}
 .shield__down { bottom: 0;}
-
 
 ._preload_loading .horizon {
 
@@ -165,14 +161,24 @@ a:-webkit-any-link {
     height: calc( 100vh - 40px );
     display: grid;
     grid-template-columns: 4.9fr 10.8333fr 3.6667fr 1fr;
-    grid-gap: 10px 10px;
     grid-template-rows: 12.7vh 6vh 1fr 6vh 12.7vh;
+    grid-gap: 10px 10px;
     grid-template-areas:
       'aside prev prev prog'
       'aside prev prev prog'
       'aside curS curI prog'
       'aside next next prog'
       'aside next next prog';
+
+    @include mq ( medium ) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 5vh 1fr 8vh;
+        grid-gap: 10px 10px 10px;
+        grid-template-areas:
+          'aside aside'
+          'CurS CurS'
+          'prev next';
+    };
 }
 
 
@@ -205,7 +211,6 @@ div[data-page='works']
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
-
 
 
 // Top
@@ -600,7 +605,7 @@ div[data-page='top'] { overflow: hidden;}
         opacity: .2;
     }
 
-    .badge__ch {
+    &__ch {
         width: 18px;
         height: 26px;
         margin: 1.8vh 0 0 1.23vw;
@@ -615,7 +620,7 @@ div[data-page='top'] { overflow: hidden;}
     .__badge-dev { background-image: url( /assets/top/badge_02.svg );}
     .__badge-direction { background-image: url( /assets/top/badge_03.svg );}
 
-    .badge__li {
+    &__li {
         display: flex;
         justify-content: flex-start;
         width: 60%;
@@ -631,11 +636,11 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 
-    .badges_active {
+    &-active {
         background-image: linear-gradient( #232a8b, #0b1940 );
 
-        .badge__ch { opacity: 1;}
-        .badge__li span { background: #6b6d41;}
+        &__ch { opacity: 1;}
+        &__li span { background: #6b6d41;}
 
         // &:before {
         //     position: absolute;
@@ -912,15 +917,10 @@ div[data-page='about'] {
 
     li {
         margin: 0 18px;
-        // cursor: pointer;
     }
 
     li:first-child { margin-left: 0;}
     li:last-child { margin-right: 0;}
-
-    i {
-        // cursor: pointer;
-    }
 
     .i__github { svg { width: 30.8px; height: 30px;}}
     .i__ins { svg { width: 34px; height: 12.2px;}}
