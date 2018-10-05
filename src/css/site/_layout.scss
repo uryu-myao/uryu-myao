@@ -6,7 +6,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 body {
-    font-family: $safeType_en, $safeType_jp, $safeType_ch;
+    font-family: $safeType_en, $safeType_jp, $safeType_ch; // Safe fonts
     color: black;
     cursor: url('/assets/common/cursor.png'), auto;
     background: $clr-dark;
@@ -535,7 +535,7 @@ div[data-page='top'] { overflow: hidden;}
 
     p {
         color: $clr_blue-main;
-        font-family: $txt_courier;
+        font-family: $txt_code;
         font-size: 1rem;
         font-weight: bold;
         letter-spacing: .18em;
@@ -784,7 +784,7 @@ div[data-page='top'] { overflow: hidden;}
 div[data-page='about'] {
     h1 {
         color: $clr_blue-main;
-        font-family: $txt_courier;
+        font-family: $txt_code;
         font-size: 1.9rem;
         text-transform: uppercase;
         letter-spacing: .3em;
@@ -1038,7 +1038,7 @@ div[data-page='about'] {
 
     .due {
         color: $clr_blue-main;
-        font-family: $txt_courier;
+        font-family: $txt_code;
         font-size: 1.3rem;
         letter-spacing: .02em;
         margin: 18px 0 0;
