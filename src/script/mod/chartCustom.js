@@ -1,50 +1,63 @@
 /*
-    *** slider ***
+    *** Chart ***
 
-    - top page main slider
-    - top.html
+    - top page and works details
 
 */
 
 
 (function() {
 
+    if ( document.getElementById("chart") ) {
+
     let ctx = document.getElementById("chart").getContext('2d');
+    let gradientStroke = ctx.createLinearGradient(0, 0, 100, 100);
+
+    gradientStroke.addColorStop(0, "#303595");
+    gradientStroke.addColorStop(1, "#D14836");
+
     let cht = new Chart( ctx, {
 
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels : ["Jan","Feb","Mar","Apr","May","Jun"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
+                data: [4, 5, 5, 7, 2, 1],
+                label: false,
+                point: false,
+                fillColor : "red",
+                strokeColor : "white",
+                pointBorderWidth : 0,
+                pointRadius: 0,
+                backgroundColor: '#030918',
+                borderColor: gradientStroke,
+                borderWidth: 1,
+                pointStrokeColor : "transparent",
             }]
         },
         options: {
+            responsive: true,
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        min: 0,
+                        max: 8,
+                        fontSize: 12,
+                        stepSize: 10,
+                        beginAtZero: true
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 12,
                     }
                 }]
+            },
+            legend: {
+                display: false
             }
         }
     });
+
+    }
 }());

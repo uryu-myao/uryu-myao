@@ -8,7 +8,6 @@
 body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch; // Safe fonts
     color: black;
-    cursor: url('/assets/common/cursor.png'), auto;
     background: $clr-dark;
 }
 
@@ -169,7 +168,7 @@ p, dt, dd, li, a {
       'aside curS curI prog'
       'aside next next prog'
       'aside next next prog';
-/* 
+/*
     @include mq ( medium ) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 5vh 1fr 8vh;
@@ -404,7 +403,8 @@ div[data-page='top'] { overflow: hidden;}
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
 
         a {
             font-size: 1.45rem;
@@ -415,21 +415,30 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 
-    &__list {
-        width: 60%;
+    .svg__clr { fill: $clr_blue-main;}
+
+    .svg__ins,
+    .svg__git {
+        width: 26px;
+        height: 26px;
+        fill: $clr_blue-active;
+    }
+
+    ul {
+        width: 50%;
         margin: 0 auto;
         position: relative;
+    }
 
-        &::before {
-            position: absolute;
-            font-size: 1rem;
-            font-family: $txt_cond;
-            color: $clr_blue-main;
-            letter-spacing: .3em;
-            content: 'projects';
-            top: -2.6em;
-            text-transform: uppercase;
-        }
+    .overlay__list::before {
+        position: absolute;
+        font-size: 1rem;
+        font-family: $txt_cond;
+        color: $clr_blue-main;
+        letter-spacing: .3em;
+        content: 'projects';
+        top: -2.6em;
+        text-transform: uppercase;
     }
 
     &__item {
@@ -441,9 +450,21 @@ div[data-page='top'] { overflow: hidden;}
 
         &-active {
             opacity: 1;
-            transform: translateX(0);
+            transform: translate(0, 0) !important;
         }
     }
+
+    &__list + ul {
+        display: flex;
+        margin-top: 6.5vh;
+
+        & .overlay__item {
+            transform: translate(0, 10px);
+            transition-delay: .4s;
+        }
+    }
+
+    .svg__ins { margin-left: 1em;}
 
     @for $i from 1 through 5 {
     .overlay__list > li:nth-child(#{ $i }) {
@@ -599,6 +620,7 @@ div[data-page='top'] { overflow: hidden;}
         text-orientation: mixed;
         margin: 0;
         font-family: $txt_cond;
+        text-transform: capitalize;
         letter-spacing: .045em;
         top: 4px;
         right: 4px;
@@ -636,11 +658,11 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 
-    &-active {
+    .badges-active {
         background-image: linear-gradient( #232a8b, #0b1940 );
 
-        &__ch { opacity: 1;}
-        &__li span { background: #6b6d41;}
+        .badges__ch { opacity: 1;}
+        .badges__li span { background: #6b6d41;}
 
         // &:before {
         //     position: absolute;
@@ -785,9 +807,9 @@ div[data-page='about'] {
     h1 {
         color: $clr_blue-main;
         font-family: $txt_code;
-        font-size: 1.9rem;
+        font-size: 1.78rem;
         text-transform: uppercase;
-        letter-spacing: .3em;
+        letter-spacing: .25em;
         margin-left: 5vw;
     }
 
@@ -838,12 +860,6 @@ div[data-page='about'] {
 
 .me { padding-top: 60px;}
 
-.svg__clr { fill: $clr_blue-main;}
-
-.svg__me { width: 220px; height: 72.7px;}
-.svg__resume { width: 130.6px; height: 72.4px;}
-.svg__contact { width: 133.5px; height: 72.4px;}
-
 .introduce {
     margin-top: calc( 8vh - (38.5px * 1.45 / 4) );
     position: relative;
@@ -851,6 +867,7 @@ div[data-page='about'] {
 }
 
 .txt__en {
+    font-family: $txt_code;
     font-size: 3.85rem;
     line-height: 1.45;
     letter-spacing: .03em;
@@ -949,7 +966,7 @@ div[data-page='about'] {
     picture {
         display: inline-block;
         position: relative;
-        height: calc( 780px - 1.5vh );
+        height: calc( 840px - 1.5vh );
         @include bg-image (auto, 0, /assets/about/paper, png, center, cover, no-repeat);
 
         &::before {
@@ -974,14 +991,21 @@ div[data-page='about'] {
     overflow: hidden;
 
     h1 {
+        & > span,
         span {
             font-family: $txt_cond;
             font-size: 1.25rem;
             font-weight: normal;
             color: white;
-            letter-spacing: .2em;
-            margin-left: 15px;
+            letter-spacing: .16em;
+
+            span {
+                color: #495863;
+            }
         }
+
+        & > span { margin-left: 4em;}
+        & > span:last-child { margin-left: 1.2em;}
     }
 
     &::before {
@@ -1003,7 +1027,7 @@ div[data-page='about'] {
 
 .history {
     position: relative;
-    margin: 8vh 5vw 0;
+    margin: 8vh calc( 5vw + 4vw ) 0;
     box-sizing: border-box;
     z-index: 2;
 
@@ -1023,8 +1047,10 @@ div[data-page='about'] {
         text-transform: uppercase;
         font-size: 1.8rem;
         letter-spacing: .25rem;
-        margin-bottom: 3.5vh;
+        margin-bottom: 2vh;
     }
+
+    p { text-transform: capitalize;}
 
     .tag {
         font-family: $txt_cond;
@@ -1061,7 +1087,7 @@ div[data-page='about'] {
             content: '';
             position: absolute;
             @include center (vertical);
-            left: -2.8vw;
+            left: -4vw;
             width: 8px;
             height: 8px;
             border-radius: 50%;
@@ -1206,10 +1232,10 @@ div[data-page='about'] {
 
             p {
                 color: $clr_blue-main;
-                font-family: "courier";
+                font-family: $txt_code;
                 font-size: 1.35rem;
                 font-weight: bold;
-                letter-spacing: .15em;
+                letter-spacing: .16em;
                 margin: 0;
                 text-transform: capitalize;
                 white-space: nowrap;
@@ -1221,13 +1247,8 @@ div[data-page='about'] {
             padding: 0 9.33333%;
             box-sizing: border-box;
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
-
-            & > div {
-                width: 50%;
-            }
-
-            .badges { margin-bottom: 3.5vh;}
 
             .badges ol { justify-content: flex-start;}
 
@@ -1239,21 +1260,36 @@ div[data-page='about'] {
             }
         }
 
-        .role > p,
+        .role {
+            width: 100%;
+
+            & > div {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .badges { width: 44%;}
+
+                & > p { line-height: 1.6;}
+            }
+        }
+
+        .role > div > p,
         .agency > p,
         .agency > a
         {
             color: $clr_blue-main;
-            font-family: "courier";
+            font-family: $txt_code;
             font-size: 1.35rem;
             font-weight: bold;
-            letter-spacing: .1em;
+            letter-spacing: .135em;
             margin: 0;
             white-space: nowrap;
         }
 
         .agency {
-            margin-top: 10vh;
+            width: 50%;
+            margin-top: 14vh;
 
             svg {
                 width: 8px;
@@ -1262,12 +1298,15 @@ div[data-page='about'] {
             }
         }
 
+        .graph {
+            width: 42%;
+            margin-top: 14vh;
+        }
+
         .__sto {
             position: relative;
 
-            & > div {
-                padding: 10vh 9.33333%;
-            }
+            & > div { padding: 14vh 9.33333%;}
 
             p {
                 font-size: 1.25rem;
@@ -1283,9 +1322,7 @@ div[data-page='about'] {
             padding: 0 9.33333%;
             box-sizing: border-box;
 
-            button {
-                max-width: 200px;
-            }
+            button { max-width: 200px;}
         }
     }
 }

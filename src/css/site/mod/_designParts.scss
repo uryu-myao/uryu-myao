@@ -1,10 +1,19 @@
 @charset "UTF-8";
 
 
+
 // CURSOR
 //
-a:-webkit-any-link { cursor: url('/assets/common/cursor.png'), auto;}
-.innerScroll { cursor: url('/assets/common/cursor.gif'), auto;}
+body {
+    cursor: url('/assets/common/cursor.png') 2 2, auto;
+}
+a:-webkit-any-link {
+    cursor: url('/assets/common/cursor.png') 2 2, auto;
+}
+.innerScroll {
+    cursor: url('/assets/common/cursor.gif') 2 2, auto;
+}
+
 
 
 // HORIZON LINE
@@ -111,7 +120,4 @@ a:-webkit-any-link { cursor: url('/assets/common/cursor.png'), auto;}
 
 // Charts
 //
-#chart {
-  width: 400px;
-  height: 300px;
-}
+#chart { width: 100%;}
