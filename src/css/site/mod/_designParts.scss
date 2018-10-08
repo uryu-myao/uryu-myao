@@ -16,6 +16,56 @@ a:-webkit-any-link {
 
 
 
+// ANIMATION BANER
+//
+.motionBar {
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0 10px 3em;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background: {
+        image: url(/assets/common/pttn.png);
+        repeat: repeat;
+    }
+    animation: stripe .5s linear 0s infinite;
+
+    & > div {
+        background: black;
+        width: 65%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    p {
+        position: absolute;
+        font-family: $txt_cond;
+        font-size: 1.585rem;
+        font-weight: bold;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        color: #001d2d;
+        margin: 0;
+        white-space: nowrap;
+        @include center(vertical);
+        animation: movingleft 3s linear 0s infinite;
+    }
+
+    @keyframes stripe {
+        0%   { background-position-x: 0px;}
+        100% { background-position-x: 9px;}
+    }
+
+    @keyframes movingleft {
+        0%   { left: -50px;}
+        100% { left: 0px;}
+    }
+}
+
+
 // HORIZON LINE
 //
 .horizon {
@@ -164,4 +214,28 @@ a:-webkit-any-link {
     5% { filter: blur(8px);}
     6% { filter: blur(10px);}
     100% { filter: blur(10px);}
+}
+
+
+// Question mark
+//
+.question {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: linear-gradient(#232a8b, #0b1940);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 1rem;
+        margin-left: 3px;
+        color: #8089ff;
+        line-height: 1;
+        font-weight: bold;
+        font-family: $txt_en;
+    }
 }

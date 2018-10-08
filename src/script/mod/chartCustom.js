@@ -55,6 +55,9 @@
             },
             legend: {
                 display: false
+            },
+            chartArea: {
+                backgroundColor: 'rgba(26, 38, 133, 0.12)'
             }
         }
     });
