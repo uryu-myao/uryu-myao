@@ -45,10 +45,12 @@
 
             <article>
                 <div>
+                    {% for desc1 in desc1 %}
                     <section class="__ttl">
-                        <h1>YOSHIKAWA</h1>
+                        <h1 class="neon" data-text="{{ desc1.name }}">YOSHIKAWA</h1>
                         <p>corporate site</p>
                     </section>
+                    {% endfor %}
 
                     <section class="__dtl">
                         <div class="role">

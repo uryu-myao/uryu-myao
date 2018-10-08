@@ -121,3 +121,47 @@ a:-webkit-any-link {
 // Charts
 //
 #chart { width: 100%;}
+
+
+
+// Text Neon Light
+//
+.neon {
+    z-index: 3;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        width: 100%;
+        @include center (both);
+        z-index: 2;
+        color: white;
+        filter: blur(10px);
+        animation: 3s neonFlashing .2s infinite linear;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $clr_blue-main;
+        z-index: 1;
+        opacity: .45;
+        filter: blur(20px);
+    }
+}
+
+@keyframes neonFlashing {
+    0% { filter: blur(10px);}
+    1% { filter: blur(2px);}
+    2% { filter: blur(8px);}
+    3% { filter: blur(10px);}
+    4% { filter: blur(10px);}
+    5% { filter: blur(8px);}
+    6% { filter: blur(10px);}
+    100% { filter: blur(10px);}
+}
