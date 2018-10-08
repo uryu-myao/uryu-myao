@@ -873,7 +873,7 @@ div[data-page='about'] {
 
 .txt__en {
     font-family: $txt_code;
-    font-size: 3.85rem;
+    font-size: 2.915vw;
     line-height: 1.45;
     letter-spacing: .03em;
     color: white;
@@ -999,7 +999,7 @@ div[data-page='about'] {
   position: absolute;
   top: 50%;
   left: -4vw;
-  animation: rotatingWheel 8s infinite linear;
+  animation: rotatingWheel 10s infinite linear;
 
   .svg__clr { fill: $clr_blue-grey;}
 }
@@ -1069,7 +1069,7 @@ div[data-page='about'] {
         margin: 0 auto;
         display: flex;
         align-items: flex-start;
-        margin-bottom: 4vh;
+        margin-bottom: 2vh;
         position: relative;
 
         &:last-child { margin-bottom: 0;}
@@ -1108,11 +1108,10 @@ div[data-page='about'] {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding-left: 30px;
+        padding-left: 3vw;
         box-sizing: border-box;
         width: 24vw;
         height: 150px;
-        max-width: 278px;
         margin-top: 5px;
         background: #1f2a33;
     }
@@ -1197,6 +1196,7 @@ div[data-page='about'] {
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 .grid__contentsWorks {
+    width: 100%;
     grid-column-start: 2;
     grid-column-end: 5;
     height: calc( 100% - 40px );
@@ -1219,11 +1219,6 @@ div[data-page='about'] {
         background: black;
         padding: 100px 0;
 
-        & > div {
-            width: $wd_work-dtl;
-            margin: 0 auto;
-        }
-
         h2 {
             color: #272d40;
             font-family: $txt_cond;
@@ -1236,11 +1231,14 @@ div[data-page='about'] {
         }
 
         .__ttl {
+            width: $wd_work-dtl;
             display: flex;
             justify-content: space-between;
             align-items: center;
             @include clr-opacity ( $clr_blue-main, .2 );
+            margin: 0 auto;
             padding: 8vh 9.33333%;
+            box-sizing: border-box;
 
             h1 {
                 color: white;
@@ -1264,8 +1262,9 @@ div[data-page='about'] {
             }
         }
 
-        .__dtl {
-            margin-top: 7.5vh;
+        .detailItem {
+            width: $wd_work-dtl;
+            margin: 7.5vh auto 0;
             padding: 0 9.33333%;
             box-sizing: border-box;
             display: flex;
@@ -1275,7 +1274,10 @@ div[data-page='about'] {
             .badges ol { justify-content: flex-start;}
 
             .badges li {
-                max-width: 62px;
+                width: 5vw;
+                min-width: 72px;
+                height: 5.5vw;
+                min-height: 80px;
                 margin-right: 10px;
 
                 &:last-child { margin-right: 0;}
@@ -1290,9 +1292,14 @@ div[data-page='about'] {
                 justify-content: flex-start;
                 align-items: flex-start;
 
-                .badges { width: 44%;}
+                .badges {
+                    width: auto;
 
-                & > p { line-height: 1.6;}
+                    & + p {
+                        line-height: 1.6;
+                        margin-left: 3.45vw;
+                    }
+                }
             }
         }
 
@@ -1310,7 +1317,7 @@ div[data-page='about'] {
         }
 
         .agency {
-            width: 50%;
+            width: 100%;
             margin-top: 14vh;
 
             svg {
@@ -1321,19 +1328,31 @@ div[data-page='about'] {
         }
 
         .graph {
-            width: 42%;
-            margin-top: 14vh;
+            width: 52%;
+            margin: 14vh auto 0;
+            position: relative;
         }
 
-        .__sto {
+        .detailStory {
             position: relative;
+            width: $wd_work-dtl;
+            margin: 0 auto;
 
-            & > div { padding: 14vh 9.33333%;}
+            & > div {
+                padding: 14vh 9.33333%;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
 
             p {
+                width: 48%;
                 font-size: 1.25rem;
                 line-height: 1.8;
                 letter-spacing: .16em;
+                text-align: justify;
                 color: $clr_blue-light;
             }
         }
