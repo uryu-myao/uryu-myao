@@ -13,7 +13,7 @@
     let ctx = document.getElementById("chart").getContext('2d');
     let gradientStroke = ctx.createLinearGradient(0, 0, 100, 100);
 
-    gradientStroke.addColorStop(0, "#303595");
+    gradientStroke.addColorStop(.5, "#303595");
     gradientStroke.addColorStop(1, "#D14836");
 
     let cht = new Chart( ctx, {

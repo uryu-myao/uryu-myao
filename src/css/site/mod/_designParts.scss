@@ -170,7 +170,12 @@ a:-webkit-any-link {
 
 // Charts
 //
-#chart { width: 100%;}
+#chart {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba( 57,66,140,.12 );
+}
 
 
 
