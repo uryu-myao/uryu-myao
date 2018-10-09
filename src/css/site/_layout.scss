@@ -800,9 +800,8 @@ div[data-page='about'] {
 
 .resume {
     position: relative;
-    padding-top: 8vh;
+    padding: 8vh 0 8vh;
     background: #172126;
-    padding-bottom: 13vh;
     z-index: 1;
     overflow: hidden;
 
@@ -836,14 +835,25 @@ div[data-page='about'] {
     button {
         width: 200px;
         position: absolute;
-        bottom: -12px;
-        right: 5vw;
+        bottom: 8vh;
+        right: 9vw;
+    }
+
+    & > a {
+        font-size: 1.2rem;
+        color: $clr_blue-active;
+        font-family: $txt_cond;
+        font-weight: bold;
+        letter-spacing: .16em;
+        position: absolute;
+        right: calc( 9vw + 200px + 5vw );
+        bottom: calc( 8vh + 15px );
     }
 }
 
 .history {
     position: relative;
-    margin: 8vh calc( 5vw + 4vw ) 0;
+    margin: 8vh calc( 5vw + 4vw ) 13vh;
     box-sizing: border-box;
     z-index: 2;
 
@@ -913,6 +923,11 @@ div[data-page='about'] {
             line-height: 1.8;
             margin: 0;
         }
+    }
+
+    .question {
+        @include center( vertical );
+        right: 0;
     }
 }
 

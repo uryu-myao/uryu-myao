@@ -10,9 +10,9 @@ body {
 a:-webkit-any-link {
     cursor: url('/assets/common/cursor.png') 2 2, auto;
 }
-.innerScroll {
-    cursor: url('/assets/common/cursor.gif') 2 2, auto !important;
-}
+// .innerScroll {
+//     cursor: url('/assets/common/cursor.gif') 2 2, auto !important;
+// }
 
 
 
@@ -97,7 +97,7 @@ a:-webkit-any-link {
 
 
 
-// menu module
+// MAIN MEMU
 //
 
 // * icon
@@ -339,7 +339,7 @@ a:-webkit-any-link {
 
 
 
-// Charts
+// CHARTS
 //
 #chart {
     width: 100%;
