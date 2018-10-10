@@ -854,7 +854,7 @@ div[data-page='works'] {
     }
 }
 
-.work_details {
+.works_detail {
     width: $wd_work-dtl;
     margin: 10vh auto 0;
     padding: 0 9.33333%;
@@ -862,6 +862,17 @@ div[data-page='works'] {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    .badges {
+        width: auto;
+        z-index: 2;
+
+        & + p {
+            line-height: 1.6;
+            margin-left: 3.45vw;
+            z-index: 2;
+        }
+    }
 
     .badges ol { justify-content: flex-start;}
 
@@ -874,32 +885,96 @@ div[data-page='works'] {
 
         &:last-child { margin-right: 0;}
     }
-}
 
-.works_details_role {
-    width: 100%;
+    &_role {
+        width: 100%;
 
-    & > div {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        & > div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
 
-        .badges {
-            width: auto;
-            z-index: 2;
+    }
 
-            & + p {
-                line-height: 1.6;
-                margin-left: 3.45vw;
-                z-index: 2;
+    &_agency {
+        width: 40%;
+        margin: -1vh 0 0 60%;
+        z-index: 2;
+
+        svg {
+            width: 8px;
+            height: 7px;
+            fill: $clr_blue-main;
+        }
+    }
+
+    &_graph {
+        width: 50%;
+        margin: 14.5vh 0 0 0;
+        position: relative;
+
+        .question {
+            top: 1px;
+            right: 0;
+        }
+    }
+
+    &_story {
+        width: 40%;
+        margin-top: 32vh;
+        position: relative;
+
+        & > div {
+            padding: 11.5vh 0;
+        }
+
+        p {
+            width: 100%;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            letter-spacing: .16em;
+            text-align: justify;
+            color: $clr_blue-light;
+        }
+    }
+
+    &_others {
+        width: 100%;
+        margin-top: 4vh;
+        position: relative;
+
+        h2 { text-align: center;}
+
+        button {
+            max-width: 200px;
+            top: calc( 4.5vh + 1.35rem);
+            @include center( horizontal );
+        }
+
+        .__ctl {
+            margin-top: 20vh;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                width: calc( 100% / 2 - 10px );
+            }
+
+            a:last-child {
+                .banner_motion {
+                    div { margin-left: calc( 35% - 3em );}
+                }
             }
         }
     }
 }
 
-.works_details_role > div > p,
-.works_details_agency > p,
-.works_details_agency > a
+
+
+.works_detail_role > div > p,
+.works_detail_agency > p,
+.works_detail_agency > a
 {
     color: $clr_blue-main;
     font-family: $txt_code;
@@ -908,48 +983,6 @@ div[data-page='works'] {
     letter-spacing: .135em;
     margin: 0;
     white-space: nowrap;
-}
-
-.works_details_agency {
-    width: 40%;
-    margin: -1vh 0 0 60%;
-    z-index: 2;
-
-    svg {
-        width: 8px;
-        height: 7px;
-        fill: $clr_blue-main;
-    }
-}
-
-.works_details_graph {
-    width: 50%;
-    margin: 14.5vh 0 0 0;
-    position: relative;
-
-    .question {
-        top: 1px;
-        right: 0;
-    }
-}
-
-.works_details_story {
-    width: 40%;
-    margin-top: 32vh;
-    position: relative;
-
-    & > div {
-        padding: 11.5vh 0;
-    }
-
-    p {
-        width: 100%;
-        font-size: 1.25rem;
-        line-height: 1.8;
-        letter-spacing: .16em;
-        text-align: justify;
-        color: $clr_blue-light;
-    }
 }
 
 .caseImg {
@@ -1009,35 +1042,6 @@ div[data-page='works'] {
     figure { width: 400px;}
 }
 
-.works_details_others {
-    width: 100%;
-    margin-top: 4vh;
-    position: relative;
-
-    h2 { text-align: center;}
-
-    button {
-        max-width: 200px;
-        top: calc( 4.5vh + 1.35rem);
-        @include center( horizontal );
-    }
-
-    .__ctl {
-        margin-top: 20vh;
-        display: flex;
-        justify-content: space-between;
-
-        a {
-            width: calc( 100% / 2 - 10px );
-        }
-
-        a:last-child {
-            .banner_motion {
-                div { margin-left: calc( 35% - 3em );}
-            }
-        }
-    }
-}
 
 
 
