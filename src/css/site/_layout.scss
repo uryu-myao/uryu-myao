@@ -401,10 +401,8 @@ div[data-page='top'] {
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 div[data-page='about'] {
-  
-    .grid_content {
-        overflow: scroll;
-    }
+
+    article { position: relative;}
 
     h1 {
         color: $clr_blue-main;
@@ -418,38 +416,27 @@ div[data-page='about'] {
     .__ttl {
         position: relative;
         z-index: 10;
-    }
-}
 
-.__asideAbout {
-    height: calc( 100% - 40px );
-    height: calc( 100vh - 40px );
-
-    & > div {
-        width: 100%;
-        flex-direction: column-reverse;
-        // @include bg-image (auto, 0, /assets/about/aside, gif, center, cover, no-repeat);
-        opacity: 1;
-    }
-}
-
-.grid__contentsAbout {
-
-    article {
-        position: relative;
-
-        .__ttl {
-            & > div:first-child {
-                margin: 0 0 8vh 5vw;
-            }
+        & > div:first-child {
+            margin: 0 0 8vh 5vw;
         }
     }
 
-    .banner_motion {
-        height: 75px;
-        // cursor: pointer;
+    .grid_content {
+        position: relative;
+        overflow: scroll;
+    }
 
-        p { text-transform: uppercase;}
+    .grid_aside {
+        height: calc( 100% - 40px );
+        height: calc( 100vh - 40px );
+
+        & > div {
+            width: 100%;
+            flex-direction: column-reverse;
+            // @include bg-image (auto, 0, /assets/about/aside, gif, center, cover, no-repeat);
+            opacity: 1;
+        }
     }
 }
 
