@@ -23,7 +23,7 @@ a:-webkit-any-link {
     box-sizing: border-box;
     margin-bottom: 10px;
     background: {
-        image: url(/assets/common/pttn.png);
+        image: url('/assets/common/pttn.png');
         repeat: repeat;
     }
     animation: stripe .5s linear 0s infinite;
@@ -217,6 +217,7 @@ a:-webkit-any-link {
     6% { filter: blur(10px);}
     100% { filter: blur(10px);}
 }
+
 
 
 // Question mark

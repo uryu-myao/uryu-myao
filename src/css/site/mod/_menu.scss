@@ -152,14 +152,14 @@
         & li { margin-bottom: 0;}
     }
 
-    .svg__ins,
-    .svg__git {
+    .svg_ins,
+    .svg_git {
         width: 22px;
         height: 22px;
         fill: $clr_blue-active;
     }
 
-    .svg__ins { margin-left: 1em;}
+    .svg_ins { margin-left: 1em;}
 
     @for $i from 1 through 5 {
     .overlay_list > li:nth-child(#{ $i }) {

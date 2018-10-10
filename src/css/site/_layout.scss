@@ -396,40 +396,12 @@ div[data-page='top'] {
 }
 
 
-// Progress
-//
-
-.grid_prog {
-    height: 100%;
-    background: $clr_dark-trans;
-    grid-area: prog;
-    position: relative;
-
-    .__prog {
-        width: 100%;
-        height: 100%;
-        @include flex (center, center);
-        flex-direction: column;
-    }
-
-    & ol { width: 30%;}
-}
-
-.__prog-dots {
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin: 6px 0;
-    background: #2c374c;
-}
-
-.__prog-active { background: white;}
-
 
 // About
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 div[data-page='about'] {
+  
     .grid_content {
         overflow: scroll;
     }
@@ -565,7 +537,7 @@ div[data-page='about'] {
     .i__github { svg { width: 30.8px; height: 30px;}}
     .i__ins { svg { width: 34px; height: 12.2px;}}
 
-    .svg__clr-sns { fill: #568fff;}
+    .svg_clr-sns { fill: #568fff;}
 }
 
 .brush {
@@ -605,7 +577,7 @@ div[data-page='about'] {
     }
 }
 
-.svg__clr { fill: $clr_blue-main;}
+.svg_clr { fill: $clr_blue-main;}
 
 .svg__me { width: 220px; height: 72.7px;}
 .svg__resume { width: 130.6px; height: 72.4px;}
@@ -619,13 +591,13 @@ div[data-page='about'] {
   left: -4vw;
   animation: rotatingWheel 10s infinite linear;
 
-  .svg__clr { fill: $clr_blue-grey;}
+  .svg_clr { fill: $clr_blue-grey;}
 }
 
 .__wheel-fast {
     animation-duration: 3s;
 
-    .svg__clr { fill: $clr_blue-main;}
+    .svg_clr { fill: $clr_blue-main;}
 }
 
 @keyframes rotatingWheel {
