@@ -14,17 +14,17 @@
 
 <div id="about" data-page="about" class="child">
 
-    {% include "_bg.njk" %}
+    {% include "bg.njk" %}
 
     <main class="grid_rule __g-about" role="about">
 
-        {% include "_cyberline.njk" %}
+        {% include "cyberline.njk" %}
 
         <aside class="grid_aside __asideAbout">
             <div>
-                <p class="cr">© {{ basic.sitename }} 2018</p>
+                {% include "menu.njk" %}
 
-                {% include "site_menu.njk" %}
+                <p class="cr">© {{ basic.sitename }} 2018</p>
             </div>
         </aside>
 
@@ -227,7 +227,7 @@
 
                 <a href="http://sprout.uryu-myao.com/" target="_blank">OLD PORTFOLIO</a>
 
-                <button type="button" class="glitch__btn audio__hv-01 mz">
+                <button type="button" class="btn btn_glitch audio_hv_01 mz">
                     <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">resume</a>
                 </button>
 

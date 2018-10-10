@@ -6,7 +6,7 @@
     const BGM = document.querySelector('#sound_bgm'); // @audio.njk
 
     // DOM
-    let audio_hvGlitch_01 = document.querySelector('.audio__hv-01'),
+    let audio_hvGlitch_01 = document.querySelector('.audio_hv_01'),
         audio_switchBGM = document.querySelector('.BGM')
 
     //
@@ -26,7 +26,7 @@
     // let audio_glitch_01 = hoverAudioEffect( glitch_01 );
     // let audio_glitch_02 = hoverAudioEffect( glitch_02 );
     //
-    // document.querySelector('.audio__hv-01').addEventListener = audio_glitch_01;
+    // document.querySelector('.audio_hv_01').addEventListener = audio_glitch_01;
 
     let btnHoverSoundEffect = function () {
 

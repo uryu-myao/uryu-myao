@@ -21,7 +21,7 @@
     // bg color
     renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.setPixelRatio( window.devicePixelRatio );
-    document.querySelector('.bg__canvas').appendChild( renderer.domElement );
+    document.querySelector('.bg_canvas').appendChild( renderer.domElement );
 
     // scene
     const scene  = new THREE.Scene();

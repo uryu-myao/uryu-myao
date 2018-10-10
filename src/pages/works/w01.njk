@@ -15,20 +15,20 @@
 
 <div data-page="works">
 
-    {% include "_bg.njk" %}
+    {% include "bg.njk" %}
 
     <main class="grid_rule" role="main">
 
-        {% include "_cyberline.njk" %}
+        {% include "cyberline.njk" %}
 
         <aside class="grid_aside">
             <div>
+                {% include "menu.njk" %}
+
                 <figure class="earth"><picture></picture></figure>
                 <figure class="mars"><picture></picture></figure>
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
-
-                {% include "site_menu.njk" %}
             </div>
         </aside>
 
@@ -53,25 +53,25 @@
                                 <ol>
                                     <li class="badges-active">
                                         <p>design</p>
-                                        <div class="badges__ch badges-design"></div>
+                                        <div class="badges_ch badges-design"></div>
                                         <!-- ** level status ** -->
-                                        <div class="badges__li __level-5">
+                                        <div class="badges_level __level-5">
                                             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                         </div>
                                     </li>
                                     <li class="badges-active">
                                         <p>DEV.</p>
-                                        <div class="badges__ch __badge-dev"></div>
+                                        <div class="badges_ch __badge-dev"></div>
                                         <!-- ** level status ** -->
-                                        <div class="badges__li __level-3">
+                                        <div class="badges_level __level-3">
                                             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                         </div>
                                     </li>
                                     <li>
                                         <p>direction</p>
-                                        <div class="badges__ch __badge-direction"></div>
+                                        <div class="badges_ch __badge-direction"></div>
                                         <!-- ** level status ** -->
-                                        <div class="badges__li">
+                                        <div class="badges_level">
                                             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                                         </div>
                                     </li>
@@ -142,7 +142,7 @@
 
                     <div class="detailOthers">
                         <h2>see site</h2>
-                        <button type="button" class="glitch__btn audio__hv-01">
+                        <button type="button" class="btn btn_glitch audio_hv_01">
                             <a href="http://yoshikawagumi.info" role="button" target="_blank">launch</a>
                         </button>
 

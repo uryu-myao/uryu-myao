@@ -19,14 +19,16 @@
 
 <div id="top" data-page="top">
     <!-- ** background ** -->
-    {% include "_bg.njk" %}
+    {% include "bg.njk" %}
 
-    <main class="grid_rule __gTop mz" role="main">
+    <main class="grid_rule mz" role="main">
 
-        {% include "_cyberline.njk" %}
+        {% include "cyberline.njk" %}
 
-        <aside class="grid_aside __asideTop">
+        <aside class="grid_aside">
             <div>
+                {% include "menu.njk" %}
+
                 <div id="logo">
                     <h1>logo</h1>
                 </div>
@@ -35,27 +37,23 @@
                 <figure class="mars"><picture></picture></figure>
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
-
-                {% include "site_menu.njk" %}
             </div>
         </aside>
 
-
-        <section class="grid__curS">
+        <section class="grid_curS">
 
             {% for current in current %}
             <a href="{{ basic.root }}works/{{ current.link }}.html">
-                <figure class="__cur-show">
+                <figure class="grid_curS_view">
                     <picture class="__{{ current.class }}"></picture>
                 </figure>
             </a>
             {% endfor %}
         </section>
 
+        <section class="grid_curI">
 
-        <section class="grid__curI">
-
-            {% include "_cyberline.njk" %}
+            {% include "cyberline.njk" %}
 
             <div class="__curI-ttl">
                 {% for desc1 in desc1 %}
@@ -70,45 +68,41 @@
                 {% endfor %}
             </div>
             <div class="__curI-desc">
-                {# <div class="chart kl">
-                    <canvas id="chart"></canvas>
-                </div> #}
                 <div class="badges">
                     <ol>
                         <li class="badges-active">
                             <p>Design</p>
-                            <div class="badges__ch badges-design"></div>
+                            <div class="badges_ch badges-design"></div>
                             <!-- ** level status ** -->
-                            <div class="badges__li __level-5">
+                            <div class="badges_level __level-5">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
                         </li>
                         <li class="badges-active">
                             <p>DEV.</p>
-                            <div class="badges__ch __badge-dev"></div>
+                            <div class="badges_ch __badge-dev"></div>
                             <!-- ** level status ** -->
-                            <div class="badges__li __level-3">
+                            <div class="badges_level __level-3">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
                         </li>
                         <li>
                             <p>Direction</p>
-                            <div class="badges__ch __badge-direction"></div>
+                            <div class="badges_ch __badge-direction"></div>
                             <!-- ** level status ** -->
-                            <div class="badges__li">
+                            <div class="badges_level">
                                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
                             </div>
                         </li>
                     </ol>
                 </div>
-                <button type="button" class="glitch__btn audio__hv-01">
+                <button type="button" class="btn btn_glitch audio_hv_01">
                     <a role="button">details</a>
                 </button>
             </div>
-        </section> <!-- grid__curI -->
+        </section> <!-- grid_curI -->
 
-
-        <section class="grid__prev">
+        <section class="grid_prev">
             {% for prev in prev %}
             <div class="__midbar">
                 <figure>
@@ -121,8 +115,7 @@
             {% endfor %}
         </section>
 
-
-        <section class="grid__next">
+        <section class="grid_next">
             {% for next in next %}
             <div class="motionBar">
                 <div><p></p></div>
@@ -135,8 +128,7 @@
             {% endfor %}
         </section>
 
-
-        <section class="grid__prog">
+        <section class="grid_prog">
             <div class="__prog">
                 <ol>
                     <li class="__prog-dots __prog-active"></li>
@@ -153,7 +145,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 </div> <!-- id.top -->
 <!--  * CONTENTS end * -->
