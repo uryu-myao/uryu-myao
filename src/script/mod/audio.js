@@ -1,9 +1,9 @@
 (function() {
 
     // Sound Resourses
-    const glitch_01 = document.querySelector('#sound_hv-01'); // @_audio.njk
-    const glitch_02 = document.querySelector('#sound_hv-02'); // @_audio.njk
-    const BGM = document.querySelector('#sound_bgm'); // @_audio.njk
+    const glitch_01 = document.querySelector('#sound_hv-01'); // @audio.njk
+    const glitch_02 = document.querySelector('#sound_hv-02'); // @audio.njk
+    const BGM = document.querySelector('#sound_bgm'); // @audio.njk
 
     // DOM
     let audio_hvGlitch_01 = document.querySelector('.audio__hv-01'),

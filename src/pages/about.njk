@@ -7,30 +7,24 @@
 {% block content %}
 
 <!-- ** Audio Source ** -->
-{% include "_audio.njk" %}
+{% include "audio.njk" %}
 <!-- * Mouse * -->
-{% include "_mouse-circle.njk" %}
+{% include "mouse-circle.njk" %}
 
 
 <div id="about" data-page="about" class="child">
 
     {% include "_bg.njk" %}
 
-    <main class="grid__rule __g-about" role="about">
+    <main class="grid_rule __g-about" role="about">
 
         {% include "_cyberline.njk" %}
 
-        <aside class="grid__aside __asideAbout">
+        <aside class="grid_aside __asideAbout">
             <div>
-                <div class="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
                 <p class="cr">© {{ basic.sitename }} 2018</p>
 
-                {% include "_menu-overlay.njk" %}
+                {% include "site_menu.njk" %}
             </div>
         </aside>
 

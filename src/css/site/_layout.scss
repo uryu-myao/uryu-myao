@@ -154,7 +154,7 @@ p, dt, dd, li, a {
 // Grid Admin
 //
 
-.grid__rule {
+.grid_rule {
     width: 100%;
     height: calc( 100% - 40px );
     height: calc( 100vh - 40px );
@@ -219,7 +219,7 @@ div[data-page='top'] { overflow: hidden;}
 
 // aside
 //
-.grid__aside {
+.grid_aside {
     grid-area: aside;
     height: 100%;
     background: $clr_dark-trans;
@@ -473,7 +473,7 @@ div[data-page='top'] { overflow: hidden;}
         }
     }
 
-    .__badge-design { background-image: url( /assets/top/badge_01.svg );}
+    .badges-design { background-image: url( /assets/top/badge_01.svg );}
     .__badge-dev { background-image: url( /assets/top/badge_02.svg );}
     .__badge-direction { background-image: url( /assets/top/badge_03.svg );}
 
