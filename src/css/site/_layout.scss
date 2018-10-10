@@ -523,7 +523,7 @@ div[data-page='top'] {
     grid-area: prev;
     overflow: hidden;
 
-    .__midbar {
+    .banner_middle {
         height: calc( 100% - 65px );
         margin-bottom: 10px;
     }
@@ -534,7 +534,7 @@ div[data-page='top'] {
     overflow: hidden;
 }
 
-.__midbar {
+.banner_middle {
     height: 100%;
     opacity: .22;
 
@@ -633,7 +633,7 @@ div[data-page='about'] {
         }
     }
 
-    .motionBar {
+    .banner_motion {
         height: 75px;
         // cursor: pointer;
 
@@ -1240,7 +1240,7 @@ div[data-page='about'] {
         }
 
         a:last-child {
-            .motionBar {
+            .banner_motion {
                 div { margin-left: calc( 35% - 3em );}
             }
         }

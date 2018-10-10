@@ -22,11 +22,11 @@
           if ((dataJSON.readyState === 4) && (dataJSON.status === 200)) {
 
             let dataContent = JSON.parse(dataJSON.responseText),
-                motionBar_prev = document.querySelector('.grid_prev p'),
-                motionBar_next = document.querySelector('.grid_next p');
+                banner_motion_prev = document.querySelector('.grid_prev p'),
+                banner_motion_next = document.querySelector('.grid_next p');
 
-            motionBar_prev.innerHTML = dataContent.prev[0].title.repeat(15);
-            motionBar_next.innerHTML = dataContent.next[0].title.repeat(16);
+            banner_motion_prev.innerHTML = dataContent.prev[0].title.repeat(15);
+            banner_motion_next.innerHTML = dataContent.next[0].title.repeat(16);
 
           }
         }
