@@ -1,32 +1,26 @@
 (function() {
 
-    // const LOADING = (function() {
-    //
-    //     let loadingPage = document.querySelector('#preload')
-    //
-    //
-    //     let preload = setInterval(function() {
-    //
-    //         if (document.readyState === 'complete') {
-    //
-    //             loadingPage.classList.remove('_preload_loading');
-    //             clearInterval(preload);
-    //
-    //         }
-    //
-    //     }, 500);
-    //
-    //
-    //     let bindActions = function() {
-    //         window.onload = preload;
-    //     };
-    //
-    //     let init = function() { bindActions();};
-    //
-    //     return { init: init };
-    //
-    // }());
-    //
-    // LOADING.init();
+    const LOADING = (function() {
+
+        let preload = document.querySelector('#preload');
+
+        let removing = function() {
+
+            preload.classList.remove('loading');
+
+        };
+
+
+        let bindActions = function() {
+            document.addEventListener("DOMContentLoaded", removing);
+        };
+
+        let init = function() { bindActions();};
+
+        return { init: init };
+
+    }());
+
+    LOADING.init();
 
 }());

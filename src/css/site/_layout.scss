@@ -12,8 +12,6 @@ p, dt, dd, li, a {
     letter-spacing: .15em;
 }
 
-
-
 .col-2 {
     display: flex;
     justify-content: space-between;
@@ -49,8 +47,8 @@ p, dt, dd, li, a {
     }
 }
 
-.loadingline__up { top: 0;}
-.loadingline__down { bottom: 0;}
+.loadingline_up { top: 0;}
+.loadingline_down { bottom: 0;}
 
 .shield {
     width: calc( 100% );
@@ -61,10 +59,10 @@ p, dt, dd, li, a {
     z-index: 10;
 }
 
-.shield__up { top: 0;}
-.shield__down { bottom: 0;}
+.shield_up { top: 0;}
+.shield_down { bottom: 0;}
 
-._preload_loading .horizon {
+.loading .horizon {
 
     div {
 
@@ -75,7 +73,7 @@ p, dt, dd, li, a {
     }
 }
 
-._preload_loading .shield {
+.loading .shield {
     height: calc( 50vh - 20px );
 }
 
@@ -894,7 +892,6 @@ div[data-page='works'] {
             justify-content: flex-start;
             align-items: flex-start;
         }
-
     }
 
     &_agency {
