@@ -12,23 +12,23 @@
 {% include "mouse-circle.njk" %}
 
 
-<div id="about" data-page="about" class="child">
+<div data-page="about" class="child">
 
     {% include "bg.njk" %}
 
-    <main class="grid_rule __g-about" role="about">
+    <main class="grid_rule" role="about">
 
         {% include "cyberline.njk" %}
 
         <aside class="grid_aside __asideAbout">
-            <div>
+            <div class="grid_aside_inner">
                 {% include "menu.njk" %}
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
-            </div>
+            </div> <!-- .grid_aside_inner -->
         </aside>
 
-        <section class="grid__contentsAbout innerScroll kl">
+        <section class="grid_content innerScroll kl">
 
             <article class="me">
                 <div class="countup">

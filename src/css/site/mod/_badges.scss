@@ -1,0 +1,76 @@
+.badges {
+
+    ol {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        width: 30%;
+        height: 72px;
+        position: relative;
+        clip-path: polygon(19% 0, 100% 0, 100% 86%, 81% 100%, 0 100%, 0 14%);
+        @include clr-opacity ( $clr_blue-main, .34 );
+    }
+
+    p {
+        color: white;
+        position: absolute;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        margin: 0;
+        font-family: $txt_cond;
+        text-transform: capitalize;
+        letter-spacing: .045em;
+        top: 4px;
+        right: 4px;
+        opacity: .2;
+    }
+
+    &_ch {
+        width: 18px;
+        height: 26px;
+        margin: 1.8vh 0 0 1.23vw;
+        opacity: .1;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+        }
+    }
+
+    &_level {
+        display: flex;
+        justify-content: flex-start;
+        width: 60%;
+        position: absolute;
+        left: .6vw;
+        bottom: 10px;
+
+        span {
+            width: 4px;
+            height: 6px;
+            margin-right: 2px;
+            @include clr-opacity ( #6b6d41, .28 );
+        }
+    }
+
+    &_design { background-image: url( /assets/top/badge_01.svg );}
+    &_dev { background-image: url( /assets/top/badge_02.svg );}
+    &_direction { background-image: url( /assets/top/badge_03.svg );}
+
+    &_active {
+        background-image: linear-gradient( #232a8b, #0b1940 );
+
+        .badges_ch { opacity: 1;}
+        .badges_level span { background: #6b6d41;}
+    }
+
+    // Badge level grid loop
+    $levelStatus: __level !default;
+
+    @for $i from 1 through 7 {
+        .#{ $levelStatus }_#{ $i } span:nth-child(-n+#{ $i }) {
+            background: #f0ff00;
+        }
+    }
+}

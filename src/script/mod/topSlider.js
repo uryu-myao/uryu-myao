@@ -22,7 +22,7 @@
         let nextElem = document.querySelector('.grid_prev'),
             prevElem = document.querySelector('.grid_next'),
             currentSlider = document.querySelector('.grid_curS .grid_curS_view > *'),
-            detailsBtn = document.querySelector('.__curI-desc button a');
+            detailsBtn = document.querySelector('.grid_curI_desc button a');
 
         nextElem.addEventListener('click', nextImage);
         prevElem.addEventListener('click', prevImage);
