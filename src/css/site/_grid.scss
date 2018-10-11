@@ -33,9 +33,9 @@
     grid-area: aside;
     height: 100%;
     background: $clr_dark-trans;
-    animation: noise .2s 2s linear infinite;
+    animation: flashing .2s 2s linear infinite;
 
-    @keyframes noise {
+    @keyframes flashing {
       0% {
           background: transparent;
       }

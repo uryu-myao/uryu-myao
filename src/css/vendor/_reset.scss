@@ -445,7 +445,7 @@ template {
 
 
 
-/* Fix <figure> and <dl> margin
+/* Reset <figure> and <dl> margin
    ========================================================================== */
 
 figure, dl { margin: 0;}
@@ -462,7 +462,7 @@ ul, ol {
 li { list-style: none;}
 
 
-/* Remove underbar in <a> tag
+/* Reset underbar in <a> tag
    ========================================================================== */
 
 a { text-decoration: none;}
@@ -486,7 +486,8 @@ label, input, textarea {
   padding: 0;
   list-style: none;
 }
-input:focus, textarea:focus ,select:focus { outline: none;}
+
+button:focus, input:focus, textarea:focus ,select:focus { outline: none;}
 
 
 /* Add font optimization

@@ -30,13 +30,40 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
-    transition: all 5s $cb_rush;
+    transition: all 1s $cb_rush;
 
     & > div {
         position: relative;
         height: calc( 100% - 40px );
         height: calc( 100vh - 40px );
+        z-index: 2;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/assets/common/noise.png');
+            background-repeat: repeat;
+            animation: 1s infinite noise;
+            z-index: 3;
+        }
     }
+}
+
+@keyframes noise {
+    0%, 100% { background-position: 0 0;}
+    10% { background-position: -5% -10%;}
+    20% { background-position: -15% 5%;}
+    30% { background-position: 7% -25%;}
+    40% { background-position: 20% 25%;}
+    50% { background-position: -25% 10%;}
+    60% { background-position: 15% 5%;}
+    70% { background-position: 0% 15%;}
+    80% { background-position: 25% 35%;}
+    90% { background-position: -10% 10%;}
 }
 
 .loadingline {
@@ -105,6 +132,7 @@ p, dt, dd, li, a {
 .start {
     position: absolute;
     bottom: calc( 10vh - 10px );
+    padding: 1em;
     @include center(horizontal);
     background: transparent;
     color: $clr_blue-active;
@@ -115,7 +143,7 @@ p, dt, dd, li, a {
     z-index: 10;
     opacity: 0;
     transition: all 1s $cb_rush;
-    transition-delay: 1s;
+    transition-delay: .8s;
 }
 
 // during Top loading
@@ -169,13 +197,13 @@ p, dt, dd, li, a {
 
 .bg_filter {
     position: absolute;
-    opacity: 0.02725;
+    opacity: 1;
     z-index: 2;
     background:
     {
-        image: url(/assets/common/noise.gif);
+        image: url(/assets/common/noise.png);
         repeat: repeat;
-    }
+    };
 }
 
 .bg_gradient {
@@ -192,9 +220,9 @@ p, dt, dd, li, a {
 }
 
 @keyframes bgGradient {
-    0% { background-position: 0 100% }
-    50% { background-position: 100% 100% }
-    100% { background-position: 0% 100% }
+    0% { background-position: 0 100%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 100%; }
 }
 
 

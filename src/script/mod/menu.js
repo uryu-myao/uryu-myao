@@ -1,5 +1,5 @@
 (function() {
-    const MENU = (function() {
+    const Menu = (function() {
         let menu = document.querySelector('.menu'),
             overlay = document.querySelector('.overlay'),
             navItem = document.querySelectorAll('.overlay_item')
@@ -46,6 +46,6 @@
 
     }());
 
-    MENU.init()
+    Menu.init()
 
 }());
