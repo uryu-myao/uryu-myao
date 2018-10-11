@@ -204,6 +204,7 @@ p, dt, dd, li, a {
         image: url(/assets/common/noise.png);
         repeat: repeat;
     };
+    animation: 1s infinite noise;
 }
 
 .bg_gradient {

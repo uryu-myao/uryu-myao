@@ -16,7 +16,9 @@
 
         let bindActions = function() {
             document.addEventListener("DOMContentLoaded", changeClass);
-            startBtn.addEventListener("click", entryThroughBtn);
+            if (startBtn) {
+                startBtn.addEventListener("click", entryThroughBtn);
+            }
         };
 
         let init = function() {
