@@ -1,8 +1,10 @@
-// MAIN MEMU
-//
+/* MAIN MEMU
+ * -
+ */
 
 
-// * icon
+
+// menu icon
 .menu {
     position: absolute;
     display: flex;
@@ -72,8 +74,8 @@
         }
     }
 }
-// * overlay
-//
+
+// overlay navigation
 .overlay {
     position: absolute;
     width: 100%;

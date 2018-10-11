@@ -1,4 +1,4 @@
-(function(){
+(function() {
 
     'use strict';
 
@@ -6,10 +6,10 @@
     const THREE = require('three');
 
     // resposive
-    window.addEventListener( 'resize', function ()
-    {
+    window.addEventListener('resize', function () {
         let width  = window.innerWidth,
             height = window.innerHeight;
+
         renderer.setSize( width, height );
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
@@ -35,8 +35,8 @@
 
     // create the shapes
     const geometry = new THREE.Geometry();
-    for ( let i = 0; i < 100; i ++ )
-    {
+
+    for ( let i = 0; i < 100; i ++ ) {
         let vertex = new THREE.Vector3();
         vertex.x = 1000 * Math.random() - 500;
         vertex.y = 1000 * Math.random() - 500;
@@ -45,13 +45,13 @@
     }
 
     // create materials
-    const material = new THREE.PointsMaterial(
-    {
+    const material = new THREE.PointsMaterial({
         size: 4,
         sizeAttenuation: true,
         transparent: true,
         opacity: 0.4
     });
+
     material.color.setHex( 0x1e3b86 );
 
     const particles = new THREE.Points( geometry, material );
@@ -60,8 +60,7 @@
     scene.add( particles );
 
     // draw materials
-    let draw = function ()
-    {
+    let draw = function() {
         requestAnimationFrame( draw );
 
         let is_update = true;
@@ -70,24 +69,20 @@
             particles.material.color.setHSL(1.5, 1, 0.5 );
             particles.rotation.y = Date.now() * 0.0002;
         }
-
     }
 
     // draw Scene
-    let render = function()
-    {
+    let render = function() {
         renderer.render( scene, camera );
     };
 
     // run game loop
-    let gameLoop = function()
-    {
+    let gameLoop = function() {
         requestAnimationFrame( gameLoop );
         draw();
         render();
 
-        if (!(document.getElementById('top')))
-        {
+        if (!(document.getElementById('top'))) {
             scene.remove( geometry );
         }
     };

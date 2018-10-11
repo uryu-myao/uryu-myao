@@ -1,10 +1,8 @@
-(function(){
-
-    let scrollProgress = document.querySelector( '.scrollProgress' )
-
-    window.addEventListener ( 'scroll', function ()
+(function() {
+    let scrollProgress = document.querySelector('.scrollProgress')
+    window.addEventListener ('scroll', function ()
     {
-        if ( scrollProgress )
+        if (scrollProgress)
         {
             let docH = document.querySelector('.child').clientHeight,
                 winH = window.style.height,

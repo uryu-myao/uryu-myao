@@ -1,18 +1,16 @@
 /*
-    *** slider ***
-
-    - top page main slider
-    - top.html
-
-*/
+ *    *** slider ***
+ *
+ *    - top page main slider
+ *    - top.html
+ *
+ */
 
 
 (function() {
-
     let topPage = document.querySelector('#top');
 
-    if ( topPage ) {
-
+    if (topPage) {
         let elemCount = 3,
             elemTrans = 0;
 
@@ -29,21 +27,18 @@
 
         detailsBtn.href = "/works/01.html";
 
-        function nextImage () {
-            if ( current < elemCount )
-            {
+        function nextImage() {
+            if (current < elemCount){
                 current++;
                 console.log(current);
             }
         };
 
-        function prevImage () {
-            if ( current > 0 )
-            {
+        function prevImage() {
+            if (current > 0) {
                 current--;
                 console.log(current);
             }
         }
-
     }
 }());

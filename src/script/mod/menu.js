@@ -1,7 +1,5 @@
 (function() {
-
     const MENU = (function() {
-
         let menu = document.querySelector('.menu'),
             overlay = document.querySelector('.overlay'),
             navItem = document.querySelectorAll('.overlay_item');
@@ -10,11 +8,8 @@
 
         let active = false;
 
-
         let toggleMenu = function() {
-
             if (!active) {
-
                 overlay.classList.add('overlay_active');
                 menu.classList.add('menu_active');
 
@@ -25,7 +20,6 @@
                 active = true;
 
             } else {
-
                 overlay.classList.remove('overlay_active');
                 menu.classList.remove('menu_active');
 
@@ -37,8 +31,8 @@
             }
 
             click_01.play();
-        };
 
+        };
 
         let bindActions = function() {
             menu.addEventListener('click', toggleMenu, false);

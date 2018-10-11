@@ -1,14 +1,12 @@
 /*
-    *** Chart ***
-
-    - top page and works details
-
-*/
+ *  *** Chart ***
+ *
+ *  - top page and works details
+ */
 
 
 (function() {
-
-    if ( document.getElementById("chart") ) {
+    if (document.getElementById("chart")) {
 
     let ctx = document.getElementById("chart").getContext('2d');
     let gradientStroke = ctx.createLinearGradient(0, 0, 100, 100);
@@ -17,7 +15,6 @@
     gradientStroke.addColorStop(1, "#D14836");
 
     let cht = new Chart( ctx, {
-
         type: 'line',
         data: {
             labels : ["Jan","Feb","Mar","Apr","May","Jun"],

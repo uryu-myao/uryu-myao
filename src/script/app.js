@@ -6,20 +6,20 @@ console.log (
 
 
 // jQuery
-// ** -
 window.$ = window.jQuery = require('jquery');
 
 
-// lib
-// ** -
+// library
 const mgGlitch = require('./lib/mgGlitch.js');
 const chartJS = require('Chart.js');
 const gsap = require('gsap');
 // const glMatrix = require('./lib/gl-matrix-min.js');
 
 
-// modules
-// ** -
+/* modules
+ *
+ */
+
 // const threeCustom = require('./mod/three.js');
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');

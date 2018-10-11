@@ -1,18 +1,16 @@
 /*
-    *** glitch ***
-
-    - video and picture glitch effect
-    @ top.html
-
-*/
+ *    *** glitch ***
+ *
+ *    - video and picture glitch effect
+ *    @ top.html
+ *
+ */
 
 
 $(function(){
+    let $glitchPic = $(".grid_curS picture");
 
-    let $glitchPic = $( ".grid_curS picture" );
-
-    if ( $glitchPic ) {
-
+    if ($glitchPic) {
         $glitchPic.mgGlitch({
             // set 'true' to stop the plugin
     			  destroy : false,
@@ -33,6 +31,5 @@ $(function(){
             // set max time for glitch 2 elem
             glitch2TimeMax : 1000,
     	  })
-
     }
 });

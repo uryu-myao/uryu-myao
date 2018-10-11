@@ -7,12 +7,18 @@
     TweenMax.set(circle, { scale: 0, xPercent: -50, yPercent: -50 });
 
     container.addEventListener("pointerenter", function(e) {
-        TweenMax.to(circle, 0.3, { scale: 1, opacity: 1 });
+        TweenMax.to(circle, 0.3, {
+            scale: 1,
+            opacity: 1
+        });
         positionCircle(e);
     });
 
     container.addEventListener("pointerleave", function(e) {
-        TweenMax.to(circle, 0.3, { scale: 0, opacity: 0 });
+        TweenMax.to(circle, 0.3, {
+            scale: 0,
+            opacity: 0
+        });
         positionCircle(e);
     });
 
@@ -21,19 +27,25 @@
     });
 
 
-    if ( noEffect ) {
+    if (noEffect) {
 
         noEffect.addEventListener("pointerenter", function() {
             killAction();
         });
 
         noEffect.addEventListener("pointerleave", function(e) {
-            TweenMax.to(circle, 0.3, { scale: 1, opacity: 1 });
+            TweenMax.to(circle, 0.3, {
+                scale: 1,
+                opacity: 1
+            });
             positionCircle(e);
         });
 
         function killAction() {
-            TweenMax.to(circle, 0.3, { scale: 0, opacity: 0 });
+            TweenMax.to(circle, 0.3, {
+                scale: 0,
+                opacity: 0
+            });
             TweenMax.killTweensOf(noEffect);
         };
     };
@@ -44,8 +56,6 @@
         let relY = e.pageY - container.offsetTop;
 
         TweenMax.to(circle, 0.3, { x: relX, y: relY });
-    };
-
-
+    }
 
 })();

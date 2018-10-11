@@ -1,13 +1,12 @@
 /*
-    *** scramble ***
-
-    - text scrambling effect
-    @ top.html
-
-*/
+ *    *** scramble ***
+ *
+ *    - text scrambling effect
+ *    @ top.html
+ *
+ */
 
 (function(){
-
     function _classCallCheck(t, e) {
         if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
     }
