@@ -13,9 +13,7 @@
             bindActions();
         };
 
-        return {
-            init: init
-        };
+        return { init: init };
 
     }());
 

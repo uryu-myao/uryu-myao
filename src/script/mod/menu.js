@@ -38,7 +38,9 @@
             menu.addEventListener('click', toggleMenu, false);
         };
 
-        let init = function() { bindActions();};
+        let init = function() {
+            bindActions();
+        };
 
         return { init: init }
 
