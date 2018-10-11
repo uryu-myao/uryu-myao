@@ -52,46 +52,35 @@ p, dt, dd, li, a {
     &_up {
         top: 0;
 
-        &::before {
+        &::before, &::after {
             content: '';
             position: absolute;
-            top: -2px;
-            left: 0;
-            background: $clr_blue-active;
             width: 5px;
             height: 5px;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            right: 0;
             background: $clr_blue-active;
-            width: 5px;
-            height: 5px;
+            top: -2px;
+            opacity: 0;
+            transition: all .8s linear;
         }
+        &::before { left: -2px;}
+        &::after { right: -2px;}
     }
+
     &_down {
         bottom: 0;
 
-        &::before {
+        &::before, &::after {
             content: '';
             position: absolute;
-            bottom: -2px;
-            left: 0;
-            background: $clr_blue-active;
             width: 5px;
             height: 5px;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            right: 0;
             background: $clr_blue-active;
-            width: 5px;
-            height: 5px;
+            top: -2px;
+            opacity: 0;
+            transition: all .8s linear;
         }
+        &::before { left: -2px;}
+        &::after { right: -2px;}
     }
 }
 
@@ -109,27 +98,23 @@ p, dt, dd, li, a {
 
 
 
-.loading  {
-
-    .loadingline {
-
-        &_up::before,
-        &_up::after,
-        &_down::before,
-        &_down::after {
-            animation: open-dots .5s infinite 0 alternate ease;
-        }
-    }
-
+.loading {
     .shield { height: calc( 50vh - 20px );}
 }
 
 .loaded {
-    background: rgba(0,0,0,.8);
+    background: rgba(0,0,0,.9);
 
     .loadingline {
         width: 100%;
         background: $clr_blue-grey;
+
+        &_up {
+            &::before, &::after { opacity: 1;}
+        }
+        &_down {
+            &::before, &::after { opacity: 1;}
+        }
     }
 }
 
