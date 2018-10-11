@@ -1,6 +1,5 @@
-// Eye catch
 console.log (
-  '%cDesigned & Developed by Me ♥♥ https://github.com/uryu-myao',
+  '%cDesigned & Developed by Me ♥♥',
   'background: #222; color: rgba(23, 111, 246, 1); padding: 20px; margin: 15px 0;'
 );
 
@@ -13,7 +12,6 @@ window.$ = window.jQuery = require('jquery');
 const mgGlitch = require('./lib/mgGlitch.js');
 const chartJS = require('Chart.js');
 const gsap = require('gsap');
-// const glMatrix = require('./lib/gl-matrix-min.js');
 
 
 /* modules

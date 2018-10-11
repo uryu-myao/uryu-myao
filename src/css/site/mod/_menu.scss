@@ -44,9 +44,7 @@
     }
 
     &:hover {
-        span {
-            margin-right: 4px;
-        }
+        span { margin-right: 4px;}
     }
 
     &_active {
@@ -56,9 +54,7 @@
             background-image: linear-gradient( to bottom, $clr_blue-grey 45%, black );
         }
 
-        & span:nth-child(n+2) {
-            height: 0;
-        }
+        & span:nth-child(n+2) { height: 0;}
 
         & span:last-child {
             &::after {
@@ -66,11 +62,9 @@
                 opacity: 1;
             }
         }
-
+        
         &:hover {
-            span {
-                margin-right: 2px;
-            }
+            span { margin-right: 2px;}
         }
     }
 }

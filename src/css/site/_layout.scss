@@ -96,12 +96,34 @@ p, dt, dd, li, a {
     &_down { bottom: 0;}
 }
 
+.visual {
+    position: absolute;
+    @include center(both);
+    z-index: 10;
+}
 
+.start {
+    position: absolute;
+    bottom: calc( 10vh - 10px );
+    @include center(horizontal);
+    background: transparent;
+    color: $clr_blue-active;
+    font-size: 1.45rem;
+    font-family: $txt_cond;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    z-index: 10;
+    opacity: 0;
+    transition: all 1s $cb_rush;
+    transition-delay: 1s;
+}
 
+// during Top loading
 .loading {
     .shield { height: calc( 50vh - 20px );}
 }
 
+// Top loaded
 .loaded {
     background: rgba(0,0,0,.9);
 
@@ -116,25 +138,11 @@ p, dt, dd, li, a {
             &::before, &::after { opacity: 1;}
         }
     }
-}
 
-
-@keyframes open-dots {
-  0% {
-    opacity: 0;
-    background: black;
-  }
-  50% {
-    opacity: 1;
-    background: #001eff;
-  }
-  75% {
-    background: #1a2685;
-  }
-  100% {
-    opacity: 1;
-    background: #001eff;
-  }
+    .start {
+        bottom: 10vh;
+        opacity: 1;
+    }
 }
 
 
