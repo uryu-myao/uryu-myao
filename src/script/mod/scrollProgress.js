@@ -12,5 +12,4 @@
             document.querySelector( '.scrollProgress div' ).style.width = totalScroll + '%';
         }
     })
-
 })();

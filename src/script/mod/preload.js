@@ -19,6 +19,6 @@
 
     }());
 
-    LOADING.init();
+    LOADING.init()
 
 }());

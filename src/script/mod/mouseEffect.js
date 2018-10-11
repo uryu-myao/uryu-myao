@@ -2,7 +2,7 @@
 
     let container = document.querySelector('body');
     let circle = document.querySelector('.circle');
-    let noEffect = document.querySelector('.kl');
+    let noEffect = document.querySelector('.kl')
 
     TweenMax.set(circle, { scale: 0, xPercent: -50, yPercent: -50 });
 
@@ -11,7 +11,7 @@
             scale: 1,
             opacity: 1
         });
-        positionCircle(e);
+        positionCircle(e)
     });
 
     container.addEventListener("pointerleave", function(e) {
@@ -19,18 +19,19 @@
             scale: 0,
             opacity: 0
         });
-        positionCircle(e);
+
+        positionCircle(e)
     });
 
     container.addEventListener("pointermove", function(e) {
-        positionCircle(e);
-    });
+        positionCircle(e)
+    })
 
 
     if (noEffect) {
 
         noEffect.addEventListener("pointerenter", function() {
-            killAction();
+            killAction()
         });
 
         noEffect.addEventListener("pointerleave", function(e) {
@@ -38,7 +39,8 @@
                 scale: 1,
                 opacity: 1
             });
-            positionCircle(e);
+
+            positionCircle(e)
         });
 
         function killAction() {
@@ -46,8 +48,9 @@
                 scale: 0,
                 opacity: 0
             });
-            TweenMax.killTweensOf(noEffect);
-        };
+
+            TweenMax.killTweensOf(noEffect)
+        }
     };
 
     function positionCircle(e) {
@@ -55,7 +58,7 @@
         let relX = e.pageX - container.offsetLeft;
         let relY = e.pageY - container.offsetTop;
 
-        TweenMax.to(circle, 0.3, { x: relX, y: relY });
+        TweenMax.to(circle, 0.3, { x: relX, y: relY })
     }
 
 })();
