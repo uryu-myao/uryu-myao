@@ -22,7 +22,7 @@ p, dt, dd, li, a {
 // Preload
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-#preload {
+.preload {
     width: 100%;
     padding: 20px;
     background: black;
@@ -30,52 +30,109 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
+    transition: all 5s $cb_rush;
 
     & > div {
         position: relative;
         height: calc( 100% - 40px );
         height: calc( 100vh - 40px );
     }
-
-    .loadingline {
-        width: calc( 100% - 46px );
-        height: 1px;
-        position: absolute;
-        background: $clr_blue-main;
-        transition: all .15s $cb_rush;
-        z-index: 20;
-    }
 }
 
-.loadingline_up { top: 0;}
-.loadingline_down { bottom: 0;}
+.loadingline {
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 50%;
+    background: $clr_blue-main;
+    z-index: 20;
+    transform: translateX(-50%);
+    transition: all 1.5s $cb_rush;
+
+    &_up {
+        top: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            background: $clr_blue-active;
+            width: 5px;
+            height: 5px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: 0;
+            background: $clr_blue-active;
+            width: 5px;
+            height: 5px;
+        }
+    }
+    &_down {
+        bottom: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            background: $clr_blue-active;
+            width: 5px;
+            height: 5px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            background: $clr_blue-active;
+            width: 5px;
+            height: 5px;
+        }
+    }
+}
 
 .shield {
     width: calc( 100% );
     height: 0;
     position: absolute;
     background: $clr_dark;
-    transition: all .35s $cb_rush;
+    transition: all .8s $cb_rush;
     z-index: 10;
+
+    &_up { top: 0;}
+    &_down { bottom: 0;}
 }
 
-.shield_up { top: 0;}
-.shield_down { bottom: 0;}
 
-.loading .horizon {
 
-    div {
+.loading  {
 
-        &::before, &::after {
-            background: black;
-            animation: open-dots 2s infinite 0 alternate $cb_rush;
+    .loadingline {
+
+        &_up::before,
+        &_up::after,
+        &_down::before,
+        &_down::after {
+            animation: open-dots .5s infinite 0 alternate ease;
         }
+    }
+
+    .shield { height: calc( 50vh - 20px );}
+}
+
+.loaded {
+    background: rgba(0,0,0,.8);
+
+    .loadingline {
+        width: 100%;
+        background: $clr_blue-grey;
     }
 }
 
-.loading .shield {
-    height: calc( 50vh - 20px );
-}
 
 @keyframes open-dots {
   0% {

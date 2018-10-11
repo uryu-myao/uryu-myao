@@ -1,19 +1,21 @@
 (function() {
     const LOADING = (function() {
-        let preload = document.querySelector('#preload');
-        let removing = function() {
+        let preload = document.querySelector('#preload')
+
+        let classChanges = function() {
             preload.classList.remove('loading');
+            preload.classList.add('loaded')
         };
 
         let bindActions = function() {
-            document.addEventListener("DOMContentLoaded", removing);
+            document.addEventListener("DOMContentLoaded", classChanges)
         };
 
         let init = function() {
-            bindActions();
+            bindActions()
         };
 
-        return { init: init };
+        return { init: init }
 
     }());
 
