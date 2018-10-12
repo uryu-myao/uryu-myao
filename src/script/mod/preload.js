@@ -1,30 +1,36 @@
 (function() {
     const Loading = (function() {
         let preload = document.querySelector('#Preload'),
-            entryBtn = document.querySelector('.entry')
+            entryBtn = document.querySelector('.entry'),
+            entryLetter = ['.e1','.e2','.e3','.e4','.e5']
 
-        let changeClass = function() {
+        let bindLoadingAnimation = function() {
             preload.classList.remove('loading');
             preload.classList.add('loaded');
 
-            TweenMax.to( entryBtn, .4,
-                { ease: Sine.easeOut, bottom: "10vh", opacity: 1 }
-            ).delay(1);
+            TweenMax.delayedCall( 1, letterAimation );
+
+            function letterAimation() {
+                TweenMax.staggerFromTo( entryLetter, .4,
+                    { opacity: 0 },
+                    { opacity: 1 }, .2
+                )
+            }
         };
 
-        let siteOpening = function () {
+        let entringAnimaion = function () {
 
             TweenMax.to( entryBtn, .2,
                 { ease: Circ.easeOut, opacity: 0 }
             );
             TweenMax.to( preload, .2,
                 { ease: Circ.easeOut, opacity: 0 }
-            ).delay(.2);
+            );
         }
 
         let bindActions = function() {
-            document.addEventListener("DOMContentLoaded", changeClass);
-            if (entryBtn) { entryBtn.addEventListener("click", siteOpening); }
+            document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
+            if (entryBtn) { entryBtn.addEventListener("click", entringAnimaion); }
         };
 
         let init = function() {

@@ -30,7 +30,6 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
-    transition: all 1s $cb_rush;
 
     & > div {
         position: relative;
@@ -138,10 +137,19 @@ p, dt, dd, li, a {
     color: $clr_blue-active;
     font-size: 1.45rem;
     font-family: $txt_cond;
-    letter-spacing: .08em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
+    transition: all .2s ease;
     z-index: 10;
-    opacity: 0;
+
+    &_inner { position: relative;}
+
+    span {
+        margin: 0 -1px;
+        opacity: 0;
+    }
+
+    &:hover { background: $clr-light-trans;}
 }
 
 // during Top loading
