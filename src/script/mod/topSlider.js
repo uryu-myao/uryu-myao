@@ -8,7 +8,7 @@
 
 
 (function() {
-    let topPage = document.querySelector('#top');
+    let topPage = document.querySelector('#Top');
 
     if (topPage) {
         let elemCount = 3,
@@ -29,14 +29,14 @@
 
         function nextImage() {
             if (current < elemCount){
-                current++;
+                current ++;
                 console.log(current);
             }
         };
 
         function prevImage() {
             if (current > 0) {
-                current--;
+                current --;
                 console.log(current);
             }
         }

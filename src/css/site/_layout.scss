@@ -129,7 +129,7 @@ p, dt, dd, li, a {
     z-index: 10;
 }
 
-.start {
+.entry {
     position: absolute;
     bottom: calc( 10vh - 10px );
     padding: 1em;
@@ -142,8 +142,6 @@ p, dt, dd, li, a {
     text-transform: uppercase;
     z-index: 10;
     opacity: 0;
-    transition: all 1s $cb_rush;
-    transition-delay: .8s;
 }
 
 // during Top loading
@@ -165,11 +163,6 @@ p, dt, dd, li, a {
         &_down {
             &::before, &::after { opacity: 1;}
         }
-    }
-
-    .start {
-        bottom: 10vh;
-        opacity: 1;
     }
 }
 

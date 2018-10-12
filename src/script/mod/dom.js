@@ -9,7 +9,7 @@
 
 (function(){
 
-    let top = document.querySelector('#top')
+    let top = document.querySelector('#Top')
 
     if (top) {
         let dataJSON = new XMLHttpRequest(),
