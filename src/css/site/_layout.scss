@@ -139,7 +139,7 @@ p, dt, dd, li, a {
     font-family: $txt_cond;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    transition: all .2s ease;
+    transition: all .3s $cb_rush;
     z-index: 10;
 
     &_inner { position: relative;}
@@ -526,7 +526,7 @@ div[data-page='about'] {
     z-index: 10;
 }
 
-.txt__en {
+.txt_en {
     font-family: $txt_code;
     font-size: 2.915vw;
     line-height: 1.45;
@@ -536,7 +536,7 @@ div[data-page='about'] {
     margin-left: 5vw;
 }
 
-.txt__ch {
+.txt_ch {
     font-size: 1.25rem;
     line-height: 1.6;
     letter-spacing: .16em;
@@ -1028,20 +1028,20 @@ div[data-page='works'] {
             top: calc( 4.5vh + 1.35rem);
             @include center( horizontal );
         }
+    }
 
-        .__ctl {
-            margin-top: 20vh;
-            display: flex;
-            justify-content: space-between;
+    &_ctl {
+        margin-top: 20vh;
+        display: flex;
+        justify-content: space-between;
 
-            a {
-                width: calc( 100% / 2 - 10px );
-            }
+        a {
+            width: calc( 100% / 2 - 10px );
+        }
 
-            a:last-child {
-                .banner_motion {
-                    div { margin-left: calc( 35% - 3em );}
-                }
+        a:last-child {
+            .banner_motion {
+                div { margin-left: calc( 35% - 3em );}
             }
         }
     }
@@ -1080,40 +1080,40 @@ div[data-page='works'] {
         transform-origin: left center;
     }
 
-    .__img01 {
+    &_01 {
         top: 0;
         left: 0;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_01, png, center, cover, no-repeat);
     }
-    .__img02 {
+    &_02 {
         top: -84px;
         left: 204px;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_01, png, center, cover, no-repeat);
     }
-    .__img03 {
+    &_03 {
         top: 100px;
         left: 0;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
     }
-    .__img04 {
+    &_04 {
         top: -150px;
         left: 216px;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
     }
-    .__img05 {
+    &_05 {
         top: 10px;
         left: 543px;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
     }
 }
 
-.__caseSP {
+.caseSP {
     margin: 18vh 0 0 4vw;
 
     figure { width: 200px;}
 }
 
-.__casePC {
+.casePC {
     margin: -5vh 0 0 4vw;
 
     figure { width: 400px;}

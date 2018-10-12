@@ -62,7 +62,7 @@
                 opacity: 1;
             }
         }
-        
+
         &:hover {
             span { margin-right: 2px;}
         }
@@ -100,7 +100,6 @@
     }
 
     &_list {
-
         li:last-child { margin-bottom: 0;}
 
         &::before {
@@ -115,7 +114,7 @@
         }
     }
 
-    .__last_pj { margin-bottom: 6.5vh;}
+    ._last { margin-bottom: 6.5vh;}
 
     &_item {
         margin-bottom: 1.45em;
