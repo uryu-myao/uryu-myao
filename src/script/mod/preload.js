@@ -3,7 +3,7 @@
 
         let preload = document.querySelector('#Preload'),
             entryBtn = document.querySelector('.entry'),
-            entryLetters = ['.e1','.e2','.e3','.e4','.e5'];
+            entryLetters = ['.e1','.e2','.e3','.e4','.e5']
 
         let bindLoadingAnimation = function() {
             // Cyberline motion in CSS
@@ -22,7 +22,7 @@
 
         let bindEntringAnimaion = function () {
             let entryLetterNodes = document.querySelectorAll('.enl'),
-                arrEntryLetters = Array.from( entryLetterNodes );
+                arrEntryLetters = Array.from( entryLetterNodes )
 
             // Letters fade out randomly
             TweenMax.set( arrEntryLetters, { opacity: 1 });
@@ -39,11 +39,14 @@
             TweenMax.delayedCall( .8, bgFadeOut );
 
             function bgFadeOut() {
+                TweenMax.set( preload,
+                    { opacity: 1, display:"block" }
+                );
                 TweenMax.to( preload, .5,
-                    { ease: Circ.easeOut, opacity: 0 }
+                    { ease: Circ.easeOut, opacity: 0, display:"none" }
                 )
             }
-        }
+        };
 
         let bindActions = function() {
             document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
