@@ -8,7 +8,7 @@
 
 
 $(function(){
-    let $glitchPic = $(".grid_curS picture")
+    let $glitchPic = $(".grid_thum picture")
 
     if ($glitchPic) {
         $glitchPic.mgGlitch({

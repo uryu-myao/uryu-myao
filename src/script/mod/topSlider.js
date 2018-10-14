@@ -8,19 +8,19 @@
 
 
 (function() {
-    let topPage = document.querySelector('#Top');
 
-    if (topPage) {
+    const topSlider = (function() {
+
         let elemCount = 3,
             elemTrans = 0;
 
-        let current = 1,
+        let current = 0,
             trans = 1;
 
         let nextElem = document.querySelector('.grid_prev'),
             prevElem = document.querySelector('.grid_next'),
-            currentSlider = document.querySelector('.grid_curS .grid_curS_view > *'),
-            detailsBtn = document.querySelector('.grid_curI_desc button a');
+            currentSlider = document.querySelector('.grid_thum .grid_thum_fig > *'),
+            detailsBtn = document.querySelector('.grid_desc_down button a');
 
         nextElem.addEventListener('click', nextImage);
         prevElem.addEventListener('click', prevImage);
@@ -40,5 +40,21 @@
                 console.log(current);
             }
         }
-    }
+
+        let bindActions = function() {
+            if ( top ) {
+
+            }
+        };
+
+        let init = function() {
+            bindActions()
+        };
+
+        return { init: init }
+
+    }());
+
+    topSlider.init()
+
 }());

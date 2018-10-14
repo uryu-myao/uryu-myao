@@ -242,8 +242,8 @@ div[data-page='works']
     main { position: relative;}
   }
 
-.grid_curS,
-.grid_curI
+.grid_thum,
+.grid_desc
 {
     .horizon {
         position: absolute;
@@ -324,55 +324,59 @@ div[data-page='top'] {
 // Current show
 //
 
-.grid_curS {
+.grid_thum {
     grid-area: curS;
     width: 100%;
     position: relative;
     overflow: hidden;
 
-    .grid_curS_view {
-        height: 100%;
-        position: relative;
-        object-fit: cover;
-        align-self: stretch;
-        overflow: hidden;
+    ul, li { height: 100%;}
 
-      & picture {
-          position: absolute;
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: .94;
-      }
+    a {
+        z-index: 2;
 
-      a {
-          z-index: 2;
-
-          &:hover {
-              -webkit-filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
-          }
-      }
-
-      .__cur-s1 {
-          @include bg-image (auto, 0, /assets/top/video_s1, gif, center, cover, no-repeat);
-      }
-      // .__cur-s2 {
-      //     @include bg-image (auto, 0, /assets/top/video_s2, gif, center, cover, no-repeat);
-      // }
-      // .__cur-s3 {
-      //     @include bg-image (auto, 0, /assets/top/video_s3, gif, center, cover, no-repeat);
-      // }
+        &:hover {
+            -webkit-filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
+        }
     }
+
+    picture {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .94;
+    }
+
+    .__fig_01 {
+        @include bg-image (auto, 0, /assets/top/video_s1, gif, center, cover, no-repeat);
+    }
+    // .__fig_02 {
+    //     @include bg-image (auto, 0, /assets/top/video_s2, gif, center, cover, no-repeat);
+    // }
+    // .__fig_03 {
+    //     @include bg-image (auto, 0, /assets/top/video_s3, gif, center, cover, no-repeat);
+    // }
+
 }
 
-.grid_curI {
+.grid_thum_fig {
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    align-self: stretch;
+    overflow: hidden;
+}
+
+// Description
+.grid_desc {
     grid-area: curI;
     color: white;
     position: relative;
 }
 
-.grid_curI_ttl {
+.grid_desc_up {
     margin-bottom: 10px;
     box-sizing: border-box;
     position: relative;
@@ -380,7 +384,7 @@ div[data-page='top'] {
     height: calc( 33% - 10px );
     text-align: center;
 
-    & > div {
+    div {
         @include center ( both );
         display: flex;
         flex-direction: column;
@@ -409,7 +413,7 @@ div[data-page='top'] {
     }
 }
 
-.grid_curI_desc {
+.grid_desc_down {
     text-transform: uppercase;
     position: relative;
     background: black;
@@ -419,13 +423,10 @@ div[data-page='top'] {
     box-sizing: border-box;
     margin: 0 auto;
 
-    & > div {
-        width: 80%;
-        margin: 0 auto;
-    }
-
     .badges {
         margin-top: 15px;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .btn {

@@ -37,67 +37,72 @@
             </div>
         </aside>
 
-        <section class="grid_curS">
+        <section class="grid_thum kl">
+            <ul>
+                <li>
+                    <a href="/works/w01.html">
+                        <figure class="grid_thum_fig">
+                            <picture class="__fig_01"></picture>
+                        </figure>
+                    </a>
+                </li>
 
-            {% for current in current %}
-            <a href="{{ basic.root }}works/{{ current.link }}.html">
-                <figure class="grid_curS_view">
-                    <picture class="__{{ current.class }}"></picture>
-                </figure>
-            </a>
-            {% endfor %}
+            </ul>
         </section>
 
-        <section class="grid_curI">
+        <section class="grid_desc">
 
             {% include "cyberline.njk" %}
 
-            <div class="grid_curI_ttl">
-                {% for desc1 in desc1 %}
-                <div>
-                    <h2 class="neon" data-text="{{ desc1.name }}">
-                    {{ desc1.name }}
-                    </h2>
-                    <p>
-                    {{ desc1.cat }}
-                    </p>
-                </div>
-                {% endfor %}
+            <div class="grid_desc_up">
+                <ul>
+                    <li>
+                        <div>
+                            <h2 class="neon" data-text="yoshikawa">yoshikawa</h2>
+                            <p>corporate site</p>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
-            <div class="grid_curI_desc">
-                <div class="badges">
-                    <ol>
-                        <li class="badges_item badges_active">
-                            <p>Design</p>
-                            <div class="badges_ch badges_design"></div>
-                            <!-- ** level status ** -->
-                            <div class="badges_level __level_5">
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </li>
-                        <li class="badges_item badges_active">
-                            <p>DEV.</p>
-                            <div class="badges_ch badges_dev"></div>
-                            <!-- ** level status ** -->
-                            <div class="badges_level __level_3">
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </li>
-                        <li class="badges_item">
-                            <p>Direction</p>
-                            <div class="badges_ch badges_direction"></div>
-                            <!-- ** level status ** -->
-                            <div class="badges_level">
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
-                <button type="button" class="btn btn_glitch audio_hv_01">
-                    <a role="button">details</a>
-                </button>
+            <div class="grid_desc_down">
+                <ul>
+                    <li>
+                        <div class="badges">
+                            <ol>
+                                <li class="badges_item badges_active">
+                                    <p>Design</p>
+                                    <div class="badges_ch badges_design"></div>
+                                    <!-- ** level status ** -->
+                                    <div class="badges_level __level_5">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </li>
+                                <li class="badges_item badges_active">
+                                    <p>DEV.</p>
+                                    <div class="badges_ch badges_dev"></div>
+                                    <!-- ** level status ** -->
+                                    <div class="badges_level __level_3">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </li>
+                                <li class="badges_item">
+                                    <p>Direction</p>
+                                    <div class="badges_ch badges_direction"></div>
+                                    <!-- ** level status ** -->
+                                    <div class="badges_level">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <button type="button" class="btn btn_glitch audio_hv_01">
+                            <a role="button">details</a>
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </section> <!-- grid_curI -->
+        </section> <!-- grid_desc -->
 
         <section class="grid_prev">
             {% for prev in prev %}
