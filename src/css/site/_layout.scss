@@ -350,7 +350,7 @@ div[data-page='top'] {
     }
 
     .__fig_01 {
-        @include bg-image (auto, 0, /assets/top/video_s1, gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, /assets/top/thm_01, gif, center, cover, no-repeat);
     }
     // .__fig_02 {
     //     @include bg-image (auto, 0, /assets/top/video_s2, gif, center, cover, no-repeat);
@@ -370,6 +370,7 @@ div[data-page='top'] {
 }
 
 // Description
+
 .grid_desc {
     grid-area: curI;
     color: white;
@@ -439,7 +440,6 @@ div[data-page='top'] {
 
 
 // Prev & Next
-//
 
 .grid_prev {
     grid-area: prev;
@@ -459,6 +459,9 @@ div[data-page='top'] {
 .banner_middle {
     height: 100%;
     opacity: .22;
+    overflow: hidden;
+
+    ul,li { height: 100%;}
 
     figure, picture {
         height: 100%;
@@ -466,13 +469,51 @@ div[data-page='top'] {
     }
 }
 
-.__next-s1 {
-    @include bg-image (auto, 0, /assets/top/next_s1, png, center, cover, no-repeat);
+.__sub_01 {
+    @include bg-image (auto, 0, /assets/top/sub_01, png, center, cover, no-repeat);
+}
+.__sub_02 {
+    @include bg-image (auto, 0, /assets/top/sub_02, png, center, cover, no-repeat);
+}
+.__sub_03 {
+    @include bg-image (auto, 0, /assets/top/sub_03, png, center, cover, no-repeat);
+}
+.__sub_04 {
+    @include bg-image (auto, 0, /assets/top/sub_04, png, center, cover, no-repeat);
 }
 
-.__prev-s1 {
-    @include bg-image (auto, 0, /assets/top/prev_s1, png, center, cover, no-repeat);
+
+
+
+// Progress
+
+.grid_prog {
+    height: 100%;
+    background: $clr_dark-trans;
+    grid-area: prog;
+    position: relative;
+
+    & ol { width: 20%;}
+
+    &_inner {
+        width: 100%;
+        height: 100%;
+        @include flex (center, center);
+        flex-direction: column;
+    }
+
+    &_dots {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 6px 0;
+        background: #2c374c;
+    }
+
+    &_active { background: white;}
 }
+
+
 
 
 
