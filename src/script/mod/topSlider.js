@@ -48,7 +48,7 @@
         let items = item.querySelectorAll('li'),
             current = 0,
             autoUpdate = true,
-            timeTrans = 4000;
+            timeTrans = 6000;
 
         //BTN link
         let detailsBtn = document.querySelector('.grid_desc_down button a');
@@ -82,8 +82,11 @@
             items[nextCurrent].className = "";
         }
 
-        item.addEventListener('mouseenter', function() { autoUpdate = false;});
-        item.addEventListener('mouseleave', function() { autoUpdate = true;});
+        // pause slider
+        // let pauseZoom = document.querySelector('.grid_prev .banner_middle'),
+        //     pauseZoom = document.querySelector('.grid_prev .banner_middle'),
+        // item.addEventListener('mouseenter', function() { autoUpdate = false;});
+        // item.addEventListener('mouseleave', function() { autoUpdate = true;});
 
         setInterval(function() {
             if (autoUpdate) navigate('down');
@@ -103,6 +106,22 @@
     let bindActions = function() {
         if ( top ) {
             [].slice.call(document.querySelectorAll('.grid_thum'))
+              .forEach( function(item) {
+                slider(item);
+            });
+            [].slice.call(document.querySelectorAll('.grid_desc_up'))
+              .forEach( function(item) {
+                slider(item);
+            });
+            [].slice.call(document.querySelectorAll('.grid_prev'))
+              .forEach( function(item) {
+                slider(item);
+            });
+            [].slice.call(document.querySelectorAll('.grid_next'))
+              .forEach( function(item) {
+                slider(item);
+            });
+            [].slice.call(document.querySelectorAll('.grid_prog'))
               .forEach( function(item) {
                 slider(item);
             });

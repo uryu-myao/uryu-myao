@@ -331,11 +331,11 @@ div[data-page='top'] {
 
     li {
         position: absolute;
-        visibility: hidden;
         top: 0;
         left: 0;
         width: 100%;
-        
+        z-index: 2;
+        visibility: hidden;
     }
 
     a {
@@ -394,12 +394,13 @@ div[data-page='top'] {
     height: calc( 33% - 10px );
     text-align: center;
 
-    div {
+    li {
         @include center ( both );
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-top: 8px;
+        visibility: hidden;
     }
 
     h2 {
@@ -443,7 +444,7 @@ div[data-page='top'] {
 
     .btn {
         width: calc( 100% - 24%);
-        bottom: 8%;
+        bottom: 16%;
         @include center (horizontal);
     }
 }
@@ -458,14 +459,31 @@ div[data-page='top'] {
         height: calc( 100% - 65px );
         margin-bottom: 10px;
     }
+
+    li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+    }
 }
 
 .grid_next {
     grid-area: next;
     overflow: hidden;
+
+    li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+    }
 }
 
 .banner_middle {
+    position: relative;
     height: 100%;
     opacity: .22;
     overflow: hidden;
@@ -508,7 +526,7 @@ div[data-page='top'] {
         flex-direction: column;
     }
 
-    &_dots {
+    li {
         display: block;
         width: 100%;
         height: 1px;
@@ -516,12 +534,27 @@ div[data-page='top'] {
         background: #2c374c;
     }
 
-    &_active { background: white;}
+    .current { background: white;}
 }
 
 // Slider controling
 
 .grid_thum {
+    li.current {
+        visibility: visible;
+    }
+}
+.grid_desc_up {
+    li.current {
+        visibility: visible;
+    }
+}
+.grid_prev {
+    li.current {
+        visibility: visible;
+    }
+}
+.grid_next {
     li.current {
         visibility: visible;
     }
@@ -931,7 +964,7 @@ div[data-page='works'] {
             display: block;
             height: 100%;
 
-            @include bg-image (auto, 0, /assets/works/w01/main, png, center, cover, no-repeat);
+            @include bg-image (auto, 0, /assets/top/thm_01, gif, center, cover, no-repeat);
         }
     }
 
