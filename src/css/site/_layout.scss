@@ -274,7 +274,7 @@ div[data-page='top'] {
 }
 
 // aside
-//
+
 .earth {
     position: absolute;
     display: block;
@@ -319,10 +319,7 @@ div[data-page='top'] {
     }
 }
 
-
-
 // Current show
-//
 
 .grid_thum {
     grid-area: curS;
@@ -331,6 +328,15 @@ div[data-page='top'] {
     overflow: hidden;
 
     ul, li { height: 100%;}
+
+    li {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+    }
 
     a {
         z-index: 2;
@@ -352,12 +358,15 @@ div[data-page='top'] {
     .__fig_01 {
         @include bg-image (auto, 0, /assets/top/thm_01, gif, center, cover, no-repeat);
     }
-    // .__fig_02 {
-    //     @include bg-image (auto, 0, /assets/top/video_s2, gif, center, cover, no-repeat);
-    // }
-    // .__fig_03 {
-    //     @include bg-image (auto, 0, /assets/top/video_s3, gif, center, cover, no-repeat);
-    // }
+    .__fig_02 {
+        @include bg-image (auto, 0, /assets/top/thm_02, gif, center, cover, no-repeat);
+    }
+    .__fig_03 {
+        @include bg-image (auto, 0, /assets/top/thm_03, gif, center, cover, no-repeat);
+    }
+    .__fig_04 {
+        @include bg-image (auto, 0, /assets/top/thm_04, gif, center, cover, no-repeat);
+    }
 
 }
 
@@ -400,6 +409,7 @@ div[data-page='top'] {
         line-height: 1;
         white-space: nowrap;
         text-transform: uppercase;
+        overflow: hidden;
     }
 
     p {
@@ -411,6 +421,7 @@ div[data-page='top'] {
         margin: 1.8em auto 0;
         text-transform: capitalize;
         white-space: nowrap;
+        overflow: hidden;
     }
 }
 
@@ -436,8 +447,6 @@ div[data-page='top'] {
         @include center (horizontal);
     }
 }
-
-
 
 // Prev & Next
 
@@ -482,9 +491,6 @@ div[data-page='top'] {
     @include bg-image (auto, 0, /assets/top/sub_04, png, center, cover, no-repeat);
 }
 
-
-
-
 // Progress
 
 .grid_prog {
@@ -513,8 +519,13 @@ div[data-page='top'] {
     &_active { background: white;}
 }
 
+// Slider controling
 
-
+.grid_thum {
+    li.current {
+        visibility: visible;
+    }
+}
 
 
 // About
