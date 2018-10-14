@@ -82,6 +82,14 @@
 
     &_active { left: 0;}
 
+    a {
+        font-size: 1.45rem;
+        color: $clr_blue-active;
+        font-weight: bold;
+        font-family: $txt_cond;
+        text-transform: uppercase;
+    }
+
     nav {
         position: relative;
         width: 100%;
@@ -89,14 +97,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        a {
-            font-size: 1.45rem;
-            color: $clr_blue-active;
-            font-weight: bold;
-            font-family: $txt_cond;
-            text-transform: uppercase;
-        }
     }
 
     &_list {
@@ -105,16 +105,15 @@
         &::before {
             position: absolute;
             font-size: 1rem;
-            font-family: $txt_cond;
+            font-family: $txt_code;
+            font-weight: bold;
             color: $clr_blue-main;
-            letter-spacing: .3em;
+            letter-spacing: .2em;
             content: 'projects';
             top: -2.6em;
-            text-transform: uppercase;
+            text-transform: capitalize;
         }
     }
-
-    ._last { margin-bottom: 6.5vh;}
 
     &_item {
         margin-bottom: 1.45em;
@@ -128,6 +127,8 @@
             transform: translate(0, 0) !important;
         }
     }
+
+    &_last { margin-bottom: 6.5vh;}
 
     ul {
         width: 50%;
@@ -159,6 +160,36 @@
     @for $i from 1 through 5 {
     .overlay_list > li:nth-child(#{ $i }) {
             transition-delay: $i * .1s;
+        }
+    }
+}
+
+
+
+//  Coming Soon
+//
+.coming {
+    position: relative;
+
+    a { color: $clr_blue-grey;}
+
+    &::after {
+        position: absolute;
+        @include center(vertical);
+        right: calc( 100% + 1em);
+        content: 'coming soon';
+        font-family: $txt_code;
+        font-size: 1rem;
+        letter-spacing: .1em;
+        line-height: 1;
+        text-transform: uppercase;
+        visibility: hidden;
+        transition: all .15s $cb_rush;
+    }
+
+    &:hover {
+        &::after {
+            visibility: visible;
         }
     }
 }

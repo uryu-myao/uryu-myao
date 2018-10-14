@@ -49,8 +49,10 @@
         };
 
         let bindActions = function() {
-            document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
-            if (entryBtn) { entryBtn.addEventListener("click", bindEntringAnimaion); }
+            if (entryBtn) { 
+                document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
+                entryBtn.addEventListener("click", bindEntringAnimaion);
+            }
         };
 
         let init = function() {

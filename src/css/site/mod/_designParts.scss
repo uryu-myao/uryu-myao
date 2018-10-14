@@ -242,32 +242,3 @@ a:-webkit-any-link {
         font-family: $txt_en;
     }
 }
-
-
-
-//  Coming Soon
-//
-.coming {
-    position: relative;
-    opacity: .4;
-
-    &::after {
-        position: absolute;
-        @include center(vertical);
-        right: calc( 100% + 1em);
-        content: 'coming soon';
-        font-family: $txt_code;
-        font-size: 1rem;
-        letter-spacing: .1em;
-        line-height: 1;
-        text-transform: uppercase;
-        visibility: hidden;
-        transition: all .15s $cb_rush;
-    }
-
-    &:hover {
-        &::after {
-            visibility: visible;
-        }
-    }
-}
