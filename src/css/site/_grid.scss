@@ -36,12 +36,8 @@
     animation: flashing .2s 2s linear infinite;
 
     @keyframes flashing {
-      0% {
-          background: transparent;
-      }
-      50% {
-          background: transparent;
-      }
+      0% { @include clr-opacity ( $clr_dark-trans, .35 );}
+      50% { @include clr-opacity ( $clr_dark-trans, .35 );}
     }
 
     .cr {
