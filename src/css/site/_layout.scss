@@ -133,6 +133,8 @@ p, dt, dd, li, a {
     position: absolute;
     bottom: calc( 10vh - 10px );
     padding: 1em;
+    max-width: 80px;
+    width: 10vw;
     @include center(horizontal);
     background: transparent;
     color: $clr_blue-active;
@@ -140,6 +142,7 @@ p, dt, dd, li, a {
     font-family: $txt_cond;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: all .3s $cb_rush;
     z-index: 10;
 
@@ -973,6 +976,7 @@ div[data-page='about'] {
 
     h1 {
         & + p {
+            font-size: 1rem;
             color: $clr_blue-light;
             line-height: 1.75;
             margin: -2px 0 0 4%;

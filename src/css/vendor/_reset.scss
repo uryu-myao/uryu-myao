@@ -508,7 +508,7 @@ iframe {
 }
 
 
-/* Remove botton border style
+/* Remove button border style
    ========================================================================== */
 
 input[type="button" i],
@@ -517,4 +517,11 @@ input[type="reset" i],
 input[type="file" i]::-webkit-file-upload-button,
 button {
   border: 0;
+}
+/* for Firefox */
+button {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
 }
