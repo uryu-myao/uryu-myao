@@ -49,7 +49,7 @@
         };
 
         let bindActions = function() {
-            if (entryBtn) { 
+            if (entryBtn) {
                 document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
                 entryBtn.addEventListener("click", bindEntringAnimaion);
             }

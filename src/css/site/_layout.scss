@@ -30,6 +30,7 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
+    animation: glitchSwift .8s linear forwards;
 
     & > div {
         position: relative;
@@ -115,7 +116,7 @@ p, dt, dd, li, a {
     height: 0;
     position: absolute;
     background: $clr_dark;
-    transition: all .8s $cb_rush;
+    transition: all .2s $cb_rush;
     z-index: 10;
 
     &_up { top: 0;}
@@ -172,6 +173,10 @@ p, dt, dd, li, a {
             &::before, &::after { opacity: 1;}
         }
     }
+}
+
+.vhs {
+    animation: glitchSwift .2s linear forwards;
 }
 
 
@@ -400,7 +405,7 @@ div[data-page='top'] {
             // opacity: .94;
             // transform: scale(1);
             // transition-delay: 0;
-            animation: turnOn 4s linear forwards;
+            animation: glitchSwift 4s linear forwards;
         }
     }
 }
