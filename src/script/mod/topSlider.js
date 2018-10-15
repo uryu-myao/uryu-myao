@@ -48,11 +48,8 @@
         let items = item.querySelectorAll('li'),
             current = 0,
             autoUpdate = true,
-            timeTrans = 6000;
-
-        //BTN link
-        let detailsBtn = document.querySelector('.grid_desc_down button a');
-        detailsBtn.href = "/works/01.html";
+            timeTrans = 6000,
+            slidersNum = 4;
 
         //create button prev
         let prevbtn = document.querySelector('.grid_prev');
@@ -75,12 +72,21 @@
             }
 
             let	nextCurrent = current < items.length - 1 ? current + 1 : 0,
-                prevCurrent = current > 0 ? current - 1 : items.length-1;
+                prevCurrent = current > 0 ? current - 1 : items.length - 1;
 
             items[current].className = "current";
             items[prevCurrent].className = "prev_slide";
             items[nextCurrent].className = "";
         }
+
+        //BTN link
+
+        let detailsBtn = document.querySelector('.grid_desc_down button a');
+        detailsBtn.href = "/works/w0" + current + ".html";
+
+        console.log(detailsBtn.href);
+
+
 
         // pause slider
         // let pauseZoom = document.querySelector('.grid_prev .banner_middle'),
@@ -107,23 +113,23 @@
         if ( top ) {
             [].slice.call(document.querySelectorAll('.grid_thum'))
               .forEach( function(item) {
-                slider(item);
+                  slider(item);
             });
             [].slice.call(document.querySelectorAll('.grid_desc_up'))
               .forEach( function(item) {
-                slider(item);
+                  slider(item);
             });
             [].slice.call(document.querySelectorAll('.grid_prev'))
               .forEach( function(item) {
-                slider(item);
+                  slider(item);
             });
             [].slice.call(document.querySelectorAll('.grid_next'))
               .forEach( function(item) {
-                slider(item);
+                  slider(item);
             });
             [].slice.call(document.querySelectorAll('.grid_prog'))
               .forEach( function(item) {
-                slider(item);
+                  slider(item);
             });
         }
     };
