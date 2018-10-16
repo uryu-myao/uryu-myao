@@ -12,6 +12,11 @@
     left: 3vw;
     z-index: 20;
 
+    @include mq (medium, max) {
+        @include center (vertical);
+        left: 20px;
+    }
+
     span {
         display: block;
         width: 2px;
@@ -19,6 +24,8 @@
         background: $clr_blue-active;
         margin-right: 2px;
         transition: all .25s $cb_rush;
+
+        @include mq (medium, max) { height: 32px;}
 
         &:last-child {
             margin-right: 0;

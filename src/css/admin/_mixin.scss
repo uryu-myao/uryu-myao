@@ -35,25 +35,29 @@
 }
 
 
-// M Q
-//
-//    'xsmall'  : 320px,
-//    'small'   : 600px,
-//    'medium'  : 768px,
-//    'large'   : 1024px,
-//    'xlarge'  : 1280px,
-//    'xxlarge' : 1440px,
-//
-//     .elements {
-//       @include mq (large) {
-//         ...
-//         @include mq (xlarge, max, true ) {
-//           ...
-//         }
-//       }
-//     }
-//
-//   original: https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+/* M Q
+ *
+ * 'xsmall'  : 320px,
+ * 'small'   : 600px,
+ * 'medium'  : 768px,
+ * 'large'   : 1024px,
+ * 'xlarge'  : 1280px,
+ * 'xxlarge' : 1440px,
+
+ * use max
+ * .elements {
+ *   @include mq (large) {
+ *     ...
+ *   }
+ *   @include mq (xlarge, max, true ) {
+ *     ...
+ *   }
+ * }
+
+ * original:
+ * https://www.nxworld.net/tips/sass-media-queries-mixin.html
+ */
+
 
 @mixin mq ($breakpoint: medium, $rule: min, $subtraction: false)
 {

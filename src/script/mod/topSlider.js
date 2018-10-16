@@ -41,7 +41,7 @@
         let items = item.querySelectorAll('li'),
             current = 0,
             autoUpdate = true,
-            timeTrans = 6000,
+            timeTrans = 5000,
             slidersNum = 4;
 
         // Define main visual

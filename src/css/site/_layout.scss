@@ -152,6 +152,10 @@ p, dt, dd, li, a {
     }
 
     &:hover { background: $clr-light-trans;}
+
+    @include mq (medium, max) {
+        width: 22vw;
+    }
 }
 
 // during Top loading
@@ -286,10 +290,21 @@ div[data-page='top'] {
     right: -62px;
     animation: plantrail 30s 1s linear infinite;
 
+    @include mq (medium,max) {
+        width: 38px;
+        height: 38px;
+        bottom: 14vh;
+        animation: plantrail-sp 30s 1s linear infinite;
+    }
+
     picture {
         display: block;
         height: 62px;
         @include bg-image (auto, 0, /assets/top/earth, png, center, cover, no-repeat);
+
+        @include mq (medium,max) {
+            height: 38px;
+        }
     }
 }
 
@@ -301,12 +316,20 @@ div[data-page='top'] {
     bottom: 0;
     left: 0;
 
+    @include mq (medium,max) {
+        height: 9vh;
+    }
+
     picture {
         opacity: .35;
         display: block;
         width: 100%;
         height: 100%;
         @include bg-image (auto, 0, /assets/top/mars, png, top 0px right 35%, cover, no-repeat);
+
+        @include mq (medium,max) {
+
+        }
     }
 }
 
@@ -317,6 +340,16 @@ div[data-page='top'] {
     }
     100% {
         bottom: 160px;
+        right: 100%;
+    }
+}
+@keyframes plantrail-sp {
+    0% {
+        bottom: 14vh;
+        right: -62px;
+    }
+    100% {
+        bottom: 9vh;
         right: 100%;
     }
 }
@@ -404,6 +437,11 @@ div[data-page='top'] {
             animation: glitchSwift 2s linear forwards;
         }
     }
+
+    @include mq ( medium, max ) {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+    }
 }
 
 
@@ -420,6 +458,11 @@ div[data-page='top'] {
     grid-area: curI;
     color: white;
     position: relative;
+
+    @include mq (medium, max) {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
+    }
 }
 
 .grid_desc_up {
@@ -429,6 +472,11 @@ div[data-page='top'] {
     background: black;
     height: calc( 33% - 10px );
     text-align: center;
+
+    @include mq (medium, max) {
+        height: 50%;
+        margin-bottom: 0;
+    }
 
     li {
         @include center ( both );
@@ -465,6 +513,10 @@ div[data-page='top'] {
         opacity: 0;
         transition: all .5s $cb_rush;
         transition-delay: .65s;
+
+        @include mq (medium, max) {
+            margin-top: .8em;
+        }
     }
 
     // Slider controling
@@ -487,16 +539,28 @@ div[data-page='top'] {
     box-sizing: border-box;
     margin: 0 auto;
 
+    @include mq (medium,max) {
+        padding-top: 0;
+        height: 50%;
+    }
+
     .badges {
         margin-top: 15px;
         width: 80%;
         margin: 0 auto;
+
+        @include mq (medium, max) { display: none;}
     }
 
     .btn {
         width: calc( 100% - 24%);
-        @include center (horizontal);
         bottom: 16%;
+        @include center (horizontal);
+
+        @include mq (medium, max) {
+            width: calc( 100% - 40px );
+            bottom: 20px;
+        }
     }
 }
 
@@ -586,6 +650,8 @@ div[data-page='top'] {
         height: 100%;
         display: block;
     }
+
+    @include mq (medium, max) { display: none;}
 }
 
 .__sub_01 {
@@ -629,6 +695,8 @@ div[data-page='top'] {
     .current {
         background: $clr_blue-active;
     }
+
+    @include mq (medium, max) { display: none;}
 }
 
 

@@ -28,6 +28,23 @@ a:-webkit-any-link {
     }
     animation: stripe .5s linear 0s infinite;
 
+    @include mq (medium,max) {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-family: $txt_cond;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .15em;
+            padding: .6em 1.2em;
+            color: #182329;
+            background: $clr-dark;
+            @include center (horizontal);
+        }
+    }
+
     & > div {
         background: black;
         width: 65%;
@@ -58,6 +75,21 @@ a:-webkit-any-link {
     @keyframes movingleft {
         0%   { left: -50px;}
         100% { left: 0px;}
+    }
+}
+
+.grid_next .banner_motion {
+    @include mq (medium,max) {
+        &::before {
+            content: 'next';
+        }
+    }
+}
+.grid_prev .banner_motion {
+    @include mq (medium,max) {
+        &::before {
+            content: 'prev';
+        }
     }
 }
 

@@ -13,6 +13,11 @@
     z-index: 10; // * since mouse effect div is 2.
     cursor: url('/assets/common/cursor.png'), auto;
 
+    @include mq (medium,max) {
+        padding-top: 5px;
+        height: 48px;
+    }
+
     a {
         display: block;
         width: 100%;
@@ -26,7 +31,7 @@
         letter-spacing: .16em;
 
         &:hover {
-          animation: button_hover .25s 0s linear forwards;
+            animation: button_hover .25s 0s linear forwards;
         }
 
         @keyframes button_hover {

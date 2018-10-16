@@ -14,16 +14,17 @@
       'aside curS curI prog'
       'aside next next prog'
       'aside next next prog';
-/*
-    @include mq ( medium ) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 5vh 1fr 8vh;
-        grid-gap: 10px 10px 10px;
+
+    @include mq (medium, max) {
+        grid-template-columns: calc( 50% - 5px ) calc( 50% - 5px );
+        grid-template-rows: 12.5vh 1fr 25vh 10vh;
+        grid-gap: 10px;
         grid-template-areas:
           'aside aside'
           'CurS CurS'
+          'CurS CurS'
           'prev next';
-    }; */
+    }
 }
 
 
@@ -52,6 +53,8 @@
         bottom: 60px;
         left: 3vw;
         margin: 0;
+
+        @include mq (medium,max) { display: none;}
     }
 }
 
