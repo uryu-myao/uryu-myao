@@ -80,16 +80,12 @@ a:-webkit-any-link {
 
 .grid_next .banner_motion {
     @include mq (medium,max) {
-        &::before {
-            content: 'next';
-        }
+        &::before { content: 'next';}
     }
 }
 .grid_prev .banner_motion {
     @include mq (medium,max) {
-        &::before {
-            content: 'prev';
-        }
+        &::before { content: 'prev';}
     }
 }
 
