@@ -1,7 +1,7 @@
 /*
  *    *** slider ***
  *
- *    - top page main slider
+ *    - top main slider
  *    - top.html
  *
  */
@@ -20,10 +20,6 @@
         // let nextElem = document.querySelector('.grid_prev'),
         //     prevElem = document.querySelector('.grid_next'),
         //     currentSlider = document.querySelector('.grid_thum .grid_thum_fig > *'),
-        //     detailsBtn = document.querySelector('.grid_desc_down button a');
-        //
-        // nextElem.addEventListener('click', nextImage);
-        // prevElem.addEventListener('click', prevImage);
         //
         // detailsBtn.href = "/works/01.html";
         //
@@ -63,7 +59,7 @@
         let navigate = function(dir) {
             items[current].className = "";
 
-            if (dir === 'down') {
+            if ( dir === 'down' ) {
                 current = current < items.length - 1 ? current + 1 : 0;
             } else {
                 current = current > 0 ? current - 1 : items.length - 1;
@@ -78,7 +74,7 @@
         };
 
         setInterval( function() {
-            if (autoUpdate) navigate('down');
+            if ( autoUpdate ) navigate('down');
         }, timeTrans);
 
 
@@ -90,8 +86,8 @@
         };
 
         setInterval( function() {
-            if (autoUpdate) linkHref( current + 1 );
-        },timeTrans );
+            if ( autoUpdate ) linkHref( current + 1 );
+        }, timeTrans );
 
 
         // Pause slider
@@ -107,11 +103,11 @@
 
         // Execute click
         prevbtn.addEventListener('click', function() {
-            navigate('up');
+            navigate('up')
         });
 
         nextbtn.addEventListener('click', function() {
-            navigate('down');
+            navigate('down')
         });
     };
 
@@ -120,23 +116,23 @@
         if ( top ) {
             [].slice.call(document.querySelectorAll('.grid_thum'))
               .forEach( function(item) {
-                  slider(item);
+                  slider(item)
             });
             [].slice.call(document.querySelectorAll('.grid_desc_up'))
               .forEach( function(item) {
-                  slider(item);
+                  slider(item)
             });
             [].slice.call(document.querySelectorAll('.grid_prev'))
               .forEach( function(item) {
-                  slider(item);
+                  slider(item)
             });
             [].slice.call(document.querySelectorAll('.grid_next'))
               .forEach( function(item) {
-                  slider(item);
+                  slider(item)
             });
             [].slice.call(document.querySelectorAll('.grid_prog'))
               .forEach( function(item) {
-                  slider(item);
+                  slider(item)
             });
         }
     };
