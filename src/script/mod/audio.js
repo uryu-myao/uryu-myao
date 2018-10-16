@@ -36,7 +36,9 @@
         }, false)
     };
 
-    btnHoverSoundEffect();
+    if (audio_hvGlitch_01) {
+        btnHoverSoundEffect()
+    }
 
     // Turn on/off BGM
     let play = true;

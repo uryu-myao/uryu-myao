@@ -2,7 +2,6 @@
 {% set pagetitle = "ABOUT" %}
 {% set kw = 'URYU, MYAO, URYU MYAO, ウェブデザイナー, 中国人デザイナー, 网页设计, 网站开发, design, ui, ux, development, web, javascript, js, webgl' %}
 {% set des = 'Here is the ABOUT page of URYU MYAO personal site.' %}
-<!-- * Head end -->
 
 {% block content %}
 
@@ -12,7 +11,7 @@
 {% include "mouse-circle.njk" %}
 
 
-<div data-page="about" id="about" class="child">
+<div data-page="about" id="About" class="child">
 
     {% include "bg.njk" %}
 
@@ -93,7 +92,7 @@
                 <figure class="paper">
                     <picture></picture>
                 </figure>
-            </article> <!-- me -->
+            </article> <!-- .me -->
 
             <article class="resume">
                 <div class="__ttl">
@@ -225,7 +224,7 @@
                     <a href="{{ basic.root }}works/{{ desc2.link }}.html" role="button">resume</a>
                 </button>
 
-            </article> <!-- resume -->
+            </article> <!-- .resume -->
 
             <article class="contact">
                 <div class="__ttl">
@@ -277,11 +276,11 @@
                         </div>
                     </a>
                 </div>
-            </article> <!-- contact -->
+            </article> <!-- .contact -->
 
             <div class="banner_motion"></div>
 
-        </section> <!-- grid__contentsAbout -->
+        </section> <!-- .grid__contentsAbout -->
 
         <div class="BGM BGM_child">
             <div>
@@ -292,7 +291,7 @@
             </div>
         </div>
     </main>
-</div> <!-- id.about -->
+</div> <!-- #About -->
 <!--  * CONTENTS end * -->
 
 {% endblock %}

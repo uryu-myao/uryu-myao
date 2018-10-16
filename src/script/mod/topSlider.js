@@ -41,9 +41,6 @@
         //     }
         // }
 
-
-///   sample
-
     function slider(item) {
         let items = item.querySelectorAll('li'),
             current = 0,
@@ -51,16 +48,17 @@
             timeTrans = 6000,
             slidersNum = 4;
 
-        //create button prev
+        // Define main visual
+        let thm = document.querySelector('.grid_thum');
+        // Define button prev
         let prevbtn = document.querySelector('.grid_prev');
-
-        //create button next
+        // Define button next
         let nextbtn = document.querySelector('.grid_next');
 
 
+        // Set up current
         items[current].className = "current";
         if (items) items[items.length - 1].className = "prev_slide";
-
 
         let navigate = function(dir) {
             items[current].className = "";
@@ -77,27 +75,37 @@
             items[current].className = "current";
             items[prevCurrent].className = "prev_slide";
             items[nextCurrent].className = "";
-        }
+        };
 
-        //BTN link
-
-        let detailsBtn = document.querySelector('.grid_desc_down button a');
-        detailsBtn.href = "/works/w0" + current + ".html";
-
-        console.log(detailsBtn.href);
-
-
-
-        // pause slider
-        // let pauseZoom = document.querySelector('.grid_prev .banner_middle'),
-        //     pauseZoom = document.querySelector('.grid_prev .banner_middle'),
-        // item.addEventListener('mouseenter', function() { autoUpdate = false;});
-        // item.addEventListener('mouseleave', function() { autoUpdate = true;});
-
-        setInterval(function() {
+        setInterval( function() {
             if (autoUpdate) navigate('down');
-        },timeTrans);
+        }, timeTrans);
 
+
+        // Change BTN link
+        let detailsBtn = document.querySelector('.grid_desc_down button a');
+
+        let linkHref = function(current) {
+            detailsBtn.href = "/works/w0" + current + ".html";
+        };
+
+        setInterval( function() {
+            if (autoUpdate) linkHref( current + 1 );
+        },timeTrans );
+
+
+        // Pause slider
+        let pauseZoom = [ prevbtn, nextbtn, thm ];
+
+        function pauseAction( pauseItem ) {
+            pauseItem.addEventListener('mouseenter', function() { autoUpdate = false;});
+            pauseItem.addEventListener('mouseleave', function() { autoUpdate = true;});
+        };
+
+        pauseZoom.forEach( pauseAction );
+
+
+        // Execute click
         prevbtn.addEventListener('click', function() {
             navigate('up');
         });
@@ -105,8 +113,7 @@
         nextbtn.addEventListener('click', function() {
             navigate('down');
         });
-    }
-
+    };
 
 
     let bindActions = function() {

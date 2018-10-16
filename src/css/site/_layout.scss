@@ -1,6 +1,5 @@
 // General
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch; // Safe fonts
     color: black;
@@ -21,7 +20,6 @@ p, dt, dd, li, a {
 
 // Preload
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 .preload {
     width: 100%;
     padding: 20px;
@@ -30,7 +28,7 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
-    animation: glitchSwift .8s linear forwards;
+    animation: glitchSwift .8s linear .5s forwards;
 
     & > div {
         position: relative;
@@ -186,7 +184,6 @@ p, dt, dd, li, a {
 
 // Background
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 #bg {
     position: fixed;
     width: 100%;
@@ -239,7 +236,6 @@ p, dt, dd, li, a {
 
 // Common
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 div[data-page='top'],
 div[data-page='about'],
 div[data-page='works']
@@ -270,7 +266,6 @@ div[data-page='works']
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 div[data-page='top'] {
     overflow: hidden;
 
@@ -282,7 +277,6 @@ div[data-page='top'] {
 }
 
 // aside
-
 .earth {
     position: absolute;
     display: block;
@@ -328,7 +322,6 @@ div[data-page='top'] {
 }
 
 // Current show
-
 .grid_thum {
     grid-area: curS;
     width: 100%;
@@ -423,7 +416,6 @@ div[data-page='top'] {
 }
 
 // Description
-
 .grid_desc {
     grid-area: curI;
     color: white;
@@ -509,7 +501,6 @@ div[data-page='top'] {
 }
 
 // Prev & Next
-
 .grid_prev {
     grid-area: prev;
     overflow: hidden;
@@ -611,7 +602,6 @@ div[data-page='top'] {
 }
 
 // Progress
-
 .grid_prog {
     height: 100%;
     background: $clr_dark-trans;
@@ -1216,8 +1206,6 @@ div[data-page='works'] {
     }
 }
 
-
-
 .works_detail_role > div > p,
 .works_detail_agency > p,
 .works_detail_agency > a
@@ -1286,7 +1274,6 @@ div[data-page='works'] {
 
     figure { width: 400px;}
 }
-
 
 
 
