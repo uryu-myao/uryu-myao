@@ -1,3 +1,5 @@
+{% macro current(currentPage='') %}
+
 <div class="menu">
     <span></span>
     <span></span>
@@ -7,12 +9,21 @@
 <div class="overlay">
     <nav role="navigation">
         <ul class="overlay_list">
-            <li class="overlay_item"><a href="/works/w01.html">yoshikawa</a></li>
-            <li class="overlay_item"><a href="/about.html">kyobi</a></li>
-            <li class="overlay_item overlay_last"><a href="/about.html">hanplus</a></li>
-
-            <li class="overlay_item"><a href="/about.html">about</a></li>
-            <li class="overlay_item coming"><a>blog</a></li>
+            <li class="overlay_item">
+                <a class="{%if currentPage == 'w01' %}current{% endif %}" href="/works/w01.html">yoshikawa</a>
+            </li>
+            <li class="overlay_item">
+                <a class="{%if currentPage == 'w02' %}current{% endif %}" href="/about.html">kyobi</a>
+            </li>
+            <li class="overlay_item overlay_last">
+                <a class="{%if currentPage == 'w03' %}current{% endif %}" href="/about.html">hanplus</a>
+            </li>
+            <li class="overlay_item">
+                <a class="{%if currentPage == 'about' %}current{% endif %}" href="/about.html">about</a>
+            </li>
+            <li class="overlay_item coming">
+                <a>blog</a>
+            </li>
         </ul>
         <ul>
             <li class="overlay_item">
@@ -51,3 +62,5 @@
         </ul>
     </nav>
 </div>
+
+{% endmacro %}

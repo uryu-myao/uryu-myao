@@ -21,7 +21,10 @@
 
         <aside class="grid_aside">
             <div class="grid_aside_inner">
-                {% include "menu.njk" %}
+
+                <!-- ** Menu in macro ** -->
+                {% import 'menu.njk' as menu %}
+                {{ menu.current('about') }}
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
             </div> <!-- .grid_aside_inner -->

@@ -23,17 +23,20 @@
 
         <aside class="grid_aside">
             <div class="grid_aside_inner">
-                {% include "menu.njk" %}
+
+                <!-- ** Menu in macro ** -->
+                {% import 'menu.njk' as menu %}
+                {{ menu.current('about') }}
 
                 <div id="logo">
                     <h1>logo</h1>
-                </div> <!-- .grid_aside_inner-->
+                </div>
 
                 <figure class="earth"><picture></picture></figure>
                 <figure class="mars"><picture></picture></figure>
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
-            </div>
+            </div> <!-- .grid_aside_inner-->
         </aside>
 
         <section class="grid_thum kl">
