@@ -107,7 +107,12 @@
     }
 
     &_list {
+
         li:last-child { margin-bottom: 0;}
+
+        &:hover li:not(:hover) {
+            opacity: .55;
+        }
     }
 
     &_item {
@@ -125,18 +130,19 @@
 
     &_first {
         position: relative;
-
-        &::before {
-            content: 'projects';
-            position: absolute;
-            top: -2.6em;
-            font-size: 1rem;
-            font-family: $txt_code;
-            font-weight: bold;
-            color: $clr_blue-main;
-            letter-spacing: .2em;
-            text-transform: capitalize;
-        }
+        margin-top: 6.5vh;
+        //
+        // &::before {
+        //     content: 'projects';
+        //     position: absolute;
+        //     top: -2.6em;
+        //     font-size: 1rem;
+        //     font-family: $txt_code;
+        //     font-weight: bold;
+        //     color: $clr_blue-main;
+        //     letter-spacing: .2em;
+        //     text-transform: capitalize;
+        // }
     }
 
     &_last { margin-bottom: 6.5vh;}
@@ -168,9 +174,12 @@
 
     .svg_ins { margin-left: 1em;}
 
-    @for $i from 1 through 5 {
+    /* Delay transition
+     * when menu has 6 items
+     */
+    @for $i from 1 through 6 {
     .overlay_list > li:nth-child(#{ $i }) {
-            transition-delay: $i * .1s;
+            transition-delay: $i * .04s;
         }
     }
 
@@ -184,10 +193,10 @@
             display: block;
             width: 100%;
             height: 1em;
-            top: 0;
+            top: .6em;
             left: 0;
-            z-index: 3;
-            background: transparent;
+            z-index: -1;
+            background: rgba(84,8,8,.7);
         }
     }
 }
