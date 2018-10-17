@@ -108,18 +108,6 @@
 
     &_list {
         li:last-child { margin-bottom: 0;}
-
-        &::before {
-            position: absolute;
-            font-size: 1rem;
-            font-family: $txt_code;
-            font-weight: bold;
-            color: $clr_blue-main;
-            letter-spacing: .2em;
-            content: 'projects';
-            top: -2.6em;
-            text-transform: capitalize;
-        }
     }
 
     &_item {
@@ -132,6 +120,22 @@
         &_active {
             opacity: 1;
             transform: translate(0, 0) !important;
+        }
+    }
+
+    &_first {
+        position: relative;
+
+        &::before {
+            content: 'projects';
+            position: absolute;
+            top: -2.6em;
+            font-size: 1rem;
+            font-family: $txt_code;
+            font-weight: bold;
+            color: $clr_blue-main;
+            letter-spacing: .2em;
+            text-transform: capitalize;
         }
     }
 
@@ -170,7 +174,7 @@
         }
     }
 
-    // for making current page' link unable to click
+    // for making current page's link unable to click
     .current {
         position: relative;
 
