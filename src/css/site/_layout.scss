@@ -700,7 +700,6 @@ div[data-page='top'] {
 
 // About
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 div[data-page='about'] {
 
     article { position: relative;}
@@ -712,6 +711,10 @@ div[data-page='about'] {
         text-transform: uppercase;
         letter-spacing: .25em;
         margin-left: 5vw;
+
+        @include mq (medium,max) {
+            font-size: 1.5rem;
+        }
     }
 
     .__ttl {
@@ -720,6 +723,16 @@ div[data-page='about'] {
 
         & > div:first-child {
             margin: 0 0 8vh 5vw;
+
+            @include mq (medium,max) {
+                margin: 0 0 3vh 5vw;
+            }
+        }
+
+        & > div.svg_resume {
+            @include mq (medium,max) {
+                margin: 2em auto 3vh;
+            }
         }
     }
 
@@ -729,8 +742,6 @@ div[data-page='about'] {
     }
 
     .grid_aside {
-        height: calc( 100% - 40px );
-        height: calc( 100vh - 40px );
 
         & > div {
             width: 100%;
@@ -757,15 +768,27 @@ div[data-page='about'] {
     color: white;
     z-index: 10;
     margin-left: 5vw;
+
+    @include mq (medium,max) {
+        font-size: 2rem;
+        line-height: 1.65;
+    }
 }
 
 .txt_ch {
     font-size: 1.25rem;
     line-height: 1.6;
     letter-spacing: .16em;
+    text-align: justify;
     color: $clr_blue-light;
     margin: 4vh 10% 4vh 38%;
     z-index: 10;
+
+    @include mq (medium,max) {
+        font-size: 1rem;
+        line-height: 2;
+        margin: 4vh 10% 4vh 35%;
+    }
 }
 
 .countup {
@@ -861,25 +884,72 @@ div[data-page='about'] {
             background: rgba( 0,0,0,.35 );
             top: 0;
             left: 0;
+
+            @include mq (medium,max) {
+                width: 100%;
+            }
         }
+    }
+
+    @include mq (medium,max) {
+        width: 72.5%;
     }
 }
 
 .svg_clr { fill: $clr_blue-main;}
 
-.svg_me { width: 220px; height: 72.7px;}
-.svg_resume { width: 130.6px; height: 72.4px;}
-.svg_contact { width: 133.5px; height: 72.4px;}
+.svg_me {
+    width: 220px;
+    height: 72.7px;
+
+    @include mq (medium,max) {
+        width: 170px;
+        height: 58px;
+    }
+
+    svg {
+        @include mq (medium,max) {
+            width: 170px;
+            height: 58px;
+        }
+    }
+}
+
+.svg_resume {
+    width: 130.6px;
+    height: 72.4px;
+
+    @include mq (medium,max) {
+        width: 105px;
+        height: 58px;
+    }
+
+    svg {
+        @include mq (medium,max) {
+            width: 105px;
+            height: 58px;
+        }
+    }
+}
+
+.svg_contact {
+    width: 133.5px; height: 72.4px;
+}
 
 .svg_wheel {
-  width: 26px;
-  height: 26px;
-  position: absolute;
-  top: 50%;
-  left: -4vw;
-  animation: rotatingWheel 10s infinite linear;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: -4vw;
+    animation: rotatingWheel 10s infinite linear;
 
-  .svg_clr { fill: $clr_blue-grey;}
+    .svg_clr { fill: $clr_blue-grey;}
+
+    @include mq (medium,max) {
+        top: 5px;
+        left: -12px;
+    }
 }
 
 .__wheel-fast {
@@ -914,8 +984,22 @@ div[data-page='about'] {
             }
         }
 
-        & > span { margin-left: 4em;}
+        & > span {
+            margin-left: 4em;
+
+            @include mq (medium,max) {
+                display: inline-block;
+                margin: 4em 0 0 0;
+            }
+        }
         & > span:last-child { margin-left: 1.2em;}
+    }
+
+    .__ttl h1 {
+        @include mq (medium,max) {
+            text-align: center;
+            margin-left: 0;
+        }
     }
 
     &::before {
@@ -952,6 +1036,10 @@ div[data-page='about'] {
     box-sizing: border-box;
     z-index: 2;
 
+    @include mq (medium,max) {
+        margin: 8vh 5vw 13vh;
+    }
+
     & > div {
         width: 100%;
         margin: 0 auto;
@@ -961,6 +1049,10 @@ div[data-page='about'] {
         position: relative;
 
         &:last-child { margin-bottom: 0;}
+
+        @include mq (medium,max) {
+            flex-direction: column;
+        }
     }
 
     h2 {
@@ -970,6 +1062,12 @@ div[data-page='about'] {
         font-size: 1.8rem;
         letter-spacing: .25rem;
         margin-bottom: 2vh;
+
+        @include mq (medium,max) {
+            text-align: center;
+            margin-top: .4em;
+            font-size: 2rem;
+        }
     }
 
     p { text-transform: capitalize;}
@@ -982,6 +1080,14 @@ div[data-page='about'] {
         padding: 6px 12px 5px;
         display: inline;
         letter-spacing: .18em;
+
+        @include mq (medium,max) {
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            width: 59.5%;
+            margin: 1.8em auto 0;
+        }
     }
 
     .due {
@@ -990,6 +1096,12 @@ div[data-page='about'] {
         font-size: 1.3rem;
         letter-spacing: .02em;
         margin: 18px 0 0;
+
+        @include mq (medium,max) {
+            font-size: 1.15rem;
+            text-align: center;
+            margin-top: 1em;
+        }
     }
 
     .place {
@@ -1002,6 +1114,11 @@ div[data-page='about'] {
         height: 150px;
         margin-top: 5px;
         background: #1f2a33;
+
+        @include mq (medium,max) {
+            width: 100%;
+            padding-left: 0;
+        }
     }
 
     .job {
@@ -1017,6 +1134,17 @@ div[data-page='about'] {
             letter-spacing: .095em;
             line-height: 1.8;
             margin: 0;
+
+            @include mq (medium,max) {
+                font-size: 1.2rem;
+                text-align: center;
+                margin-top: 1.8em;
+            }
+        }
+
+        @include mq (medium,max) {
+            margin: 0 auto 2em;
+            height: auto;
         }
     }
 

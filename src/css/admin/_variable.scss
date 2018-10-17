@@ -54,3 +54,15 @@ $cb_rush: cubic-bezier(.6,.01,.58,.99);
 // Extend Para
 
 .tras { transition: all 1s cubic-bezier(.39,.06,.39,.99);}
+
+
+
+// easy switch
+
+.pc { display: block;}
+.sp { display: none;}
+
+@media only screen and ( max-width: 768px ) {
+  .pc { display: none;}
+  .sp { display: block;}
+}
