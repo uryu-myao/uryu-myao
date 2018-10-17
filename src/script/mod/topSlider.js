@@ -17,9 +17,7 @@
         // let current = 0,
         //     trans = 1;
         //
-        // let nextElem = document.querySelector('.grid_prev'),
-        //     prevElem = document.querySelector('.grid_next'),
-        //     currentSlider = document.querySelector('.grid_thum .grid_thum_fig > *'),
+        // let currentSlider = document.querySelector('.grid_thum .grid_thum_fig > *'),
         //
         // detailsBtn.href = "/works/01.html";
         //
@@ -90,7 +88,7 @@
         }, timeTrans );
 
 
-        // Pause slider
+        // Pause slider by hover-on
         let pauseZoom = [ prevbtn, nextbtn, thm ];
 
         function pauseAction( pauseItem ) {
@@ -101,7 +99,7 @@
         pauseZoom.forEach( pauseAction );
 
 
-        // Execute click
+        // Execute prev and next clicking
         prevbtn.addEventListener('click', function() {
             navigate('up')
         });
