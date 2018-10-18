@@ -31,7 +31,6 @@
             }
 
             click_01.play()
-
         };
 
         let bindActions = function() {

@@ -933,7 +933,20 @@ div[data-page='about'] {
 }
 
 .svg_contact {
-    width: 133.5px; height: 72.4px;
+    width: 133.5px;
+    height: 72.4px;
+
+    @include mq (medium,max) {
+        width: 105px;
+        height: 58px;
+    }
+
+    svg {
+        @include mq (medium,max) {
+            width: 105px;
+            height: 58px;
+        }
+    }
 }
 
 .svg_wheel {
@@ -969,6 +982,10 @@ div[data-page='about'] {
     background: #172126;
     z-index: 1;
     overflow: hidden;
+
+    @include mq (medium,max) {
+        padding: 9.5em 0 12em;
+    }
 
     h1 {
         & > span,
@@ -1016,6 +1033,13 @@ div[data-page='about'] {
         position: absolute;
         bottom: 8vh;
         right: 9vw;
+
+        @include mq (medium,max) {
+            width: calc( 100% - 10vw );
+            bottom: 12.5em;
+            right: auto;
+            @include center (horizontal);
+        }
     }
 
     & > a {
@@ -1027,6 +1051,12 @@ div[data-page='about'] {
         position: absolute;
         right: calc( 9vw + 200px + 5vw );
         bottom: calc( 8vh + 15px );
+
+        @include mq (medium,max) {
+            bottom: 4.5em;
+            right: auto;
+            @include center (horizontal);
+        }
     }
 }
 
@@ -1163,11 +1193,26 @@ div[data-page='about'] {
             color: $clr_blue-light;
             line-height: 1.75;
             margin: -2px 0 0 4%;
+
+            @include mq (medium,max) {
+                font-size: 1rem;
+                line-height: 2;
+            }
+        }
+
+        @include mq (medium,max) {
+            margin-bottom: 3.35em;
         }
     }
 
     .__ttl {
-        & > div:last-child { display: flex;}
+        & > div:last-child {
+            display: flex;
+
+            @include mq (medium,max) {
+                flex-direction: column;
+            }
+        }
     }
 }
 
