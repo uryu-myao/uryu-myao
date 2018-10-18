@@ -1288,6 +1288,10 @@ div[data-page='works'] {
         background: black;
         padding: 11.5vh 0 20px;
 
+        @include mq (medium,max) {
+            padding: 2.4em 0 1em;
+        }
+
         h2 {
             color: #2e354c;
             font-family: $txt_cond;
@@ -1351,14 +1355,25 @@ div[data-page='works'] {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include mq (medium,max) {
+        padding: 0;
+        flex-direction: column;
+    }
+
     .badges {
         width: auto;
         z-index: 2;
+
+        @include mq (medium,max) { width: 100%;}
 
         & + p {
             line-height: 1.6;
             margin-left: 3.45vw;
             z-index: 2;
+
+            @include mq (medium,max) {
+                margin: 1.6em 0 0 0;
+            }
         }
     }
 
@@ -1371,7 +1386,24 @@ div[data-page='works'] {
         min-height: 80px;
         margin-right: 10px;
 
+        @include mq (medium,max) {
+            width: 33%;
+            margin-right: 2.33333%;
+            height: 7.6em;
+        }
+
         &:last-child { margin-right: 0;}
+    }
+
+    .badges_ch {
+        @include mq (medium,max) {
+            margin: 2em 0 0 1.65em;
+        }
+    }
+    .badges_level {
+        @include mq (medium,max) {
+            left: .8em;
+        }
     }
 
     &_role {
@@ -1381,6 +1413,10 @@ div[data-page='works'] {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
+
+            @include mq (medium,max) {
+                flex-direction: column;
+            }
         }
     }
 
@@ -1389,7 +1425,10 @@ div[data-page='works'] {
         margin: -1vh 0 0 60%;
         z-index: 2;
 
-        @include mq (medium,max) { width: 100%;}
+        @include mq (medium,max) {
+            width: 100%;
+            margin: -3em 0 0;
+        }
 
         svg {
             width: 8px;
@@ -1400,10 +1439,13 @@ div[data-page='works'] {
 
     &_graph {
         width: 50%;
-        margin: 14.5vh 0 0 0;
+        margin: 14.5vh 0 0;
         position: relative;
 
-        @include mq (medium,max) { width: 100%;}
+        @include mq (medium,max) {
+            width: 100%;
+            margin-top: 7.2em;
+        }
 
         .question {
             top: 1px;
@@ -1416,10 +1458,17 @@ div[data-page='works'] {
         margin-top: 32vh;
         position: relative;
 
-        @include mq (medium,max) { width: 100%;}
+        @include mq (medium,max) {
+            width: 100%;
+            margin-top: 7.24em;
+        }
 
         & > div {
             padding: 11.5vh 0;
+
+            @include mq (medium,max) {
+                padding-top: 0;
+            }
         }
 
         p {
@@ -1443,6 +1492,10 @@ div[data-page='works'] {
             max-width: 200px;
             top: calc( 4.5vh + 1.35rem);
             @include center( horizontal );
+
+            @include mq (medium,max) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -1453,12 +1506,20 @@ div[data-page='works'] {
 
         a {
             width: calc( 100% / 2 - 10px );
+
+            @include mq (medium,max) {
+                width: calc( 100% / 2 - 5px );
+            }
         }
 
         a:last-child {
             .banner_motion {
                 div { margin-left: calc( 35% - 3em );}
             }
+        }
+
+        @include mq (medium,max) {
+            margin-top: 12em;
         }
     }
 }
@@ -1507,11 +1568,15 @@ div[data-page='works'] {
         top: 100px;
         left: 0;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
+
+        @include mq (medium,max) { top: 0;}
     }
     &_04 {
         top: -150px;
         left: 216px;
         @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
+
+        @include mq (medium,max) { top: -245px;}
     }
     &_05 {
         top: 10px;

@@ -42,11 +42,12 @@ a:-webkit-any-link {
             color: #182329;
             background: $clr-dark;
             @include center (horizontal);
+            z-index: 2;
         }
     }
 
     & > div {
-        background: black;
+        background: transparent;
         width: 65%;
         height: 100%;
         overflow: hidden;
@@ -78,12 +79,15 @@ a:-webkit-any-link {
     }
 }
 
-.grid_next .banner_motion {
+.grid_next .banner_motion,
+.works_detail_ctl a:last-child .banner_motion
+{
     @include mq (medium,max) {
         &::before { content: 'next';}
     }
 }
-.grid_prev .banner_motion {
+.grid_prev .banner_motion,
+.works_detail_ctl a:first-child .banner_motion {
     @include mq (medium,max) {
         &::before { content: 'prev';}
     }
