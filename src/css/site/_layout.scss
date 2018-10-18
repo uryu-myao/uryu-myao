@@ -1146,7 +1146,7 @@ div[data-page='about'] {
         box-sizing: border-box;
         width: 24vw;
         height: 150px;
-        margin-top: 5px;
+        padding-top: 4px;
         background: #1f2a33;
 
         @include mq (medium,max) {

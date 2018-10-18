@@ -46,6 +46,11 @@
                 top: 1px;
                 opacity: 0;
                 transition: all .25s $cb_rush;
+
+                @include mq (medium, max) {
+                    height: 32px;
+                    top: 0;
+                }
             }
         }
     }
@@ -59,6 +64,10 @@
             height: 83vh;
             width: 1px;
             background-image: linear-gradient( to bottom, $clr_blue-grey 45%, black );
+
+            @include mq (medium,max) {
+                height: 80%;
+            }
         }
 
         & span:nth-child(n+2) { height: 0;}
@@ -67,6 +76,10 @@
             &::after {
                 left: -4px;
                 opacity: 1;
+
+                @include mq (medium, max) {
+                    top: -1.258em;
+                }
             }
         }
 
@@ -87,6 +100,13 @@
     left: -100%;
     transition: all .2s $cb_rush;
 
+    @include mq (medium,max) {
+        width: 200%;
+        left: -200%;
+        padding-left: 7.5em;
+        box-sizing: border-box;
+    }
+
     &_active { left: 0;}
 
     a {
@@ -95,6 +115,10 @@
         font-weight: bold;
         font-family: $txt_cond;
         text-transform: uppercase;
+
+        @include mq (medium,max) {
+            font-size: 1.5rem;
+        }
     }
 
     nav {
@@ -104,14 +128,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mq (medium,max) {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &_list {
 
-        li:last-child { margin-bottom: 0;}
+        li:last-child {
+            margin-bottom: 0;
+
+            @include mq (medium,max) {
+                margin-right: 0;
+            }
+        }
 
         &:hover li:not(:hover) {
             opacity: .55;
+        }
+
+        @include mq (medium,max) {
+            display: flex;
         }
     }
 
@@ -125,6 +164,10 @@
         &_active {
             opacity: 1;
             transform: translate(0, 0) !important;
+        }
+
+        @include mq (medium,max) {
+            margin: 0 2em 0 0;
         }
     }
 
@@ -143,14 +186,28 @@
         //     letter-spacing: .2em;
         //     text-transform: capitalize;
         // }
+
+        @include mq (medium,max) {
+            margin-top: 0;
+        }
     }
 
-    &_last { margin-bottom: 6.5vh;}
+    &_last {
+        margin-bottom: 6.5vh;
+
+        @include mq (medium,max) {
+            margin-bottom: 0;
+        }
+    }
 
     ul {
         width: 50%;
         margin: 0 auto;
         position: relative;
+
+        @include mq (medium,max) {
+           width: 100%;
+        }
     }
 
     &_list + ul {
@@ -163,6 +220,11 @@
         }
 
         & li { margin-bottom: 0;}
+
+        @include mq (medium,max) {
+            margin-top: 0;
+            justify-content: flex-end;
+        }
     }
 
     .svg_ins,
@@ -172,7 +234,13 @@
         fill: $clr_blue-active;
     }
 
-    .svg_ins { margin-left: 1em;}
+    .svg_ins {
+        margin-left: 1em;
+
+        @include mq (medium,max) {
+            margin-left: 0;
+        }
+    }
 
     /* Delay transition
      * when menu has 6 items
