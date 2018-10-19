@@ -147,9 +147,9 @@ a:-webkit-any-link {
     width: 32px;
     height: 32px;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
+    right: 13px;
     @include clr-opacity ( $clr_blue-main, .35 );
-    @include center (horizontal);
     z-index: 10;
 
     & > div {
@@ -185,14 +185,6 @@ a:-webkit-any-link {
             animation: none;
         }
     }
-}
-
-.BGM_child {
-    position: fixed;
-    bottom: 30px;
-    left: auto;
-    right: 15px;
-    z-index: 10;
 }
 
 
