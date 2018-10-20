@@ -735,7 +735,7 @@ div[data-page='about'] {
 
         & > div.svg_resume {
             @include mq (medium,max) {
-                margin: 2em auto 3vh;
+                margin: 0 auto 3vh;
             }
         }
     }
@@ -1040,7 +1040,7 @@ div[data-page='about'] {
 
         @include mq (medium,max) {
             width: calc( 100% - 10vw );
-            bottom: 12.5em;
+            bottom: 9.6em;
             right: auto;
             @include center (horizontal);
         }
@@ -1185,6 +1185,11 @@ div[data-page='about'] {
     .question {
         @include center( vertical );
         right: 0;
+
+        @include mq (medium,max) {
+            top: auto;
+            bottom: 1em;
+        }
     }
 }
 
