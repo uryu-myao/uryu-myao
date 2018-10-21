@@ -48,6 +48,7 @@
                 transition: all .25s $cb_rush;
 
                 @include mq (medium, max) {
+                    font-size: 2.3vw;
                     height: 32px;
                     top: 0;
                 }
@@ -101,9 +102,9 @@
     transition: all .2s $cb_rush;
 
     @include mq (medium,max) {
-        width: 200%;
-        left: -200%;
-        padding-left: 7.5em;
+        width: 190%;
+        left: -190%;
+        padding: 0 0 0 18.5vw;
         box-sizing: border-box;
     }
 
@@ -117,7 +118,7 @@
         text-transform: uppercase;
 
         @include mq (medium,max) {
-            font-size: 1.5rem;
+            font-size: 4.5vw;
         }
     }
 
@@ -130,6 +131,7 @@
         justify-content: center;
 
         @include mq (medium,max) {
+            justify-content: flex-start;
             flex-direction: row;
             align-items: center;
         }
@@ -167,7 +169,7 @@
         }
 
         @include mq (medium,max) {
-            margin: 0 2em 0 0;
+            margin: 0 4.85vw 0 0;
         }
     }
 
@@ -219,12 +221,21 @@
             transition-delay: .4s;
         }
 
-        & li { margin-bottom: 0;}
+        & li {
+            margin-bottom: 0;
+
+            &:last-child {
+                @include mq (medium,max) {
+                    margin-right: 0;
+                }
+            }
+        }
 
         @include mq (medium,max) {
-            margin-top: 0;
-            justify-content: flex-end;
+            margin: 0 0 0 9vw;
         }
+
+
     }
 
     .svg_ins,

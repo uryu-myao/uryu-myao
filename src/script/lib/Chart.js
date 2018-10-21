@@ -12541,7 +12541,7 @@ var helpers = require(45);
 function generateTicks(generationOptions, dataRange) {
 	var ticks = [];
 	// To get a "nice" value for the tick spacing, we will use the appropriately named
-	// "nice number" algorithm. See http://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
+	// "nice number" algorithm. See http://stackoverflow.com/infos/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
 	// for details.
 
 	var spacing;
