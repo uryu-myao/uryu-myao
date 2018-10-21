@@ -569,7 +569,7 @@ div[data-page='top'] {
 .grid_prev {
     grid-area: prev;
     overflow: hidden;
-
+    
     .banner_middle {
         height: calc( 100% - 65px );
         margin-bottom: 10px;
@@ -1278,7 +1278,7 @@ div[data-page='works'] {
     }
 
     .fs {
-        height: 100%;
+        height: calc( 100% - 30% - 10px );
 
         picture {
             display: block;
@@ -1291,7 +1291,7 @@ div[data-page='works'] {
     article {
         margin-top: 10px;
         background: black;
-        padding: 11.5vh 0 20px;
+        padding: 5.7vh 0 20px;
 
         @include mq (medium,max) {
             padding: 2.4em 0 1em;
@@ -1315,7 +1315,7 @@ div[data-page='works'] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include clr-opacity ( $clr_blue-main, .2 );
+    @include clr-opacity ( $clr_blue-main, .22 );
     margin: 0 auto;
     padding: 8vh 9.33333%;
     box-sizing: border-box;
