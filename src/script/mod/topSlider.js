@@ -9,32 +9,6 @@
 
 (function() {
 
-    // const topSlider = (function() {
-
-        // let elemCount = 3,
-        //     elemTrans = 0;
-        //
-        // let current = 0,
-        //     trans = 1;
-        //
-        // let currentSlider = document.querySelector('.grid_thum .grid_thum_fig > *'),
-        //
-        // detailsBtn.href = "/works/01.html";
-        //
-        // function nextImage() {
-        //     if (current < elemCount){
-        //         current ++;
-        //         console.log(current);
-        //     }
-        // };
-        //
-        // function prevImage() {
-        //     if (current > 0) {
-        //         current --;
-        //         console.log(current);
-        //     }
-        // }
-
     function slider(item) {
         let items = item.querySelectorAll('li'),
             current = 0,

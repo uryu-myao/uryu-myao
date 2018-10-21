@@ -1,16 +1,65 @@
 .badges {
+    position: relative;
+
+    &::before,
+    &::after
+    {
+        position: absolute;
+        content: '';
+        background: transparent;
+        border: 2px solid $clr_blue-active;
+        width: 9px;
+        height: 5px;
+        z-index: 1;
+    }
+    &::before {
+        bottom: -4px;
+        left: -4px;
+        border-top: 2px;
+        border-right: 2px;
+
+        @include mq (xlarge,max) {
+            left: calc( 10% - 4px );
+        }
+    }
+    &::after {
+        top: -4px;
+        right: -4px;
+        border-left: 2px;
+        border-bottom: 2px;
+
+        @include mq (xlarge,max) {
+            right: calc( 10% - 4px );
+        }
+    }
 
     ol {
         display: flex;
         justify-content: space-between;
+
+        @include mq (xlarge,max) {
+            flex-direction: column;
+        }
     }
 
     &_item {
         width: 30%;
-        height: 72px;
+        height: 74px;
         position: relative;
         clip-path: polygon(19% 0, 100% 0, 100% 86%, 81% 100%, 0 100%, 0 14%);
-        @include clr-opacity ( $clr_blue-main, .34 );
+        background: $clr_blur-dark;
+        position: relative;
+        z-index: 2;
+
+        @include mq (xlarge,max) {
+            width: 80%;
+            height: 48px;
+            margin: 0 auto 6px;
+            clip-path: polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%);
+        }
+        &:last-child {
+            @include mq (xlarge,max) { margin-bottom: 0;}
+        }
     }
 
     p {
@@ -30,11 +79,15 @@
     &_ch {
         width: 18px;
         height: 26px;
-        margin: 1.8vh 0 0 1.23vw;
+        margin: 1.8vh 0 0 .955vw;
         opacity: .1;
         background: {
             repeat: no-repeat;
             size: cover;
+        }
+
+        @include mq (xlarge,max) {
+            margin: 1.2vh 0 0 1.25vw;
         }
     }
 
@@ -45,6 +98,11 @@
         position: absolute;
         left: .6vw;
         bottom: 10px;
+
+        @include mq (xlarge,max) {
+            left: 4vw;
+            bottom: 12px;
+        }
 
         span {
             width: 4px;
@@ -68,7 +126,7 @@
     // Badge level grid loop
     $levelStatus: __level !default;
 
-    @for $i from 1 through 7 {
+    @for $i from 1 through 6 {
         .#{ $levelStatus }_#{ $i } span:nth-child(-n+#{ $i }) {
             background: #f0ff00;
         }

@@ -4,58 +4,6 @@
         "root": "/",
         "sitename": "URYU MYAO",
         "url": "http://www.uryu-myao.com/"
-    },
-
-    "visual":[
-        {
-            "link": "work_1",
-            "class": "cur-s1"
-        },
-        {
-            "link": "work_2",
-            "class": "cur-s2"
-        },
-        {
-            "link": "work_3",
-            "class": "cur-s3"
-        }
-    ],
-
-    "desc1":[
-        {
-            "name": "yoshikawa",
-            "cat": "corporate site"
-        }
-    ],
-
-    "desc2":[
-        {
-            "badge1": "Design",
-            "badge2": "DEV.",
-            "badge3": "Direction"
-        }
-    ],
-
-    "prev":[
-        {
-            "title": "hanplus",
-            "class": "prev-s1"
-        }
-    ],
-
-    "next":[
-        {
-            "title": "kyobi",
-            "class": "next-s1"
-        }
-    ],
-
-    "works":[
-        {
-            "title": "yoshikawa",
-            "cat": "web design",
-            "firstview": "/img/work/firstview"
-        }
-    ]
+    }
 
 }

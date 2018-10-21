@@ -546,10 +546,10 @@ div[data-page='top'] {
     }
 
     .badges {
-        margin-top: 15px;
         width: 80%;
-        margin: 0 auto;
+        margin: 3em auto 0;
 
+        @include mq (xlarge,max) { margin-top: 1em;}
         @include mq (medium, max) { display: none;}
     }
 
