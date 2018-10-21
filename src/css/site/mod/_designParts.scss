@@ -182,7 +182,7 @@ a:-webkit-any-link {
     height: 32px;
     position: absolute;
     bottom: 20px;
-    right: 13px;
+    right: calc( 2.1% / 2 + 3px);
     @include clr-opacity ( $clr_blue-main, .35 );
     z-index: 2;
 
@@ -207,7 +207,7 @@ a:-webkit-any-link {
     }
 
     @include mq (medium,max) {
-        top: 2.245em;
+        top: 6.8vw;
     }
 }
 

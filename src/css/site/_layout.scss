@@ -569,7 +569,7 @@ div[data-page='top'] {
 .grid_prev {
     grid-area: prev;
     overflow: hidden;
-    
+
     .banner_middle {
         height: calc( 100% - 65px );
         margin-bottom: 10px;
@@ -1377,38 +1377,48 @@ div[data-page='works'] {
             z-index: 2;
 
             @include mq (medium,max) {
-                margin: 1.6em 0 0 0;
+                margin: 1.6em 0 0;
             }
         }
-    }
 
-    .badges ol { justify-content: flex-start;}
+        ol {
+            justify-content: flex-start;
 
-    .badges li {
-        width: 5vw;
-        min-width: 72px;
-        height: 5.5vw;
-        min-height: 80px;
-        margin-right: 10px;
-
-        @include mq (medium,max) {
-            width: 33%;
-            margin-right: 2.33333%;
-            height: 7.6em;
+            @include mq (medium,max) {
+                flex-direction: row;
+            }
         }
 
-        &:last-child { margin-right: 0;}
-    }
+        &_item {
+            width: 5vw;
+            min-width: 72px;
+            height: 5.5vw;
+            min-height: 80px;
+            margin-right: 10px;
 
-    .badges_ch {
-        @include mq (medium,max) {
-            margin: 2em 0 0 1.65em;
+            @include mq (medium,max) {
+                width: 33%;
+                margin: 0 2.33333% 0 0;
+                height: 7.6em;
+            }
+
+            &:last-child { margin: 0;}
         }
-    }
-    .badges_level {
-        @include mq (medium,max) {
-            left: .8em;
+
+        &_ch {
+            @include mq (medium,max) {
+                margin: 2em 0 0 1.65em;
+            }
         }
+
+        &_level {
+            @include mq (medium,max) {
+                left: .8em;
+            }
+        }
+
+        &::before { left: -4px;}
+        &::after { right: -4px;}
     }
 
     &_role {
