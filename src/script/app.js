@@ -23,6 +23,7 @@ const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const chart = require('./mod/chartCustom.js');
 const mouse = require('./mod/mouseEffect.js');
+const dialog = require('./mod/dialog.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
 const slider = require('./mod/topSlider.js');
