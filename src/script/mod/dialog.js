@@ -55,7 +55,7 @@ if (document.querySelector('#Works')) {
     info_w01.addEventListener('click', function() {
         var dialog = new Dialog({
             content:
-            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            '<p>It is showing how much times that I was spended in the project.<br>Assuming 8 hours per workday I have had :)</p>',
             buttons: [{
                 text: 'ok',
                 action: function() { dialog.close() }
@@ -76,7 +76,7 @@ if (document.querySelector('#About')) {
     info_a01.addEventListener('click', function() {
         var dialog = new Dialog({
             content:
-            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            '<p><a href="https://https://www.econosys.jp/" target="_blank">Econosys Design,Inc</a><br></p>',
             buttons: [{
                 text: 'ok',
                 action: function() { dialog.close() }
@@ -87,7 +87,7 @@ if (document.querySelector('#About')) {
     info_a02.addEventListener('click', function() {
         var dialog = new Dialog({
             content:
-            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            '<p><a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc</a></p>',
             buttons: [{
                 text: 'ok',
                 action: function() { dialog.close() }
@@ -98,7 +98,7 @@ if (document.querySelector('#About')) {
     info_a03.addEventListener('click', function() {
         var dialog = new Dialog({
             content:
-            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            '<p><a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University</a></p>',
             buttons: [{
                 text: 'ok',
                 action: function() { dialog.close() }

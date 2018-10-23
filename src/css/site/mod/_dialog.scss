@@ -12,18 +12,44 @@
     transition: all .15s $cb_rush;
     z-index: 20;
 
-    @include mq (medium,max) {
-        width: 88vw;
+    &_inner {
+        position: relative;
+        width: 600px;
+        height: 360px;
+        background: $clr_blue-main;
+        clip-path: polygon(6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10%);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: calc( 600px - 2px );
+            height: calc( 360px - 2px );
+            background: black;
+            clip-path: polygon(6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10%);
+            @include center (both);
+        }
+
+        @include mq (medium,max) {
+            width: 88vw;
+        }
     }
 
+    main, footer { position: relative; z-index: 21;}
+
     &_cts {
-        color: $clr_blue-active;
+        color: $clr_blue-main;
         text-align: center;
-        background: black;
     }
 
     button {
-        margin-top: 3em;
+        margin: 3em 0 0;
         font-family: $txt_cond;
         font-size: 1.4rem;
         font-weight: bold;
@@ -31,11 +57,13 @@
         letter-spacing: .05em;
         background: transparent;
         text-transform: uppercase;
+        z-index: 30;
     }
 
     p, a {
         font-family: $txt_cond;
         font-size: 1.4rem;
+        line-height: 1.6;
         letter-spacing: .05em;
     }
 
