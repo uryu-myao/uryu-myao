@@ -294,6 +294,7 @@ div.info {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .15s $cb_rush;
 
     p {
         font-family: $txt_code;
@@ -303,10 +304,17 @@ div.info {
         color: #8089ff;
         line-height: 1;
         font-weight: bold;
+        transition: all .05s $cb_rush;
 
         @include mq (medium,max) {
             font-size: 1.2rem;
         }
+    }
+
+    &:hover {
+      background: $clr_blur-dark;
+
+      p { color: $clr_blue-main;}
     }
 
     @include mq (medium,max) {

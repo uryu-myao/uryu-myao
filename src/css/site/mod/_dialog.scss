@@ -35,6 +35,10 @@
             background: black;
             clip-path: polygon( 6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10% );
             @include center (both);
+
+            @include mq (medium,max) {
+                width: calc( 88vw - 2px);
+            }
         }
 
         @include mq (medium,max) {
@@ -53,6 +57,9 @@
         position: absolute;
         top: 2.2em;
         right: 2.2em;
+        background: $clr_blur-dark;
+
+        p { color: $clr_blue-main;}
     }
 
     button {
@@ -76,7 +83,7 @@
     p, a {
         font-family: $txt_cond;
         font-size: 1.4rem;
-        line-height: 1.6;
+        line-height: 1.9;
         letter-spacing: .05em;
     }
 
