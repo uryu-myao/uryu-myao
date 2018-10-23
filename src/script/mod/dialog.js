@@ -8,13 +8,13 @@ class Dialog {
     getTemplate() {
         let {content} = this.options
         let template = `
-                <div class="dialog kl">
-                    <div class="dialog_inner">
-                        <main class="dialog_cts">${content}</main>
-                        <footer class="dialog_footer"></footer>
-                    </div>
+            <div class="dialog kl">
+                <div class="dialog_inner">
+                    <main class="dialog_cts">${content}</main>
+                    <footer class="dialog_footer"></footer>
                 </div>
-            `
+            </div>
+        `
         return template
     }
 
@@ -47,69 +47,64 @@ class Dialog {
 
 }
 
+// Works
+if (document.querySelector('#Works')) {
 
-// Works page
-(function() {
+    let info_w01 = document.querySelectorAll('.info')[0]
 
-    if (document.querySelector('#Works')) {
-        let info_01 = document.querySelectorAll('.info')[0]
-
-        info_01.addEventListener('click', function() {
-            var dialog = new Dialog({
-                content:
-                '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
-                buttons: [{
-                    text: 'ok',
-                    action: function() { dialog.close() }
-                }]
-            })
-            dialog.open()
+    info_w01.addEventListener('click', function() {
+        var dialog = new Dialog({
+            content:
+            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            buttons: [{
+                text: 'ok',
+                action: function() { dialog.close() }
+            }]
         })
-    }
+        dialog.open()
+    })
 
-}());
+}
 
-// About page
-(function() {
+// About
+if (document.querySelector('#About')) {
 
-    if (document.querySelector('#About')) {
-        let info_01 = document.querySelectorAll('.info')[0],
-        let info_02 = document.querySelectorAll('.info')[1],
-        let info_03 = document.querySelectorAll('.info')[2]
+    let info_a01 = document.querySelectorAll('.info')[0],
+        info_a02 = document.querySelectorAll('.info')[1],
+        info_a03 = document.querySelectorAll('.info')[2]
 
-        info_01.addEventListener('click', function() {
-            var dialog = new Dialog({
-                content:
-                '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
-                buttons: [{
-                    text: 'ok',
-                    action: function() { dialog.close() }
-                }]
-            })
-            dialog.open()
-        });
-        info_02.addEventListener('click', function() {
-            var dialog = new Dialog({
-                content:
-                '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
-                buttons: [{
-                    text: 'ok',
-                    action: function() { dialog.close() }
-                }]
-            })
-            dialog.open()
-        });
-        info_03.addEventListener('click', function() {
-            var dialog = new Dialog({
-                content:
-                '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
-                buttons: [{
-                    text: 'ok',
-                    action: function() { dialog.close() }
-                }]
-            })
-            dialog.open()
-        });
-    }
+    info_a01.addEventListener('click', function() {
+        var dialog = new Dialog({
+            content:
+            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            buttons: [{
+                text: 'ok',
+                action: function() { dialog.close() }
+            }]
+        })
+        dialog.open()
+    })
+    info_a02.addEventListener('click', function() {
+        var dialog = new Dialog({
+            content:
+            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            buttons: [{
+                text: 'ok',
+                action: function() { dialog.close() }
+            }]
+        })
+        dialog.open()
+    })
+    info_a03.addEventListener('click', function() {
+        var dialog = new Dialog({
+            content:
+            '<p><a href="https://www.awwwards.com/sites/wonderland-ams" target="_blank">baidu</a>aaosidjfasdaskdfj;aslkjdfaslkjd<br>asdfasdfasf</p>',
+            buttons: [{
+                text: 'ok',
+                action: function() { dialog.close() }
+            }]
+        })
+        dialog.open()
+    })
 
-}())
+}
