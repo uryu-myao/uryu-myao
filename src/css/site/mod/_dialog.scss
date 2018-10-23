@@ -5,11 +5,12 @@
     width: 100vw;
     height: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.45);
+    background: url('/assets/common/noise.png');
+    background-repeat: repeat;
+    animation: 1s infinite noise;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .15s $cb_rush;
     z-index: 20;
 
     &_inner {
@@ -17,7 +18,7 @@
         width: 600px;
         height: 360px;
         background: $clr_blue-main;
-        clip-path: polygon(6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10%);
+        clip-path: polygon( 6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10% );
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -32,7 +33,7 @@
             width: calc( 600px - 2px );
             height: calc( 360px - 2px );
             background: black;
-            clip-path: polygon(6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10%);
+            clip-path: polygon( 6% 0, 100% 0, 100% 90%, 94% 100%, 0 100%, 0% 70%, 0 10% );
             @include center (both);
         }
 
@@ -41,15 +42,24 @@
         }
     }
 
-    main, footer { position: relative; z-index: 21;}
+    .info, main, footer { z-index: 21;}
 
     &_cts {
         color: $clr_blue-main;
         text-align: center;
     }
 
+    .info {
+        position: absolute;
+        top: 2.2em;
+        right: 2.2em;
+    }
+
     button {
-        margin: 3em 0 0;
+        position: absolute;
+        @include center (horizontal);
+        bottom: 4.25em;
+        padding: 1em;
         font-family: $txt_cond;
         font-size: 1.4rem;
         font-weight: bold;
@@ -57,7 +67,10 @@
         letter-spacing: .05em;
         background: transparent;
         text-transform: uppercase;
+        transition: all .15s $cb_rush;
         z-index: 30;
+
+        &:hover { background: $clr-light-trans;}
     }
 
     p, a {

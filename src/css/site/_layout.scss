@@ -127,7 +127,7 @@ p, dt, dd, li, a {
 
 .visual {
     position: absolute;
-    @include center(both);
+    @include center (both);
     z-index: 10;
 }
 
@@ -137,7 +137,7 @@ p, dt, dd, li, a {
     padding: 1em;
     max-width: 80px;
     width: 10vw;
-    @include center(horizontal);
+    @include center (horizontal);
     background: transparent;
     color: $clr_blue-active;
     font-size: 1.45rem;
@@ -145,7 +145,7 @@ p, dt, dd, li, a {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     white-space: nowrap;
-    transition: all .3s $cb_rush;
+    transition: all .2s $cb_rush;
     z-index: 10;
 
     &_inner { position: relative;}

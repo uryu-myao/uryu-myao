@@ -10,6 +10,7 @@ class Dialog {
         let template = `
             <div class="dialog kl">
                 <div class="dialog_inner">
+                    <div class="info"><p>i</p></div>
                     <main class="dialog_cts">${content}</main>
                     <footer class="dialog_footer"></footer>
                 </div>
@@ -50,7 +51,7 @@ class Dialog {
 // Works
 if (document.querySelector('#Works')) {
 
-    let info_w01 = document.querySelectorAll('.info')[0]
+    let info_w01 = document.querySelectorAll('.info_js')[0]
 
     info_w01.addEventListener('click', function() {
         var dialog = new Dialog({
@@ -69,9 +70,9 @@ if (document.querySelector('#Works')) {
 // About
 if (document.querySelector('#About')) {
 
-    let info_a01 = document.querySelectorAll('.info')[0],
-        info_a02 = document.querySelectorAll('.info')[1],
-        info_a03 = document.querySelectorAll('.info')[2]
+    let info_a01 = document.querySelectorAll('.info_js')[0],
+        info_a02 = document.querySelectorAll('.info_js')[1],
+        info_a03 = document.querySelectorAll('.info_js')[2]
 
     info_a01.addEventListener('click', function() {
         var dialog = new Dialog({
