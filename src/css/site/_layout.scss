@@ -304,7 +304,7 @@ div[data-page='top'] {
     picture {
         display: block;
         height: 62px;
-        @include bg-image (auto, 0, /assets/top/earth, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/earth', png, center, cover, no-repeat);
 
         @include mq (medium,max) {
             height: 38px;
@@ -329,7 +329,7 @@ div[data-page='top'] {
         display: block;
         width: 100%;
         height: 100%;
-        @include bg-image (auto, 0, /assets/top/mars, png, top 0px right 35%, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/mars', png, top 0px right 35%, cover, no-repeat);
 
         @include mq (medium,max) {
 
@@ -418,16 +418,16 @@ div[data-page='top'] {
     }
 
     .__fig_01 {
-        @include bg-image (auto, 0, /assets/top/thm_01, gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
     }
     .__fig_02 {
-        @include bg-image (auto, 0, /assets/top/thm_02, gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
     }
     .__fig_03 {
-        @include bg-image (auto, 0, /assets/top/thm_03, gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
     }
     .__fig_04 {
-        @include bg-image (auto, 0, /assets/top/thm_04, gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
     }
 
     // Slider controling
@@ -656,16 +656,16 @@ div[data-page='top'] {
 }
 
 .__sub_01 {
-    @include bg-image (auto, 0, /assets/top/sub_01, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, '/assets/top/sub_01', png, center, cover, no-repeat);
 }
 .__sub_02 {
-    @include bg-image (auto, 0, /assets/top/sub_02, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, '/assets/top/sub_02', png, center, cover, no-repeat);
 }
 .__sub_03 {
-    @include bg-image (auto, 0, /assets/top/sub_03, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, '/assets/top/sub_03', png, center, cover, no-repeat);
 }
 .__sub_04 {
-    @include bg-image (auto, 0, /assets/top/sub_04, png, center, cover, no-repeat);
+    @include bg-image (auto, 0, '/assets/top/sub_04', png, center, cover, no-repeat);
 }
 
 // Progress
@@ -750,7 +750,7 @@ div[data-page='about'] {
         & > div {
             width: 100%;
             flex-direction: column-reverse;
-            // @include bg-image (auto, 0, /assets/about/aside, gif, center, cover, no-repeat);
+            // @include bg-image (auto, 0, '/assets/about/aside', gif, center, cover, no-repeat);
             opacity: 1;
         }
     }
@@ -877,7 +877,7 @@ div[data-page='about'] {
         display: inline-block;
         position: relative;
         height: calc( 660px + 13vw );
-        @include bg-image (auto, 0, /assets/about/paper, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/about/paper', png, center, cover, no-repeat);
 
         &::before {
             content: '';
@@ -1284,7 +1284,7 @@ div[data-page='works'] {
             display: block;
             height: 100%;
 
-            @include bg-image (auto, 0, /assets/top/thm_01, gif, center, cover, no-repeat);
+            @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
         }
     }
 
@@ -1572,31 +1572,31 @@ div[data-page='works'] {
     &_01 {
         top: 0;
         left: 0;
-        @include bg-image (auto, 0, /assets/works/w01/caseimg_01, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
     }
     &_02 {
         top: -84px;
         left: 204px;
-        @include bg-image (auto, 0, /assets/works/w01/caseimg_01, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
     }
     &_03 {
         top: 100px;
         left: 0;
-        @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
 
         @include mq (medium,max) { top: 0;}
     }
     &_04 {
         top: -150px;
         left: 216px;
-        @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
 
         @include mq (medium,max) { top: -245px;}
     }
     &_05 {
         top: 10px;
         left: 543px;
-        @include bg-image (auto, 0, /assets/works/w01/caseimg_02, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
     }
 }
 
@@ -1662,7 +1662,7 @@ div[data-page='404'] {
     picture {
         display: block;
         height: 200px;
-        @include bg-image (auto, 0, /assets/404/screen, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/404/screen', png, center, cover, no-repeat);
     }
 }
 
@@ -1674,7 +1674,7 @@ div[data-page='404'] {
 
     picture {
         height: 200px;
-        @include bg-image (auto, 0, /assets/404/plant, png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/404/plant', png, center, cover, no-repeat);
     }
 }
 
