@@ -29,7 +29,7 @@ a:-webkit-any-link {
     animation: stripe .5s linear 0s infinite;
 
     @include mq (medium,max) {
-        margin-bottom: 0;
+        
         position: relative;
 
         &::before {
@@ -82,10 +82,16 @@ a:-webkit-any-link {
 
 /* Works page specific */
 .works_detail_ctl a {
+
+    width: 100%;
+
     .banner_motion {
+
         position: relative;
+        margin-bottom: 0;
 
         &::before {
+            content: 'next';
             position: absolute;
             font-family: $txt_cond;
             font-size: 1rem;
@@ -98,14 +104,6 @@ a:-webkit-any-link {
             @include center (horizontal);
             z-index: 2;
         }
-    }
-
-    &:last-child .banner_motion {
-        &::before { content: 'next';}
-    }
-
-    &:first-child .banner_motion {
-        &::before { content: 'prev';}
     }
 }
 
@@ -124,7 +122,6 @@ a:-webkit-any-link {
         height: calc( 100% - 10px );
     }
 }
-
 
 
 

@@ -1461,23 +1461,41 @@ div[data-page='works'] {
         display: flex;
         justify-content: space-between;
 
-        a {
-            width: calc( 100% / 2 - 10px );
-
-            @include mq (medium,max) {
-                width: calc( 100% / 2 - 5px );
-            }
-        }
-
-        a:last-child {
-            .banner_motion {
-                div { margin-left: calc( 35% - 3em );}
-            }
-        }
-
         @include mq (medium,max) {
             margin-top: 12em;
         }
+
+        figure { width: 100%;}
+    }
+}
+
+.__next {
+    position: relative;
+    display: block;
+    height: 10vh;
+    width: 100%;
+
+    @include mq (medium,max) { height: 55px;}
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: '';
+        background: rgba(6,14,29,.76);
+    }
+
+    &_01 {
+         @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
+    }
+    &_02 {
+         @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
+    }
+    &_03 {
+         @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
+    }
+    &_04 {
+         @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
     }
 }
 
@@ -1490,8 +1508,7 @@ div[data-page='works'] {
 }
 .works_detail_role > div > p,
 .works_detail_agency > p,
-.works_detail_agency > a
-{
+.works_detail_agency > a {
     color: $clr_blue-main;
     font-size: 1.35rem;
     font-weight: bold;
