@@ -37,12 +37,15 @@
             @include center (both);
 
             @include mq (medium,max) {
-                width: calc( 88vw - 2px);
+                width: calc( 80vw - 2px);
+                height: calc( 270px - 2px );
             }
         }
 
         @include mq (medium,max) {
-            width: 88vw;
+            width: 80vw;
+            height: 270px;
+            padding: 0 6vw;
         }
     }
 
@@ -60,6 +63,11 @@
         background: $clr_blur-dark;
 
         p { color: $clr_blue-main;}
+
+        @include mq (medium,max) {
+            top: .85em;
+            right: .85em;
+        }
     }
 
     button {
@@ -78,6 +86,10 @@
         z-index: 30;
 
         &:hover { background: $clr-light-trans;}
+
+        @include mq (medium,max) {
+            bottom: 1.5em;
+        }
     }
 
     p, a {
