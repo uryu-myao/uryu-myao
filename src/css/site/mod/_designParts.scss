@@ -88,7 +88,10 @@ a:-webkit-any-link {
     .banner_motion {
 
         position: relative;
-        margin-bottom: 0;
+
+        @include mq (medium,max) {
+            margin-bottom: 0;
+        }
 
         &::before {
             content: 'next';

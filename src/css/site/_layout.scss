@@ -1292,9 +1292,9 @@ div[data-page='works'] {
     }
 
     article {
-        margin-top: 10px;
+        margin: 10px 0 0;
         background: black;
-        padding: 5.7vh 0 20px;
+        padding: 5.7vh 0 12px;
 
         @include mq (medium,max) {
             padding: 2.4em 0 1em;
@@ -1403,7 +1403,7 @@ div[data-page='works'] {
     }
 
     &_graph {
-        width: 58%;
+        width: 56%;
         margin: 14.5vh 0 0;
         position: relative;
 
@@ -1420,7 +1420,7 @@ div[data-page='works'] {
 
     &_story {
         width: 100%;
-        margin: 15vh 0 8vh;
+        margin: 15vh 0 10vh;
         position: relative;
 
         @include mq (medium,max) {
@@ -1440,7 +1440,6 @@ div[data-page='works'] {
 
     &_others {
         width: 100%;
-        margin-top: 4vh;
         position: relative;
 
         h2 { text-align: center;}
@@ -1457,7 +1456,7 @@ div[data-page='works'] {
     }
 
     &_ctl {
-        margin-top: 20vh;
+        margin-top: 24vh;
         display: flex;
         justify-content: space-between;
 
