@@ -1354,6 +1354,15 @@ div[data-page='works'] {
     }
 }
 
+.row {
+    width: 100%;
+    display: flex;
+
+    &_left {
+        justify-content: flex-start;
+    }
+}
+
 .works_detail {
     width: $wd_work-dtl;
     margin: 10vh auto 0;
@@ -1384,7 +1393,7 @@ div[data-page='works'] {
 
     &_agency {
         width: 40%;
-        margin: -1vh 0 0 60%;
+        margin: -5vh 0 0 60%;
         z-index: 2;
 
         @include mq (medium,max) {
@@ -1394,7 +1403,7 @@ div[data-page='works'] {
     }
 
     &_graph {
-        width: 50%;
+        width: 58%;
         margin: 14.5vh 0 0;
         position: relative;
 
@@ -1410,21 +1419,13 @@ div[data-page='works'] {
     }
 
     &_story {
-        width: 40%;
-        margin-top: 32vh;
+        width: 100%;
+        margin: 15vh 0 8vh;
         position: relative;
 
         @include mq (medium,max) {
             width: 100%;
             margin-top: 7.24em;
-        }
-
-        & > div {
-            padding: 11.5vh 0;
-
-            @include mq (medium,max) {
-                padding-top: 0;
-            }
         }
 
         p {
