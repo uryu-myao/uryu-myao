@@ -379,9 +379,9 @@ div[data-page='top'] {
     a {
         z-index: 2;
 
-        &:hover {
-            // -webkit-filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
-        }
+        // &:hover {
+        //     filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
+        // }
     }
 
     picture {
@@ -1080,7 +1080,6 @@ div[data-page='about'] {
         display: flex;
         align-items: flex-start;
         margin-bottom: 2vh;
-        position: relative;
 
         &:last-child { margin-bottom: 0;}
 
@@ -1139,12 +1138,14 @@ div[data-page='about'] {
     }
 
     .place {
+        position: relative;
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding-left: 3vw;
         box-sizing: border-box;
-        width: 24vw;
+        width: 30vw;
+        min-width: 320px;
         height: 150px;
         padding-top: 4px;
         background: #1f2a33;
@@ -1164,10 +1165,12 @@ div[data-page='about'] {
         p {
             color: $clr_blue-light;
             font-family: $txt_norm;
-            font-size: 1.6rem;
+            font-size: 1.45rem;
             letter-spacing: .095em;
             line-height: 1.8;
             margin: 0;
+            white-space: nowrap;
+
 
             @include mq (medium,max) {
                 font-size: 1.2rem;
@@ -1183,8 +1186,8 @@ div[data-page='about'] {
     }
 
     .info {
-        @include center( vertical );
-        right: 0;
+        top: 2.6em;
+        right: 2.6em;
 
         @include mq (medium,max) {
             top: auto;
@@ -1365,62 +1368,6 @@ div[data-page='works'] {
         flex-direction: column;
     }
 
-    .badges {
-        width: auto;
-        z-index: 2;
-
-        @include mq (medium,max) { width: 100%;}
-
-        & + p {
-            line-height: 1.6;
-            margin-left: 3.45vw;
-            z-index: 2;
-
-            @include mq (medium,max) {
-                margin: 1.6em 0 0;
-            }
-        }
-
-        ol {
-            justify-content: flex-start;
-
-            @include mq (medium,max) {
-                flex-direction: row;
-            }
-        }
-
-        &_item {
-            width: 5vw;
-            min-width: 72px;
-            height: 5.5vw;
-            min-height: 80px;
-            margin-right: 10px;
-
-            @include mq (medium,max) {
-                width: 33%;
-                margin: 0 2.33333% 0 0;
-                height: 7.6em;
-            }
-
-            &:last-child { margin: 0;}
-        }
-
-        &_ch {
-            @include mq (medium,max) {
-                margin: 2em 0 0 1.65em;
-            }
-        }
-
-        &_level {
-            @include mq (medium,max) {
-                left: .8em;
-            }
-        }
-
-        &::before { left: -4px;}
-        &::after { right: -4px;}
-    }
-
     &_role {
         width: 100%;
 
@@ -1443,12 +1390,6 @@ div[data-page='works'] {
         @include mq (medium,max) {
             width: 100%;
             margin: -3em 0 0;
-        }
-
-        svg {
-            width: 8px;
-            height: 7px;
-            fill: $clr_blue-main;
         }
     }
 
@@ -1539,12 +1480,18 @@ div[data-page='works'] {
     }
 }
 
+.works_detail_role > div > p {
+    font-family: $txt_code;
+}
+.works_detail_agency > p,
+.works_detail_agency > a {
+    font-family: $txt_cond;
+}
 .works_detail_role > div > p,
 .works_detail_agency > p,
 .works_detail_agency > a
 {
     color: $clr_blue-main;
-    font-family: $txt_code;
     font-size: 1.35rem;
     font-weight: bold;
     letter-spacing: .135em;

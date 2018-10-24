@@ -17,10 +17,6 @@
         left: -4px;
         border-top: 2px;
         border-right: 2px;
-
-        @include mq (xlarge,max) {
-            left: calc( 10% - 4px );
-        }
     }
     &::after {
         top: -4px;
@@ -28,18 +24,12 @@
         border-left: 2px;
         border-bottom: 2px;
 
-        @include mq (xlarge,max) {
-            right: calc( 10% - 4px );
-        }
+
     }
 
     ol {
         display: flex;
         justify-content: space-between;
-
-        @include mq (xlarge,max) {
-            flex-direction: column;
-        }
     }
 
     &_item {
@@ -50,16 +40,6 @@
         background: $clr_blur-dark;
         position: relative;
         z-index: 2;
-
-        @include mq (xlarge,max) {
-            width: 80%;
-            height: 48px;
-            margin: 0 auto 6px;
-            clip-path: polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%);
-        }
-        &:last-child {
-            @include mq (xlarge,max) { margin-bottom: 0;}
-        }
     }
 
     p {
@@ -85,10 +65,6 @@
             repeat: no-repeat;
             size: cover;
         }
-
-        @include mq (xlarge,max) {
-            margin: 1.2vh 0 0 1.25vw;
-        }
     }
 
     &_level {
@@ -99,11 +75,6 @@
         left: .6vw;
         bottom: 10px;
 
-        @include mq (xlarge,max) {
-            left: 4vw;
-            bottom: 12px;
-        }
-
         span {
             width: 4px;
             height: 6px;
@@ -112,9 +83,9 @@
         }
     }
 
-    &_design { background-image: url( /assets/top/badge_01.svg );}
-    &_dev { background-image: url( /assets/top/badge_02.svg );}
-    &_direction { background-image: url( /assets/top/badge_03.svg );}
+    &_design { background-image: url( '/assets/top/badge_01.svg' );}
+    &_dev { background-image: url( '/assets/top/badge_02.svg' );}
+    &_direction { background-image: url( '/assets/top/badge_03.svg' );}
 
     &_active {
         background-image: linear-gradient( #232a8b, #0b1940 );
@@ -129,6 +100,111 @@
     @for $i from 1 through 6 {
         .#{ $levelStatus }_#{ $i } span:nth-child(-n+#{ $i }) {
             background: #f0ff00;
+        }
+    }
+}
+
+// Works page Specific
+.works_detail .badges {
+
+    width: auto;
+    z-index: 2;
+
+    @include mq (medium,max) { width: 100%;}
+
+    & + p {
+        line-height: 1.6;
+        margin-left: 3.45vw;
+        z-index: 2;
+
+        @include mq (medium,max) {
+            margin: 1.6em 0 0;
+        }
+    }
+
+    ol {
+        justify-content: flex-start;
+
+        @include mq (medium,max) {
+            flex-direction: row;
+        }
+    }
+
+    &_item {
+        width: 5vw;
+        min-width: 72px;
+        height: 5.5vw;
+        min-height: 80px;
+        margin-right: 10px;
+
+        @include mq (medium,max) {
+            width: 33%;
+            margin: 0 2.33333% 0 0;
+            height: 7.6em;
+        }
+
+        &:last-child { margin: 0;}
+    }
+
+    &_ch {
+        @include mq (medium,max) {
+            margin: 2em 0 0 1.65em;
+        }
+    }
+
+    &_level {
+        @include mq (medium,max) {
+            left: .8em;
+        }
+    }
+
+    &::before { left: -4px;}
+    &::after { right: -4px;}
+}
+
+// Top page Specific
+.grid_desc_down .badges {
+
+    ol {
+        @include mq (xlarge,max) {
+            flex-direction: column;
+        }
+    }
+    &::before {
+        @include mq (xlarge,max) {
+            left: calc( 10% - 4px );
+        }
+    }
+
+    &::after {
+        @include mq (xlarge,max) {
+            right: calc( 10% - 4px );
+        }
+    }
+
+    &_item {
+        @include mq (xlarge,max) {
+            width: 80%;
+            height: 48px;
+            margin: 0 auto 6px;
+            clip-path: polygon(14% 0, 100% 0, 100% 83%, 87% 100%, 0 100%, 0 18%);
+
+            &:last-child {
+                @include mq (xlarge,max) { margin-bottom: 0;}
+            }
+        }
+    }
+
+    &_level {
+        @include mq (xlarge,max) {
+            left: 4vw;
+            bottom: 12px;
+        }
+    }
+
+    &_ch {
+        @include mq (xlarge,max) {
+            margin: 1.2vh 0 0 1.25vw;
         }
     }
 }
