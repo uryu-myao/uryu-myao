@@ -48,64 +48,70 @@ class Dialog {
 
 }
 
-// Works
-if (document.querySelector('#Works')) {
 
-    let info_w01 = document.querySelectorAll('.info_js')[0]
+// Specific
+(function() {
 
-    info_w01.addEventListener('click', function() {
-        var dialog = new Dialog({
-            content:
-            '<p>It is showing how much times that I was spended in the project.<br>Assuming 8 hours per workday I have had :)</p>',
-            buttons: [{
-                text: 'ok',
-                action: function() { dialog.close() }
-            }]
+    // Works
+    if (document.querySelector('#Works')) {
+
+        let info_w01 = document.querySelectorAll('.info_js')[0]
+
+        info_w01.addEventListener('click', function() {
+            var dialog = new Dialog({
+                content:
+                '<p>It is showing how much times that I was spended in the project.<br>Assuming 8 hours per workday I have had :)</p>',
+                buttons: [{
+                    text: 'ok',
+                    action: function() { dialog.close() }
+                }]
+            })
+            dialog.open()
         })
-        dialog.open()
-    })
 
-}
+    }
 
-// About
-if (document.querySelector('#About')) {
+    // About
+    if (document.querySelector('#About')) {
 
-    let info_a01 = document.querySelectorAll('.info_js')[0],
-        info_a02 = document.querySelectorAll('.info_js')[1],
-        info_a03 = document.querySelectorAll('.info_js')[2]
+        let info_a01 = document.querySelectorAll('.info_js')[0],
+            info_a02 = document.querySelectorAll('.info_js')[1],
+            info_a03 = document.querySelectorAll('.info_js')[2]
 
-    info_a01.addEventListener('click', function() {
-        var dialog = new Dialog({
-            content:
-            '<p><a href="https://https://www.econosys.jp/" target="_blank">Econosys Design,Inc</a><br></p>',
-            buttons: [{
-                text: 'ok',
-                action: function() { dialog.close() }
-            }]
+        info_a01.addEventListener('click', function() {
+            var dialog = new Dialog({
+                content:
+                '<p><a href="https://https://www.econosys.jp/" target="_blank">Econosys Design,Inc</a><br></p>',
+                buttons: [{
+                    text: 'ok',
+                    action: function() { dialog.close() }
+                }]
+            })
+            dialog.open()
         })
-        dialog.open()
-    })
-    info_a02.addEventListener('click', function() {
-        var dialog = new Dialog({
-            content:
-            '<p><a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc</a></p>',
-            buttons: [{
-                text: 'ok',
-                action: function() { dialog.close() }
-            }]
+        info_a02.addEventListener('click', function() {
+            var dialog = new Dialog({
+                content:
+                '<p><a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc</a></p>',
+                buttons: [{
+                    text: 'ok',
+                    action: function() { dialog.close() }
+                }]
+            })
+            dialog.open()
         })
-        dialog.open()
-    })
-    info_a03.addEventListener('click', function() {
-        var dialog = new Dialog({
-            content:
-            '<p><a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University</a></p>',
-            buttons: [{
-                text: 'ok',
-                action: function() { dialog.close() }
-            }]
+        info_a03.addEventListener('click', function() {
+            var dialog = new Dialog({
+                content:
+                '<p><a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University</a></p>',
+                buttons: [{
+                    text: 'ok',
+                    action: function() { dialog.close() }
+                }]
+            })
+            dialog.open()
         })
-        dialog.open()
-    })
 
-}
+    }
+
+}())
