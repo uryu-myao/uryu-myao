@@ -126,18 +126,16 @@ p, dt, dd, li, a {
 }
 
 .visual {
-    position: absolute;
     @include center (both);
     z-index: 10;
 }
 
 .entry {
-    position: absolute;
+    @include center (horizontal);
     bottom: calc( 10vh - 10px );
     padding: 1em;
     max-width: 80px;
     width: 10vw;
-    @include center (horizontal);
     background: transparent;
     color: $clr_blue-active;
     font-size: 1.45rem;

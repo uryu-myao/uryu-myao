@@ -246,7 +246,6 @@ a:-webkit-any-link {
 
     &::after {
         content: attr(data-text);
-        position: absolute;
         width: 100%;
         @include center (both);
         z-index: 2;
