@@ -548,19 +548,50 @@ div[data-page='top'] {
     .badges {
         width: 80%;
         margin: 3em auto 0;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all .15s $cb_rush;
 
-        @include mq (xlarge,max) { margin-top: 1em;}
-        @include mq (medium, max) { display: none;}
+        @include mq (xlarge, max) {
+            margin-top: 1em;
+        }
+
+        @include mq (medium, max) {
+            display: none;
+        }
     }
 
     .btn {
-        width: calc( 100% - 24%);
+        width: calc(100% - 24%);
         bottom: 16%;
         @include center (horizontal);
+        transition: all .3s $cb_rush;
+        transition-delay: .2s;
 
         @include mq (medium, max) {
-            width: calc( 100% - 40px );
+            width: calc(100% - 40px);
             bottom: 20px;
+        }
+    }
+
+    li {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    // Slider controling
+    li.current {
+        visibility: visible;
+
+        .badges {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .btn {
+            opacity: 1;
         }
     }
 }
@@ -584,9 +615,9 @@ div[data-page='top'] {
     }
 
     picture {
-        transition: all .3s $cb_rush;
         opacity: 0;
         transform: translateY(20px);
+        transition: all .3s $cb_rush;
         transition-delay: .2s;
 
         &:hover {
