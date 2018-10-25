@@ -534,10 +534,8 @@ div[data-page='top'] {
     text-transform: uppercase;
     position: relative;
     background: black;
-    height: 67%;
+    height: 67%; // 33% is up part
     width: 100%;
-    padding: 16% 0 0;
-    box-sizing: border-box;
     margin: 0 auto;
 
     @include mq (medium,max) {
@@ -547,14 +545,17 @@ div[data-page='top'] {
 
     .badges {
         width: 80%;
-        margin: 3em auto 0;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all .15s $cb_rush;
+        margin: 8.5vh auto 0;
+
+        dd { 
+            opacity: 0;
+            transform: translateY(6px);
+            transition: all .2s $cb_rush;
+        }
 
         /* Delay transition */
         @for $i from 1 through 3 {
-            dl:nth-child(#{ $i }) {
+            dd:nth-child(#{ $i }) {
                 transition-delay: $i * .1s;
             }
         }
@@ -570,7 +571,7 @@ div[data-page='top'] {
 
     .btn {
         width: calc(100% - 24%);
-        bottom: 16%;
+        bottom: 5vh;
         @include center (horizontal);
         transition: all .3s $cb_rush;
         transition-delay: .2s;
@@ -592,7 +593,7 @@ div[data-page='top'] {
     li.current {
         visibility: visible;
 
-        .badges {
+        .badges dd {
             transform: translateY(0);
             opacity: 1;
         }
@@ -1109,7 +1110,9 @@ div[data-page='about'] {
     z-index: 2;
 
     @include mq (medium,max) {
-        margin: 8vh 5vw 13vh;
+        margin: 8vh auto 13vh;
+        padding: 0 5vw;
+        box-sizing: border-box;
     }
 
     & > div {
@@ -1190,6 +1193,7 @@ div[data-page='about'] {
 
         @include mq (medium,max) {
             width: 100%;
+            min-width: 100%;
             padding-left: 0;
         }
     }
@@ -1209,7 +1213,6 @@ div[data-page='about'] {
             margin: 0;
             white-space: nowrap;
 
-
             @include mq (medium,max) {
                 font-size: 1.2rem;
                 text-align: center;
@@ -1228,8 +1231,8 @@ div[data-page='about'] {
         right: 2.6em;
 
         @include mq (medium,max) {
-            top: auto;
-            bottom: 1em;
+            top: .5em;
+            right: .6em;
         }
     }
 }

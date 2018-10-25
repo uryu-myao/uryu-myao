@@ -289,7 +289,7 @@ div.info {
     width: 1.4em;
     height: 1.4em;
     display: block;
-    background-image: linear-gradient(#232a8b, #0b1940);
+    background-image: linear-gradient(#2f368d, #11214d);
     border-radius: 2px;
     display: flex;
     justify-content: center;
@@ -314,7 +314,7 @@ div.info {
     &:hover {
       background: $clr_blur-dark;
 
-      p { color: $clr_blue-main;}
+      p { color: #2f368d;}
     }
 
     @include mq (medium,max) {
