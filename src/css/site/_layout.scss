@@ -552,6 +552,13 @@ div[data-page='top'] {
         transform: translateY(10px);
         transition: all .15s $cb_rush;
 
+        /* Delay transition */
+        @for $i from 1 through 3 {
+            dl:nth-child(#{ $i }) {
+                transition-delay: $i * .1s;
+            }
+        }
+
         @include mq (xlarge, max) {
             margin-top: 1em;
         }

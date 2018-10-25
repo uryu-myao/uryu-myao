@@ -234,8 +234,6 @@
         @include mq (medium,max) {
             margin: 0 0 0 9vw;
         }
-
-
     }
 
     .svg_ins,
@@ -254,10 +252,10 @@
     }
 
     /* Delay transition
-     * when menu has 6 items
+     * whether if menu has 6 items
      */
     @for $i from 1 through 6 {
-    .overlay_list > li:nth-child(#{ $i }) {
+        .overlay_list > li:nth-child(#{ $i }) {
             transition-delay: $i * .04s;
         }
     }
