@@ -287,12 +287,15 @@ div.info {
     position: absolute;
     width: 1.4em;
     height: 1.4em;
+    padding-top: 1px;
     display: block;
     background-image: linear-gradient(#2f368d, #11214d);
-    border-radius: 2px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
     transition: all .15s $cb_rush;
 
     p {
@@ -311,9 +314,9 @@ div.info {
     }
 
     &:hover {
-      background: $clr_blur-dark;
-
-      p { color: #2f368d;}
+        color: $clr_blue-main;
+        background: $clr_blur-dark;
+        border: 1px solid $clr_blue-main;
     }
 
     @include mq (medium,max) {

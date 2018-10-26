@@ -750,7 +750,7 @@ div[data-page='about'] {
         font-family: $txt_code;
         font-size: 1.78rem;
         text-transform: uppercase;
-        letter-spacing: .25em;
+        letter-spacing: .18em;
         margin-left: 5vw;
 
         @include mq (medium,max) {
@@ -1031,14 +1031,14 @@ div[data-page='about'] {
     h1 {
         & > span,
         span {
+            color: $clr_grey-light;
             font-family: $txt_cond;
             font-size: 1.25rem;
             font-weight: normal;
-            color: white;
             letter-spacing: .16em;
 
             span {
-                color: #495863;
+                color: white;
             }
         }
 
@@ -1203,7 +1203,7 @@ div[data-page='about'] {
         height: 150px;
 
         p {
-            color: $clr_blue-light;
+            color: $clr_grey-light;
             font-family: $txt_norm;
             font-size: 1.45rem;
             letter-spacing: .095em;
@@ -1274,7 +1274,7 @@ div[data-page='about'] {
         background: rgba( 26, 38, 46, .3);
         width: 86%;
         height: 20vh;
-        margin: 8vh auto 13vh;
+        margin: 4vh auto 13vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1416,6 +1416,19 @@ div[data-page='works'] {
         flex-direction: column;
     }
 
+    .badges {
+        & + p {
+            color: $clr_grey-light;
+            line-height: 1.6;
+            margin-left: 3.45vw;
+            z-index: 2;
+
+            @include mq (medium,max) {
+                margin: 1.6em 0 0;
+            }
+        }
+    }
+
     &_role {
         width: 100%;
 
@@ -1473,7 +1486,8 @@ div[data-page='works'] {
             line-height: 1.8;
             letter-spacing: .16em;
             text-align: justify;
-            color: $clr_blue-light;
+            color: $clr_grey-light;
+            font-weight: bold;
         }
     }
 
@@ -1573,13 +1587,13 @@ div[data-page='works'] {
     }
 
     &_01 {
-        top: 0;
-        left: 0;
+        top: -20px;
+        left: 20px;
         @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
     }
     &_02 {
-        top: -84px;
-        left: 204px;
+        top: -104px;
+        left: 224px;
         @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
     }
     &_03 {

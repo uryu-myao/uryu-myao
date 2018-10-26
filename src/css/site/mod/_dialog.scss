@@ -50,7 +50,7 @@
     .info, main, footer { z-index: 21;}
 
     &_cts {
-        color: white;
+        color: $clr_grey-light;
         text-align: center;
 
         @include mq (medium,max) {
@@ -62,7 +62,9 @@
         position: absolute;
         top: 2.2em;
         right: 2.2em;
+        padding-top: 0;
         background: $clr_blur-dark;
+        border: 1px solid #0f2d69;
 
         p { color: $clr_blue-main;}
 
