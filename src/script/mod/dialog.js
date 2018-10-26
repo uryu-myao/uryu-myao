@@ -45,7 +45,6 @@ class Dialog {
     open() {
         this.$dialog.appendTo('body')
     }
-
 }
 
 
@@ -60,7 +59,7 @@ class Dialog {
         info_w01.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>It is showing how much times that I was spended via the project.</p>',
+                '<p>It is showing how much times that I was spended in the project.</p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
@@ -68,7 +67,6 @@ class Dialog {
             })
             dialog.open()
         })
-
     }
 
     // About
@@ -81,7 +79,7 @@ class Dialog {
         info_a01.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>Award-winning Kyoto-based design and branding firm.<br><a href="https://www.econosys.jp/" target="_blank">Econosys Design,Inc<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a><br></p>',
+                '<p>Award-winning Kyoto-based design and branding firm.<br><a href="https://www.econosys.jp/" target="_blank">Econosys Design,Inc<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
@@ -92,7 +90,7 @@ class Dialog {
         info_a02.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p><a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc</a></p>',
+                '<p>A global software development company in Tokyo.<a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
@@ -103,7 +101,7 @@ class Dialog {
         info_a03.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p><a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University</a></p>',
+                '<p>An art school where I fallen in love with design and a paopao-name bread.<a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
@@ -111,7 +109,5 @@ class Dialog {
             })
             dialog.open()
         })
-
     }
-
 }())

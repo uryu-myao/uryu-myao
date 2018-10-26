@@ -892,16 +892,16 @@ div[data-page='about'] {
     .svg_clr-sns { fill: #568fff;}
 }
 
-.brush {
-    position: relative;
+// .brush {
+//     position: relative;
 
-    &::after {
-        content: url(/assets/about/brush.png);
-        position: absolute;
-        top: -4px;
-        left: -18px;
-    }
-}
+//     &::after {
+//         content: url(/assets/about/brush.png);
+//         position: absolute;
+//         top: -4px;
+//         left: -18px;
+//     }
+// }
 
 .paper {
     width: 65%;
