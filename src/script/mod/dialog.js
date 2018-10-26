@@ -90,7 +90,7 @@ class Dialog {
         info_a02.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>A global software development company in Tokyo.<a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
+                '<p>A global software development company in Tokyo.<br><a href="https://monstar-lab.com/" target="_blank">Monstar lab,Inc<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
@@ -101,7 +101,7 @@ class Dialog {
         info_a03.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>An art school where I fallen in love with design and a paopao-name bread.<a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
+                '<p>An art school where I fallen in love with design.<br><a href="https://http://www.musabi.ac.jp" target="_blank">Musashino Art University<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
