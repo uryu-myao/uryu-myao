@@ -1538,16 +1538,16 @@ div[data-page='works'] {
     }
 
     &_01 {
-         @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
     }
     &_02 {
-         @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
     }
     &_03 {
-         @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
     }
     &_04 {
-         @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
     }
 }
 
@@ -1588,32 +1588,64 @@ div[data-page='works'] {
 
     &_01 {
         top: -20px;
-        left: 20px;
-        @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
+        left: 160px;
     }
     &_02 {
         top: -104px;
-        left: 224px;
-        @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);
+        left: 364px;
     }
     &_03 {
         top: 100px;
         left: 0;
-        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
 
         @include mq (medium,max) { top: 0;}
     }
     &_04 {
         top: -150px;
         left: 216px;
-        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
 
         @include mq (medium,max) { top: -245px;}
     }
     &_05 {
         top: 10px;
         left: 543px;
-        @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);
+    }
+}
+
+.w01 {
+    $work-img: caseImg !default;
+    /* 5 is total picture number */
+    @for $i from 1 through 5 {
+        .#{ $work-img }_0#{ $i }  {
+            @include bg-image (auto, 0, '/assets/works/w01/caseimg_0#{ $i }', png, center, cover, no-repeat);
+        }
+    }
+}
+.w02 {
+    $work-img: caseImg !default;
+    /* 5 is total picture number */
+    @for $i from 1 through 5 {
+        .#{ $work-img }_#{ $i } {
+            @include bg-image (auto, 0, '/assets/works/w02/caseimg_#{ $i }', png, center, cover, no-repeat);
+        }
+    }
+}
+.w03 {
+    $work-img: caseImg !default;
+    /* 5 is total picture number */
+    @for $i from 1 through 5 {
+        .#{ $work-img }_#{ $i } {
+            @include bg-image (auto, 0, '/assets/works/w03/caseimg_#{ $i }', png, center, cover, no-repeat);
+        }
+    }
+}
+.w04 {
+    $work-img: caseImg !default;
+    /* 5 is total picture number */
+    @for $i from 1 through 5 {
+        .#{ $work-img }_#{ $i } {
+            @include bg-image (auto, 0, '/assets/works/w04/caseimg_#{ $i }', png, center, cover, no-repeat);
+        }
     }
 }
 
