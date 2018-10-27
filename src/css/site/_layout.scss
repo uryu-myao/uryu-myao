@@ -1628,51 +1628,41 @@ div[data-page='works'] {
 }
 
 .w01 {
-    $work-img: caseImg !default;
-    /* 5 is total picture number */
-    @for $i from 1 through 5 {
-        .#{ $work-img }_0#{ $i }  {
-            @include bg-image (auto, 0, '/assets/works/w01/caseimg_0#{ $i }', png, center, cover, no-repeat);
-        }
-    }
+    .caseImg_01 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);}
+    .caseImg_02 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);}
+    .caseImg_03 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_03', png, center, cover, no-repeat);}
+    .caseImg_04 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_04', png, center, cover, no-repeat);}
+    .caseImg_05 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_05', png, center, cover, no-repeat);}
 }
 .w02 {
-    $work-img: caseImg !default;
-    /* 5 is total picture number */
-    @for $i from 1 through 5 {
-        .#{ $work-img }_#{ $i } {
-            @include bg-image (auto, 0, '/assets/works/w02/caseimg_#{ $i }', png, center, cover, no-repeat);
-        }
-    }
+    .caseImg_01 { @include bg-image (auto, 0, '/assets/works/w02/caseimg_01', png, center, cover, no-repeat);}
+    .caseImg_02 { @include bg-image (auto, 0, '/assets/works/w02/caseimg_02', png, center, cover, no-repeat);}
+    .caseImg_03 { @include bg-image (auto, 0, '/assets/works/w02/caseimg_03', png, center, cover, no-repeat);}
+    .caseImg_04 { @include bg-image (auto, 0, '/assets/works/w02/caseimg_04', png, center, cover, no-repeat);}
+    .caseImg_05 { @include bg-image (auto, 0, '/assets/works/w02/caseimg_05', png, center, cover, no-repeat);}
 }
 .w03 {
-    $work-img: caseImg !default;
-    /* 5 is total picture number */
-    @for $i from 1 through 5 {
-        .#{ $work-img }_#{ $i } {
-            @include bg-image (auto, 0, '/assets/works/w03/caseimg_#{ $i }', png, center, cover, no-repeat);
-        }
-    }
+    .caseImg_01 { @include bg-image (auto, 0, '/assets/works/w03/caseimg_01', png, center, cover, no-repeat);}
+    .caseImg_02 { @include bg-image (auto, 0, '/assets/works/w03/caseimg_02', png, center, cover, no-repeat);}
+    .caseImg_03 { @include bg-image (auto, 0, '/assets/works/w03/caseimg_03', png, center, cover, no-repeat);}
+    .caseImg_04 { @include bg-image (auto, 0, '/assets/works/w03/caseimg_04', png, center, cover, no-repeat);}
+    .caseImg_05 { @include bg-image (auto, 0, '/assets/works/w03/caseimg_05', png, center, cover, no-repeat);}
 }
 .w04 {
-    $work-img: caseImg !default;
-    /* 5 is total picture number */
-    @for $i from 1 through 5 {
-        .#{ $work-img }_#{ $i } {
-            @include bg-image (auto, 0, '/assets/works/w04/caseimg_#{ $i }', png, center, cover, no-repeat);
-        }
-    }
+    .caseImg_01 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_01', png, center, cover, no-repeat);}
+    .caseImg_02 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_02', png, center, cover, no-repeat);}
+    .caseImg_03 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_03', png, center, cover, no-repeat);}
+    .caseImg_04 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_04', png, center, cover, no-repeat);}
+    .caseImg_05 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_05', png, center, cover, no-repeat);}
 }
 
 .caseSP {
     margin: 18vh 0 0 4vw;
-
     figure { width: 200px;}
 }
 
 .casePC {
     margin: -5vh 0 0 4vw;
-
     figure { width: 400px;}
 }
 
