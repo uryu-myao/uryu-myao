@@ -59,7 +59,7 @@ class Dialog {
         info_w01.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>It is showing how much times that I was spended in the project.</p>',
+                '<p>Arrage assigned time per month in the project.</p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
