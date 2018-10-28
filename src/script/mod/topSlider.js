@@ -13,7 +13,7 @@
         let items = item.querySelectorAll('li'),
             current = 0,
             autoUpdate = true,
-            timeTrans = 5000
+            timeTrans = 6000
 
         // Define main visual
         let thm = document.querySelector('.grid_thum'),

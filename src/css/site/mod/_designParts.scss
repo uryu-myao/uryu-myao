@@ -11,6 +11,82 @@ a:-webkit-any-link {
 // }
 
 
+.logo {
+    @include center (both);
+    display: flex;
+
+    &_svg {
+        width: 48px;
+        height: 68px;
+
+        polygon {fill:#142247;}
+    }
+
+    &_txt {
+        margin: 0 0 0 4px;
+        svg { fill: #364f96;}
+    }
+}
+
+div[data-page='top'] .logo {
+    &_svg {
+        polygon:nth-child(2),
+        polygon:nth-child(3),
+        polygon:nth-child(4),
+        polygon:nth-child(5),
+        polygon:nth-child(6),
+        polygon:nth-child(7),
+        polygon:nth-child(8),
+        polygon:nth-child(10),
+        polygon:nth-child(11),
+        polygon:nth-child(19),
+        polygon:nth-child(20),
+        polygon:nth-child(21)
+        {
+            fill:$clr_blue-active;
+            animation: logoEffect 6s steps(10) infinite; 
+        }
+    }
+}
+div[data-page='works'] .logo {
+    &_svg {
+        polygon:nth-child(2),
+        polygon:nth-child(3),
+        polygon:nth-child(7),
+        polygon:nth-child(11),
+        polygon:nth-child(12),
+        polygon:nth-child(13),
+        polygon:nth-child(15),
+        polygon:nth-child(16),
+        polygon:nth-child(18)
+        {
+            fill:$clr_blue-active;
+            animation: logoEffect 6s steps(10) infinite; 
+        }
+    }
+}
+div[data-page='about'] .logo {
+    &_svg {
+        polygon:nth-child(1),
+        polygon:nth-child(2),
+        polygon:nth-child(3),
+        polygon:nth-child(4),
+        polygon:nth-child(5),
+        polygon:nth-child(6),
+        polygon:nth-child(9),
+        polygon:nth-child(10),
+        polygon:nth-child(11),
+        polygon:nth-child(12),
+        polygon:nth-child(13),
+        polygon:nth-child(14),
+        polygon:nth-child(17),
+        polygon:nth-child(19)
+        {
+            fill:$clr_blue-active;
+            animation: logoEffect 6s steps(10) infinite; 
+        }
+    }
+}
 
 /** ANIMATION BANNER
  */

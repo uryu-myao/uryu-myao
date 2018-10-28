@@ -26,13 +26,12 @@
                 <!-- ** Menu in macro ** -->
                 {% import 'menu.njk' as menu %}
                 {{ menu.current('top') }}
-
-                <div id="logo">
-                    <h1>logo</h1>
-                </div>
+                
+                {% include 'logo.njk'%}
 
                 <figure class="earth"><picture></picture></figure>
                 <figure class="mars"><picture></picture></figure>
+                <div class"star01"></div>
 
                 <p class="cr">© {{ basic.sitename }} 2018</p>
             </div> <!-- .grid_aside_inner-->

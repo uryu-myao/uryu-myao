@@ -281,3 +281,44 @@
 	    opacity: 1;
   }
 }
+
+
+@keyframes logoEffect {
+    0% {
+        fill:#142247;
+    }
+    1% {
+        transform: translate3d(1px,1px,1px);
+        fill: $clr_blue-active;
+    }
+    2% {
+        transform: translate3d(-1px,-1px,-1px);
+        fill:#142247;
+    }
+    3% {
+        transform: translate3d(1px,1px,1px);
+        fill: $clr_blue-active;
+    }
+    4% {
+        transform: translate3d(0,0,0);
+        fill:#142247;
+    }
+    5% {
+        fill: $clr_blue-active;
+    }
+    10% {
+        fill: $clr_blue-active;
+    }
+    70% {
+        fill: $clr_blue-active;
+    }
+    80% {
+        fill: $clr_blue-active;
+    }
+    90% {
+        fill: $clr_blue-active;
+    }
+    100% {
+        fill:#142247;
+    }
+}

@@ -274,12 +274,6 @@ div[data-page='works']
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 div[data-page='top'] {
     overflow: hidden;
-
-    #logo {
-        color: $clr_red;
-        z-index: 2;
-        @include center (both);
-    }
 }
 
 // aside
@@ -355,6 +349,18 @@ div[data-page='top'] {
         right: 100%;
     }
 }
+
+.star01 {
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: rgb(227, 218, 245);
+    bottom: 300px;
+    left: 3vw;
+}
+
 
 // Current show
 .grid_thum {
