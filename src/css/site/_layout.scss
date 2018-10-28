@@ -492,7 +492,25 @@ div[data-page='top'] {
         visibility: hidden;
     }
 
+    div { 
+        position: relative;
+
+        &::after {
+            @include center (vertical);
+            right: -.2em;
+            font-size: 10.5rem;
+            font-family: $txt_cond;
+            font-weight: bold;
+            text-align: right;
+            color: #0c1625;
+            transition: all .2s $cb_rush;
+            opacity: 0;
+            z-index: 1;
+        }
+    }
+
     h2 {
+        position: relative;
         font-family: $txt_cond;
         font-size: 1.89rem;
         letter-spacing: .16em;
@@ -503,21 +521,24 @@ div[data-page='top'] {
         opacity: 0;
         transition: all .4s $cb_rush;
         transition-delay: .5s;
+        z-index: 2;
     }
 
     p {
+        position: relative;
         color: $clr_blue-main;
         font-family: $txt_code;
         font-size: 1rem;
         font-weight: bold;
         letter-spacing: .18em;
-        margin: 1.8em auto 0;
+        margin: 1.15em auto 0;
         text-transform: capitalize;
         white-space: nowrap;
         overflow: hidden;
         opacity: 0;
         transition: all .5s $cb_rush;
         transition-delay: .65s;
+        z-index: 2;
 
         @include mq (medium, max) {
             margin-top: .8em;
@@ -528,11 +549,14 @@ div[data-page='top'] {
     li.current {
         visibility: visible;
 
-        h2 { opacity: 1;}
-
-        p { opacity: 1;}
+        h2, p, div::after { opacity: 1;}
     }
 }
+
+.ttl_w01::after { content: '1';}
+.ttl_w02::after { content: '2';}
+.ttl_w03::after { content: '3';}
+.ttl_w04::after { content: '4';}
 
 .grid_desc_down {
     text-transform: uppercase;
@@ -1602,7 +1626,7 @@ div[data-page='works'] {
     }
 
     picture {
-        height: 300px;
+        height: 310px;
         position: absolute;
         display: block;
         transform: rotate(-35deg) skew(29deg, 13deg);
@@ -1614,8 +1638,8 @@ div[data-page='works'] {
         left: 200px;
     }
     &_02 {
-        top: -134px;
-        left: 404px;
+        top: -130px;
+        left: 398px;
     }
     &_03 {
         top: 100px;
@@ -1623,13 +1647,13 @@ div[data-page='works'] {
         @include mq (medium,max) { top: 0;}
     }
     &_04 {
-        top: -150px;
-        left: 216px;
+        top: -146px;
+        left: 206px;
         @include mq (medium,max) { top: -245px;}
     }
     &_05 {
-        top: 10px;
-        left: 543px;
+        top: 14px;
+        left: 533px;
     }
 }
 
