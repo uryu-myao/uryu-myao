@@ -32,7 +32,7 @@ p, dt, dd, li, a {
     overflow: hidden;
     box-sizing: border-box;
     z-index: 999;
-    transition: all .5s $cb_rush;
+    transition: all 2.5s $cb_rush;
 
     & > div {
         position: relative;
@@ -53,19 +53,43 @@ p, dt, dd, li, a {
             z-index: 3;
         }
     }
-}
 
-@keyframes noise {
-    0%, 100% { background-position: 0 0;}
-    10% { background-position: -5% -10%;}
-    20% { background-position: -15% 5%;}
-    30% { background-position: 7% -25%;}
-    40% { background-position: 20% 25%;}
-    50% { background-position: -25% 10%;}
-    60% { background-position: 15% 5%;}
-    70% { background-position: 0% 15%;}
-    80% { background-position: 25% 35%;}
-    90% { background-position: -10% 10%;}
+    &_ttl {
+        @include center (both);
+        margin: -1.1555em 0 0;
+        z-index: 10;
+
+        p {
+            font-family: $txt_cond;
+            text-transform: uppercase;
+        }
+
+        & > p {
+            margin: 0;
+            color: rgb(32, 2, 2);
+            font-size: 15rem;
+            font-weight: bold;
+            letter-spacing: .05em;   
+            opacity: 0;
+            transition: all 2.5s $cb_rush;
+        }
+    }
+
+    &_name {
+        overflow: hidden;
+
+        p {
+            margin: 0;
+            text-align: center;
+            color: white;
+            font-size: 2.65rem;
+            letter-spacing: .04em;
+            font-weight: normal;
+            transform: translate3d( 0, 100%, 0);
+            transition: all 1.5s $cb_rush;
+            transition-delay: .4s;
+        }
+    }
 }
 
 .loadingline {
@@ -114,7 +138,7 @@ p, dt, dd, li, a {
 }
 
 .shield {
-    width: calc( 100% );
+    width: 100%;
     height: 0;
     position: absolute;
     background: $clr_dark;
@@ -130,7 +154,7 @@ p, dt, dd, li, a {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 20;
 
     & > div {
         margin: 0 5px;
@@ -138,7 +162,6 @@ p, dt, dd, li, a {
         transition: all 1s $cb_rush;
     }
     
-    /* Delay transition */
     @for $i from 1 through 4 {
         & > div:nth-child(#{ $i }) {
             transition-delay: $i * .08s;
@@ -146,9 +169,42 @@ p, dt, dd, li, a {
     }
 }
 
+.logo { 
+    &_svg {
+        polygon {
+            fill:#142247;
+            transition: all .5s $cb_rush;
+        }
+
+    }
+}
+.visual_on > div:nth-child(1) .logo {
+    &_svg polygon {
+        transition-delay: .5s;
+    }
+}
+.visual_on > div:nth-child(2) .logo {
+    &_svg polygon {
+        transition-delay: .9s;
+    }
+}
+.visual_on > div:nth-child(3) .logo {
+    &_svg polygon {
+        transition-delay: .7s;
+    }
+}
+.visual_on > div:nth-child(4) .logo {
+    &_svg {
+        animation: logoEffect 3s steps(10) infinite; 
+        polygon {
+            transition-delay: 1.4s;
+        }
+    }
+}
+
 .entry {
     @include center (horizontal);
-    bottom: calc( 10vh - 10px );
+    bottom: calc( 30vh - 10px );
     padding: 1em;
     max-width: 80px;
     width: 10vw;
@@ -185,9 +241,9 @@ p, dt, dd, li, a {
     .shield { height: calc( 50vh - 20px );}
 }
 
-// Top loaded
+// loaded
 .loaded {
-    background: rgba(0,0,0,.92);
+    background: rgba(0,0,0,.95);
 
     .loadingline {
         width: 100%;
@@ -200,11 +256,17 @@ p, dt, dd, li, a {
             &::before, &::after { opacity: 1;}
         }
     }
+    
+    .preload_ttl {
+        & > p { opacity: 1;}
+    }
+
+    .preload_name {
+        p { transform: translate3d( 0, 0%, 0);}
+    }
 
     .visual {
-        & > div {
-            opacity: 1;
-        }
+        & > div { opacity: 1;}
     }
 }
 
@@ -404,7 +466,6 @@ div[data-page='top'] {
 
     a {
         z-index: 2;
-
         // &:hover {
         //     filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
         // }
@@ -519,6 +580,7 @@ div[data-page='top'] {
 
         &::after {
             @include center (vertical);
+            display: block;
             right: -.2em;
             font-size: 10.5rem;
             font-family: $txt_cond;
@@ -611,7 +673,7 @@ div[data-page='top'] {
         }
 
         @include mq (xlarge, max) {
-            margin-top: 1em;
+            margin-top: 3.65em;
         }
 
         @include mq (medium, max) {

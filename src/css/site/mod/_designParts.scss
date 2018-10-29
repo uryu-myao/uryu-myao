@@ -10,17 +10,19 @@ a:-webkit-any-link {
 //     cursor: url('/assets/common/cursor.gif') 2 2, auto !important;
 // }
 
-
+// Logo
 .logo {
     &_svg {
         width: 48px;
         height: 68px;
-
-        polygon {fill:#142247;}
+        
+        polygon { 
+            fill:#142247;
+        }
     }
 
     &_txt {
-        visibility: hidden;
+        display: none;
         margin: 3px 0 0 4px;
         svg { fill:#1d3169;}
     }
@@ -31,12 +33,17 @@ a:-webkit-any-link {
         @include center (both);
         display: flex;
 
-        &_txt {
-            visibility: visible;
+        &_txt { display: block;}
+
+        &_svg {
+            animation: logoEffect 6s steps(10) infinite; 
         }
     }
 }
-
+// Logo on Preload viusal 
+.visual_on > div:nth-child(1) .logo,
+.visual_on > div:nth-child(4) .logo,
+// Logo on Aside
 .U .logo {
     &_svg {
         polygon:nth-child(2),
@@ -53,10 +60,12 @@ a:-webkit-any-link {
         polygon:nth-child(21)
         {
             fill:$clr_blue-active;
-            animation: logoEffect 6s steps(10) infinite; 
         }
     }
 }
+// Logo on Preload viusal
+.visual_on > div:nth-child(2) .logo,
+// Logo on Aside
 .R .logo {
     &_svg {
         polygon:nth-child(2),
@@ -70,10 +79,12 @@ a:-webkit-any-link {
         polygon:nth-child(18)
         {
             fill:$clr_blue-active;
-            animation: logoEffect 6s steps(10) infinite; 
         }
     }
 }
+// Logo on Preload viusal
+.visual_on > div:nth-child(3) .logo,
+// Logo on Aside
 .Y .logo {
     &_svg {
         polygon:nth-child(1),
@@ -92,7 +103,6 @@ a:-webkit-any-link {
         polygon:nth-child(19)
         {
             fill:$clr_blue-active;
-            animation: logoEffect 6s steps(10) infinite; 
         }
     }
 }

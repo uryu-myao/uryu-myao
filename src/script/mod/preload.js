@@ -3,8 +3,9 @@
 
         let preload = document.querySelector('#Preload'),
             entryBtn = document.querySelector('.entry'),
-            entryLetters = ['.e1','.e2','.e3','.e4','.e5']
-
+            entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
+            entryVisual = document.querySelector('.visual')
+            
         let bindLoadingAnimation = function() {
             // Cyberline motion in CSS
             preload.classList.remove('loading');
@@ -17,7 +18,10 @@
                     { opacity: 0 },
                     { opacity: 1 }, .2
                 )
-            }
+            };
+
+            // Logo trun on
+            entryVisual.classList.add('visual_on')
         };
 
         let bindEntringAnimaion = function () {
@@ -36,7 +40,7 @@
             );
 
             // Whole Preload fade out
-            TweenMax.delayedCall( .8, bgFadeOut );
+            TweenMax.delayedCall( .6, bgFadeOut );
 
             function bgFadeOut() {
                 TweenMax.set( preload,
