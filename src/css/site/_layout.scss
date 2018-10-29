@@ -1788,15 +1788,18 @@ div[data-page='works'] {
 div[data-page='404'] {
     color: white;
     position: relative;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
 
     main > * { position: absolute;}
     picture { display: block;}
 }
 
 .p_404 {
-    top: 10vh;
+    top: 18vh;
     @include center( horizontal );
-    color: $clr_blue-grey;
+    color: white;
 
     h1 {
         font-size: 14rem;
@@ -1807,8 +1810,10 @@ div[data-page='404'] {
 
     p {
         font-size: 1.65rem;
+        font-family: $txt_cond;
         font-weight: bold;
         line-height: 1;
+        text-transform: uppercase;
         letter-spacing: .2rem;
         text-align: center;
 
@@ -1822,43 +1827,14 @@ div[data-page='404'] {
 }
 
 .screen_404 {
-    width: 200px;
-    left: 4vw;
-    bottom: 10vh;
-    box-shadow: 0px 0px 10px white;
-    animation: screen_flash 1s infinite 0s linear;
-
+    width: 350px;
+    @include center (horizontal);
+    bottom: 20vh;
+    
     picture {
         display: block;
         height: 200px;
+        animation: vibration 2s infinite linear;
         @include bg-image (auto, 0, '/assets/404/screen', png, center, cover, no-repeat);
-    }
-}
-
-.plant_404 {
-    width: 400px;
-    right: 0;
-    bottom: 0;
-    animation: floating 1s infinite 0s linear;
-
-    picture {
-        height: 200px;
-        @include bg-image (auto, 0, '/assets/404/plant', png, center, cover, no-repeat);
-    }
-}
-
-@keyframes screen_flash {
-    0% { box-shadow: 0px 0px 10px white;}
-    100% { box-shadow: 0px 0px 10px white;}
-}
-
-@keyframes floating {
-    0% {
-        top: 1px;
-        left: 1vw;
-    }
-    100% {
-        top: 1px;
-        left: 1vw;
     }
 }
