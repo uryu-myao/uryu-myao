@@ -29,6 +29,7 @@
         text-transform: uppercase;
         line-height: 3.4;
         letter-spacing: .16em;
+        animation: vibration 2s linear infinite;
 
         &:hover {
             animation: button_hover .25s 0s linear forwards;

@@ -52,7 +52,7 @@ class Dialog {
 (function() {
 
     // Works
-    if (document.querySelector('#Works')) {
+    if (document.querySelector('.info_js')) {
 
         let info_w01 = document.querySelectorAll('.info_js')[0]
 

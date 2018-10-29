@@ -12,9 +12,6 @@ a:-webkit-any-link {
 
 
 .logo {
-    @include center (both);
-    display: flex;
-
     &_svg {
         width: 48px;
         height: 68px;
@@ -23,12 +20,24 @@ a:-webkit-any-link {
     }
 
     &_txt {
+        visibility: hidden;
         margin: 3px 0 0 4px;
         svg { fill:#1d3169;}
     }
 }
 
-div[data-page='top'] .logo {
+.grid_aside {
+    .logo {
+        @include center (both);
+        display: flex;
+
+        &_txt {
+            visibility: visible;
+        }
+    }
+}
+
+.U .logo {
     &_svg {
         polygon:nth-child(2),
         polygon:nth-child(3),
@@ -48,7 +57,7 @@ div[data-page='top'] .logo {
         }
     }
 }
-div[data-page='works'] .logo {
+.R .logo {
     &_svg {
         polygon:nth-child(2),
         polygon:nth-child(3),
@@ -65,7 +74,7 @@ div[data-page='works'] .logo {
         }
     }
 }
-div[data-page='about'] .logo {
+.Y .logo {
     &_svg {
         polygon:nth-child(1),
         polygon:nth-child(2),
