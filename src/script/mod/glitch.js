@@ -13,7 +13,7 @@ $(function(){
     if ($glitchPic) {
         $glitchPic.mgGlitch({
             // set 'true' to stop the plugin
-    			  destroy : false,
+    		destroy : false,
             // set 'false' to stop glitching
             glitch: true,
             // set 'false' to stop scaling
@@ -30,6 +30,6 @@ $(function(){
             glitch2TimeMin : 800,
             // set max time for glitch 2 elem
             glitch2TimeMax : 1000,
-    	  })
+    	})
     }
 });
