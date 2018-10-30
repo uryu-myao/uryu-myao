@@ -46,7 +46,7 @@
                 TweenMax.set( preload,
                     { opacity: 1, display:"block" }
                 );
-                TweenMax.to( preload, 2,
+                TweenMax.to( preload, 1,
                     { ease: Circ.easeOut, opacity: 0, display:"none" }
                 )
             }

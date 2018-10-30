@@ -102,8 +102,8 @@
     transition: all .2s $cb_rush;
 
     @include mq (medium,max) {
-        width: 190%;
-        left: -190%;
+        width: 220%;
+        left: -220%;
         padding: 0 0 0 18.5vw;
         box-sizing: border-box;
     }

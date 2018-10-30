@@ -1,12 +1,14 @@
 $(function () {
+    
+    let $asyncContent = $('#container');
 
     $.pjax({
-        area: '#container', // 遷移するエリアを指定
-        link: '.async', // イベント発火のターゲットを指定できる
+        area: '#container',
+        link: '.async',
         ajax: {
             timeout: 3000
-        }, // 読み込みにこれ以上かかる場合は通常遷移
-        wait: function () { // エフェクト分の待ち時間を作る(関数可)
+        },
+        wait: function () {
             var wScr = $(window).scrollTop();
             if (wScr) {
                 return 800;
@@ -14,7 +16,22 @@ $(function () {
                 return 400;
             }
         }
-    })
+    });
+
+    if ($asyncContent) {
+        $(document).on('pjax:fetch', function() {
+            $asyncContent.animate({
+                'left' : '-10px',
+                'opacity' : 0
+            }, 500);
+        });
+        $(document).on('pjax:render', function() {
+            $asyncContent.animate({
+                'left': 0,
+                'opacity': 1
+            }, 500);
+        });
+    }
 
 });
 

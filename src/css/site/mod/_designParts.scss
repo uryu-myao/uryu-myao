@@ -17,6 +17,11 @@ a:-webkit-any-link {
     &_svg {
         width: 48px;
         height: 68px;
+     
+        @include mq (medium,max) {
+            width: 42px;
+            height: 60px;
+        }
         
         polygon { 
             fill:#142247;
@@ -275,15 +280,18 @@ a:-webkit-any-link {
 /** BGM switch Bottom
  */
 .BGM {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    bottom: 20px;
-    right: calc( 2.1% / 2 + 3px);
-    @include clr-opacity ( $clr_blue-main, .35 );
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
     z-index: 2;
 
     & > div {
+        width: 32px;
+        height: 32px;
+        margin-top: 5em;
+        @include clr-opacity ( $clr_blue-main, .35 );
         position: relative;
     }
     span {
@@ -291,7 +299,7 @@ a:-webkit-any-link {
         width: 2px;
         background: $clr_blue-active;
         display: block;
-        bottom: -22px;
+        bottom: 9px;
         height: 1px;
 
         animation: spectrum 0ms -800ms linear infinite alternate;
@@ -304,7 +312,17 @@ a:-webkit-any-link {
     }
 
     @include mq (medium,max) {
-        top: 6.8vw;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > div {
+            margin: 0 20px 0 0;
+        }
     }
 }
 

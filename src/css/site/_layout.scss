@@ -231,6 +231,7 @@ p, dt, dd, li, a {
 
     @include mq (medium, max) {
         width: 22vw;
+        bottom: 6em;
     }
 }
 
@@ -1139,7 +1140,7 @@ div[data-page='about'] {
     overflow: hidden;
 
     @include mq (medium,max) {
-        padding: 9.5em 0 12em;
+        padding: 9.5em 0 1.1em;
     }
 
     h1 {

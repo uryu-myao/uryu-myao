@@ -444,3 +444,13 @@
         fill:#142247;
     }
 }
+
+@keyframes async_on {
+  0% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@keyframes async_off {
+  0% { opacity: 1;}
+  100% { opacity: 0;}
+}
