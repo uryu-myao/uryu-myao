@@ -96,6 +96,7 @@ gulp.task('sass', function() {
 
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('dist'))
     .pipe(bs.reload({ stream: true }))
 });
