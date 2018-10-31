@@ -369,13 +369,13 @@ div[data-page='top'] {
     height: 62px;
     bottom: 200px;
     right: -62px;
-    animation: plantrail 30s 1s linear infinite;
+    animation: plantrail 40s 1s linear infinite;
 
     @include mq (medium,max) {
         width: 38px;
         height: 38px;
         bottom: 14vh;
-        animation: plantrail-sp 30s 1s linear infinite;
+        animation: plantrail-sp 40s 1s linear infinite;
     }
 
     picture {
@@ -674,7 +674,7 @@ div[data-page='top'] {
         }
 
         @include mq (xlarge, max) {
-            margin-top: 3.65em;
+            margin-top: 3.6vh;
         }
 
         @include mq (medium, max) {
@@ -684,7 +684,7 @@ div[data-page='top'] {
 
     .btn {
         width: calc(100% - 24%);
-        bottom: 5vh;
+        bottom: 3.8vh;
         @include center (horizontal);
         transition: all .3s $cb_rush;
         transition-delay: .2s;
