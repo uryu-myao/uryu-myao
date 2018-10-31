@@ -1,5 +1,7 @@
 (function() {
+
     const Menu = (function() {
+        
         let menu = document.querySelector('.menu'),
             overlay = document.querySelector('.overlay'),
             navItem = document.querySelectorAll('.overlay_item')

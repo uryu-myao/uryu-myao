@@ -29,6 +29,5 @@ const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');
 const slider = require('./mod/topSlider.js');
 const preload = require('./mod/preload.js');
-const dom = require('./mod/dom.js');
 const menu = require('./mod/menu.js');
 // const ajax = require('./mod/pjaxCustom.js');
