@@ -78,13 +78,13 @@ gulp.task('njk', function() {
 gulp.task('sass', function() {
     return gulp.src(paths.srcSASS)
 
+    .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: 'expanded'
         // style：nested, compact, expanded, compressed
     }))
-    .pipe(sourcemaps.init())
+    
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(sourcemaps.write({includeContent: false}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
         autoprefixer({
@@ -95,8 +95,8 @@ gulp.task('sass', function() {
     ]))
 
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write('.')) 
     .pipe(cleanCSS())
+    .pipe(sourcemaps.write('.')) 
     .pipe(gulp.dest('dist'))
     .pipe(bs.reload({ stream: true }))
 });
@@ -117,8 +117,8 @@ gulp.task('js', function() {
         .pipe(source('app.js'))
         .pipe(rename({ suffix: ".bundle" }))
         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-        // .pipe(sourcemaps.init({loadMaps: true}))
-        // .pipe(sourcemaps.write())
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('src/script'));
 });
 
@@ -136,16 +136,16 @@ gulp.task('minjs', ['js'], function() {
 
 // Minify assets
 
-gulp.task('img', () =>
+gulp.task('img', function () { 
     gulp.src(paths.srcIMG)
-        .pipe(imagemin({
-            interlaced: true,
-            progressive: true,
-            optimizationLevel: 5,
-            svgoPlugins: [{removeViewBox: true}]
-        }))
-        .pipe(gulp.dest('dist/assets'))
-);
+        .pipe(imagemin())
+        //     interlaced: true,
+        //     progressive: true,
+        //     optimizationLevel: 5,
+        //     svgoPlugins: [{removeViewBox: true}]
+        // }))
+        .pipe(gulp.dest('dist/assets/'))
+});
 
 
 //  Transfer font files
