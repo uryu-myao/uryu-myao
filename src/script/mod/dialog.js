@@ -51,7 +51,7 @@ class Dialog {
 // Specific
 (function() {
 
-    // Works
+    // dialog specific on Work pages
     if (document.querySelector('.w2018')) {
 
         let info_w01 = document.querySelectorAll('.info_js')[0]
@@ -69,7 +69,7 @@ class Dialog {
         })
     }
 
-    // About
+    // dialog specific on About pages
     if (document.querySelector('#About')) {
 
         let info_a01 = document.querySelectorAll('.info_js')[0],
@@ -110,4 +110,5 @@ class Dialog {
             dialog.open()
         })
     }
-}())
+    
+}());

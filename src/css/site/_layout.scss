@@ -523,7 +523,7 @@ div[data-page='top'] {
         visibility: visible;
 
         picture {
-            animation: glitchSwift 2s linear forwards;
+            animation: glitchSwift 2.2s linear forwards;
         }
     }
 
@@ -1063,7 +1063,7 @@ div[data-page='about'] {
     picture {
         display: inline-block;
         position: relative;
-        height: calc( 660px + 13vw );
+        height: calc( 660px + 18vw );
         @include bg-image (auto, 0, '/assets/about/paper', png, center, cover, no-repeat);
 
         &::before {

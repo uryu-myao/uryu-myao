@@ -9,6 +9,7 @@ const postcss        = require("gulp-postcss"); // Pipe CSS
 const cleanCSS       = require('gulp-clean-css'); // minfy CSS
 const autoprefixer   = require("autoprefixer"); // complement CSS prefixer
 const source         = require('vinyl-source-stream');　//　change vinyl to Stream
+const plumber        = require('gulp-plumber');
 const minify         = require('gulp-minify'); //　minify JS
 const browserify     = require('browserify'); // require JS module
 const sourcemaps     = require('gulp-sourcemaps');
@@ -69,7 +70,7 @@ gulp.task('njk', function() {
         path: ['src/_templates']
     }))
     .pipe(gulp.dest('dist'))
-    .pipe(bs.reload({ stream: true }))
+    .pipe(bs.reload({ stream: true }));
 });
 
 
@@ -77,14 +78,14 @@ gulp.task('njk', function() {
 
 gulp.task('sass', function() {
     return gulp.src(paths.srcSASS)
-
-    .pipe(sourcemaps.init())
+    
     .pipe(sass({
         outputStyle: 'expanded'
         // style：nested, compact, expanded, compressed
     }))
     
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(plumber())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
         autoprefixer({
@@ -98,7 +99,7 @@ gulp.task('sass', function() {
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('.')) 
     .pipe(gulp.dest('dist'))
-    .pipe(bs.reload({ stream: true }))
+    .pipe(bs.reload({ stream: true }));
 });
 
 
@@ -114,6 +115,7 @@ gulp.task('js', function() {
       });
 
     return bs.bundle()
+        .pipe(plumber())
         .pipe(source('app.js'))
         .pipe(rename({ suffix: ".bundle" }))
         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
@@ -144,7 +146,7 @@ gulp.task('img', function () {
         //     optimizationLevel: 5,
         //     svgoPlugins: [{removeViewBox: true}]
         // }))
-        .pipe(gulp.dest('dist/assets/'))
+        .pipe(gulp.dest('dist/assets/'));
 });
 
 
@@ -152,7 +154,7 @@ gulp.task('img', function () {
 
 gulp.task('font', function() {
     gulp.src(paths.srcFONT)
-        .pipe(gulp.dest('dist/assets'))
+        .pipe(gulp.dest('dist/assets'));
 });
 
 
@@ -160,7 +162,7 @@ gulp.task('font', function() {
 
 gulp.task('audio', function() {
     gulp.src(paths.srcAUDIO)
-        .pipe(gulp.dest('dist/assets'))
+        .pipe(gulp.dest('dist/assets'));
 });
 
 
@@ -168,21 +170,21 @@ gulp.task('audio', function() {
 
 gulp.task('JSON', function() {
     gulp.src(paths.srcDATA)
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('dist/'));
 });
 
 
 // Delete assets
 
 gulp.task('del', function (cb) {
-    return del(paths.distIMG, cb)
+    return del(paths.distIMG, cb);
 });
 
 
 // Delete js
 
 gulp.task('deljs', function (cb) {
-    return del('dist/script/app.js', cb)
+    return del('dist/script/app.js', cb);
 });
 
 
@@ -197,7 +199,7 @@ gulp.task('clean', function() {
 // Build
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'audio', 'del'], cb)
+    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'audio', 'del'], cb);
 });
 
 

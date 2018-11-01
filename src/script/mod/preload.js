@@ -1,72 +1,70 @@
-(function() {
-    const Loading = (function() {
+const Loading = (function() {
 
-        let preload = document.querySelector('#Preload'),
-            entryBtn = document.querySelector('.entry'),
-            entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
-            entryVisual = document.querySelector('.visual')
-            
-        let bindLoadingAnimation = function() {
-            // Cyberline motion in CSS
-            preload.classList.remove('loading');
-            preload.classList.add('loaded');
+    let preload = document.querySelector('#Preload'),
+        entryBtn = document.querySelector('.entry'),
+        entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
+        entryVisual = document.querySelector('.visual')
+        
+    let bindLoadingAnimation = function() {
+        // Cyberline motion in CSS
+        preload.classList.remove('loading');
+        preload.classList.add('loaded');
 
-            // Letters fade in
-            TweenMax.delayedCall( 1, letterAimation );
-            function letterAimation() {
-                TweenMax.staggerFromTo( entryLetters, .4,
-                    { opacity: 0 },
-                    { opacity: 1 }, .2
-                )
-            };
-
-            // Logo trun on
-            entryVisual.classList.add('visual_on')
+        // Letters fade in
+        TweenMax.delayedCall( 1, letterAimation );
+        function letterAimation() {
+            TweenMax.staggerFromTo( entryLetters, .4,
+                { opacity: 0 },
+                { opacity: 1 }, .2
+            )
         };
 
-        let bindEntringAnimaion = function () {
-            let entryLetterNodes = document.querySelectorAll('.enl'),
-                arrEntryLetters = Array.from( entryLetterNodes )
+        // Logo trun on
+        entryVisual.classList.add('visual_on')
+    };
 
-            // Letters fade out randomly
-            TweenMax.set( arrEntryLetters, { opacity: 1 });
+    let bindEntringAnimaion = function () {
+        let entryLetterNodes = document.querySelectorAll('.enl'),
+            arrEntryLetters = Array.from( entryLetterNodes )
 
-            arrEntryLetters.sort( function() {
-                return .3 - Math.random()
-            });
+        // Letters fade out randomly
+        TweenMax.set( arrEntryLetters, { opacity: 1 });
 
-            TweenMax.staggerTo( arrEntryLetters, .4,
-                { opacity: 0, ease: Quad.easeInOut }, .2
+        arrEntryLetters.sort( function() {
+            return .3 - Math.random()
+        });
+
+        TweenMax.staggerTo( arrEntryLetters, .4,
+            { opacity: 0, ease: Quad.easeInOut }, .2
+        );
+
+        // Whole Preload fade out
+        TweenMax.delayedCall( .6, bgFadeOut );
+
+        function bgFadeOut() {
+            TweenMax.set( preload,
+                { opacity: 1, display:"block" }
             );
+            TweenMax.to( preload, 1,
+                { ease: Circ.easeOut, opacity: 0, display:"none" }
+            )
+        }
+    };
 
-            // Whole Preload fade out
-            TweenMax.delayedCall( .6, bgFadeOut );
+    let bindActions = function() {
+        if (entryBtn) {
+            document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
+            entryBtn.addEventListener("click", bindEntringAnimaion);
+        }
+    };
 
-            function bgFadeOut() {
-                TweenMax.set( preload,
-                    { opacity: 1, display:"block" }
-                );
-                TweenMax.to( preload, 1,
-                    { ease: Circ.easeOut, opacity: 0, display:"none" }
-                )
-            }
-        };
+    let init = function() {
+        bindActions()
+    };
 
-        let bindActions = function() {
-            if (entryBtn) {
-                document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
-                entryBtn.addEventListener("click", bindEntringAnimaion);
-            }
-        };
+    return { init: init }
 
-        let init = function() {
-            bindActions()
-        };
+}())
 
-        return { init: init }
+Loading.init()
 
-    }());
-
-    Loading.init()
-
-}());

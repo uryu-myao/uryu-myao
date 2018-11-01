@@ -1,30 +1,11 @@
 (function() {
     // Sound Resourses
     const glitch_01 = document.querySelector('#sound_hv-01'); // @audio.njk
-    const glitch_02 = document.querySelector('#sound_hv-02'); // @audio.njk
     const BGM = document.querySelector('#sound_bgm'); // @audio.njk
 
     // DOM
     let audio_hvGlitch_01 = document.querySelector('.audio_hv_01'),
         audio_switchBGM = document.querySelector('.BGM')
-    //
-    // function hoverAudioEffect ( audio ) {
-    //     return function () {
-    //
-    //         this.addEventListener('mouseenter', function() {
-    //             audio.play();
-    //         }, false);
-    //         this.addEventListener('mouseleave', function() {
-    //             audio.pause();
-    //         }, false);
-    //
-    //     }
-    // };
-    //
-    // let audio_glitch_01 = hoverAudioEffect( glitch_01 );
-    // let audio_glitch_02 = hoverAudioEffect( glitch_02 );
-    //
-    // document.querySelector('.audio_hv_01').addEventListener = audio_glitch_01;
 
     let btnHoverSoundEffect = function() {
         audio_hvGlitch_01.addEventListener('mouseenter', function() {

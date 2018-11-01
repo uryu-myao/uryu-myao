@@ -1,15 +1,33 @@
-(function() {
-    let scrollProgress = document.querySelector('.scrollProgress')
-    window.addEventListener ('scroll', function ()
-    {
-        if (scrollProgress)
-        {
-            let docH = document.querySelector('.child').clientHeight,
-                winH = window.style.height,
-                winT = document.body.scrollTop,
-                totalScroll = winT / ( docH - winH ) * 100
 
-            document.querySelector( '.scrollProgress div' ).style.width = totalScroll + '%';
+
+
+
+
+function scrollProgressing (content) {
+
+    let scrollProgressBar = document.querySelector('.scrollProgressBar'),
+        docHeight = document.querySelector(content).scrollHeight,
+        // winHeight = window.style.height,
+        // winT = document.body.scrollTop,
+        totalScroll = winT / (docHeight - winHeight) * 100;
+
+        document.querySelector('.scrollProgress div').style.width = totalScroll + '%';
+        window.onscroll = function () {
+            scrollProgressing('.grid_content');
         }
-    })
-})();
+
+
+    if (scrollProgressBar) {
+
+        window.onscroll = function () {
+            scrollProgressing('.grid_content');
+        }
+    }
+}
+
+
+
+
+
+
+

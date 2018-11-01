@@ -9,7 +9,7 @@ window.$ = window.jQuery = require('jquery');
 
 
 // library
-// const pjax = require('./lib/jquery.pjax.js');
+const pjax = require('./lib/jquery.pjax.js');
 const mgGlitch = require('./lib/mgGlitch.js');
 const chartJS = require('Chart.js');
 const gsap = require('gsap');
@@ -30,4 +30,4 @@ const scramble = require('./mod/scramble.js');
 const slider = require('./mod/topSlider.js');
 const preload = require('./mod/preload.js');
 const menu = require('./mod/menu.js');
-// const ajax = require('./mod/pjaxCustom.js');
+const pjaxCustom = require('./mod/pjaxCustom.js');

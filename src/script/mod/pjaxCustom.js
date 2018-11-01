@@ -1,38 +1,24 @@
 $(function () {
     
-    let $asyncContent = $('#container');
-
     $.pjax({
         area: '#container',
         link: '.async',
         ajax: {
             timeout: 3000
-        },
-        wait: function () {
-            var wScr = $(window).scrollTop();
-            if (wScr) {
-                return 800;
-            } else {
-                return 400;
-            }
         }
     });
 
-    if ($asyncContent) {
-        $(document).on('pjax:fetch', function() {
-            $asyncContent.animate({
-                'left' : '-10px',
-                'opacity' : 0
-            }, 500);
-        });
-        $(document).on('pjax:render', function() {
-            $asyncContent.animate({
-                'left': 0,
-                'opacity': 1
-            }, 500);
-        });
-    }
+    $("body").on('click', '#container', function () {
 
+        let $asyncContent = $('#container');
+
+        $(document).on('pjax:start', function () {
+            $asyncContent.fadeOut(200);
+        });
+        $(document).on('pjax:complete', function () {
+            $asyncContent.fadeIn(200);
+        });
+    });
 });
 
 

@@ -249,38 +249,33 @@
 
 @keyframes glitchSwift {
   0%{
-	    transform: scale(1,0.2) translate3d(0,0,0);
-	    filter: brightness(4);
+	    transform: scale(1,1) translate3d(0,0,0);
+	    filter: brightness(2);
 	    opacity: 1;
   }
   3.5% {
-    	transform: scale(1,0.2) translate3d(0,100%,0);
+    	transform: scale(1,0.6) translate3d(0,100%,0);
   }
-
   3.6% {
-	    transform: scale(1,0.2) translate3d(0,-100%,0);
+	    transform: scale(1,0.6) translate3d(0,-100%,0);
 	    opacity: 1;
   }
-
   9%{
 	    transform: scale(1.3,0.6) translate3d(0,100%,0);
-	    filter: brightness(4);
+	    filter: brightness(2);
 	    opacity: 0;
   }
-
   11%{
 	    transform: scale(1,1) translate3d(0,0,0);
 	    filter: contrast(0) brightness(0);
 	    opacity: 0;
   }
-
   20%{
-	    transform: scale(1,1) translate3d(0,0,0);
 	    filter: contrast(1) brightness(1.2) saturate(1.3);
 	    opacity: 1;
   }
 }
-.vhs { animation: glitchSwift .25s linear forwards;}
+.vhs { animation: glitchSwift 2.5s ease forwards;}
 
 
 @keyframes vibration {
@@ -443,14 +438,4 @@
     100% {
         fill:#142247;
     }
-}
-
-@keyframes async_on {
-  0% { opacity: 1;}
-  100% { opacity: 0;}
-}
-
-@keyframes async_off {
-  0% { opacity: 1;}
-  100% { opacity: 0;}
 }
