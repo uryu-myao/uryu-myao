@@ -173,6 +173,8 @@
     }
 
     &_item {
+        height: 80px;
+
         @include mq (xlarge,max) {
             width: 80%;
             height: 48px;

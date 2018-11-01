@@ -435,17 +435,70 @@ div[data-page='top'] {
     }
 }
 
-.star01 {
+.astro {
+    width: 140px;
+    height: 50px;
     position: absolute;
     display: block;
-    width: 2px;
-    height: 2px;
-    border-radius: 50%;
-    background: rgb(227, 218, 245);
-    bottom: 300px;
-    left: 3vw;
+    top: 28vh;
+    right: 21px;
+
+    @include mq (medium,max) {
+        height: 9vh;
+    }
+
+    picture {
+        opacity: .29;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include bg-image (auto, 0, '/assets/about/astro', gif, center, cover, no-repeat);
+        animation: astro 10s linear infinite;
+    }
+
+    @keyframes astro {
+        0% { transform: rotate(-50deg) translate(0,0);}
+        20% { transform: rotate(-55deg) translate(2px,-2px);}
+        30% { transform: rotate(-54deg) translate(0,-1px);}
+        50% { transform: rotate(-49deg) translate(1px,1px);}
+        70% { transform: rotate(-58deg) translate(3px,-1px);}
+        100% { transform: rotate(-50deg) translate(0,0);}
+    }
 }
 
+.earthBig {
+    width: 100%;
+    height: 266px;
+    position: absolute;
+    display: block;
+    top: -50px;
+    left: 0;
+
+    picture {
+        opacity: .32;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include bg-image (auto, 0, '/assets/about/earthBig', png, center, cover, no-repeat);
+    }
+}
+
+.satePart {
+    width: 60px;
+    height: 160px;
+    position: absolute;
+    display: block;
+    top: 22vh;
+    right: 0;
+
+    picture {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include bg-image (auto, 0, '/assets/about/satePart', png, center, cover, no-repeat);
+    }
+}
 
 // Current show
 .grid_thum {
