@@ -1,25 +1,24 @@
-$(function () {
+$(document).pjax('a', '#container');
     
-    $.pjax({
-        area: '#container',
-        link: '.async',
-        ajax: {
-            timeout: 3000
-        }
-    });
-
-    $("body").on('click', '#container', function () {
-
-        let $asyncContent = $('#container');
-
-        $(document).on('pjax:start', function () {
-            $asyncContent.fadeOut(200);
-        });
-        $(document).on('pjax:complete', function () {
-            $asyncContent.fadeIn(200);
-        });
-    });
+$(document).on('pjax:send', function () {
+    $('#container').fadeOut("fast");
 });
+$(document).on('pjax:complete', function () {
+    $('#container').fadeIn("fast");
+});
+
+    // $("body").on('click', '#container', function () {
+
+    //     let $asyncContent = $('#container');
+
+    //     $(document).on('pjax:start', function () {
+    //         $asyncContent.fadeOut(200);
+    //     });
+    //     $(document).on('pjax:complete', function () {
+    //         $asyncContent.fadeIn(200);
+    //     });
+    // });
+
 
 
 
