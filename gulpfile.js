@@ -85,7 +85,6 @@ gulp.task('sass', function() {
     }))
     
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(plumber())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(postcss([
         autoprefixer({
@@ -107,21 +106,19 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
     let bs = browserify({
-          entries: 'src/script/app.js',
-          debug: true
-          // paths: ['./node_modules'],
-          // cache: {},
-          // packageCache: {}
-      });
+        entries: 'src/script/app.js',
+        debug: true
+        // paths: ['./node_modules'],
+        // cache: {},
+        // packageCache: {}
+    });
 
     return bs.bundle()
-        .pipe(plumber())
-        .pipe(source('app.js'))
-        .pipe(rename({ suffix: ".bundle" }))
-        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-        .pipe(sourcemaps.init())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('src/script'));
+    .pipe(source('app.js'))
+    .pipe(rename({ suffix: ".bundle" }))
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('src/script'));
 });
 
 

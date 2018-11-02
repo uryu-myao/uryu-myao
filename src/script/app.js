@@ -4,26 +4,22 @@ console.log (
 );
 
 
-// jQuery
+// ** libraries **
+
 window.$ = window.jQuery = require('jquery');
-
-
-// library
 const pjax = require('./lib/jquery.pjax.js');
 const mgGlitch = require('./lib/mgGlitch.js');
 const chartJS = require('Chart.js');
 const gsap = require('gsap');
 
 
-/* modules
- *
- */
+// ** components **
 
 // const threeCustom = require('./mod/three.js');
+// const mouse = require('./mod/mouseEffect.js');
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const chart = require('./mod/chartCustom.js');
-const mouse = require('./mod/mouseEffect.js');
 const dialog = require('./mod/dialog.js');
 const glitchCustom = require('./mod/glitch.js');
 const scramble = require('./mod/scramble.js');

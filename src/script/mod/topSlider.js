@@ -42,7 +42,7 @@
             items[current].className = "current";
             items[prevCurrent].className = "prev_slide";
             items[nextCurrent].className = "";
-        };
+        }
 
         setInterval( function() {
             if ( autoUpdate ) navigate('down');
@@ -65,7 +65,7 @@
         function pauseAction( pauseItem ) {
             pauseItem.addEventListener('mouseenter', function() { autoUpdate = false;});
             pauseItem.addEventListener('mouseleave', function() { autoUpdate = true;});
-        };
+        }
 
         pauseZoom.forEach( pauseAction );
 
@@ -78,7 +78,7 @@
         nextbtn.addEventListener('click', function() {
             navigate('down');
         });
-    };
+    }
 
 
     let bindActions = function() {
@@ -108,8 +108,8 @@
                   slider(item)
             });
         }
-    };
+    }
 
-    bindActions()
+    bindActions();
 
 }());

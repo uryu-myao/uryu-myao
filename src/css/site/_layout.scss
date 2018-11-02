@@ -222,12 +222,28 @@ p, dt, dd, li, a {
         position: relative;
     }
 
+    &_hov {
+        position: absolute;
+        bottom: -1em;
+        left: 0;
+        width: 100%;
+        background: $clr_red;
+        height: 0;
+        transition: all .2s $cb_rush;
+    }
+
     span {
         margin: 0 -1px;
         opacity: 0;
     }
 
-    &:hover { background: $clr-light-trans;}
+    &:hover { 
+        background: $clr-light-trans;
+
+        .entry_hov {
+            height: 4px;
+        }
+    }
 
     @include mq (medium, max) {
         width: 22vw;
