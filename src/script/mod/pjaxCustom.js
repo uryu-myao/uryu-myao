@@ -1,23 +1,11 @@
 $(document).pjax('a', '#container');
     
-$(document).on('pjax:send', function () {
-    $('#container').fadeOut("fast");
-});
-$(document).on('pjax:complete', function () {
-    $('#container').fadeIn("fast");
-});
+// $(document).on('pjax:send', function () {
 
-    // $("body").on('click', '#container', function () {
+// });
+// $(document).on('pjax:complete', function () {
 
-    //     let $asyncContent = $('#container');
-
-    //     $(document).on('pjax:start', function () {
-    //         $asyncContent.fadeOut(200);
-    //     });
-    //     $(document).on('pjax:complete', function () {
-    //         $asyncContent.fadeIn(200);
-    //     });
-    // });
+// });
 
 
 
