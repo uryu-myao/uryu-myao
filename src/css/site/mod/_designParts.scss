@@ -73,7 +73,7 @@ a:-webkit-any-link {
 // Logo on Preload viusal
 .visual_on > div:nth-child(2) .logo,
 // Logo on Aside
-.R .logo {
+.Y .logo {
     &_svg {
         polygon:nth-child(2),
         polygon:nth-child(3),
@@ -92,7 +92,7 @@ a:-webkit-any-link {
 // Logo on Preload viusal
 .visual_on > div:nth-child(3) .logo,
 // Logo on Aside
-.Y .logo {
+.R .logo {
     &_svg {
         polygon:nth-child(1),
         polygon:nth-child(2),
