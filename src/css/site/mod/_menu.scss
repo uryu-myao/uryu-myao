@@ -15,10 +15,10 @@
     &::before {
         content: '';
         position: absolute;
-        top: -15px;
-        right: -15px;
-        bottom: -15px;
-        left: -15px;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
     }
 
     @include mq (medium, max) {
@@ -44,7 +44,7 @@
                 content: 'menu';
                 position: absolute;
                 font-family: $txt_cond;
-                font-size: 1.45rem;
+                font-size: 1.3rem;
                 text-transform: uppercase;
                 color: white;
                 font-weight: bold;
