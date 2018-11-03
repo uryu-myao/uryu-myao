@@ -12,6 +12,15 @@
     left: 3vw;
     z-index: 20;
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        bottom: -15px;
+        left: -15px;
+    }
+
     @include mq (medium, max) {
         @include center (vertical);
         left: 20px;

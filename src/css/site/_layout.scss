@@ -1325,6 +1325,15 @@ div[data-page='about'] {
         left: 9vw;
         bottom: calc( 8vh + 15px );
 
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+        }
+
         @include mq (medium,max) {
             bottom: 4.5em;
             right: auto;
@@ -1949,7 +1958,7 @@ div[data-page='works'] {
 }
 
 .w01 {
-    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, top, cover, no-repeat);}
+    .showImgPC { @include bg-image (auto, 50%, '/assets/works/w01/showimg_pc', png, top, cover, no-repeat);}
     .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, top, cover, no-repeat);}
 }
 .w02 {
