@@ -1678,11 +1678,11 @@ div[data-page='works'] {
         margin: 15vh 0;
 
         & > div {
-            padding: 10vh 6.5vw;
+            padding: 10vh 2.5vw;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #101018;
+            background: #09090f;
         }
     }
 
@@ -1929,34 +1929,40 @@ div[data-page='works'] {
 }
 
 
-.showPC { width: 500px; margin-right: 3.233vw;}
-.showSP { width: 108px; margin-left: 3.233vw;}
+.showPC {
+    width: 745px ; 
+    margin-right: 3.033%;
+}
+.showSP {
+    width: 154px; 
+    margin-left: 3.033%;
+}
 
 .showImgPC {
     display: block;
-    height: 280px;
+    height: 417px;
 }
 
 .showImgSP {
     display: block;
-    height: 193px;
+    height: 274px;
 }
 
 .w01 {
-    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, center, cover, no-repeat);}
-    .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, center, cover, no-repeat);}
+    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, top, cover, no-repeat);}
 }
 .w02 {
-    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, center, cover, no-repeat);}
-    .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, center, cover, no-repeat);}
+    .showImgPC { @include bg-image (auto, 0, '/assets/works/w02/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 0, '/assets/works/w02/caseimg_02', png, top, cover, no-repeat);}
 }
 .w03 {
-    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, center, cover, no-repeat);}
-    .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, center, cover, no-repeat);}
+    .showImgPC { @include bg-image (auto, 0, '/assets/works/w03/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 0, '/assets/works/w03/caseimg_02', png, top, cover, no-repeat);}
 }
 .w04 {
-    .showImgPC { @include bg-image (auto, 0, '/assets/works/w01/showimg_pc', png, center, cover, no-repeat);}
-    .showImgSP { @include bg-image (auto, 0, '/assets/works/w01/showimg_sp', png, center, cover, no-repeat);}
+    .showImgPC { @include bg-image (auto, 0, '/assets/works/w04/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 0, '/assets/works/w04/showimg_sp', gif, top, cover, no-repeat);}
 }
 
 
