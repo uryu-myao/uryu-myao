@@ -15,8 +15,8 @@ const gsap = require('gsap');
 
 // ** components **
 
-// const threeCustom = require('./mod/three.js');
 // const mouse = require('./mod/mouseEffect.js');
+const threeCustom = require('./mod/three.js');
 const audio = require('./mod/audio.js');
 const timer = require('./mod/timer.js');
 const chart = require('./mod/chartCustom.js');

@@ -8,7 +8,7 @@ class Dialog {
     getTemplate() {
         let {content} = this.options
         let template = `
-            <div class="dialog kl">
+            <div class="dialog vhs">
                 <div class="dialog_inner">
                     <div class="info"><p>i</p></div>
                     <main class="dialog_cts">${content}</main>
@@ -44,6 +44,8 @@ class Dialog {
 
     open() {
         this.$dialog.appendTo('body')
+        .css('display','none')
+        .fadeIn(300);
     }
 }
 

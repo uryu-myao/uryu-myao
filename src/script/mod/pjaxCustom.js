@@ -1,25 +1,12 @@
-$(function () {
+$(document).pjax('a', '#container');
     
-    $.pjax({
-        area: '#container',
-        link: '.async',
-        ajax: {
-            timeout: 3000
-        }
-    });
+// $(document).on('pjax:send', function () {
 
-    $("body").on('click', '#container', function () {
+// });
+// $(document).on('pjax:complete', function () {
 
-        let $asyncContent = $('#container');
+// });
 
-        $(document).on('pjax:start', function () {
-            $asyncContent.fadeOut(200);
-        });
-        $(document).on('pjax:complete', function () {
-            $asyncContent.fadeIn(200);
-        });
-    });
-});
 
 
 

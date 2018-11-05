@@ -361,6 +361,18 @@ div[data-page='works']
     100% { opacity: 1;}
 }
 
+// .grid_content { position: relative;}
+// .pjax_loading {
+//     bottom: 0;
+//     left: 0;
+//     position: absolute;
+//     width: 100%;
+//     height: 100vh;
+//     background: $clr_dark;
+//     z-index: 10;
+//     transition: all .15s $cb_rush;
+// }
+
 
 // Top
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -448,7 +460,7 @@ div[data-page='top'] {
     position: absolute;
     display: block;
     top: 28vh;
-    right: 21px;
+    right: 19px;
 
     @include mq (medium,max) {
         height: 9vh;
@@ -492,7 +504,7 @@ div[data-page='top'] {
 
 .satePart {
     width: 60px;
-    height: 160px;
+    height: 136px;
     position: absolute;
     display: block;
     top: 22vh;
@@ -1124,7 +1136,7 @@ div[data-page='about'] {
         display: inline-block;
         position: relative;
         height: calc( 660px + 18vw );
-        @include bg-image (auto, 0, '/assets/about/paper', png, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/about/paper', gif, center, cover, no-repeat);
 
         &::before {
             content: '';
@@ -1303,6 +1315,15 @@ div[data-page='about'] {
         // right: calc( 9vw + 200px + 5vw );
         left: 9vw;
         bottom: calc( 8vh + 15px );
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+        }
 
         @include mq (medium,max) {
             bottom: 4.5em;
@@ -1543,7 +1564,7 @@ div[data-page='works'] {
 
     article {
         margin: 10px 0 0;
-        background: black;
+        background: $clr_dark-trans;
         padding: 5.7vh 0 12px;
 
         @include mq (medium,max) {
@@ -1607,17 +1628,16 @@ div[data-page='works'] {
 .row {
     width: 100%;
     display: flex;
+    justify-content: space-between;
 
-    &_left {
-        justify-content: flex-start;
+    @include mq (medium,max) {
+        flex-direction: column;
     }
 }
 
 .works_detail {
-    width: $wd_work-dtl;
-    margin: 10vh auto 0;
-    padding: 0 9.33333%;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 15vh auto 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1630,8 +1650,8 @@ div[data-page='works'] {
     .badges {
         & + p {
             color: $clr_grey-light;
-            line-height: 1.6;
-            letter-spacing: .075em;
+            line-height: 1.8;
+            letter-spacing: .065em;
             margin-left: 3.45vw;
             z-index: 2;
 
@@ -1642,7 +1662,14 @@ div[data-page='works'] {
     }
 
     &_role {
-        width: 100%;
+        width: $wd_work-dtl;
+        margin: 0 auto;
+        padding: 0 9.33333%;
+        box-sizing: border-box;
+
+        @include mq (medium,max) {
+            padding: 0;
+        }
 
         & > div {
             display: flex;
@@ -1655,20 +1682,43 @@ div[data-page='works'] {
         }
     }
 
-    &_agency {
-        width: 40%;
-        margin: -5vh 0 0 77.5%;
-        z-index: 2;
+    &_show {
+        width: 100%;
+        margin: 15vh 0;
+
+        & > div {
+            padding: 10vh 2.5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b0b13;
+
+            @include mq (medium,max) {
+                flex-direction: column;
+                padding: 0;
+                background: transparent;
+            }
+        }
 
         @include mq (medium,max) {
-            width: 100%;
-            margin: -3em 0 0;
+            margin: 8em 0;
+        }
+    }
+
+    .row {
+        width: $wd_work-dtl;
+        margin: 0 auto;         
+        padding: 0 9.33333%;
+        box-sizing: border-box;
+        
+        @include mq (medium,max) {
+            padding: 0;
         }
     }
 
     &_graph {
         width: 54%;
-        margin: 14.5vh 0 0;
+        margin: 0;
         position: relative;
 
         @include mq (xlarge,max) {
@@ -1679,7 +1729,7 @@ div[data-page='works'] {
         }
         @include mq (medium,max) {
             width: 100%;
-            margin-top: 7.2em;
+            margin-top: 0;
         }
 
         .info {
@@ -1688,9 +1738,20 @@ div[data-page='works'] {
         }
     }
 
+    &_agency {
+        width: 32.5%;
+        margin: 0;
+        z-index: 2;
+
+        @include mq (medium,max) {
+            width: 100%;
+            margin: 7em 0 0;
+        }
+    }
+
     &_story {
         width: 100%;
-        margin: 15vh 0 10vh;
+        margin: 16.1vh 0 15vh;
         position: relative;
 
         @include mq (medium,max) {
@@ -1699,7 +1760,7 @@ div[data-page='works'] {
         }
 
         & > div {
-            width: 75%;
+            width: 70%;
             margin: 0 auto;
 
             @include mq (large,max) {
@@ -1707,15 +1768,21 @@ div[data-page='works'] {
             }
         }
 
-        h2 { text-align: center;}
+        h2 { 
+            text-align: center;
+            @include mq (medium,max) {
+                text-align: left;
+            }  
+        }
 
         p {
             color: $clr_grey-light;
             font-size: 1.25rem;
             line-height: 1.8;
-            letter-spacing: .16em;
+            letter-spacing: .135em;
             text-align: justify;
             font-weight: bold;
+            text-align: justify;
         }
     }
 
@@ -1730,9 +1797,7 @@ div[data-page='works'] {
             top: calc( 4.5vh + 1.35rem);
             @include center( horizontal );
 
-            @include mq (medium,max) {
-                max-width: 100%;
-            }
+            @include mq (medium,max) { max-width: 100%;}
         }
     }
 
@@ -1797,7 +1862,24 @@ div[data-page='works'] {
     white-space: nowrap;
 }
 
+.w04 {
+    .works_detail_show + .row {
+        justify-content: center;
+    }
+
+    .works_detail_agency {
+        width: 100%;
+        text-align: center;
+
+        @include mq (medium,max) {
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+}
+
 .caseImg {
+    position: absolute;
     width: 100%;
     opacity: .13;
 
@@ -1838,6 +1920,22 @@ div[data-page='works'] {
     }
 }
 
+.caseSP {
+    top: 8vh;
+    left: -110px;
+    figure { width: 200px;}
+
+    @include mq (medium,max) { display: none;}
+}
+
+.casePC {
+    bottom: 34vh;
+    left: -30px;
+    figure { width: 400px;}
+
+    @include mq (medium,max) { display: none;}
+}
+
 .w01 {
     .caseImg_01 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_01', png, center, cover, no-repeat);}
     .caseImg_02 { @include bg-image (auto, 0, '/assets/works/w01/caseimg_02', png, center, cover, no-repeat);}
@@ -1867,14 +1965,48 @@ div[data-page='works'] {
     .caseImg_05 { @include bg-image (auto, 0, '/assets/works/w04/caseimg_05', png, center, cover, no-repeat);}
 }
 
-.caseSP {
-    margin: 18vh 0 0 4vw;
-    figure { width: 200px;}
+
+.showPC {
+    width: 745px;
+    margin-right: 5%;
+    @include mq (medium,max) {
+        width: 100%;
+        margin: 0 0 5em;
+    }
+}
+.showSP {
+    width: 154px;
+    margin-left: 5%;
+    
+    @include mq (medium,max) {
+        width: 5%;
+        margin: 0 auto;
+    }
 }
 
-.casePC {
-    margin: -5vh 0 0 4vw;
-    figure { width: 400px;}
+.showImgPC {
+    display: block;
+}
+
+.showImgSP {
+    display: block;
+}
+
+.w01 {
+    .showImgPC { @include bg-image (auto, 55.973%, '/assets/works/w01/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 177.92%, '/assets/works/w01/showimg_sp', png, top, cover, no-repeat);}
+}
+.w02 {
+    .showImgPC { @include bg-image (auto, 55.973%, '/assets/works/w02/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 177.92%, '/assets/works/w02/caseimg_02', png, top, cover, no-repeat);}
+}
+.w03 {
+    .showImgPC { @include bg-image (auto, 55.973%, '/assets/works/w03/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 177.92%, '/assets/works/w03/caseimg_02', png, top, cover, no-repeat);}
+}
+.w04 {
+    .showImgPC { @include bg-image (auto, 55.973%, '/assets/works/w04/showimg_pc', png, top, cover, no-repeat);}
+    .showImgSP { @include bg-image (auto, 177.92%, '/assets/works/w04/showimg_sp', gif, top, cover, no-repeat);}
 }
 
 

@@ -12,6 +12,15 @@
     left: 3vw;
     z-index: 20;
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+    }
+
     @include mq (medium, max) {
         @include center (vertical);
         left: 20px;
@@ -35,7 +44,7 @@
                 content: 'menu';
                 position: absolute;
                 font-family: $txt_cond;
-                font-size: 1.45rem;
+                font-size: 1.3rem;
                 text-transform: uppercase;
                 color: white;
                 font-weight: bold;

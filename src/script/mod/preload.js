@@ -45,7 +45,7 @@ const Loading = (function() {
             TweenMax.set( preload,
                 { opacity: 1, display:"block" }
             );
-            TweenMax.to( preload, 1,
+            TweenMax.to( preload, 2,
                 { ease: Circ.easeOut, opacity: 0, display:"none" }
             )
         }
