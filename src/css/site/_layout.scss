@@ -11,15 +11,6 @@ p, dt, dd, li, a {
     letter-spacing: .15em;
 }
 
-.col-2 {
-    display: flex;
-    justify-content: space-between;
-
-    @include mq (medium,max) {
-        flex-direction: column;
-    }
-}
-
 
 
 // Preload
