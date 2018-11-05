@@ -545,8 +545,6 @@ div[data-page='top'] {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        // opacity: 0;
-        // transform: scale(.96);
         transition: all .2s $cb_rush;
     }
 
@@ -570,6 +568,14 @@ div[data-page='top'] {
             background-size: 100% 2px, 3px 100%;
             z-index: 10;
         }
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        transition: all .2s $cb_rush;
     }
 
     .__fig_01 {

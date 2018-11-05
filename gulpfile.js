@@ -38,6 +38,7 @@ const paths =
     srcIMG:   src  + '/assets/**/*.+(png|jpg|gif|svg)',
     srcFONT:  src  + '/assets/**/*.+(ttf|woff|truetype|svg)',
     srcAUDIO: src  + '/assets/**/*.+(mp3|ogg)',
+    srcVIDEO: src  + '/assets/**/*.mp4',
 
     distJS:   dist + '/**/*.js',
     distIMG:  dist + '/assets/**/*.+(png|jpg|gif|webp)'
@@ -163,6 +164,14 @@ gulp.task('audio', function() {
 });
 
 
+//  Transfer video files
+
+gulp.task('video', function() {
+    gulp.src(paths.srcVIDEO)
+        .pipe(gulp.dest('dist/assets'));
+});
+
+
 //  Transfer JSON files
 
 gulp.task('JSON', function() {
@@ -196,7 +205,7 @@ gulp.task('clean', function() {
 // Build
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'audio', 'del'], cb);
+    runSequence('clean', ['njk', 'sass', 'minjs', 'JSON', 'img', 'font', 'audio', 'video', 'del'], cb);
 });
 
 
@@ -212,6 +221,7 @@ gulp.task('watch', ['sync'], function()
     gulp.watch(paths.srcIMG,   ['img']).on('change', bs.reload);
     gulp.watch(paths.srcFONT,  ['font']).on('change', bs.reload);
     gulp.watch(paths.srcAUDIO, ['audio']).on('change', bs.reload);
+    gulp.watch(paths.srcVIDEO, ['video']).on('change', bs.reload);
     gulp.watch(paths.srcIMG,   ['del']).on('change', bs.reload);
 });
 
