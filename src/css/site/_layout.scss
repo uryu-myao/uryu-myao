@@ -537,12 +537,7 @@ div[data-page='top'] {
         visibility: hidden;
     }
 
-    a {
-        z-index: 2;
-        // &:hover {
-        //     filter: hue-rotate(90deg) invert(0.1) saturate(3) sepia(0.4);
-        // }
-    }
+    a { z-index: 2;}
 
     picture {
         position: absolute;
@@ -604,7 +599,6 @@ div[data-page='top'] {
         grid-row: 2 / span 1;
     }
 }
-
 
 .grid_thum_fig {
     height: 100%;
@@ -1555,10 +1549,36 @@ div[data-page='works'] {
         height: calc( 100% - 30% - 10px );
 
         picture {
+            position: relative;
             display: block;
             height: 100%;
 
-            @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
+            &::before {
+                width: 100%;
+                height: 100%;
+                display: block;
+                content: '';
+                background: rgba(6,14,29,.76);
+                z-index: 11;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(
+                    transparentize(#121010,1) 50%,
+                    transparentize(darken(#121010,10),0.75) 50%),
+                    linear-gradient(90deg, transparentize(#ff0000,0.94),
+                    transparentize(#00ff00,0.98),
+                    transparentize(#0000ff,0.94));
+                background-size: 100% 2px, 3px 100%;
+                z-index: 10;
+            }
         }
     }
 
@@ -1582,6 +1602,19 @@ div[data-page='works'] {
             margin-bottom: 4.5vh;
         }
     }
+}
+
+.w01 .fs picture {
+    @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
+}
+.w02 .fs picture {
+    @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
+}
+.w03 .fs picture {
+    @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
+}
+.w04 .fs picture {
+    @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
 }
 
 .works_header {
@@ -1831,16 +1864,16 @@ div[data-page='works'] {
     }
 
     &_01 {
-        @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
     }
     &_02 {
-        @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_02', gif, center, cover, no-repeat);
     }
     &_03 {
-        @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_03', gif, center, cover, no-repeat);
     }
     &_04 {
-        @include bg-image (auto, 0, '/assets/top/thm_01', gif, center, cover, no-repeat);
+        @include bg-image (auto, 0, '/assets/top/thm_04', gif, center, cover, no-repeat);
     }
 }
 
