@@ -1558,6 +1558,10 @@ div[data-page='works'] {
         height: calc( 100% - 30% - 10px );
         overflow: hidden;
 
+        @include mq (medium,max) {
+            height: auto;
+        }
+
         &::before {
             position: absolute;
             width: 100%;
@@ -1687,6 +1691,7 @@ div[data-page='works'] {
     flex-wrap: wrap;
 
     @include mq (medium,max) {
+        margin-top: 7.85em;
         padding: 0;
         flex-direction: column;
     }
@@ -1779,6 +1784,11 @@ div[data-page='works'] {
         .info {
             top: -3px;
             left: 7.4em;
+
+            @include mq (medium,max) {
+                top: -1px;
+                left: 100px;
+            }
         }
     }
 
@@ -1800,7 +1810,7 @@ div[data-page='works'] {
 
         @include mq (medium,max) {
             width: 100%;
-            margin-top: 7.24em;
+            margin: 7.24em 0 5.8em;
         }
 
         & > div {
@@ -1851,7 +1861,7 @@ div[data-page='works'] {
         justify-content: space-between;
 
         @include mq (medium,max) {
-            margin-top: 12em;
+            margin-top: 17.65em;
         }
 
         figure { width: 100%;}

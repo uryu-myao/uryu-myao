@@ -142,7 +142,7 @@ a:-webkit-any-link {
             font-weight: bold;
             letter-spacing: .15em;
             padding: .6em 1.2em;
-            color: #182329;
+            color: $clr_blue-active;
             background: $clr-dark;
             @include center (horizontal);
             z-index: 2;
@@ -204,7 +204,7 @@ a:-webkit-any-link {
             font-weight: bold;
             letter-spacing: .15em;
             padding: .6em 1.2em;
-            color: #182329;
+            color: $clr_blue-active;
             background: $clr-dark;
             @include center (horizontal);
             z-index: 2;
