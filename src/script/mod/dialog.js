@@ -61,7 +61,7 @@ class Dialog {
         cr.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>Arrage assigned time per month in the project.</p>',
+                '<p>Copyright © 2018 by URYU MYAO<br><br>No part of this site including video footages may not be reproduced, distributed, or transmitted in any form or by any means.</p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }

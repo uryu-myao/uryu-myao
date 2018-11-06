@@ -8,7 +8,7 @@
 
 
 $(function(){
-    let $glitchPic = $(".banner_middle picture")
+    let $glitchPic = $(".pic_glitch")
 
     if ($glitchPic) {
         $glitchPic.mgGlitch({
@@ -23,7 +23,7 @@ $(function(){
             // select blend mode type
             blendModeType : 'hue',
             // set min time for glitch 1 elem
-            glitch1TimeMin : 10,
+            glitch1TimeMin : 20,
             // set max time for glitch 1 elem
             glitch1TimeMax : 600,
             // set min time for glitch 2 elem
