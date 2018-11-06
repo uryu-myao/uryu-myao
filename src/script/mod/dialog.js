@@ -53,6 +53,24 @@ class Dialog {
 // Specific
 (function() {
 
+    // dialog specific about copyright
+    if (document.querySelector('.cr')) {
+
+        let cr = document.querySelectorAll('.cr')[0]
+
+        cr.addEventListener('click', function() {
+            var dialog = new Dialog({
+                content:
+                '<p>Arrage assigned time per month in the project.</p>',
+                buttons: [{
+                    text: 'ok',
+                    action: function() { dialog.close() }
+                }]
+            })
+            dialog.open()
+        })
+    }
+
     // dialog specific on Work pages
     if (document.querySelector('.w2018')) {
 
