@@ -2022,7 +2022,7 @@ div[data-page='works'] {
     margin-left: 5%;
     
     @include mq (medium,max) {
-        width: 5%;
+        width: 50%;
         margin: 0 auto;
     }
 }
