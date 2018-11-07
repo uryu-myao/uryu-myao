@@ -74,7 +74,7 @@
     let cht02 = new Chart( ctx02, {
         type: 'line',
         data: {
-            labels : ["Oct","Nov","Dec","Jan","Feb","Mar","Apr","May"],
+            labels : ["Oct","Nov","Dec","Jan","Feb","Mar","Apr"],
             datasets: [{
                 data: [0.5, 1, 0.5, 1, 1, 2, 2, 1.75],
                 label: false,
@@ -116,6 +116,7 @@
         }
     })
     };
+    
     // Work 03
     if (document.getElementById("chart03")) {
 

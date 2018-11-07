@@ -687,7 +687,7 @@ div[data-page='top'] {
         font-family: $txt_code;
         font-size: 1rem;
         font-weight: bold;
-        letter-spacing: .18em;
+        letter-spacing: .1em;
         margin: 1.15em auto 0;
         text-transform: capitalize;
         white-space: nowrap;
@@ -1154,6 +1154,10 @@ div[data-page='about'] {
                 width: 100%;
             }
         }
+
+        @include mq (medium,max) {
+            height: 680px;
+        }
     }
 
     @include mq (medium,max) {
@@ -1523,7 +1527,7 @@ div[data-page='about'] {
         font-family: $txt_cond;
         font-weight: bold;
         font-size: 2rem;
-        letter-spacing: .2em;
+        letter-spacing: .15em;
         padding-bottom: 2px;
         position: relative;
         z-index: 2;

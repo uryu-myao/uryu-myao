@@ -69,8 +69,8 @@
         p { color: $clr_blue-main;}
 
         @include mq (medium,max) {
-            top: .85em;
-            right: .85em;
+            top: 14px;
+            right: 14px;
         }
     }
 
@@ -82,7 +82,7 @@
         background: $clr_light-trans;
 
         @include mq (medium,max) {
-            height: 24px;
+            height: 52px;
         }
     }
 

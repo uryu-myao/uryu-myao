@@ -444,8 +444,8 @@ div.info {
     }
 
     @include mq (medium,max) {
-        width: 1.6em;
-        height: 1.6em;
+        width: 16px;
+        height: 16px;
     }
 }
 
