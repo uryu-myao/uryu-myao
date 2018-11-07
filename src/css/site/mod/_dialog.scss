@@ -82,7 +82,7 @@
         background: $clr_light-trans;
 
         @include mq (medium,max) {
-            height: 4.4em;
+            height: 24px;
         }
     }
 
@@ -118,5 +118,4 @@
         margin-top: .6em;
         color: $clr_blue-active;
     }
-
 }
