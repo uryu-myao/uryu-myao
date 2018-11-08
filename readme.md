@@ -1,3 +1,3 @@
 # Hello, and Welcome
-The site is still in development.
+The site is a portfolio. Hope you enjoy.
 
