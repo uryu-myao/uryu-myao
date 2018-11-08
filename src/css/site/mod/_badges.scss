@@ -7,7 +7,7 @@
         position: absolute;
         content: '';
         background: transparent;
-        border: 2px solid $clr_blue-active;
+        border: 2px solid $clr_blue-main;
         width: 9px;
         height: 5px;
         z-index: 1;
@@ -88,7 +88,7 @@
     &_direction { background-image: url( '/assets/top/badge_03.svg' );}
 
     &_active {
-        background-image: linear-gradient( #232a8b, #0b1940 );
+        background-image: linear-gradient( #1c2272, #07143a );
 
         .badges_ch { opacity: 1;}
         .badges_level span { background: #6b6d41;}

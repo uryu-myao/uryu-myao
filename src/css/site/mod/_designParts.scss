@@ -216,15 +216,21 @@ a:-webkit-any-link {
 .grid_next .banner_motion {
 
     @include mq (medium,max) {
-        &::before { content: 'next';}
         height: calc( 100% - 10px );
+        transition: all .15s $cb_rush;
+
+        &::before { content: 'next';}
+        &:active { transform: scale(.94);}
     }
 }
 .grid_prev .banner_motion {
 
     @include mq (medium,max) {
-        &::before { content: 'prev';}
         height: calc( 100% - 10px );
+        transition: all .15s $cb_rush;
+
+        &::before { content: 'prev';}
+        &:active { transform: scale(.94);}
     }
 }
 
@@ -248,7 +254,7 @@ a:-webkit-any-link {
           position: absolute;
           width: 5px;
           height: 5px;
-          background: $clr_blue-active;
+          background: $clr_blue-main;
           top: -2px;
       }
       &::before { left: -2px;}
@@ -293,6 +299,8 @@ a:-webkit-any-link {
         margin-top: 5em;
         @include clr-opacity ( $clr_blue-main, .35 );
         position: relative;
+        transition: all .15s $cb_rush;
+        &:active { transform: scale(.85);}
     }
     span {
         position: absolute;
@@ -412,6 +420,7 @@ div.info {
     border: 1px solid transparent;
     box-sizing: border-box;
     transition: all .15s $cb_rush;
+    &:active { transform: scale(.9);}
 
     &::before {
         content: '';
