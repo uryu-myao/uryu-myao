@@ -123,10 +123,12 @@
         color: $clr_blue-active;
         font-weight: bold;
         font-family: $txt_cond;
+        letter-spacing: .15em;
         text-transform: uppercase;
 
         @include mq (medium,max) {
             font-size: 4.5vw;
+            letter-spacing: .08em;
         }
     }
 
@@ -199,6 +201,7 @@
 
         @include mq (medium,max) {
             margin-top: 0;
+            margin-left: calc( 11vw - 4.85vw );
         }
     }
 
@@ -206,7 +209,7 @@
         margin-bottom: 6.5vh;
 
         @include mq (medium,max) {
-            margin-bottom: 0;
+            margin: 0 11.5vw 0 0;
         }
     }
 
@@ -240,7 +243,7 @@
         }
 
         @include mq (medium,max) {
-            margin: 0 0 0 9vw;
+            margin: 0 0 0 11.5vw;
         }
     }
 

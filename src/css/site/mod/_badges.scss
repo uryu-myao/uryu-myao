@@ -46,12 +46,17 @@
         writing-mode: vertical-rl;
         text-orientation: mixed;
         margin: 0;
+        font-size: 1rem;
         font-family: $txt_cond;
         text-transform: capitalize;
         letter-spacing: .045em;
         top: 4px;
         right: 4px;
         opacity: .15;
+
+        @include mq (medium,max) {
+            font-size: 1.25rem;
+        }
     }
 
     &_ch {
