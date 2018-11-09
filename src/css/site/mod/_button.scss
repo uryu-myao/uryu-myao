@@ -4,11 +4,10 @@
 .btn {
     width: 100%;
     background: $clr_light-trans;
-    height: 42px;
+    height: 52px;
     border-left: 2px solid $clr_blue-active;
     border-right: 2px solid $clr_blue-active;
     position: absolute;
-    padding-top: 2px;
     box-sizing: border-box;
     z-index: 10; // * since mouse effect div is 2.
     cursor: url('/assets/common/cursor.png'), auto;
@@ -27,12 +26,16 @@
         color: white;
         font-weight: bold;
         text-transform: uppercase;
-        line-height: 3.4;
+        line-height: 4;
         letter-spacing: .16em;
         animation: vibration 2s linear infinite;
 
         &:hover {
             animation: button_hover .25s 0s linear forwards;
+        }
+
+        &:active {
+            letter-spacing: .44em;
         }
 
         @keyframes button_hover {
@@ -57,6 +60,10 @@
                 background: transparent;
                 margin-top: 1px;
             }
+        }
+
+        @include mq (medium,max) {
+            line-height: 3;
         }
     }
 }

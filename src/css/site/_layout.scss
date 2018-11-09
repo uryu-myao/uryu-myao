@@ -659,12 +659,12 @@ div[data-page='top'] {
             @include center (vertical);
             display: block;
             right: -.2em;
-            font-size: 10.5rem;
+            font-size: 10.8rem;
             font-family: $txt_cond;
             font-weight: bold;
             text-align: right;
-            color: #0c1625;
-            transition: all .2s $cb_rush;
+            color: #0d1c30;
+            transition: all .3s $cb_rush;
             opacity: 0;
             z-index: 1;
         }
@@ -804,10 +804,10 @@ div[data-page='top'] {
         font-family: $txt_cond;
         font-size: 2.1rem;
         letter-spacing: .1em;
-        color: rgb(255, 255, 255);
+        color: $clr_blue-active;
         opacity: 0;
-        transition: all .3s $cb_rush;
-        z-index: 2;
+        transition: all .2s $cb_rush;
+        z-index: 21;
     }
 
     ul,li { height: 100%;}
@@ -832,7 +832,6 @@ div[data-page='top'] {
     .banner_middle {
         height: calc( 100% - 65px );
         margin-bottom: 10px;
-        z-index: 1;
 
         &::before {
             content: 'PREV';
@@ -1034,7 +1033,7 @@ div[data-page='about'] {
     font-size: 2.915vw;
     line-height: 1.45;
     letter-spacing: .03em;
-    color: white;
+    color: rgb(212, 212, 212);
     z-index: 10;
     margin-left: 5vw;
 
@@ -1371,7 +1370,7 @@ div[data-page='about'] {
 
     h2 {
         font-family: $txt_cond;
-        color: white;
+        color: $clr_white;
         text-transform: uppercase;
         font-size: 1.8rem;
         letter-spacing: .25rem;
@@ -1389,7 +1388,7 @@ div[data-page='about'] {
     .tag {
         font-family: $txt_cond;
         font-weight: bold;
-        color: white;
+        color: $clr_white;
         background: $clr_blue-main;
         padding: 6px 12px 5px;
         display: inline;
@@ -1528,7 +1527,7 @@ div[data-page='about'] {
 
     p {
         text-transform: uppercase;
-        color: white;
+        color: $clr_white;
         font-family: $txt_cond;
         font-weight: bold;
         font-size: 2rem;

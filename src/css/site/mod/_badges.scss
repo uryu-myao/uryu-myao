@@ -23,8 +23,6 @@
         right: -4px;
         border-left: 2px;
         border-bottom: 2px;
-
-
     }
 
     dl {
@@ -43,7 +41,7 @@
     }
 
     p {
-        color: white;
+        color: $clr_grey-light;
         position: absolute;
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -53,14 +51,14 @@
         letter-spacing: .045em;
         top: 4px;
         right: 4px;
-        opacity: .2;
+        opacity: .15;
     }
 
     &_ch {
         width: 18px;
         height: 26px;
         margin: 1.8vh 0 0 .955vw;
-        opacity: .1;
+        opacity: .2;
         background: {
             repeat: no-repeat;
             size: cover;
@@ -90,8 +88,10 @@
     &_active {
         background-image: linear-gradient( #1c2272, #07143a );
 
+        & > p { opacity: 1;}
+
         .badges_ch { opacity: 1;}
-        .badges_level span { background: #6b6d41;}
+        .badges_level span { background: #52532e;}
     }
 
     // Badge level grid loop
@@ -99,7 +99,7 @@
 
     @for $i from 1 through 6 {
         .#{ $levelStatus }_#{ $i } span:nth-child(-n+#{ $i }) {
-            background: #f0ff00;
+            background: #cddb09;
         }
     }
 }
