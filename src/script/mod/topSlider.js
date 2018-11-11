@@ -47,20 +47,11 @@
         setInterval( function() {
             if ( autoUpdate ) navigate('down');
         }, timeTrans);
+        
 
-
-        // Change BTN link
-        // let detailsBtn = document.querySelector('.grid_desc_down button a')
-        // let linkHref = function(current) {
-        //     detailsBtn.href = "/works/w0" + current + ".html";
-        // };
-        // setInterval( function() {
-        //     if ( autoUpdate ) linkHref( current + 1 );
-        // }, timeTrans );
-
-
+        let dtlbtn = document.querySelector('.grid_desc_down');
         // Pause slider by hover-on
-        let pauseZoom = [ prevbtn, nextbtn, thm ];
+        let pauseZoom = [prevbtn, nextbtn, thm, dtlbtn];
 
         function pauseAction( pauseItem ) {
             pauseItem.addEventListener('mouseenter', function() { autoUpdate = false;});
