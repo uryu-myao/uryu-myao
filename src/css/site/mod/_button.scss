@@ -3,12 +3,15 @@
 
 .btn {
     width: 100%;
-    background: $clr_light-trans;
+    background: $clr_blue-active;
     height: 52px;
     border-left: 2px solid $clr_blue-active;
     border-right: 2px solid $clr_blue-active;
+    // border-top: 1px solid #1a273e;
+    // border-bottom: 1px solid #1a273e;
     position: absolute;
     box-sizing: border-box;
+    transition: all .15s $cb_rush;
     z-index: 10; // * since mouse effect div is 2.
     cursor: url('/assets/common/cursor.png'), auto;
 
@@ -16,6 +19,7 @@
         padding-top: 5px;
         height: 48px;
     }
+
 
     a {
         display: block;
@@ -29,10 +33,6 @@
         line-height: 4;
         letter-spacing: .16em;
         animation: vibration 2s linear infinite;
-
-        &:hover {
-            animation: button_hover .25s 0s linear forwards;
-        }
 
         &:active {
             letter-spacing: .44em;
@@ -64,6 +64,15 @@
 
         @include mq (medium,max) {
             line-height: 3;
+        }
+    }
+
+
+    &:hover {
+        background: $clr_light-trans;
+        
+        & > a {
+            animation: button_hover .25s 0s linear forwards;
         }
     }
 }
