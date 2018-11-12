@@ -2,7 +2,8 @@ const Menu = (function() {
     
     let menu = document.querySelector('.menu'),
         overlay = document.querySelector('.overlay'),
-        navItem = document.querySelectorAll('.overlay_item')
+        navItem = document.querySelectorAll('.overlay_item'),
+        asider = document.querySelector('.grid_aside_inner')
 
     const click_01 = document.querySelector('#sound_click-01')
 
@@ -12,6 +13,7 @@ const Menu = (function() {
         if (!active) {
             overlay.classList.add('overlay_active');
             menu.classList.add('menu_active');
+            asider.classList.add('asider_active');
 
             for ( var i = 0; i < navItem.length; i++ ) {
                 navItem[i].classList.add('overlay_item_active')
@@ -22,6 +24,7 @@ const Menu = (function() {
         } else {
             overlay.classList.remove('overlay_active');
             menu.classList.remove('menu_active');
+            asider.classList.remove('asider_active');
 
             for ( var i = 0; i < navItem.length; i++ ) {
                 navItem[i].classList.remove('overlay_item_active')

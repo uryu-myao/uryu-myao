@@ -16,12 +16,14 @@
     {% include "bg.njk" %}
     
     <main class="grid_rule mz" role="main">
-
+    
         {% include "cyberline.njk" %}
 
         <aside class="grid_aside">
             <div class="grid_aside_inner">
 
+                <span class="overlay_mask _mask_blue"></span>
+                <span class="overlay_mask _mask_black"></span>
                 <!-- ** Menu in macro ** -->
                 {% import 'menu.njk' as menu %}
                 {{ menu.current('top') }}
