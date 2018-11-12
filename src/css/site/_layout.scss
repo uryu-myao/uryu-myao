@@ -1649,16 +1649,46 @@ div[data-page='works'] {
 .works_header {
     width: $wd_work-dtl;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include clr-opacity ( $clr_blue-main, .22 );
     margin: 0 auto;
-    padding: 8vh 9.33333%;
-    box-sizing: border-box;
+    position: relative;
+    
+    &_main {
+        width: 95%;
+        padding: 8vh 9.33333%;
+        box-sizing: border-box;
+        @include clr-opacity ( $clr_blue-main, .22 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    @include mq (medium,max) {
-        flex-direction: column;
-        padding: 4.5em 0 3.45em;
+        @include mq (medium,max) {
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 4.5em 0 3.8em 10vw;
+        }
+    }
+
+    &_scroll {
+        width: 10%;
+        @include center (vertical);
+        right: -8%;
+        justify-content: flex-end;
+
+        p {
+            text-align: right;
+            transform: rotate(90deg);
+            
+            span {
+                font-size: 1rem;
+                letter-spacing: .8em;
+                color: $clr_blue-grey;
+            }
+        }
+
+        @include mq (medium,max) {
+            right: -8%;
+            top: 25%;
+        }
     }
 
     h1 {
