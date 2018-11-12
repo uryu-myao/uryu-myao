@@ -634,7 +634,7 @@ div[data-page='top'] {
     margin-bottom: 10px;
     box-sizing: border-box;
     position: relative;
-    background: black;
+    background: $clr_dark-trans;
     height: calc( 33% - 10px );
     text-align: center;
 
@@ -723,7 +723,7 @@ div[data-page='top'] {
 .grid_desc_down {
     text-transform: uppercase;
     position: relative;
-    background: black;
+    background: $clr_dark-trans;
     height: 67%; // 33% is up part
     width: 100%;
     margin: 0 auto;
