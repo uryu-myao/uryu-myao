@@ -1870,12 +1870,12 @@ div[data-page='works'] {
     }
 
     &_ctl {
-        margin-top: 24vh;
+        margin-top: 14vh;
         display: flex;
         justify-content: space-between;
 
         @include mq (medium,max) {
-            margin-top: 17.65em;
+            margin-top: 85px;
         }
 
         figure { width: 100%;}

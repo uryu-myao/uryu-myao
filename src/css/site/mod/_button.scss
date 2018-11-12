@@ -76,3 +76,20 @@
         }
     }
 }
+
+
+.btt {
+    margin-top: 125px;
+    text-align: center;
+    transition: all .15s $cb_rush;
+    &:active { transform: scale(.92);}
+
+    a {
+        color: $clr_blue-active;
+        font-size: 1rem;
+        font-family: $txt_cond;
+        font-weight: bold;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+    }
+}
