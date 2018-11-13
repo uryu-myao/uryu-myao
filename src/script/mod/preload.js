@@ -3,7 +3,7 @@ const Loading = (function() {
     let preload = document.querySelector('#Preload'),
         entryBtn = document.querySelector('.entry'),
         entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
-        entryVisual = document.querySelector('.visual')
+        entryVisual = document.querySelector('.visual');
         
     let bindLoadingAnimation = function() {
         // Cyberline motion in CSS
@@ -17,15 +17,15 @@ const Loading = (function() {
                 { opacity: 0 },
                 { opacity: 1 }, .2
             )
-        };
+        }
 
         // Logo trun on
-        entryVisual.classList.add('visual_on')
-    };
+        entryVisual.classList.add('visual_on');
+    }
 
     let bindEntringAnimaion = function () {
         let entryLetterNodes = document.querySelectorAll('.enl'),
-            arrEntryLetters = Array.from( entryLetterNodes )
+            arrEntryLetters = Array.from( entryLetterNodes );
 
         // Letters fade out randomly
         TweenMax.set( arrEntryLetters, { opacity: 1 });
@@ -47,24 +47,24 @@ const Loading = (function() {
             );
             TweenMax.to( preload, .4,
                 { ease: Circ.easeOut, opacity: 0, display:"none" }
-            )
+            );
         }
-    };
+    }
 
     let bindActions = function() {
         if (entryBtn) {
-            document.addEventListener("DOMContentLoaded", bindLoadingAnimation);
+            window.addEventListener("load", bindLoadingAnimation);
             entryBtn.addEventListener("click", bindEntringAnimaion);
         }
-    };
+    }
 
     let init = function() {
-        bindActions()
-    };
+        bindActions();
+    }
 
     return { init: init }
 
-}())
+}());
 
-Loading.init()
+Loading.init();
 
