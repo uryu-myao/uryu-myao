@@ -178,7 +178,8 @@
     }
 
     &_item {
-        height: 80px;
+        height: 7.5vh;
+        min-height: 84px;
 
         @include mq (xlarge,max) {
             width: 80%;
