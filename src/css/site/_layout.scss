@@ -133,7 +133,7 @@ p, dt, dd, li, a {
     height: 0;
     position: absolute;
     background: $clr_dark;
-    transition: all .2s $cb_rush;
+    transition: all .45s $cb_rush;
     z-index: 10;
 
     &_up { top: 0;}
@@ -248,7 +248,18 @@ p, dt, dd, li, a {
 .loading {
     background: rgba(0,0,0,1);
 
+    .visual {
+        & > div { 
+            animation: waiting_logo_effect 1s $cb_rush infinite alternate;
+        }
+    }
+
     .shield { height: calc( 50vh - 20px );}
+}
+
+@keyframes waiting_logo_effect {
+    0% { opacity: 0;}
+    100% { opacity: .6;}
 }
 
 // loaded
