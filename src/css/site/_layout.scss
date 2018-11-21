@@ -166,9 +166,9 @@ p, dt, dd, li, a {
             fill:#142247;
             transition: all .5s $cb_rush;
         }
-
     }
 }
+
 .visual_on > div:nth-child(1) .logo {
     &_svg polygon {
         transition-delay: .5s;
@@ -190,6 +190,29 @@ p, dt, dd, li, a {
         polygon {
             transition-delay: 1.4s;
         }
+    }
+}
+
+.notice {
+    position: absolute;
+    width: 100%;
+    @include center (horizontal);
+    bottom: 2vh;
+    opacity: 0;
+    z-index: 11;
+
+    @include mq (medium,max) {
+        bottom: 8px;
+    }
+
+    p {
+        font-weight: bold;
+        font-family: $txt_en;
+        font-size: 1rem;
+        color: $clr_blue-grey;
+        line-height: 1.7;
+        letter-spacing: .08em;
+        text-align: center;
     }
 }
 
@@ -240,11 +263,11 @@ p, dt, dd, li, a {
 
     @include mq (medium, max) {
         width: 22vw;
-        bottom: 6em;
+        bottom: 140px;
     }
 }
 
-// during Top loading
+// during site loading
 .loading {
     background: rgba(0,0,0,1);
 
@@ -255,6 +278,9 @@ p, dt, dd, li, a {
     }
 
     .shield { height: calc( 50vh - 20px );}
+    .notice {
+        opacity: 1;
+    }
 }
 
 @keyframes waiting_logo_effect {
@@ -262,7 +288,7 @@ p, dt, dd, li, a {
     100% { opacity: .6;}
 }
 
-// loaded
+// if loaded
 .loaded {
     background: rgba(0,0,0,.95);
 
@@ -288,6 +314,10 @@ p, dt, dd, li, a {
 
     .visual {
         & > div { opacity: 1;}
+    }
+
+    .notice {
+        opacity: 1;
     }
 }
 

@@ -4,8 +4,18 @@ const Loading = (function() {
         entryBtn = document.querySelector('.entry'),
         entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
         entryVisual = document.querySelector('.visual');
+    
+    function LoadingAnimation() {
+        let noticeLetterNodes = document.querySelectorAll('.notice span'),
+            arrNoticeLetters = Array.from(noticeLetterNodes);
         
-    let bindLoadingAnimation = function() {
+        TweenMax.set(arrNoticeLetters, { opacity: 0 });
+        TweenMax.staggerTo(arrNoticeLetters, .3,
+            { opacity: 1, ease: Quad.easeInOut }, .03
+        );
+    }
+
+    let bindLoadedAnimation = function() {
         // Cyberline motion in CSS
         preload.classList.remove('loading');
         preload.classList.add('loaded');
@@ -23,7 +33,7 @@ const Loading = (function() {
         entryVisual.classList.add('visual_on');
     }
 
-    let bindEntringAnimaion = function () {
+    let bindEntringAnimaion = function() {
         let entryLetterNodes = document.querySelectorAll('.enl'),
             arrEntryLetters = Array.from( entryLetterNodes );
 
@@ -53,7 +63,8 @@ const Loading = (function() {
 
     let bindActions = function() {
         if (entryBtn) {
-            window.addEventListener("load", bindLoadingAnimation);
+            LoadingAnimation();
+            window.addEventListener("load", bindLoadedAnimation);
             entryBtn.addEventListener("click", bindEntringAnimaion);
         }
     }
