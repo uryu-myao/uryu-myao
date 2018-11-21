@@ -5,15 +5,15 @@ const Loading = (function() {
         entryLetters = ['.e1','.e2','.e3','.e4','.e5'],
         entryVisual = document.querySelector('.visual');
     
-    function LoadingAnimation() {
-        let noticeLetterNodes = document.querySelectorAll('.notice span'),
-            arrNoticeLetters = Array.from(noticeLetterNodes);
+    // function LoadingAnimation() {
+    //     let noticeLetterNodes = document.querySelectorAll('.notice span'),
+    //         arrNoticeLetters = Array.from(noticeLetterNodes);
         
-        TweenMax.set(arrNoticeLetters, { opacity: 0 });
-        TweenMax.staggerTo(arrNoticeLetters, .3,
-            { opacity: 1, ease: Quad.easeInOut }, .03
-        );
-    }
+    //     TweenMax.set(arrNoticeLetters, { opacity: 0 });
+    //     TweenMax.staggerTo(arrNoticeLetters, .3,
+    //         { opacity: 1, ease: Quad.easeInOut }, .03
+    //     );
+    // }
 
     let bindLoadedAnimation = function() {
         // Cyberline motion in CSS
@@ -63,7 +63,7 @@ const Loading = (function() {
 
     let bindActions = function() {
         if (entryBtn) {
-            LoadingAnimation();
+            // LoadingAnimation();
             window.addEventListener("load", bindLoadedAnimation);
             entryBtn.addEventListener("click", bindEntringAnimaion);
         }
