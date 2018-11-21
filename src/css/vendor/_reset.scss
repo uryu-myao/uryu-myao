@@ -535,3 +535,15 @@ table {
 td,th {
 	padding: 0;
 }
+
+/* Remove clicking foucus blue border
+   ========================================================================== */
+div:focus,
+a:focus,
+img:focus,
+span:focus,
+li:focus,
+picture:focus,
+figure:focus {
+  outline: none;
+}
