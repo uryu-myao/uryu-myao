@@ -183,7 +183,8 @@
 
         @include mq (xlarge,max) {
             width: 80%;
-            height: 48px;
+            height: 4vh;
+            min-height: 50px;
             margin: 0 auto 6px;
             clip-path: polygon(14% 0, 100% 0, 100% 83%, 87% 100%, 0 100%, 0 18%);
 
@@ -196,7 +197,7 @@
     &_level {
         @include mq (xlarge,max) {
             left: 4vw;
-            bottom: 12px;
+            @include center (vertical);
         }
     }
 

@@ -296,7 +296,7 @@ a:-webkit-any-link {
     & > div {
         width: 32px;
         height: 32px;
-        margin-top: 5em;
+        margin-top: 50px;
         @include clr-opacity ( $clr_blue-main, .35 );
         position: relative;
         transition: all .15s $cb_rush;
