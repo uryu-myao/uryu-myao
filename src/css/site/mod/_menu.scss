@@ -125,6 +125,7 @@
         font-family: $txt_cond;
         letter-spacing: .15em;
         text-transform: uppercase;
+        white-space: nowrap;
 
         @include mq (medium,max) {
             font-size: 4.5vw;
