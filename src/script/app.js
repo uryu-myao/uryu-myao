@@ -16,10 +16,10 @@ const gsap = require('gsap');
 // ** components **
 
 // const mouse = require('./mod/mouseEffect.js');
+const preload = require('./mod/preload.js');
 const threeCustom = require('./mod/three.js');
 const pjaxCustom = require('./mod/pjaxCustom.js');
 const menu = require('./mod/menu.js');
-const preload = require('./mod/preload.js');
 const slider = require('./mod/topSlider.js');
 const scramble = require('./mod/scramble.js');
 const dialog = require('./mod/dialog.js');
