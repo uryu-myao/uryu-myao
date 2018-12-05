@@ -4,11 +4,18 @@ body {
     font-family: $safeType_en, $safeType_jp, $safeType_ch; // Safe fonts
     color: black;
     background: $clr_dark;
+    position: relative;
 }
 
 p, dt, dd, li, a {
     font-family: $txt_norm;
     letter-spacing: .15em;
+}
+
+#awwwards {
+    @include mq (medium,max) {
+        display: none;
+    }
 }
 
 
@@ -391,7 +398,7 @@ div[data-page='works']
     box-sizing: border-box;
 
     main { position: relative;}
-  }
+}
 
 .grid_thum,
 .grid_desc
