@@ -2,7 +2,7 @@
 
     let container = document.querySelector('body');
     let circle = document.querySelector('.circle');
-    let noEffect = document.querySelector('.kl')
+    let noEffect = document.querySelector('.kl');
 
     TweenMax.set(circle, { scale: 0, xPercent: -50, yPercent: -50 });
 
