@@ -102,7 +102,7 @@ class Dialog {
         info_a01.addEventListener('click', function() {
             var dialog = new Dialog({
                 content:
-                '<p>An award-winning Kyoto-based design and branding firm.<br><a href="https://stores.jp/" target="_blank">STORES.JP<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
+                '<p><br>An convenient and efficient online store platform<br>that has obviously well-designed interface.<br><a href="https://stores.jp/" target="_blank">STORES.JP<span><svg class="ext" x="0px" y="0px" viewBox="0 0 8 7"><polygon points="1,2 0,2 0,7 6,7 6,6 1,6 "/><rect x="2" width="6" height="5"/></svg></span></a></p>',
                 buttons: [{
                     text: 'ok',
                     action: function() { dialog.close() }
