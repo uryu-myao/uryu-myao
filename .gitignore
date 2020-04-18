@@ -5,6 +5,17 @@
 /logs/
 /.viminfo
 
+# next.js build output #
+#####################################
+.next
+
+# nuxt.js build output #
+#####################################
+.nuxt
+
+# vuepress build output #
+#####################################
+.vuepress/dist
 
 # Build systems #
 #####################################
@@ -18,9 +29,18 @@ build/
 dist/
 *.bundle.js
 
+# Firebase cache #
+#####################################
+.firebase/
 
 # Logs and database #
 #####################################
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+firebase-debug.log*
 /config/database.php
 /config/domain.php
 /config/form.json
@@ -29,11 +49,9 @@ database.php
 /sites/kigaeru/blog/database-config.php
 env.php
 
-
 # Vagrant #
 #####################################
 /.vagrant
-
 
 # OS generated files #
 #####################################
@@ -120,3 +138,5 @@ node_modules/
 *.rar
 *.tar
 *.zip
+
+
