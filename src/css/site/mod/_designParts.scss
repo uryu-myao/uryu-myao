@@ -3,9 +3,11 @@
 body {
     cursor: url('/assets/common/cursor.png') 2 2, auto;
 }
+
 a:-webkit-any-link {
     cursor: url('/assets/common/cursor.png') 2 2, auto;
 }
+
 // .innerScroll {
 //     cursor: url('/assets/common/cursor.gif') 2 2, auto !important;
 // }
@@ -17,21 +19,24 @@ a:-webkit-any-link {
     &_svg {
         width: 48px;
         height: 68px;
-     
-        @include mq (medium,max) {
+
+        @include mq (medium, max) {
             width: 42px;
             height: 60px;
         }
-        
-        polygon { 
-            fill:#142247;
+
+        polygon {
+            fill: #142247;
         }
     }
 
     &_txt {
         display: none;
         margin: 3px 0 0 4px;
-        svg { fill:#1d3169;}
+
+        svg {
+            fill: #1d3169;
+        }
     }
 }
 
@@ -40,19 +45,23 @@ a:-webkit-any-link {
         @include center (both);
         display: flex;
 
-        &_txt { display: block;}
+        &_txt {
+            display: block;
+        }
 
         &_svg {
-            animation: logoEffect 6s steps(10) infinite; 
+            animation: logoEffect 6s steps(10) infinite;
         }
     }
 }
+
 // Logo on Preload viusal 
-.visual_on > div:nth-child(1) .logo,
-.visual_on > div:nth-child(4) .logo,
+.visual_on>div:nth-child(1) .logo,
+.visual_on>div:nth-child(4) .logo,
 // Logo on Aside
 .U .logo {
     &_svg {
+
         polygon:nth-child(2),
         polygon:nth-child(3),
         polygon:nth-child(4),
@@ -64,17 +73,18 @@ a:-webkit-any-link {
         polygon:nth-child(11),
         polygon:nth-child(19),
         polygon:nth-child(20),
-        polygon:nth-child(21)
-        {
-            fill:$clr_blue-active;
+        polygon:nth-child(21) {
+            fill: $clr_blue-active;
         }
     }
 }
+
 // Logo on Preload viusal
-.visual_on > div:nth-child(2) .logo,
+.visual_on>div:nth-child(2) .logo,
 // Logo on Aside
 .Y .logo {
     &_svg {
+
         polygon:nth-child(2),
         polygon:nth-child(3),
         polygon:nth-child(7),
@@ -83,17 +93,18 @@ a:-webkit-any-link {
         polygon:nth-child(13),
         polygon:nth-child(15),
         polygon:nth-child(16),
-        polygon:nth-child(18)
-        {
-            fill:$clr_blue-active;
+        polygon:nth-child(18) {
+            fill: $clr_blue-active;
         }
     }
 }
+
 // Logo on Preload viusal
-.visual_on > div:nth-child(3) .logo,
+.visual_on>div:nth-child(3) .logo,
 // Logo on Aside
 .R .logo {
     &_svg {
+
         polygon:nth-child(1),
         polygon:nth-child(2),
         polygon:nth-child(3),
@@ -107,9 +118,8 @@ a:-webkit-any-link {
         polygon:nth-child(13),
         polygon:nth-child(14),
         polygon:nth-child(17),
-        polygon:nth-child(19)
-        {
-            fill:$clr_blue-active;
+        polygon:nth-child(19) {
+            fill: $clr_blue-active;
         }
     }
 }
@@ -124,14 +134,16 @@ a:-webkit-any-link {
     padding: 10px 0 10px 3em;
     box-sizing: border-box;
     margin-bottom: 10px;
+
     background: {
         image: url('/assets/common/pttn.png');
         repeat: repeat;
     }
+
     animation: stripe .5s linear 0s infinite;
 
-    @include mq (medium,max) {
-        
+    @include mq (medium, max) {
+
         position: relative;
 
         &::before {
@@ -149,7 +161,7 @@ a:-webkit-any-link {
         }
     }
 
-    & > div {
+    &>div {
         background: transparent;
         width: 65%;
         height: 100%;
@@ -172,13 +184,23 @@ a:-webkit-any-link {
     }
 
     @keyframes stripe {
-        0%   { background-position-x: 0px;}
-        100% { background-position-x: 9px;}
+        0% {
+            background-position-x: 0px;
+        }
+
+        100% {
+            background-position-x: 9px;
+        }
     }
 
     @keyframes movingleft {
-        0%   { left: -50px;}
-        100% { left: 0px;}
+        0% {
+            left: -50px;
+        }
+
+        100% {
+            left: 0px;
+        }
     }
 }
 
@@ -191,7 +213,7 @@ a:-webkit-any-link {
 
         position: relative;
 
-        @include mq (medium,max) {
+        @include mq (medium, max) {
             margin-bottom: 0;
         }
 
@@ -215,22 +237,33 @@ a:-webkit-any-link {
 /* Top page specific */
 .grid_next .banner_motion {
 
-    @include mq (medium,max) {
-        height: calc( 100% - 10px );
+    @include mq (medium, max) {
+        height: calc(100% - 10px);
         transition: all .15s $cb_rush;
 
-        &::before { content: 'next';}
-        &:active { transform: scale(.94);}
+        &::before {
+            content: 'next';
+        }
+
+        &:active {
+            transform: scale(.94);
+        }
     }
 }
+
 .grid_prev .banner_motion {
 
-    @include mq (medium,max) {
-        height: calc( 100% - 10px );
+    @include mq (medium, max) {
+        height: calc(100% - 10px);
         transition: all .15s $cb_rush;
 
-        &::before { content: 'prev';}
-        &:active { transform: scale(.94);}
+        &::before {
+            content: 'prev';
+        }
+
+        &:active {
+            transform: scale(.94);
+        }
     }
 }
 
@@ -239,31 +272,43 @@ a:-webkit-any-link {
 /** HORIZON LINE
  */
 .horizon {
-    width: calc( 100% - 40px );
+    width: calc(100% - 40px);
     height: 1px;
     background: $clr_blue-grey;
     position: fixed;
     z-index: 20;
 
     div {
-      position: relative;
-      width: 100%;
+        position: relative;
+        width: 100%;
 
-      &::before, &::after {
-          content: '';
-          position: absolute;
-          width: 5px;
-          height: 5px;
-          background: $clr_blue-main;
-          top: -2px;
-      }
-      &::before { left: -2px;}
-      &::after { right: -2px;}
-  }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: $clr_blue-main;
+            top: -2px;
+        }
+
+        &::before {
+            left: -2px;
+        }
+
+        &::after {
+            right: -2px;
+        }
+    }
 }
 
-.horizon_top { top: 20px;}
-.horizon_bottom { bottom: 20px;}
+.horizon_top {
+    top: 20px;
+}
+
+.horizon_bottom {
+    bottom: 20px;
+}
 
 
 
@@ -293,15 +338,19 @@ a:-webkit-any-link {
     margin: 0 auto;
     z-index: 2;
 
-    & > div {
+    &>div {
         width: 32px;
         height: 32px;
         margin-top: 50px;
-        @include clr-opacity ( $clr_blue-main, .35 );
+        @include clr-opacity ($clr_blue-main, .35);
         position: relative;
         transition: all .15s $cb_rush;
-        &:active { transform: scale(.85);}
+
+        &:active {
+            transform: scale(.85);
+        }
     }
+
     span {
         position: absolute;
         width: 2px;
@@ -313,13 +362,28 @@ a:-webkit-any-link {
         animation: spectrum 0ms -800ms linear infinite alternate;
         transition: all .35s $cb_rush;
 
-        &:nth-child(1) { left: 9px;  animation-duration: 424ms;}
-        &:nth-child(2) { left: 13px; animation-duration: 487ms;}
-        &:nth-child(3) { left: 17px; animation-duration: 400ms;}
-        &:nth-child(4) { left: 21px; animation-duration: 442ms;}
+        &:nth-child(1) {
+            left: 9px;
+            animation-duration: 424ms;
+        }
+
+        &:nth-child(2) {
+            left: 13px;
+            animation-duration: 487ms;
+        }
+
+        &:nth-child(3) {
+            left: 17px;
+            animation-duration: 400ms;
+        }
+
+        &:nth-child(4) {
+            left: 21px;
+            animation-duration: 442ms;
+        }
     }
 
-    @include mq (medium,max) {
+    @include mq (medium, max) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         margin: 0;
@@ -328,15 +392,20 @@ a:-webkit-any-link {
         justify-content: flex-end;
         align-items: center;
 
-        & > div {
+        &>div {
             margin: 0 20px 0 0;
         }
     }
 }
 
 @keyframes spectrum {
-    0%   { height: 2px;}
-    100% { height: 10px;}
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 10px;
+    }
 }
 
 ._pause {
@@ -356,7 +425,7 @@ a:-webkit-any-link {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background: rgba( 57,66,140,.12 );
+    background: rgba(57, 66, 140, .12);
 }
 
 
@@ -392,14 +461,37 @@ a:-webkit-any-link {
 }
 
 @keyframes neonFlashing {
-    0% { filter: blur(10px);}
-    1% { filter: blur(2px);}
-    2% { filter: blur(8px);}
-    3% { filter: blur(10px);}
-    4% { filter: blur(10px);}
-    5% { filter: blur(8px);}
-    6% { filter: blur(10px);}
-    100% { filter: blur(10px);}
+    0% {
+        filter: blur(10px);
+    }
+
+    1% {
+        filter: blur(2px);
+    }
+
+    2% {
+        filter: blur(8px);
+    }
+
+    3% {
+        filter: blur(10px);
+    }
+
+    4% {
+        filter: blur(10px);
+    }
+
+    5% {
+        filter: blur(8px);
+    }
+
+    6% {
+        filter: blur(10px);
+    }
+
+    100% {
+        filter: blur(10px);
+    }
 }
 
 
@@ -408,8 +500,8 @@ a:-webkit-any-link {
  */
 div.info {
     position: absolute;
-    width: 1.4em;
-    height: 1.4em;
+    width: 15px;
+    height: 16px;
     padding-top: 1px;
     display: block;
     background-image: linear-gradient(#2f368d, #11214d);
@@ -419,8 +511,11 @@ div.info {
     align-items: center;
     border: 1px solid transparent;
     box-sizing: border-box;
-    transition: all .15s $cb_rush;
-    &:active { transform: scale(.9);}
+    transition: all .1s $cb_rush;
+
+    &:active {
+        transform: scale(.8);
+    }
 
     &::before {
         content: '';
@@ -441,7 +536,7 @@ div.info {
         font-weight: bold;
         transition: all .05s $cb_rush;
 
-        @include mq (medium,max) {
+        @include mq (medium, max) {
             font-size: 1.2rem;
         }
     }
@@ -452,7 +547,7 @@ div.info {
         border: 1px solid $clr_blue-main;
     }
 
-    @include mq (medium,max) {
+    @include mq (medium, max) {
         width: 16px;
         height: 16px;
     }
