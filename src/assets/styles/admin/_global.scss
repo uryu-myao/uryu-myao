@@ -1,0 +1,14 @@
+body {
+  font-family: $safeType_jp, $safeType_en;
+  font-size: 1.4rem;
+  letter-spacing: .05rem;
+  color: $black;
+
+  @include mq (medium, max) {
+    font-size: 1.3rem;
+  }
+}
+
+p {
+  margin: 0;
+}
