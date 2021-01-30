@@ -1046,8 +1046,7 @@ div[data-page='top'] {
     font-family: $txt_cond;
     font-size: 2.1rem;
     letter-spacing: 0.1em;
-    color: $clr_blue-active;
-    opacity: 0;
+    color: $clr_white;
     transition: all 0.2s $cb_rush;
     z-index: 21;
   }
@@ -1089,7 +1088,7 @@ div[data-page='top'] {
 
     &:hover {
       &::before {
-        opacity: 1;
+        color: $clr_blue-active;
       }
     }
   }
@@ -1140,7 +1139,7 @@ div[data-page='top'] {
 
     &:hover {
       &::before {
-        opacity: 1;
+        color: $clr_blue-active;
       }
     }
   }
