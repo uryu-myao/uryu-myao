@@ -2206,7 +2206,7 @@ div[data-page='works'] {
 
     .info {
       top: -3px;
-      left: 7.4em;
+      right: 0;
 
       @include mq(medium, max) {
         top: -1px;
