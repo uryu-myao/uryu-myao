@@ -1430,17 +1430,6 @@ div[data-page='about'] {
   }
 }
 
-// .brush {
-//     position: relative;
-
-//     &::after {
-//         content: url(/assets/about/brush.png);
-//         position: absolute;
-//         top: -4px;
-//         left: -18px;
-//     }
-// }
-
 .paper {
   width: 65%;
   position: absolute;
@@ -1489,6 +1478,11 @@ div[data-page='about'] {
 
 .svg_clr {
   fill: $clr_blue-main;
+}
+
+.svg_focus {
+  fill: #717490;
+  @extend .tras;
 }
 
 .svg_me {
@@ -1580,13 +1574,15 @@ div[data-page='about'] {
 
 .resume {
   position: relative;
-  padding: 8vh 0 8vh;
+  padding: 8vh 0 0;
+  margin-bottom: 80px;
   background: #172126;
   z-index: 1;
   overflow: hidden;
 
   @include mq(medium, max) {
-    padding: 9.5em 0 1.1em;
+    padding: 9.5em 0 0;
+    margin-bottom: 5em;
   }
 
   h1 {
@@ -1838,6 +1834,60 @@ div[data-page='about'] {
       @include mq(medium, max) {
         flex-direction: column;
       }
+    }
+  }
+}
+
+.focus {
+  width: 100%;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  &_inner {
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_block {
+    width: calc(100% / 4 - 2vw);
+    background: rgba(26, 38, 46, 0.3);
+    @extend .tras;
+    margin-right: 2vw;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: rgba(26, 38, 46, 1);
+
+      .svg_focus {
+        fill: white;
+      }
+    }
+  }
+
+  &_block_inner {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+
+    svg {
+      @include center(both);
+    }
+
+    .__uiux {
+      width: 44%;
+    }
+    .__js {
+      width: 36%;
+    }
+    .__branding {
+      width: 56%;
     }
   }
 }
