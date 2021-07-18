@@ -1582,7 +1582,7 @@ div[data-page='about'] {
 
   @include mq(medium, max) {
     padding: 9.5em 0 0;
-    margin-bottom: 5em;
+    margin-bottom: 12em;
   }
 
   h1 {
@@ -1675,7 +1675,7 @@ div[data-page='about'] {
   z-index: 2;
 
   @include mq(medium, max) {
-    margin: 8vh auto 13vh;
+    margin: 8vh auto 6vh;
     padding: 0 5vw;
     box-sizing: border-box;
   }
@@ -1823,7 +1823,7 @@ div[data-page='about'] {
     }
 
     @include mq(medium, max) {
-      margin-bottom: 3.35em;
+      margin-bottom: 1.5em;
     }
   }
 
@@ -1849,7 +1849,12 @@ div[data-page='about'] {
     width: 86%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    @include mq(medium, max) {
+      width: 100%;
+    }
   }
 
   &_block {
@@ -1858,8 +1863,19 @@ div[data-page='about'] {
     @extend .tras;
     margin-right: 2vw;
 
+    @include mq(medium, max) {
+      width: calc(100% / 2 - 2vw);
+    }
+
     &:last-child {
       margin-right: 0;
+    }
+
+    @include mq(medium, max) {
+      margin-bottom: 2.5em;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
 
     &:hover {
@@ -1911,6 +1927,10 @@ div[data-page='about'] {
 
     &:active {
       transform: scale(0.75);
+    }
+
+    @include mq(medium, max) {
+      width: 100%;
     }
   }
 
