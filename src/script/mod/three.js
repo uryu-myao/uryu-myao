@@ -1,92 +1,92 @@
-(function() {
+(function () {
+  // import library
+  const THREE = require('three');
 
-    'use strict';
+  // resposive
+  window.addEventListener('resize', function () {
+    let width = window.innerWidth,
+      height = window.innerHeight;
 
-    // import library
-    const THREE = require('three');
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  });
 
-    // resposive
-    window.addEventListener('resize', function () {
-        let width  = window.innerWidth,
-            height = window.innerHeight;
+  // render
+  const renderer = new THREE.WebGLRenderer();
 
-        renderer.setSize( width, height );
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-    });
+  // bg color
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  document
+    .querySelector('.bg_canvas')
+    .appendChild(renderer.domElement);
 
-    // render
-    const renderer = new THREE.WebGLRenderer();
+  // scene
+  const scene = new THREE.Scene();
 
-    // bg color
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.setPixelRatio( window.devicePixelRatio );
-    document.querySelector('.bg_canvas').appendChild( renderer.domElement );
+  // camera
+  const camera = new THREE.PerspectiveCamera(
+    50,
+    window.innerWidth / window.innerHeight,
+    1,
+    10000
+  );
+  camera.position.z = 600;
 
-    // scene
-    const scene  = new THREE.Scene();
+  // create the shapes
+  const geometry = new THREE.Geometry();
 
-    // camera
-    const camera = new THREE.PerspectiveCamera
-    (
-        50, window.innerWidth / window.innerHeight, 1, 10000
-    );
-    camera.position.z = 600;
+  for (let i = 0; i < 60; i++) {
+    let vertex = new THREE.Vector3();
+    vertex.x = 1000 * Math.random() - 500;
+    vertex.y = 1000 * Math.random() - 500;
+    vertex.z = 1000 * Math.random() - 500;
+    geometry.vertices.push(vertex);
+  }
 
-    // create the shapes
-    const geometry = new THREE.Geometry();
+  // create materials
+  const material = new THREE.PointsMaterial({
+    size: 4,
+    sizeAttenuation: true,
+    transparent: true,
+    opacity: 0.4,
+  });
 
-    for ( let i = 0; i < 60; i ++ ) {
-        let vertex = new THREE.Vector3();
-        vertex.x = 1000 * Math.random() - 500;
-        vertex.y = 1000 * Math.random() - 500;
-        vertex.z = 1000 * Math.random() - 500;
-        geometry.vertices.push( vertex );
+  material.color.setHex(0x1e3b86);
+
+  const particles = new THREE.Points(geometry, material);
+  particles.sortParticles = true;
+
+  scene.add(particles);
+
+  // draw materials
+  let draw = function () {
+    requestAnimationFrame(draw);
+
+    let is_update = true;
+    if (is_update) {
+      // let s = Math.sin( Date.now() * 0.0002 );
+      particles.material.color.setHSL(1.5, 1, 0.5);
+      particles.rotation.y = Date.now() * 0.0002;
     }
+  };
 
-    // create materials
-    const material = new THREE.PointsMaterial({
-        size: 4,
-        sizeAttenuation: true,
-        transparent: true,
-        opacity: 0.4
-    });
+  // draw Scene
+  let render = function () {
+    renderer.render(scene, camera);
+  };
 
-    material.color.setHex( 0x1e3b86 );
+  // run game loop
+  let gameLoop = function () {
+    requestAnimationFrame(gameLoop);
+    draw();
+    render();
 
-    const particles = new THREE.Points( geometry, material );
-    particles.sortParticles = true;
-
-    scene.add( particles );
-
-    // draw materials
-    let draw = function() {
-        requestAnimationFrame( draw );
-
-        let is_update = true;
-        if (is_update) {
-            // let s = Math.sin( Date.now() * 0.0002 );
-            particles.material.color.setHSL(1.5, 1, 0.5 );
-            particles.rotation.y = Date.now() * 0.0002;
-        }
+    if (!document.getElementById('top')) {
+      scene.remove(geometry);
     }
+  };
 
-    // draw Scene
-    let render = function() {
-        renderer.render( scene, camera );
-    };
-
-    // run game loop
-    let gameLoop = function() {
-        requestAnimationFrame( gameLoop );
-        draw();
-        render();
-
-        if (!(document.getElementById('top'))) {
-            scene.remove( geometry );
-        }
-    };
-
-    gameLoop();
-
+  gameLoop();
 })();
