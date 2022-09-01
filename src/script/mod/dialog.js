@@ -1,11 +1,11 @@
 class Dialog {
   constructor(options) {
-    this.options = options
-    this.init()
+    this.options = options;
+    this.init();
   }
 
   getTemplate() {
-    let { content } = this.options
+    let { content } = this.options;
     let template = `
             <div class="dialog vhs">
                 <div class="dialog_inner">
@@ -14,43 +14,43 @@ class Dialog {
                     <footer class="dialog_footer"></footer>
                 </div>
             </div>
-        `
-    return template
+        `;
+    return template;
   }
 
   getButtons() {
-    let { buttons } = this.options
+    let { buttons } = this.options;
 
     let buttonsTemplate = buttons.map((button) => {
-      var $b = $(`<button></button>`)
-      $b.text(button.text)
-      $b.on('click', button.action)
-      return $b
-    })
-    return buttonsTemplate
+      var $b = $(`<button></button>`);
+      $b.text(button.text);
+      $b.on('click', button.action);
+      return $b;
+    });
+    return buttonsTemplate;
   }
 
   init() {
-    let $dialog = $(this.getTemplate())
+    let $dialog = $(this.getTemplate());
 
-    $dialog.find('footer').append(this.getButtons())
-    this.$dialog = $dialog
+    $dialog.find('footer').append(this.getButtons());
+    this.$dialog = $dialog;
   }
 
   close() {
-    this.$dialog.detach()
+    this.$dialog.detach();
   }
 
   open() {
-    this.$dialog.appendTo('body').css('display', 'none').fadeIn(300)
+    this.$dialog.appendTo('body').css('display', 'none').fadeIn(300);
   }
 }
 
 // Specific
-;(function () {
+(function () {
   // dialog specific about copyright
   if (document.querySelector('.cr')) {
-    let cr = document.querySelectorAll('.cr')[0]
+    let cr = document.querySelectorAll('.cr')[0];
 
     cr.addEventListener('click', function () {
       var dialog = new Dialog({
@@ -60,18 +60,18 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
   }
 
   // dialog specific on Work pages
   if (document.querySelector('.w2018')) {
-    let info_w01 = document.querySelectorAll('.info_js')[0]
+    let info_w01 = document.querySelectorAll('.info_js')[0];
 
     info_w01.addEventListener('click', function () {
       var dialog = new Dialog({
@@ -81,13 +81,13 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
   }
 
   // dialog specific on About pages
@@ -96,7 +96,7 @@ class Dialog {
       info_a02 = document.querySelectorAll('.info_js')[1],
       info_a03 = document.querySelectorAll('.info_js')[2],
       info_a04 = document.querySelectorAll('.info_js')[3],
-      info_a05 = document.querySelectorAll('.info_js')[4]
+      info_a05 = document.querySelectorAll('.info_js')[4];
 
     info_a01.addEventListener('click', function () {
       var dialog = new Dialog({
@@ -106,13 +106,13 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
     info_a02.addEventListener('click', function () {
       var dialog = new Dialog({
         content:
@@ -121,13 +121,13 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
     info_a03.addEventListener('click', function () {
       var dialog = new Dialog({
         content:
@@ -136,13 +136,13 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
     info_a04.addEventListener('click', function () {
       var dialog = new Dialog({
         content:
@@ -151,13 +151,13 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
     info_a05.addEventListener('click', function () {
       var dialog = new Dialog({
         content:
@@ -166,12 +166,12 @@ class Dialog {
           {
             text: 'ok',
             action: function () {
-              dialog.close()
+              dialog.close();
             },
           },
         ],
-      })
-      dialog.open()
-    })
+      });
+      dialog.open();
+    });
   }
-})()
+})();
